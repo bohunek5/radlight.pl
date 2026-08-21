@@ -134,7 +134,7 @@
         <span>Wybierz stronę do podglądu:</span>
       </div>
       <div class="switcher-buttons">
-        <a href="index.html" class="layout-pill active" title="Wariant 1: Sprawdzony, biznesowy układ Split 50/50">
+        <a href="index.html" class="layout-pill" title="Wariant 1: Sprawdzony, biznesowy układ Split 50/50">
           <span class="pill-tag">WARIANT 1</span>
           <span class="pill-text">Classic Split 50/50</span>
         </a>
@@ -142,7 +142,7 @@
           <span class="pill-tag">WARIANT 2</span>
           <span class="pill-text">Executive Bento</span>
         </a>
-        <a href="wariant3.html" class="layout-pill" title="Wariant 3: Holograficzne wideo w tle z panelem Glassmorphism">
+        <a href="wariant3.html" class="layout-pill active" title="Wariant 3: Holograficzne wideo w tle z panelem Glassmorphism">
           <span class="pill-tag">WARIANT 3</span>
           <span class="pill-text">Hologram Video</span>
         </a>
@@ -150,185 +150,139 @@
     </div>
   </div>
   <!-- ==========================================================================
-       WARIANT 1: RADLIGHT CLASSIC SPLIT-SCREEN 50/50
+       WARIANT 3: RADLIGHT HOLOGRAPHIC VIDEO 360° + GLASSMORPHISM HUD SCREEN
        ========================================================================== -->
-  <section class="wheel-hero-section layout-split" id="kolo-uslug" data-layout="split">
+  <section class="wheel-hero-section layout-hologram" id="kolo-uslug" data-layout="hologram">
     
-    <!-- Dynamic Cinematic & Ambient Backdrop -->
+    <!-- Dynamic Futuristic Hologram Video Backdrop (Crystal Clear & Vibrant) -->
     <div class="cinematic-backdrop-container" id="cinematic-backdrop">
-      <div class="cinematic-bg-layer" id="cinematic-bg-layer"></div>
+      <video class="hero-video-bg" id="hero-video-bg" autoplay muted loop playsinline poster="images/holographic-hero-main.webp">
+        <source src="videos/hologram-bg-medium.mp4" type="video/mp4">
+      </video>
+      <div class="hologram-bg-layer" id="hologram-bg-layer"></div>
       <div class="hero-glow-sphere glow-1"></div>
       <div class="hero-glow-sphere glow-2"></div>
       <div class="hero-overlay"></div>
     </div>
 
     <div class="container wheel-hero-container">
-      <div class="hero-unified-layout">
-        
-        <!-- LEFT COLUMN: Split-Screen Executive Hero -->
-        <div class="hero-split-left" id="hero-split-left">
-          <div class="split-kicker-badge">
-            <span class="badge-dot"></span>
-            <span>GRUPA RADLIGHT • GIŻYCKO & MAZURY</span>
-          </div>
-
-          <h1 class="split-hero-title">
-            Jedna Firma.<br>
-            <span class="text-highlight">Wiele Możliwości.</span>
-          </h1>
-
-          <p class="split-hero-lead">
-            Kompleksowy ekosystem usług w sercu Krainy Wielkich Jezior Mazurskich: luksusowe apartamenty, zarządzanie najmem, profesjonalna pralnia przemysłowa, hale magazynowe, lądowisko dla helikopterów oraz całoroczne zimowanie łodzi.
-          </p>
-
-          <div class="split-hero-actions">
-            <a href="#uslugi" class="btn btn-primary btn-glow">
-              <span>Poznaj Wszystkie Usługi</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
-            <a href="tel:+48607241090" class="btn btn-outline-white">
-              <i class="fa-solid fa-phone"></i>
-              <span>+48 607 241 090</span>
-            </a>
-          </div>
-
-          <!-- Dynamic Live Info Card for Active Wheel Service in Option 1 -->
-          <div class="split-live-card" id="split-live-card">
-            <div class="live-card-header">
-              <div class="live-card-badge">
-                <i class="fa-solid fa-circle-notch fa-spin"></i>
-                <span id="split-card-category">LIDER REGIONU</span>
-              </div>
-              <span class="live-card-count" id="split-card-count">01 / 08</span>
-            </div>
-            <div class="live-card-main">
-              <div class="live-card-thumb" id="split-card-thumb">
-                <img src="images/logo-w-kole.png" alt="Miniaturka usługi" id="split-card-img">
-              </div>
-              <div class="live-card-info">
-                <h4 id="split-card-title">Radlight Giżycko</h4>
-                <p id="split-card-desc">Centralna grupa usługowo-nieruchomościowa na Mazurach. Łączymy turystykę, logistykę i obsługę firm w jednym punkcie.</p>
-              </div>
-            </div>
-            <div class="live-card-actions">
-              <a href="tel:+48607241090" id="split-card-phone" class="live-action-btn" title="Zadzwoń bezpośrednio">
-                <i class="fa-solid fa-phone"></i> <span>Zadzwoń</span>
-              </a>
-              <a href="mailto:biuro@radlight.pl" id="split-card-mail" class="live-action-btn" title="Napisz e-mail">
-                <i class="fa-solid fa-envelope"></i> <span>Napisz</span>
-              </a>
-              <a href="#o-nas" id="split-card-link" class="live-action-link" title="Przejdź do oferty">
-                <span>Otwórz ofertę</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Trust stats badges -->
-          <div class="split-trust-badges">
-            <div class="trust-pill">
-              <i class="fa-solid fa-cubes"></i>
-              <span><strong>8 Branż</strong> w 1 punkcie</span>
-            </div>
-            <div class="trust-pill">
-              <i class="fa-solid fa-shield-halved"></i>
-              <span><strong>100%</strong> lokalny kapitał</span>
-            </div>
-            <div class="trust-pill">
-              <i class="fa-solid fa-clock"></i>
-              <span><strong>24/7</strong> wsparcie</span>
-            </div>
-          </div>
+      
+      <!-- CLEAN HERO HEADER -->
+      <div class="hero-headline-wrap text-center">
+        <div class="hero-kicker-pill">
+          <span class="pulse-dot"></span>
+          <span>RADLIGHT · GIŻYCKO & MAZURY</span>
         </div>
+        <h1 class="hero-stage-title">Jedna Firma. <span class="text-highlight">Wiele Możliwości.</span></h1>
+        <p class="hero-stage-sub">Obróć centralne koło i dotknij wybranej branży, aby natychmiast zobaczyć szczegóły na ekranie HUD.</p>
+      </div>
 
-        <!-- RIGHT COLUMN: Interactive Circular Wheel Stage -->
+      <!-- STAGE LAYOUT: CENTERED WHEEL + RIGHT GLASSMORPHISM HUD SCREEN -->
+      <div class="hero-stage-layout">
+
+        <!-- CENTER: Interactive Circular Wheel Stage -->
         <div class="wheel-stage-wrapper" id="wheel-stage-wrapper">
           <div class="wheel-container" id="interactive-wheel">
-            
             <div class="wheel-ambient-glow"></div>
             <div class="orbit-radar-sweep"></div>
             <div class="orbit-ticks-ring"></div>
             <div class="orbit-ring"></div>
 
             <div class="wheel-orbit" id="wheel-orbit">
-              <!-- Node 0: Radlight Central -->
               <button class="wheel-node active" data-index="0" data-service-id="radlight" aria-label="Radlight Central">
-                <div class="node-icon-box">
-                  <img src="images/logo-w-kole.png" alt="Radlight" class="node-logo-img">
-                </div>
+                <div class="node-icon-box"><img src="images/logo-w-kole.png" alt="Radlight" class="node-logo-img"></div>
                 <span class="node-label">Radlight</span>
               </button>
-
-              <!-- Node 1: Apartamenty -->
               <button class="wheel-node" data-index="1" data-service-id="apartamenty" aria-label="Apartamenty Mazury">
-                <div class="node-icon-box">
-                  <i class="fa-solid fa-house-chimney"></i>
-                </div>
+                <div class="node-icon-box"><i class="fa-solid fa-house-chimney"></i></div>
                 <span class="node-label">Apartamenty</span>
               </button>
-
-              <!-- Node 2: Najem -->
               <button class="wheel-node" data-index="2" data-service-id="najem" aria-label="Zarządzanie Najmem">
-                <div class="node-icon-box">
-                  <i class="fa-solid fa-key"></i>
-                </div>
+                <div class="node-icon-box"><i class="fa-solid fa-key"></i></div>
                 <span class="node-label">Najem</span>
               </button>
-
-              <!-- Node 3: Pralnia -->
               <button class="wheel-node" data-index="3" data-service-id="pralnia" aria-label="Pralnia Przemysłowa Giżycko">
-                <div class="node-icon-box">
-                  <i class="fa-solid fa-shirt"></i>
-                </div>
+                <div class="node-icon-box"><i class="fa-solid fa-shirt"></i></div>
                 <span class="node-label">Pralnia</span>
               </button>
-
-              <!-- Node 4: Sprzątanie -->
               <button class="wheel-node" data-index="4" data-service-id="sprzatanie" aria-label="Usługi Sprzątające">
-                <div class="node-icon-box">
-                  <i class="fa-solid fa-broom"></i>
-                </div>
+                <div class="node-icon-box"><i class="fa-solid fa-broom"></i></div>
                 <span class="node-label">Sprzątanie</span>
               </button>
-
-              <!-- Node 5: Hale i Magazyny -->
               <button class="wheel-node" data-index="5" data-service-id="magazyny" aria-label="Hale i Magazyny Giżycko">
-                <div class="node-icon-box">
-                  <i class="fa-solid fa-warehouse"></i>
-                </div>
+                <div class="node-icon-box"><i class="fa-solid fa-warehouse"></i></div>
                 <span class="node-label">Magazyny</span>
               </button>
-
-              <!-- Node 6: Helipad -->
               <button class="wheel-node" data-index="6" data-service-id="helipad" aria-label="Lądowisko Śmigłowców Helipad">
-                <div class="node-icon-box">
-                  <i class="fa-solid fa-helicopter"></i>
-                </div>
+                <div class="node-icon-box"><i class="fa-solid fa-helicopter"></i></div>
                 <span class="node-label">Helipad</span>
               </button>
-
-              <!-- Node 7: Zimowanie Jachtów -->
               <button class="wheel-node" data-index="7" data-service-id="zimowanie" aria-label="Zimowanie Jachtów Giżycko">
-                <div class="node-icon-box">
-                  <i class="fa-solid fa-anchor"></i>
-                </div>
+                <div class="node-icon-box"><i class="fa-solid fa-anchor"></i></div>
                 <span class="node-label">Zimowanie Łodzi</span>
               </button>
             </div>
 
-            <!-- Center Logo Hub -->
             <div class="wheel-center-hub" id="wheel-center-hub" role="button" tabindex="0" title="Kliknij, aby przejść do wybranej usługi">
               <div class="hub-radar-circle"></div>
               <div class="hub-inner-core">
-                <div class="hub-avatar">
-                  <img src="images/logo-w-kole.png" alt="Radlight Central" id="hub-avatar-img">
-                </div>
+                <div class="hub-avatar"><img src="images/logo-w-kole.png" alt="Radlight Central" id="hub-avatar-img"></div>
                 <h3 class="hub-title" id="hub-title">Radlight Giżycko</h3>
                 <span class="hub-sub" id="hub-sub">Jedna firma. Wiele możliwości.</span>
                 <span class="hub-link-hint"><i class="fa-solid fa-arrow-down"></i> W katalogu</span>
               </div>
             </div>
-
           </div>
+        </div>
+
+        <!-- RIGHT: Floating Glassmorphism Hologram HUD Screen -->
+        <div class="hero-glassmorph-screen" id="hero-glassmorph-screen">
+          <div class="glass-screen-glow"></div>
+
+          <div class="glass-screen-header">
+            <div class="glass-sector-badge">
+              <i class="fa-solid fa-bolt-lightning"></i>
+              <span id="glass-sector-tag">LIDER REGIONU</span>
+            </div>
+            <span class="glass-counter-badge" id="glass-counter-badge">01 / 08</span>
+          </div>
+
+          <div class="glass-screen-body">
+            <div class="glass-thumb-wrap">
+              <img src="images/DJI_0101-1536x864.jpg" alt="Podgląd usługi" id="glass-screen-img">
+              <span class="glass-live-pill"><i class="fa-solid fa-circle"></i> LIVE</span>
+            </div>
+            <div class="glass-info-wrap">
+              <h3 class="glass-screen-title" id="glass-screen-title">Radlight Giżycko</h3>
+              <span class="glass-screen-sub" id="glass-screen-sub">Jedna firma. Wiele możliwości.</span>
+              <p class="glass-screen-desc" id="glass-screen-desc">Centralna grupa usługowo-nieruchomościowa na Mazurach. Łączymy turystykę, logistykę i obsługę firm w jednym punkcie.</p>
+            </div>
+          </div>
+
+          <div class="glass-screen-footer">
+            <div class="glass-contact-row">
+              <a href="tel:+48607241090" class="glass-contact-btn phone" id="glass-phone-btn" title="Zadzwoń bezpośrednio">
+                <i class="fa-solid fa-phone"></i>
+                <span id="glass-phone-text">+48 607 241 090</span>
+              </a>
+              <a href="mailto:biuro@radlight.pl" class="glass-contact-btn email" id="glass-email-btn" title="Napisz e-mail">
+                <i class="fa-solid fa-envelope"></i>
+                <span>E-mail</span>
+              </a>
+            </div>
+
+            <div class="glass-cta-row">
+              <a href="#o-nas" class="btn-glass-primary" id="glass-primary-btn" title="Przejdź do oferty">
+                <span>Otwórz stronę</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="#uslugi" class="btn-glass-secondary" id="glass-scroll-btn" title="Zjedź do kafelka w katalogu na dole">
+                <i class="fa-solid fa-arrow-down"></i>
+                <span>W katalogu</span>
+              </a>
+            </div>
+          </div>
+
         </div>
 
       </div>

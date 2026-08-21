@@ -94,51 +94,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
 
   const heroSection = document.getElementById('kolo-uslug');
-  const layoutPills = document.querySelectorAll('.layout-pill');
+  const activeLayout = heroSection ? (heroSection.getAttribute('data-layout') || 'split') : 'split';
 
-  function setHeroLayout(layout) {
-    if (!heroSection) return;
-
-    // Normalize layout name
-    const validLayouts = ['split', 'command', 'cinematic', 'bento'];
-    const activeLayout = validLayouts.includes(layout) ? layout : 'split';
-
-    heroSection.setAttribute('data-layout', activeLayout);
-    heroSection.className = `wheel-hero-section layout-${activeLayout}`;
-
-    // Update pill buttons
-    layoutPills.forEach(pill => {
-      if (pill.getAttribute('data-hero-layout') === activeLayout) {
-        pill.classList.add('active');
-      } else {
-        pill.classList.remove('active');
-      }
-    });
-
-    localStorage.setItem('radlight_hero_layout', activeLayout);
-    console.log(`Hero layout switched to: ${activeLayout.toUpperCase()}`);
-
-    // Re-calculate node positions smoothly across animation frames
-    requestAnimationFrame(() => {
-      positionNodes();
-      updateAllLayoutViews(activeIndex);
-    });
-    setTimeout(() => {
-      positionNodes();
-      updateAllLayoutViews(activeIndex);
-    }, 60);
-  }
-
-  layoutPills.forEach(pill => {
-    pill.addEventListener('click', () => {
-      const selectedLayout = pill.getAttribute('data-hero-layout');
-      setHeroLayout(selectedLayout);
-    });
-  });
-
-  // Load saved hero layout preference or default to split
-  const savedLayout = localStorage.getItem('radlight_hero_layout') || 'split';
-  setHeroLayout(savedLayout);
+  // Position nodes on load
+  setTimeout(() => {
+    positionNodes();
+    updateAllLayoutViews(0);
+  }, 50);
 
   // ==========================================================================
   // ROTATING CIRCULAR WHEEL ENGINE & 8-SERVICE STATE SYNCHRONIZATION
@@ -204,6 +166,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const glassEmailBtn = document.getElementById('glass-email-btn');
   const glassPrimaryBtn = document.getElementById('glass-primary-btn');
   const glassScrollBtn = document.getElementById('glass-scroll-btn');
+
+  // Option 4 Bento Grid Matrix Elements
+  const bentoCatCards = document.querySelectorAll('.bento-cat-card');
+  const bentoLiveImg = document.getElementById('bento-live-img');
+  const bentoCountBadge = document.getElementById('bento-count-badge');
+  const bentoLiveTitle = document.getElementById('bento-live-title');
+  const bentoLiveDesc = document.getElementById('bento-live-desc');
+  const bentoPhoneBtn = document.getElementById('bento-phone-btn');
+  const bentoPhoneText = document.getElementById('bento-phone-text');
+  const bentoDetailsBtn = document.getElementById('bento-details-btn');
 
   // Data for the 8 services on the wheel with real photos & yacht wintering hall
   const servicesData = [
@@ -410,11 +382,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // Position nodes on circular orbit based on container size
   function positionNodes() {
     const total = nodes.length;
-    const container = document.getElementById('wheel-container');
+    const container = document.getElementById('interactive-wheel') || document.querySelector('.wheel-container');
     if (!container) return;
 
     const orbitRing = container.querySelector('.orbit-ring');
-    const radius = orbitRing ? orbitRing.offsetWidth / 2 : container.offsetWidth * 0.4;
+    const radius = orbitRing && orbitRing.offsetWidth > 0 ? orbitRing.offsetWidth / 2 : (container.offsetWidth > 0 ? container.offsetWidth * 0.4 : 200);
 
     nodes.forEach((node, i) => {
       const angle = ((i * (360 / total)) - 90) * (Math.PI / 180);
@@ -560,7 +532,31 @@ document.addEventListener('DOMContentLoaded', () => {
       else glassPrimaryBtn.removeAttribute('target');
     }
 
-    // 7. Highlight active node on circular orbit
+    // 7. Update Option 2/4 Bento Grid Matrix
+    if (bentoCountBadge) bentoCountBadge.textContent = countStr;
+    if (bentoLiveTitle) bentoLiveTitle.textContent = data.title;
+    if (bentoLiveDesc) bentoLiveDesc.textContent = data.desc;
+    if (bentoLiveImg) {
+      bentoLiveImg.src = data.img || data.bgImg;
+      bentoLiveImg.alt = data.title;
+    }
+    if (bentoPhoneBtn) {
+      bentoPhoneBtn.href = data.phone;
+    }
+    if (bentoPhoneText) {
+      bentoPhoneText.textContent = data.phoneDisplay;
+    }
+    if (bentoDetailsBtn) {
+      bentoDetailsBtn.href = data.link;
+      if (data.link.startsWith('http')) bentoDetailsBtn.target = '_blank';
+      else bentoDetailsBtn.removeAttribute('target');
+    }
+    bentoCatCards.forEach(card => {
+      const targetIdx = parseInt(card.getAttribute('data-bento-target'), 10);
+      card.classList.toggle('active', targetIdx === index);
+    });
+
+    // 8. Highlight active node on circular orbit
     nodes.forEach((n, idx) => {
       n.classList.toggle('active', idx === index);
     });
@@ -618,6 +614,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Bento Category cards click handlers (Option 4)
+  bentoCatCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      e.preventDefault();
+      stopAutoRotate();
+      const targetIdx = parseInt(card.getAttribute('data-bento-target'), 10);
+      if (!isNaN(targetIdx)) {
+        setActiveIndex(targetIdx);
+        startAutoRotate();
+      }
+    });
+  });
+
   // Center Hub Click Handler (Smoothly scrolls to active service card and highlights it)
   if (centerHub) {
     centerHub.addEventListener('click', (e) => {
@@ -658,6 +667,37 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Mobile Bottom Navigation active item on scroll
+  const mobileNavItems = document.querySelectorAll('.mobile-bottom-nav .mobile-nav-item');
+  if (mobileNavItems.length > 0) {
+    window.addEventListener('scroll', () => {
+      const scrollPos = window.scrollY + 200;
+      const uslugiSec = document.getElementById('uslugi');
+      const aboutSec = document.getElementById('o-nas');
+      const contactSec = document.getElementById('kontakt');
+
+      mobileNavItems.forEach(item => {
+        const href = item.getAttribute('href');
+        if (!href || !href.startsWith('#')) return;
+
+        let targetSec = null;
+        if (href === '#kolo-uslug') targetSec = document.getElementById('kolo-uslug');
+        else if (href === '#uslugi') targetSec = uslugiSec;
+        else if (href === '#o-nas') targetSec = aboutSec;
+        else if (href === '#kontakt') targetSec = contactSec;
+
+        if (targetSec) {
+          const top = targetSec.offsetTop;
+          const height = targetSec.offsetHeight;
+          if (scrollPos >= top && scrollPos < top + height) {
+            mobileNavItems.forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+          }
+        }
+      });
+    }, { passive: true });
+  }
 
   // Ensure Video Background Plays
   const videoBg = document.getElementById('hero-video-bg');
