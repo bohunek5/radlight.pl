@@ -570,10 +570,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const rotationAngle = -activeIndex * (360 / total);
     if (wheelOrbit) wheelOrbit.style.transform = `rotate(${rotationAngle}deg)`;
 
-    // Counter-rotate node icons so they stay upright
+    // Counter-rotate node icons and labels so they stay perfectly upright
     nodes.forEach((n) => {
       const innerBox = n.querySelector('.node-icon-box');
       if (innerBox) innerBox.style.setProperty('--counter-rotation', `${-rotationAngle}deg`);
+      const nodeLabel = n.querySelector('.node-label');
+      if (nodeLabel) nodeLabel.style.setProperty('--counter-rotation', `${-rotationAngle}deg`);
     });
 
     updateAllLayoutViews(activeIndex);

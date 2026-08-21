@@ -124,31 +124,28 @@
     </div>
   </header>
 
-    <!-- ==========================================================================
-       HERO LAYOUT SWITCHER BAR (Wybór 3 stron Radlight na żywo)
+  <!-- ==========================================================================
+       HERO LAYOUT SWITCHER BAR (2 Główne Warianty Radlight)
        ========================================================================== -->
   <div class="hero-layout-switcher-bar" id="hero-layout-switcher-bar">
     <div class="container switcher-inner">
       <div class="switcher-badge">
-        <i class="fa-solid fa-wand-magic-sparkles"></i>
-        <span>Wybierz stronę do podglądu:</span>
+        <span class="badge-icon-box"><i class="fa-solid fa-layer-group"></i></span>
+        <span>Wybierz Wariant Strony:</span>
       </div>
       <div class="switcher-buttons">
-        <a href="index.html" class="layout-pill active" title="Wariant 1: Sprawdzony, biznesowy układ Split 50/50">
+        <a href="wariant1.html" class="layout-pill active" title="Wariant 1: Klasyczny biznesowy układ Split 50/50">
           <span class="pill-tag">WARIANT 1</span>
           <span class="pill-text">Classic Split 50/50</span>
         </a>
-        <a href="wariant2.html" class="layout-pill" title="Wariant 2: Nowoczesna modularna siatka Bento Matrix 2026">
+        <a href="wariant2.html" class="layout-pill" title="Wariant 2: Holograficzne wideo 360° z panelem Glassmorphism">
           <span class="pill-tag">WARIANT 2</span>
-          <span class="pill-text">Executive Bento</span>
-        </a>
-        <a href="wariant3.html" class="layout-pill" title="Wariant 3: Holograficzne wideo w tle z panelem Glassmorphism">
-          <span class="pill-tag">WARIANT 3</span>
-          <span class="pill-text">Hologram Video</span>
+          <span class="pill-text">Hologram Video 360°</span>
         </a>
       </div>
     </div>
   </div>
+
   <!-- ==========================================================================
        WARIANT 1: RADLIGHT CLASSIC SPLIT-SCREEN 50/50
        ========================================================================== -->
@@ -250,66 +247,66 @@
             <div class="orbit-ring"></div>
 
             <div class="wheel-orbit" id="wheel-orbit">
-              <!-- Node 0: Radlight Central -->
-              <button class="wheel-node active" data-index="0" data-service-id="radlight" aria-label="Radlight Central">
-                <div class="node-icon-box">
-                  <img src="images/logo-w-kole.png" alt="Radlight" class="node-logo-img">
+              <!-- Node 0: Radlight Main Logo -->
+              <button class="wheel-node active" data-index="0" data-service-id="radlight" aria-label="Radlight Central" title="Radlight Giżycko">
+                <div class="node-icon-box logo-type">
+                  <img src="images/logo-w-kole.png" alt="Radlight Main Logo">
                 </div>
                 <span class="node-label">Radlight</span>
               </button>
 
-              <!-- Node 1: Apartamenty -->
-              <button class="wheel-node" data-index="1" data-service-id="apartamenty" aria-label="Apartamenty Mazury">
-                <div class="node-icon-box">
-                  <i class="fa-solid fa-house-chimney"></i>
+              <!-- Node 1: Mazury Holiday Logo -->
+              <button class="wheel-node" data-index="1" data-service-id="apartamenty" aria-label="Apartamenty Mazury" title="Mazury Holiday">
+                <div class="node-icon-box logo-type">
+                  <img src="images/512X512-mh.png" alt="Mazury Holiday Logo">
                 </div>
                 <span class="node-label">Apartamenty</span>
               </button>
 
-              <!-- Node 2: Najem -->
-              <button class="wheel-node" data-index="2" data-service-id="najem" aria-label="Zarządzanie Najmem">
-                <div class="node-icon-box">
-                  <i class="fa-solid fa-key"></i>
+              <!-- Node 2: Zarządzanie Najmem Photo -->
+              <button class="wheel-node" data-index="2" data-service-id="najem" aria-label="Zarządzanie Najmem" title="Zarządzanie Najmem">
+                <div class="node-icon-box photo-type">
+                  <img src="images/positive-african-american-property-realtor-with-folder-showing-contemporary-cottage-to-happy-owners-1536x1024.jpg" alt="Zarządzanie Najmem">
                 </div>
                 <span class="node-label">Najem</span>
               </button>
 
-              <!-- Node 3: Pralnia -->
-              <button class="wheel-node" data-index="3" data-service-id="pralnia" aria-label="Pralnia Przemysłowa Giżycko">
-                <div class="node-icon-box">
-                  <i class="fa-solid fa-shirt"></i>
+              <!-- Node 3: Pralnia Giżycko Logo -->
+              <button class="wheel-node" data-index="3" data-service-id="pralnia" aria-label="Pralnia Przemysłowa Giżycko" title="Pralnia Giżycko">
+                <div class="node-icon-box logo-type">
+                  <img src="images/logo-kwadrat.jpg" alt="Pralnia Giżycko Logo">
                 </div>
                 <span class="node-label">Pralnia</span>
               </button>
 
-              <!-- Node 4: Sprzątanie -->
-              <button class="wheel-node" data-index="4" data-service-id="sprzatanie" aria-label="Usługi Sprzątające">
-                <div class="node-icon-box">
-                  <i class="fa-solid fa-broom"></i>
+              <!-- Node 4: Usługi Sprzątające Photo -->
+              <button class="wheel-node" data-index="4" data-service-id="sprzatanie" aria-label="Usługi Sprzątające" title="Usługi Sprzątające">
+                <div class="node-icon-box photo-type">
+                  <img src="images/123321-1152x1536.jpg" alt="Usługi Sprzątające">
                 </div>
                 <span class="node-label">Sprzątanie</span>
               </button>
 
-              <!-- Node 5: Hale i Magazyny -->
-              <button class="wheel-node" data-index="5" data-service-id="magazyny" aria-label="Hale i Magazyny Giżycko">
-                <div class="node-icon-box">
-                  <i class="fa-solid fa-warehouse"></i>
+              <!-- Node 5: Hale i Magazyny Photo -->
+              <button class="wheel-node" data-index="5" data-service-id="magazyny" aria-label="Hale i Magazyny Giżycko" title="Magazyny i Hale">
+                <div class="node-icon-box photo-type">
+                  <img src="images/hala-zimowanie-ogrzewana.jpg" alt="Magazyny i Hale Ogrzewane">
                 </div>
                 <span class="node-label">Magazyny</span>
               </button>
 
-              <!-- Node 6: Helipad -->
-              <button class="wheel-node" data-index="6" data-service-id="helipad" aria-label="Lądowisko Śmigłowców Helipad">
-                <div class="node-icon-box">
-                  <i class="fa-solid fa-helicopter"></i>
+              <!-- Node 6: Helipad Mazury Logo -->
+              <button class="wheel-node" data-index="6" data-service-id="helipad" aria-label="Lądowisko Śmigłowców Helipad" title="Helipad Mazury">
+                <div class="node-icon-box logo-type">
+                  <img src="images/512X512-heli.png" alt="Helipad Mazury Logo">
                 </div>
                 <span class="node-label">Helipad</span>
               </button>
 
-              <!-- Node 7: Zimowanie Jachtów -->
-              <button class="wheel-node" data-index="7" data-service-id="zimowanie" aria-label="Zimowanie Jachtów Giżycko">
-                <div class="node-icon-box">
-                  <i class="fa-solid fa-anchor"></i>
+              <!-- Node 7: Zimowanie Jachtów / All Boat Logo -->
+              <button class="wheel-node" data-index="7" data-service-id="zimowanie" aria-label="Zimowanie Jachtów Giżycko" title="Zimowanie Jachtów Giżycko">
+                <div class="node-icon-box logo-type">
+                  <img src="images/LOGO-ALL-BOAT.jpg" alt="Zimowanie Jachtów Giżycko Logo">
                 </div>
                 <span class="node-label">Zimowanie Łodzi</span>
               </button>
@@ -365,14 +362,19 @@
           <div class="service-body">
             <div class="service-icon"><i class="fa-solid fa-hotel"></i></div>
             <h3 class="service-title">Apartamenty na Mazurach</h3>
-            <p class="service-text">Nowoczesne, komfortowo wyposażone apartamenty w Giżycku i sercu Mazur. Idealny wypoczynek nad jeziorami z pełnym serwisem.</p>
+            <p class="service-text">Nowoczesne, komfortowo wyposażone apartamenty w Giżycku i sercu Mazur. Idealny wypoczynek nad jeziorami z pełnym serwisem hotelowym.</p>
             <div class="service-meta">
               <span><i class="fa-solid fa-phone"></i> +48 607 241 090</span>
               <span><i class="fa-solid fa-envelope"></i> rezerwacje@mazury.holiday</span>
             </div>
-            <a href="https://www.mazury.holiday" target="_blank" rel="noopener" class="btn-card">
-              Odwiedź Mazury.Holiday <i class="fa-solid fa-arrow-right"></i>
-            </a>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+              <a href="apartamenty.html" class="btn-card" style="flex:1; min-width:140px; text-align:center;">
+                Szczegóły & Cennik <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="https://www.mazury.holiday" target="_blank" rel="noopener" class="btn-card" style="background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.2); flex:1; min-width:140px; text-align:center;">
+                Mazury.Holiday <i class="fa-solid fa-globe"></i>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -386,14 +388,19 @@
           <div class="service-body">
             <div class="service-icon"><i class="fa-solid fa-key"></i></div>
             <h3 class="service-title">Zarządzanie Najmem</h3>
-            <p class="service-text">Zajmiemy się wszystkim: od marketingu i pozyskiwania gości, przez wydawanie kluczy, aż po profesjonalny serwis sprzątający i pranie.</p>
+            <p class="service-text">Zajmiemy się wszystkim: od marketingu i pozyskiwania gości, przez wydawanie kluczy, aż po naszą własną pralnię i profesjonalne sprzątanie.</p>
             <div class="service-meta">
               <span><i class="fa-solid fa-phone"></i> +48 607 241 090</span>
               <span><i class="fa-solid fa-envelope"></i> biuro@radlight.pl</span>
             </div>
-            <a href="#kontakt" class="btn-card">
-              Zapytaj o obsługę najmu <i class="fa-solid fa-arrow-right"></i>
-            </a>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+              <a href="zarzadzanie-najmem.html" class="btn-card" style="flex:1; min-width:140px; text-align:center;">
+                Oferta dla Właścicieli <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="#kontakt" class="btn-card" style="background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.2); flex:1; min-width:140px; text-align:center;">
+                Wycena Dochodu <i class="fa-solid fa-calculator"></i>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -401,19 +408,24 @@
         <div class="service-card" id="card-pralnia" data-category="uslugi">
           <div class="service-image">
             <img src="images/pralnia-1536x863.png" alt="Własna pralnia przemysłowa Giżycko Radlight">
-            <span class="badge-tag">Pralnia & Krawiectwo</span>
+            <span class="badge-tag">Pralnia & Magiel</span>
           </div>
           <div class="service-body">
             <div class="service-icon"><i class="fa-solid fa-shirt"></i></div>
             <h3 class="service-title">Własna Pralnia Przemysłowa</h3>
-            <p class="service-text">Nowoczesna pralnia wodna i chemiczna w Giżycku. Kompleksowe pranie pościeli, ręczników dla hoteli, pensjonatów i restauracji.</p>
+            <p class="service-text">Nowoczesna pralnia wodna i chemiczna w Giżycku. Kompleksowe pranie pościeli, ręczników dla hoteli, pensjonatów, restauracji i marin.</p>
             <div class="service-meta">
               <span><i class="fa-solid fa-phone"></i> +48 730 064 044</span>
               <span><i class="fa-solid fa-envelope"></i> biuro@pralniagizycko.pl</span>
             </div>
-            <a href="https://www.pralniagizycko.pl" target="_blank" rel="noopener" class="btn-card">
-              PralniaGizycko.pl <i class="fa-solid fa-arrow-right"></i>
-            </a>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+              <a href="pralnia.html" class="btn-card" style="flex:1; min-width:140px; text-align:center;">
+                Oferta Pralni B2B <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="https://www.pralniagizycko.pl" target="_blank" rel="noopener" class="btn-card" style="background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.2); flex:1; min-width:140px; text-align:center;">
+                PralniaGizycko.pl <i class="fa-solid fa-globe"></i>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -421,19 +433,24 @@
         <div class="service-card" id="card-sprzatanie" data-category="uslugi">
           <div class="service-image">
             <img src="images/123321-1152x1536.jpg" alt="Profesjonalne usługi sprzątające Giżycko">
-            <span class="badge-tag">Czyszczenie & Maintenance</span>
+            <span class="badge-tag">Czyszczenie & Serwis</span>
           </div>
           <div class="service-body">
             <div class="service-icon"><i class="fa-solid fa-broom"></i></div>
             <h3 class="service-title">Profesjonalne Usługi Sprzątające</h3>
-            <p class="service-text">Sprzątanie domów, biur, apartamentów wakacyjnych i obiektów komercyjnych z wykorzystaniem profesjonalnego wyposażenia.</p>
+            <p class="service-text">Sprzątanie domów, biur, apartamentów wakacyjnych i obiektów komercyjnych z wykorzystaniem profesjonalnego wyposażenia i środków Kärcher.</p>
             <div class="service-meta">
               <span><i class="fa-solid fa-phone"></i> +48 730 067 027</span>
               <span><i class="fa-solid fa-envelope"></i> biuro@radlight.pl</span>
             </div>
-            <a href="#kontakt" class="btn-card">
-              Zapytaj o sprzątanie <i class="fa-solid fa-arrow-right"></i>
-            </a>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+              <a href="sprzatanie.html" class="btn-card" style="flex:1; min-width:140px; text-align:center;">
+                Cennik Sprzątania <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="#kontakt" class="btn-card" style="background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.2); flex:1; min-width:140px; text-align:center;">
+                Zamów Serwis <i class="fa-solid fa-sparkles"></i>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -442,19 +459,24 @@
           <div class="service-image">
             <img src="images/hala-zimowanie-ogrzewana.jpg"
               alt="Hale magazynowe i powierzchnie komercyjne Giżycko Radlight">
-            <span class="badge-tag">Hale & Magazyny</span>
+            <span class="badge-tag">Hale & Self-Storage</span>
           </div>
           <div class="service-body">
             <div class="service-icon"><i class="fa-solid fa-warehouse"></i></div>
-            <h3 class="service-title">Powierzchnie Usługowo-Magazynowe</h3>
-            <p class="service-text">Hale magazynowe, boksy i lokale usługowe w Giżycku. Warunki najmu ustalamy odpowiednio do rodzaju powierzchni i okresu wynajmu.</p>
+            <h3 class="service-title">Hale i Boksy Self-Storage</h3>
+            <p class="service-text">Hale magazynowe, boksy i lokale usługowe w Giżycku przy ul. Myśliwskiej 3. Monitoring 24/7, dogodny wjazd dla TIR i elastyczne warunki.</p>
             <div class="service-meta">
               <span><i class="fa-solid fa-phone"></i> +48 607 241 090</span>
               <span><i class="fa-solid fa-envelope"></i> biuro@radlight.pl</span>
             </div>
-            <a href="#kontakt" class="btn-card">
-              Zapytaj o powierzchnię <i class="fa-solid fa-arrow-right"></i>
-            </a>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+              <a href="magazyny.html" class="btn-card" style="flex:1; min-width:140px; text-align:center;">
+                Dostępne Boksy <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="#kontakt" class="btn-card" style="background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.2); flex:1; min-width:140px; text-align:center;">
+                Zapytaj o Halę <i class="fa-solid fa-key"></i>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -462,19 +484,24 @@
         <div class="service-card" id="card-helipad" data-category="nieruchomosci">
           <div class="service-image">
             <img src="images/air-rescue-service-1536x1024.jpg" alt="Lądowisko dla helikopterów Helipad Mazury">
-            <span class="badge-tag">Lądowisko</span>
+            <span class="badge-tag">Helipad & VIP</span>
           </div>
           <div class="service-body">
             <div class="service-icon"><i class="fa-solid fa-helicopter"></i></div>
             <h3 class="service-title">Lądowisko dla Śmigłowców</h3>
-            <p class="service-text">Profesjonalnie przygotowane lądowisko w okolicach Giżycka dla śmigłowców prywatnych, biznesowych oraz Lotniczego Pogotowia Ratunkowego.</p>
+            <p class="service-text">Profesjonalnie przygotowane lądowisko w Giżycku dla śmigłowców prywatnych, biznesowych transferów VIP oraz Lotniczego Pogotowia Ratunkowego.</p>
             <div class="service-meta">
               <span><i class="fa-solid fa-phone"></i> +48 607 241 090</span>
               <span><i class="fa-solid fa-envelope"></i> biuro@helipadmazury.pl</span>
             </div>
-            <a href="https://www.helipadmazury.pl" target="_blank" rel="noopener" class="btn-card">
-              HelipadMazury.pl <i class="fa-solid fa-arrow-right"></i>
-            </a>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+              <a href="helipad.html" class="btn-card" style="flex:1; min-width:140px; text-align:center;">
+                Zgłoszenie PPR <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="https://www.helipadmazury.pl" target="_blank" rel="noopener" class="btn-card" style="background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.2); flex:1; min-width:140px; text-align:center;">
+                HelipadMazury.pl <i class="fa-solid fa-globe"></i>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -482,19 +509,24 @@
         <div class="service-card" id="card-czarter" data-category="morskie">
           <div class="service-image">
             <img src="images/103945_3.jpg" alt="Czarter Stillo 30 Mazury Radlight">
-            <span class="badge-tag">Jachty Motorowe</span>
+            <span class="badge-tag">Houseboat bez patentu</span>
           </div>
           <div class="service-body">
             <div class="service-icon"><i class="fa-solid fa-ship"></i></div>
-            <h3 class="service-title">Czarter Stillo 30</h3>
-            <p class="service-text">Czarter jachtu motorowego Stillo 30 na Wielkich Jeziorach Mazurskich. Jednostka dostępna do prowadzenia bez patentu.</p>
+            <h3 class="service-title">Czarter Jachtu Stillo 30</h3>
+            <p class="service-text">Czarter luksusowego jachtu motorowego Stillo 30 na Wielkich Jeziorach Mazurskich. 3 kajuty, ogrzewanie, stery strumieniowe, bez patentu.</p>
             <div class="service-meta">
               <span><i class="fa-solid fa-phone"></i> +48 607 241 090</span>
               <span><i class="fa-solid fa-envelope"></i> rezerwacje@mazury.holiday</span>
             </div>
-            <a href="https://www.mazury.holiday" target="_blank" rel="noopener" class="btn-card">
-              Zarezerwuj Rejs <i class="fa-solid fa-arrow-right"></i>
-            </a>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+              <a href="czarter.html" class="btn-card" style="flex:1; min-width:140px; text-align:center;">
+                Rezerwuj Czarter <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="https://www.mazury.holiday" target="_blank" rel="noopener" class="btn-card" style="background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.2); flex:1; min-width:140px; text-align:center;">
+                Mazury.Holiday <i class="fa-solid fa-globe"></i>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -502,19 +534,24 @@
         <div class="service-card" id="card-zimowanie" data-category="morskie">
           <div class="service-image">
             <img src="images/DJI_0121small-1536x1171.jpg" alt="Zimowanie Jachtów Giżycko Serwis i Hangarowanie">
-            <span class="badge-tag">Zimowanie Jachtów</span>
+            <span class="badge-tag">Hangarowanie & Slip</span>
           </div>
           <div class="service-body">
             <div class="service-icon"><i class="fa-solid fa-anchor"></i></div>
             <h3 class="service-title">Zimowanie Jachtów Giżycko</h3>
-            <p class="service-text">Zimowanie i hangarowanie jachtów żaglowych oraz motorówek na Mazurach. Zakres obejmuje również wodowanie i prace serwisowe.</p>
+            <p class="service-text">Zimowanie i hangarowanie jachtów żaglowych oraz motorówek na Mazurach. Suche hale, slipowanie, transport z portu i prace serwisowe.</p>
             <div class="service-meta">
               <span><i class="fa-solid fa-phone"></i> +48 607 241 090</span>
               <span><i class="fa-solid fa-envelope"></i> biuro@zimowaniejachtow.com.pl</span>
             </div>
-            <a href="https://zimowaniejachtow.com.pl/" target="_blank" rel="noopener" class="btn-card">
-              ZimowanieJachtow.com.pl <i class="fa-solid fa-arrow-right"></i>
-            </a>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+              <a href="zimowanie-jachtow.html" class="btn-card" style="flex:1; min-width:140px; text-align:center;">
+                Rezerwuj Halę <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="https://zimowaniejachtow.com.pl/" target="_blank" rel="noopener" class="btn-card" style="background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.2); flex:1; min-width:140px; text-align:center;">
+                ZimowanieJachtow.com.pl <i class="fa-solid fa-globe"></i>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -658,6 +695,127 @@
     </div>
   </section>
 
+  <!-- ==========================================================================
+       HOMEPAGE INTERACTIVE CONFIGURATOR (Szybki Asystent Wyceny Usług)
+       ========================================================================== -->
+  <section class="homepage-configurator" id="konfigurator">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-title">Wielobranżowy Ekosystem</span>
+        <h2 class="section-title">Dobierz Usługi Radlight pod Swoje Potrzeby</h2>
+        <p class="section-desc">Zaznacz interesujące Cię obszary – przygotujemy dla Ciebie spersonalizowaną ofertę pakietową z jednym punktem kontaktu i jedną fakturą.</p>
+      </div>
+
+      <div class="configurator-card">
+        <form id="multiServiceConfigurator" onsubmit="event.preventDefault(); alert('Dziękujemy! Otrzymaliśmy Twoją konfigurację usług. Nasz doradca skontaktuje się z Tobą w ciągu 15 minut.');">
+          
+          <div class="configurator-step-title">
+            <span class="step-num">1</span>
+            <span>Wybierz usługi, którymi jesteś zainteresowany:</span>
+          </div>
+
+          <div class="config-options-grid">
+            <label class="config-opt-label">
+              <input type="checkbox" name="services" value="apartamenty">
+              <div class="config-opt-icon"><i class="fa-solid fa-hotel"></i></div>
+              <div class="config-opt-text">
+                <strong>Apartamenty Mazury</strong>
+                <small>Noclegi dla gości / turystyka</small>
+              </div>
+            </label>
+
+            <label class="config-opt-label">
+              <input type="checkbox" name="services" value="najem">
+              <div class="config-opt-icon"><i class="fa-solid fa-key"></i></div>
+              <div class="config-opt-text">
+                <strong>Obsługa Najmu</strong>
+                <small>Zarządzanie apartamentem</small>
+              </div>
+            </label>
+
+            <label class="config-opt-label">
+              <input type="checkbox" name="services" value="pralnia">
+              <div class="config-opt-icon"><i class="fa-solid fa-shirt"></i></div>
+              <div class="config-opt-text">
+                <strong>Pralnia Przemysłowa</strong>
+                <small>Hotele, gastronomia, pościel</small>
+              </div>
+            </label>
+
+            <label class="config-opt-label">
+              <input type="checkbox" name="services" value="sprzatanie">
+              <div class="config-opt-icon"><i class="fa-solid fa-broom"></i></div>
+              <div class="config-opt-text">
+                <strong>Usługi Sprzątające</strong>
+                <small>Apartamenty, biura, obiekty</small>
+              </div>
+            </label>
+
+            <label class="config-opt-label">
+              <input type="checkbox" name="services" value="magazyny">
+              <div class="config-opt-icon"><i class="fa-solid fa-warehouse"></i></div>
+              <div class="config-opt-text">
+                <strong>Hale & Self-Storage</strong>
+                <small>Boksy magazynowe, lokale</small>
+              </div>
+            </label>
+
+            <label class="config-opt-label">
+              <input type="checkbox" name="services" value="zimowanie">
+              <div class="config-opt-icon"><i class="fa-solid fa-anchor"></i></div>
+              <div class="config-opt-text">
+                <strong>Zimowanie Jachtu</strong>
+                <small>Hangar, slip, serwis łodzi</small>
+              </div>
+            </label>
+
+            <label class="config-opt-label">
+              <input type="checkbox" name="services" value="helipad">
+              <div class="config-opt-icon"><i class="fa-solid fa-helicopter"></i></div>
+              <div class="config-opt-text">
+                <strong>Helipad Mazury</strong>
+                <small>Lądowisko & transfery VIP</small>
+              </div>
+            </label>
+
+            <label class="config-opt-label">
+              <input type="checkbox" name="services" value="czarter">
+              <div class="config-opt-icon"><i class="fa-solid fa-ship"></i></div>
+              <div class="config-opt-text">
+                <strong>Czarter Stillo 30</strong>
+                <small>Houseboat bez patentu</small>
+              </div>
+            </label>
+          </div>
+
+          <div class="configurator-step-title">
+            <span class="step-num">2</span>
+            <span>Dane kontaktowe do przesłania wyceny:</span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cfg-name">Imię i Nazwisko / Nazwa Firmy</label>
+              <input type="text" id="cfg-name" required placeholder="np. Jan Kowalski">
+            </div>
+            <div class="form-group">
+              <label for="cfg-phone">Numer Telefonu</label>
+              <input type="tel" id="cfg-phone" required placeholder="+48 600 000 000">
+            </div>
+            <div class="form-group">
+              <label for="cfg-email">Adres E-mail</label>
+              <input type="email" id="cfg-email" required placeholder="jan@example.com">
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary-hero" style="width:100%; justify-content:center; padding:16px; font-size:1.1rem; cursor:pointer;">
+            <i class="fa-solid fa-bolt"></i> Otrzymaj Kompleksową Wycenę Pakietową
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact & Location Section -->
   <section class="contact-section" id="kontakt">
     <div class="container contact-grid">
@@ -750,69 +908,64 @@
     </div>
   </section>
 
-  <!-- Expanded Premium Footer -->
-  <footer class="main-footer">
-    <div class="container footer-content">
-      <!-- Col 1: Registration Data & Brand -->
-      <div class="footer-col brand-col">
-        <img src="images/logo-w-kole.png" alt="Radlight Giżycko Footer" class="footer-logo">
-        <h4 class="company-name">RAD'LIGHT RADOSŁAW NARWOJSZ</h4>
-        <p class="footer-slogan">Jedna firma. Wiele możliwości.</p>
-        <p class="company-info"><i class="fa-solid fa-id-card"></i> <strong>NIP:</strong> 8451647713</p>
-        <p class="company-info"><i class="fa-solid fa-building"></i> <strong>REGON:</strong> 519594153</p>
-        <p class="company-info"><i class="fa-solid fa-location-dot"></i> ul. Myśliwska 3, 11-500 Giżycko</p>
-        <p class="company-info"><i class="fa-solid fa-map-pin"></i> Woj. Warmińsko-Mazurskie, Polska</p>
-        
-      </div>
-
-      <!-- Col 2: Services & Categories -->
-      <div class="footer-col">
-        <h4>Sektory & Usługi</h4>
-        <ul>
-          <li><a href="https://www.mazury.holiday" target="_blank" rel="noopener"><i class="fa-solid fa-chevron-right"></i> Apartamenty Mazury.Holiday</a></li>
-          <li><a href="#card-zarzadzanie"><i class="fa-solid fa-chevron-right"></i> Zarządzanie Najmem</a></li>
-          <li><a href="https://www.pralniagizycko.pl" target="_blank" rel="noopener"><i class="fa-solid fa-chevron-right"></i> Pralnia Giżycko</a></li>
-          <li><a href="#card-sprzatanie"><i class="fa-solid fa-chevron-right"></i> Usługi Sprzątające</a></li>
-          <li><a href="#card-magazyny"><i class="fa-solid fa-chevron-right"></i> Magazyny i hale</a></li>
-        </ul>
-      </div>
-
-      <!-- Col 3: Infrastructure & Water -->
-      <div class="footer-col">
-        <h4>Infrastruktura i jachty</h4>
-        <ul>
-          <li><a href="https://www.helipadmazury.pl" target="_blank" rel="noopener"><i class="fa-solid fa-chevron-right"></i> Helipad Mazury (Lądowisko)</a></li>
-          <li><a href="https://www.mazury.holiday" target="_blank" rel="noopener"><i class="fa-solid fa-chevron-right"></i> Czarter Stillo 30</a></li>
-          <li><a href="https://zimowaniejachtow.com.pl/" target="_blank" rel="noopener"><i class="fa-solid fa-chevron-right"></i> Zimowanie Jachtów Giżycko</a></li>
-          <li><a href="projekty-unijne.html"><i class="fa-solid fa-chevron-right"></i> Projekty unijne</a></li>
-        </ul>
-      </div>
-
-      <!-- Col 4: Direct Contacts -->
-      <div class="footer-col contact-col">
-        <h4>Bezpośredni Kontakt</h4>
-        <p><i class="fa-solid fa-phone"></i> <strong>Biuro & Najem:</strong> <a href="tel:+48607241090">+48 607 241 090</a></p>
-        <p><i class="fa-solid fa-shirt"></i> <strong>Pralnia Giżycko:</strong> <a href="tel:+48730064044">+48 730 064 044</a></p>
-        <p><i class="fa-solid fa-broom"></i> <strong>Sprzątanie:</strong> <a href="tel:+48730067027">+48 730 067 027</a></p>
-        <p><i class="fa-solid fa-envelope"></i> <strong>Email Biuro:</strong> <a href="mailto:biuro@radlight.pl">biuro@radlight.pl</a></p>
-        <p><i class="fa-solid fa-envelope"></i> <strong>Rezerwacje:</strong> <a href="mailto:rezerwacje@mazury.holiday">rezerwacje@mazury.holiday</a></p>
-        
-        <div class="social-footer">
-          <a href="https://www.facebook.com/Radlightgizycko" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+  <!-- SEO SILO & FOOTER -->
+  <footer class="seo-silo-section">
+    <div class="container">
+      <div class="seo-silo-grid">
+        <div class="seo-silo-col">
+          <h5><i class="fa-solid fa-hotel"></i> Noclegi i Najem</h5>
+          <ul>
+            <li><a href="apartamenty.html">Apartamenty Giżycko Mazury</a></li>
+            <li><a href="zarzadzanie-najmem.html">Zarządzanie Najmem Giżycko</a></li>
+            <li><a href="https://www.mazury.holiday" target="_blank" rel="noopener">Portal Mazury.Holiday</a></li>
+            <li><a href="czarter.html">Czarter Jachtów Stillo 30</a></li>
+          </ul>
+        </div>
+        <div class="seo-silo-col">
+          <h5><i class="fa-solid fa-shirt"></i> Pralnia & Sprzątanie</h5>
+          <ul>
+            <li><a href="pralnia.html">Pralnia Przemysłowa Giżycko</a></li>
+            <li><a href="sprzatanie.html">Sprzątanie Apartamentów i Biur</a></li>
+            <li><a href="https://www.pralniagizycko.pl" target="_blank" rel="noopener">PralniaGizycko.pl</a></li>
+            <li><a href="pralnia.html#oferta-hotelowa">Pranie dla Hoteli i Gastronomii</a></li>
+          </ul>
+        </div>
+        <div class="seo-silo-col">
+          <h5><i class="fa-solid fa-warehouse"></i> Nieruchomości & Logistyka</h5>
+          <ul>
+            <li><a href="magazyny.html">Hale Magazynowe Giżycko</a></li>
+            <li><a href="magazyny.html#self-storage">Boksy Magazynowe Self-Storage</a></li>
+            <li><a href="helipad.html">Lądowisko Helipad Mazury</a></li>
+            <li><a href="projekty-unijne.html">Dotacje i Projekty Unijne</a></li>
+          </ul>
+        </div>
+        <div class="seo-silo-col">
+          <h5><i class="fa-solid fa-anchor"></i> Sektor Morski Mazury</h5>
+          <ul>
+            <li><a href="zimowanie-jachtow.html">Zimowanie Jachtów Giżycko</a></li>
+            <li><a href="zimowanie-jachtow.html#slipowanie">Slipowanie i Hangarowanie Łodzi</a></li>
+            <li><a href="https://zimowaniejachtow.com.pl/" target="_blank" rel="noopener">ZimowanieJachtow.com.pl</a></li>
+            <li><a href="czarter.html">Luksusowy Houseboat bez patentu</a></li>
+          </ul>
         </div>
       </div>
-    </div>
 
-    <!-- Bottom Bar with Legal Links -->
-    <div class="footer-bottom">
-      <div class="container footer-bottom-flex">
-        <p>&copy; 2026 <strong>RAD'LIGHT Radosław Narwojsz</strong> (NIP: 8451647713). Wszelkie prawa zastrzeżone.</p>
-        <div class="legal-links">
-          <a href="#" id="open-privacy-btn">Polityka Prywatności (RODO)</a>
-          <span>|</span>
-          <a href="#" id="open-terms-btn">Regulamin Serwisu</a>
-          <span>|</span>
-          <a href="#" id="open-cookies-btn">Polityka Cookies</a>
+      <div class="seo-city-tags">
+        <span style="color:#94a3b8; font-size:0.8rem; align-self:center;">Lokalizacje & Obszar Działania:</span>
+        <a href="apartamenty.html" class="seo-city-tag">Giżycko Centrum</a>
+        <a href="apartamenty.html" class="seo-city-tag">Wilkasy</a>
+        <a href="apartamenty.html" class="seo-city-tag">Ryn</a>
+        <a href="apartamenty.html" class="seo-city-tag">Mikołajki</a>
+        <a href="apartamenty.html" class="seo-city-tag">Węgorzewo</a>
+        <a href="apartamenty.html" class="seo-city-tag">Szlak Wielkich Jezior Mazurskich</a>
+      </div>
+
+      <div style="text-align:center; padding-top:30px; margin-top:30px; border-top:1px solid rgba(255,255,255,0.06); color:#64748b; font-size:0.85rem;">
+        <p>© 2026 RAD'LIGHT Radosław Narwojsz • NIP: 8451647713 • REGON: 280287413 • ul. Myśliwska 3, 11-500 Giżycko</p>
+        <div class="legal-links" style="margin-top:10px;">
+          <a href="#" id="open-privacy-btn" style="color:#94a3b8;">Polityka Prywatności (RODO)</a>
+          <span style="color:rgba(255,255,255,0.2);">|</span>
+          <a href="#" id="open-terms-btn" style="color:#94a3b8;">Regulamin Serwisu</a>
         </div>
       </div>
     </div>
