@@ -118,11 +118,15 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('radlight_hero_layout', activeLayout);
     console.log(`Hero layout switched to: ${activeLayout.toUpperCase()}`);
 
-    // Re-calculate node positions smoothly
+    // Re-calculate node positions smoothly across animation frames
+    requestAnimationFrame(() => {
+      positionNodes();
+      updateAllLayoutViews(activeIndex);
+    });
     setTimeout(() => {
       positionNodes();
       updateAllLayoutViews(activeIndex);
-    }, 50);
+    }, 60);
   }
 
   layoutPills.forEach(pill => {
