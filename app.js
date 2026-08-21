@@ -344,11 +344,60 @@ document.addEventListener('DOMContentLoaded', () => {
   let activeIndex = 0;
   let autoRotateInterval = null;
 
-  // Helper to open link
-  function openServiceLink(linkUrl) {
+  // Scroll to target service card on page and trigger glowing highlight pulse
+  function scrollToAndHighlightCard(cardId) {
+    if (!cardId) return;
+    
+    // Strip leading hash if present
+    const cleanId = cardId.replace(/^#/, '');
+    const targetEl = document.getElementById(cleanId);
+    if (!targetEl) return;
+
+    // If target is inside #uslugi catalog, ensure it is visible through filter
+    if (targetEl.classList.contains('service-card')) {
+      const cardCategory = targetEl.getAttribute('data-category');
+      const allFilterBtn = document.querySelector('.filter-btn[data-filter="all"]');
+      const currentActiveFilter = document.querySelector('.filter-btn.active');
+      const activeFilterVal = currentActiveFilter ? currentActiveFilter.getAttribute('data-filter') : 'all';
+
+      if (activeFilterVal !== 'all' && activeFilterVal !== cardCategory) {
+        if (allFilterBtn) allFilterBtn.click();
+      }
+      targetEl.style.display = 'flex';
+      targetEl.style.opacity = '1';
+      targetEl.style.transform = 'translateY(0)';
+    }
+
+    // Smooth scroll directly to the card centered in viewport
+    targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    // Clear highlight from any existing element
+    document.querySelectorAll('.card-target-highlight').forEach(el => {
+      el.classList.remove('card-target-highlight');
+    });
+
+    // Add glowing orange pulse highlight
+    setTimeout(() => {
+      targetEl.classList.add('card-target-highlight');
+    }, 200);
+
+    // Fade out highlight after 3.2s
+    setTimeout(() => {
+      targetEl.classList.remove('card-target-highlight');
+    }, 3400);
+  }
+
+  // Helper to open link or scroll to card
+  function openServiceLink(linkUrl, cardId) {
+    if (cardId) {
+      scrollToAndHighlightCard(cardId);
+      return;
+    }
     if (!linkUrl) return;
-    if (linkUrl.startsWith('http')) {
-      window.open(linkUrl, '_blank');
+    if (linkUrl.startsWith('#')) {
+      scrollToAndHighlightCard(linkUrl);
+    } else if (linkUrl.startsWith('http')) {
+      window.open(linkUrl, '_blank', 'noopener,noreferrer');
     } else {
       window.location.href = linkUrl;
     }
@@ -598,19 +647,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Center Hub Click Handler
+  // Center Hub Click Handler (Smoothly scrolls to active service card and highlights it)
   if (centerHub) {
     centerHub.addEventListener('click', (e) => {
-      if (e.target.closest('.banner-icon-btn') || e.target.closest('.banner-go-btn')) {
-        return;
-      }
+      e.preventDefault();
       stopAutoRotate();
       const data = servicesData[activeIndex];
-      if (data && data.link) {
+      if (data && data.cardId) {
+        scrollToAndHighlightCard(data.cardId);
+      } else if (data && data.link) {
         openServiceLink(data.link);
       }
     });
   }
+
+  // Action buttons click listeners (Split, Hub Banner, Bento, Cinematic)
+  [splitCardLink, hubBannerLink, cinematicStripLink, bentoDetailsBtn].forEach(btn => {
+    if (!btn) return;
+    btn.addEventListener('click', (e) => {
+      const href = btn.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        stopAutoRotate();
+        scrollToAndHighlightCard(href);
+      }
+    });
+  });
 
   // Initialize Position & Wheel
   positionNodes();

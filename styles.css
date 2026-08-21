@@ -524,13 +524,29 @@ body.dark-theme .icon-moon {
   padding: 30px 0 50px;
 }
 
-/* Dynamic Cinematic & Ambient Backdrop */
+/* Dynamic Futuristic Hologram & Cinematic Backdrop */
 .cinematic-backdrop-container {
   position: absolute;
   inset: 0;
   pointer-events: none;
   z-index: 1;
   overflow: hidden;
+}
+
+.hologram-bg-layer {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(6, 78, 119, 0.40) 0%, rgba(2, 26, 40, 0.88) 100%),
+    url('images/holographic-hero-main.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.70;
+  filter: blur(1.5px) brightness(0.92);
+  transform: scale(1.02);
+  transition: opacity 0.8s ease;
+  z-index: 1;
 }
 
 .cinematic-bg-layer {
@@ -543,10 +559,11 @@ body.dark-theme .icon-moon {
   filter: blur(1px) brightness(0.65);
   transform: scale(1.05);
   transition: opacity 0.8s ease, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), background-image 0.6s ease;
+  z-index: 2;
 }
 
 .wheel-hero-section.layout-cinematic .cinematic-bg-layer {
-  opacity: 0.42;
+  opacity: 0.38;
   transform: scale(1);
 }
 
@@ -556,7 +573,7 @@ body.dark-theme .icon-moon {
   filter: blur(120px);
   pointer-events: none;
   opacity: 0.45;
-  z-index: 2;
+  z-index: 3;
 }
 
 .hero-glow-sphere.glow-1 {
@@ -578,8 +595,30 @@ body.dark-theme .icon-moon {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(6, 78, 119, 0.15) 0%, rgba(2, 26, 40, 0.88) 100%);
-  z-index: 3;
+  background: radial-gradient(circle at 50% 50%, rgba(6, 78, 119, 0.12) 0%, rgba(2, 26, 40, 0.82) 100%);
+  z-index: 4;
+}
+
+/* ==========================================================================
+   CARD SCROLL TARGET GLOW HIGHLIGHT EFFECT (Desktop & Mobile)
+   ========================================================================== */
+.service-card.card-target-highlight {
+  border-color: #e94e1b !important;
+  box-shadow: 0 0 0 3px rgba(233, 78, 27, 0.6), 0 0 55px rgba(233, 78, 27, 0.95), 0 20px 45px rgba(0, 0, 0, 0.6) !important;
+  transform: translateY(-8px) scale(1.03) !important;
+  z-index: 10 !important;
+  animation: cardTargetPulse 1.2s ease-in-out infinite alternate !important;
+}
+
+@keyframes cardTargetPulse {
+  0% {
+    box-shadow: 0 0 0 3px rgba(233, 78, 27, 0.5), 0 0 35px rgba(233, 78, 27, 0.7), 0 15px 35px rgba(0, 0, 0, 0.4);
+    border-color: #ff9f1c;
+  }
+  100% {
+    box-shadow: 0 0 0 5px rgba(233, 78, 27, 0.9), 0 0 65px rgba(233, 78, 27, 1), 0 25px 55px rgba(0, 0, 0, 0.6);
+    border-color: #e94e1b;
+  }
 }
 
 .wheel-hero-container {
