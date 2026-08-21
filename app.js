@@ -191,15 +191,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const cinematicStripEmail = document.getElementById('cinematic-strip-email');
   const cinematicStripLink = document.getElementById('cinematic-strip-link');
 
-  // Option 4 Bento Grid Matrix Elements
-  const bentoCatCards = document.querySelectorAll('.bento-cat-card');
-  const bentoLiveImg = document.getElementById('bento-live-img');
-  const bentoCountBadge = document.getElementById('bento-count-badge');
-  const bentoLiveTitle = document.getElementById('bento-live-title');
-  const bentoLiveDesc = document.getElementById('bento-live-desc');
-  const bentoPhoneBtn = document.getElementById('bento-phone-btn');
-  const bentoPhoneText = document.getElementById('bento-phone-text');
-  const bentoDetailsBtn = document.getElementById('bento-details-btn');
+  // Floating Glassmorphism Hologram HUD Screen Elements
+  const heroGlassmorphScreen = document.getElementById('hero-glassmorph-screen');
+  const glassSectorTag = document.getElementById('glass-sector-tag');
+  const glassCounterBadge = document.getElementById('glass-counter-badge');
+  const glassScreenImg = document.getElementById('glass-screen-img');
+  const glassScreenTitle = document.getElementById('glass-screen-title');
+  const glassScreenSub = document.getElementById('glass-screen-sub');
+  const glassScreenDesc = document.getElementById('glass-screen-desc');
+  const glassPhoneBtn = document.getElementById('glass-phone-btn');
+  const glassPhoneText = document.getElementById('glass-phone-text');
+  const glassEmailBtn = document.getElementById('glass-email-btn');
+  const glassPrimaryBtn = document.getElementById('glass-primary-btn');
+  const glassScrollBtn = document.getElementById('glass-scroll-btn');
 
   // Data for the 8 services on the wheel with real photos & yacht wintering hall
   const servicesData = [
@@ -531,29 +535,30 @@ document.addEventListener('DOMContentLoaded', () => {
       else cinematicStripLink.removeAttribute('target');
     }
 
-    // 6. Update Option 4 Bento Grid Matrix
-    if (bentoCountBadge) bentoCountBadge.textContent = countStr;
-    if (bentoLiveTitle) bentoLiveTitle.textContent = data.title;
-    if (bentoLiveDesc) bentoLiveDesc.textContent = data.desc;
-    if (bentoLiveImg) {
-      bentoLiveImg.src = data.img;
-      bentoLiveImg.alt = data.title;
+    // 6. Update Floating Glassmorphism Hologram HUD Screen
+    if (glassSectorTag) glassSectorTag.textContent = data.tag;
+    if (glassCounterBadge) glassCounterBadge.textContent = countStr;
+    if (glassScreenImg) {
+      glassScreenImg.src = data.bgImg || data.img;
+      glassScreenImg.alt = data.title;
     }
-    if (bentoPhoneBtn) {
-      bentoPhoneBtn.href = data.phone;
+    if (glassScreenTitle) glassScreenTitle.textContent = data.title;
+    if (glassScreenSub) glassScreenSub.textContent = data.sub;
+    if (glassScreenDesc) glassScreenDesc.textContent = data.desc;
+    if (glassPhoneBtn) {
+      glassPhoneBtn.href = data.phone;
     }
-    if (bentoPhoneText) {
-      bentoPhoneText.textContent = data.phoneDisplay;
+    if (glassPhoneText) {
+      glassPhoneText.textContent = data.phoneDisplay;
     }
-    if (bentoDetailsBtn) {
-      bentoDetailsBtn.href = data.link;
-      if (data.link.startsWith('http')) bentoDetailsBtn.target = '_blank';
-      else bentoDetailsBtn.removeAttribute('target');
+    if (glassEmailBtn) {
+      glassEmailBtn.href = data.email;
     }
-    bentoCatCards.forEach(card => {
-      const targetIdx = parseInt(card.getAttribute('data-bento-target'), 10);
-      card.classList.toggle('active', targetIdx === index);
-    });
+    if (glassPrimaryBtn) {
+      glassPrimaryBtn.href = data.link;
+      if (data.link.startsWith('http')) glassPrimaryBtn.target = '_blank';
+      else glassPrimaryBtn.removeAttribute('target');
+    }
 
     // 7. Highlight active node on circular orbit
     nodes.forEach((n, idx) => {
@@ -601,47 +606,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (activeIndex === i) {
         const data = servicesData[i];
-        if (data && data.link) {
+        if (data && data.cardId) {
+          scrollToAndHighlightCard(data.cardId);
+        } else if (data && data.link) {
           openServiceLink(data.link);
         }
       } else {
         setActiveIndex(i);
-        startAutoRotate();
-      }
-    });
-  });
-
-  // Dock items click handlers (Option 2)
-  dockItems.forEach((dock, i) => {
-    dock.addEventListener('click', (e) => {
-      e.preventDefault();
-      stopAutoRotate();
-      setActiveIndex(i);
-      startAutoRotate();
-    });
-  });
-
-  // Category buttons click handlers (Option 2)
-  commandCatBtns.forEach(catBtn => {
-    catBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      stopAutoRotate();
-      const targetIdx = parseInt(catBtn.getAttribute('data-node-target'), 10);
-      if (!isNaN(targetIdx)) {
-        setActiveIndex(targetIdx);
-        startAutoRotate();
-      }
-    });
-  });
-
-  // Bento Category cards click handlers (Option 4)
-  bentoCatCards.forEach(card => {
-    card.addEventListener('click', (e) => {
-      e.preventDefault();
-      stopAutoRotate();
-      const targetIdx = parseInt(card.getAttribute('data-bento-target'), 10);
-      if (!isNaN(targetIdx)) {
-        setActiveIndex(targetIdx);
         startAutoRotate();
       }
     });
@@ -661,8 +632,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Action buttons click listeners (Split, Hub Banner, Bento, Cinematic)
-  [splitCardLink, hubBannerLink, cinematicStripLink, bentoDetailsBtn].forEach(btn => {
+  // Glass Screen "W katalogu" button click handler
+  if (glassScrollBtn) {
+    glassScrollBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      stopAutoRotate();
+      const data = servicesData[activeIndex];
+      if (data && data.cardId) {
+        scrollToAndHighlightCard(data.cardId);
+      } else {
+        scrollToAndHighlightCard('uslugi');
+      }
+    });
+  }
+
+  // Action buttons click listeners
+  [splitCardLink, hubBannerLink, cinematicStripLink, bentoDetailsBtn, glassPrimaryBtn].forEach(btn => {
     if (!btn) return;
     btn.addEventListener('click', (e) => {
       const href = btn.getAttribute('href');
@@ -673,6 +658,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Ensure Video Background Plays
+  const videoBg = document.getElementById('hero-video-bg');
+  if (videoBg) {
+    videoBg.play().catch(() => {
+      console.log('Video autoplay handled by browser policy');
+    });
+  }
 
   // Initialize Position & Wheel
   positionNodes();

@@ -524,7 +524,7 @@ body.dark-theme .icon-moon {
   padding: 30px 0 50px;
 }
 
-/* Dynamic Futuristic Hologram & Cinematic Backdrop */
+/* Dynamic Futuristic Hologram Video & Cinematic Backdrop */
 .cinematic-backdrop-container {
   position: absolute;
   inset: 0;
@@ -533,20 +533,36 @@ body.dark-theme .icon-moon {
   overflow: hidden;
 }
 
+.hero-video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.75;
+  filter: brightness(0.92) contrast(1.15) saturate(1.25);
+  pointer-events: none;
+}
+
 .hologram-bg-layer {
   position: absolute;
   inset: 0;
   background-image: 
-    radial-gradient(circle at 50% 50%, rgba(6, 78, 119, 0.40) 0%, rgba(2, 26, 40, 0.88) 100%),
+    radial-gradient(circle at 50% 50%, rgba(6, 78, 119, 0.35) 0%, rgba(2, 26, 40, 0.85) 100%),
     url('images/holographic-hero-main.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.70;
-  filter: blur(1.5px) brightness(0.92);
+  opacity: 0.40;
+  filter: blur(1px) brightness(0.92);
   transform: scale(1.02);
   transition: opacity 0.8s ease;
-  z-index: 1;
+  z-index: 2;
 }
 
 .cinematic-bg-layer {
@@ -559,12 +575,7 @@ body.dark-theme .icon-moon {
   filter: blur(1px) brightness(0.65);
   transform: scale(1.05);
   transition: opacity 0.8s ease, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), background-image 0.6s ease;
-  z-index: 2;
-}
-
-.wheel-hero-section.layout-cinematic .cinematic-bg-layer {
-  opacity: 0.38;
-  transform: scale(1);
+  z-index: 3;
 }
 
 .hero-glow-sphere {
@@ -573,7 +584,7 @@ body.dark-theme .icon-moon {
   filter: blur(120px);
   pointer-events: none;
   opacity: 0.45;
-  z-index: 3;
+  z-index: 4;
 }
 
 .hero-glow-sphere.glow-1 {
@@ -595,13 +606,306 @@ body.dark-theme .icon-moon {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(6, 78, 119, 0.12) 0%, rgba(2, 26, 40, 0.82) 100%);
-  z-index: 4;
+  background: radial-gradient(circle at 50% 50%, rgba(6, 78, 119, 0.10) 0%, rgba(2, 26, 40, 0.80) 100%);
+  z-index: 5;
+}
+
+/* CLEAN HERO HEADLINE */
+.hero-headline-wrap {
+  position: relative;
+  z-index: 6;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.hero-kicker-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(233, 78, 27, 0.18);
+  border: 1px solid rgba(233, 78, 27, 0.45);
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #ff9f1c;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  box-shadow: 0 0 20px rgba(233, 78, 27, 0.3);
+}
+
+.hero-stage-title {
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.hero-stage-sub {
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 680px;
+  margin: 0 auto;
 }
 
 /* ==========================================================================
-   CARD SCROLL TARGET GLOW HIGHLIGHT EFFECT (Desktop & Mobile)
+   HERO STAGE LAYOUT (CENTERED WHEEL + RIGHT GLASSMORPHISM HUD SCREEN)
    ========================================================================== */
+.hero-stage-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
+  width: 100%;
+  position: relative;
+  z-index: 6;
+}
+
+/* FLOATING GLASSMORPHISM HUD SCREEN */
+.hero-glassmorph-screen {
+  width: 380px;
+  flex-shrink: 0;
+  background: rgba(4, 22, 36, 0.72);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1.5px solid rgba(233, 78, 27, 0.45);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 0 40px rgba(233, 78, 27, 0.25);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 7;
+}
+
+.hero-glassmorph-screen:hover {
+  border-color: rgba(233, 78, 27, 0.75);
+  box-shadow: 0 35px 90px rgba(0, 0, 0, 0.9), 0 0 50px rgba(233, 78, 27, 0.4);
+}
+
+.glass-screen-glow {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(233, 78, 27, 0.35) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(30px);
+}
+
+.glass-screen-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 12px;
+}
+
+.glass-sector-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: #ff9f1c;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.glass-counter-badge {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Outfit', sans-serif;
+}
+
+.glass-screen-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.glass-thumb-wrap {
+  width: 100%;
+  height: 160px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #021a28;
+}
+
+.glass-thumb-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.hero-glassmorph-screen:hover .glass-thumb-wrap img {
+  transform: scale(1.04);
+}
+
+.glass-live-pill {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(2, 26, 40, 0.85);
+  backdrop-filter: blur(8px);
+  color: #22c55e;
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.glass-info-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.glass-screen-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.glass-screen-sub {
+  font-size: 0.82rem;
+  color: #ff9f1c;
+  font-weight: 700;
+}
+
+.glass-screen-desc {
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.78);
+  margin: 4px 0 0 0;
+}
+
+.glass-screen-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 14px;
+}
+
+.glass-contact-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+.glass-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border-radius: 12px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.glass-contact-btn.phone {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.glass-contact-btn.phone:hover {
+  background: rgba(233, 78, 27, 0.2);
+  border-color: #e94e1b;
+  color: #ff9f1c;
+}
+
+.glass-contact-btn.email {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 9px 14px;
+}
+
+.glass-contact-btn.email:hover {
+  background: rgba(8, 102, 156, 0.3);
+  border-color: #08669c;
+  color: #38bdf8;
+}
+
+.glass-cta-row {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 8px;
+}
+
+.btn-glass-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #e94e1b 0%, #ff7033 100%);
+  color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 0.84rem;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(233, 78, 27, 0.4);
+  transition: all 0.25s ease;
+}
+
+.btn-glass-primary:hover {
+  background: linear-gradient(135deg, #ff5722 0%, #ff8c42 100%);
+  box-shadow: 0 10px 25px rgba(233, 78, 27, 0.6);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.btn-glass-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-glass-secondary:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: #ffffff;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* CARD SCROLL TARGET GLOW HIGHLIGHT EFFECT (Desktop & Mobile) */
 .service-card.card-target-highlight {
   border-color: #e94e1b !important;
   box-shadow: 0 0 0 3px rgba(233, 78, 27, 0.6), 0 0 55px rgba(233, 78, 27, 0.95), 0 20px 45px rgba(0, 0, 0, 0.6) !important;
@@ -623,8 +927,19 @@ body.dark-theme .icon-moon {
 
 .wheel-hero-container {
   position: relative;
-  z-index: 5;
+  z-index: 6;
   width: 100%;
+}
+
+@media (max-width: 1080px) {
+  .hero-stage-layout {
+    flex-direction: column;
+    gap: 35px;
+  }
+  .hero-glassmorph-screen {
+    width: 100%;
+    max-width: 480px;
+  }
 }
 
 .hero-unified-layout {

@@ -147,20 +147,20 @@
           <span class="pill-text">Cinematic Spotlight</span>
         </button>
         <button type="button" class="layout-pill" data-hero-layout="bento" title="Wariant 4: Modularna siatka Bento Matrix 2026">
-          <span class="pill-tag">OPCJA 4</span>
-          <span class="pill-text">Bento Grid Matrix</span>
-        </button>
       </div>
     </div>
   </div>
 
   <!-- ==========================================================================
-       HERO ROTATING WHEEL SECTION (Pure Interactive Circular Wheel Engine with 4 Layouts)
+       HERO ROTATING WHEEL SECTION (Pure Interactive Circular Wheel Engine)
        ========================================================================== -->
   <section class="wheel-hero-section layout-split" id="kolo-uslug" data-layout="split">
     
-    <!-- Dynamic Futuristic Hologram & Cinematic Backdrop -->
+    <!-- Dynamic Futuristic Hologram Video & Cinematic Backdrop -->
     <div class="cinematic-backdrop-container" id="cinematic-backdrop">
+      <video class="hero-video-bg" id="hero-video-bg" autoplay muted loop playsinline poster="images/holographic-hero-main.webp">
+        <source src="videos/hologram-bg-medium.mp4" type="video/mp4">
+      </video>
       <div class="hologram-bg-layer" id="hologram-bg-layer"></div>
       <div class="cinematic-bg-layer" id="cinematic-bg-layer"></div>
       <div class="hero-glow-sphere glow-1"></div>
@@ -168,257 +168,25 @@
       <div class="hero-overlay"></div>
     </div>
 
-    <!-- 1. TOP HEADER (Displayed in Option 2 Command Center) -->
-    <div class="container command-top-header" id="command-top-header">
-      <div class="command-status-pill">
-        <span class="status-dot"></span>
-        <span data-i18n="heroKicker">RADLIGHT · GIŻYCKO & MAZURY</span>
+    <!-- CLEAN HERO HEADER -->
+    <div class="container hero-headline-wrap text-center">
+      <div class="hero-kicker-pill">
+        <span class="pulse-dot"></span>
+        <span>RADLIGHT · GIŻYCKO & MAZURY</span>
       </div>
-      <h1 class="command-headline" data-i18n="heroHeadline">Jedna firma. Wiele możliwości.</h1>
-      <p class="command-sublead" data-i18n="heroIntro">Wybierz branżę z centralnego orbiteru lub szybkiego menu poniżej.</p>
-    </div>
-
-    <!-- 2. CINEMATIC TOP INFO (Displayed in Option 3 Cinematic Spotlight) -->
-    <div class="container cinematic-top-info" id="cinematic-top-info">
-      <div class="cinematic-badge">
-        <i class="fa-solid fa-compass"></i>
-        <span>RADLIGHT CINEMATIC SPOTLIGHT</span>
-      </div>
-      <div class="cinematic-heading-wrap">
-        <span class="cinematic-counter" id="cinematic-counter">01 / 08</span>
-        <h1 class="cinematic-title" id="cinematic-title">Radlight Giżycko</h1>
-      </div>
-      <p class="cinematic-sub" id="cinematic-sub">Jedna firma. Wiele możliwości na Mazurach.</p>
-    </div>
-
-    <!-- 3. BENTO TOP HEADER (Displayed in Option 4 Bento Grid Matrix) -->
-    <div class="container bento-top-header" id="bento-top-header">
-      <div class="bento-pill-tag">
-        <i class="fa-solid fa-shapes"></i>
-        <span>EKOSYSTEM RADLIGHT GIŻYCKO • BENTO MATRIX</span>
-      </div>
-      <h1 class="bento-main-title">Jedna Firma. <span class="text-highlight">Wszystkie Usługi.</span></h1>
-      <p class="bento-sub-title">Wybierz kategorię z kafelków lub zakręć centralnym kołem usług na Mazurach.</p>
+      <h1 class="hero-stage-title">Jedna Firma. <span class="text-highlight">Wiele Możliwości.</span></h1>
+      <p class="hero-stage-sub">Wybierz usługę z koła — po prawej stronie otworzy się interaktywny panel ze szczegółami.</p>
     </div>
 
     <div class="container wheel-hero-container">
-      <div class="hero-unified-layout">
+      <div class="hero-stage-layout">
         
-        <!-- A. LEFT COLUMN (Displayed in Option 1 Split-Screen) -->
-        <div class="hero-split-left" id="hero-split-left">
-          <div class="split-kicker-badge">
-            <span class="badge-dot"></span>
-            <span>GRUPA RADLIGHT • GIŻYCKO & MAZURY</span>
-          </div>
-
-          <h1 class="split-hero-title">
-            Jedna Firma.<br>
-            <span class="text-highlight">Wiele Możliwości.</span>
-          </h1>
-
-          <p class="split-hero-lead">
-            Kompleksowy ekosystem usług w sercu Krainy Wielkich Jezior Mazurskich: luksusowe apartamenty, zarządzanie najmem, profesjonalna pralnia, hale magazynowe, lądowisko helikopterów i całoroczne zimowanie łodzi.
-          </p>
-
-          <div class="split-hero-actions">
-            <a href="#uslugi" class="btn btn-primary btn-glow">
-              <span>Poznaj Wszystkie Usługi</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
-            <a href="tel:+48607241090" class="btn btn-outline-white">
-              <i class="fa-solid fa-phone"></i>
-              <span>+48 607 241 090</span>
-            </a>
-          </div>
-
-          <!-- Dynamic Live Info Card for Active Wheel Service in Option 1 -->
-          <div class="split-live-card" id="split-live-card">
-            <div class="live-card-header">
-              <div class="live-card-badge">
-                <i class="fa-solid fa-circle-notch fa-spin"></i>
-                <span id="split-card-category">Wybrana Branża</span>
-              </div>
-              <span class="live-card-count" id="split-card-count">01 / 08</span>
-            </div>
-            <div class="live-card-main">
-              <div class="live-card-thumb" id="split-card-thumb">
-                <img src="images/logo-w-kole.png" alt="Miniaturka usługi" id="split-card-img">
-              </div>
-              <div class="live-card-info">
-                <h4 id="split-card-title">Radlight Giżycko</h4>
-                <p id="split-card-desc">Centralna grupa usługowo-nieruchomościowa na Mazurach.</p>
-              </div>
-            </div>
-            <div class="live-card-actions">
-              <a href="tel:+48607241090" id="split-card-phone" class="live-action-btn" title="Zadzwoń bezpośrednio">
-                <i class="fa-solid fa-phone"></i> <span>Zadzwoń</span>
-              </a>
-              <a href="mailto:biuro@radlight.pl" id="split-card-mail" class="live-action-btn" title="Napisz e-mail">
-                <i class="fa-solid fa-envelope"></i> <span>Napisz</span>
-              </a>
-              <a href="#o-nas" id="split-card-link" class="live-action-link" title="Przejdź do oferty">
-                <span>Otwórz ofertę</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Trust stats badges -->
-          <div class="split-trust-badges">
-            <div class="trust-pill">
-              <i class="fa-solid fa-cubes"></i>
-              <span><strong>8 Branż</strong> w 1 punkcie</span>
-            </div>
-            <div class="trust-pill">
-              <i class="fa-solid fa-shield-halved"></i>
-              <span><strong>100%</strong> lokalny kapitał</span>
-            </div>
-            <div class="trust-pill">
-              <i class="fa-solid fa-clock"></i>
-              <span><strong>24/7</strong> wsparcie</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- B. SATELLITE LEFT PANEL (Displayed in Option 2 Command Center) -->
-        <div class="command-left-panel" id="command-left-panel">
-          <div class="command-glass-card">
-            <div class="panel-card-header">
-              <i class="fa-solid fa-layer-group"></i>
-              <h4>Kategorie Usług</h4>
-            </div>
-            <p class="panel-card-subtitle">Kliknij kategorię, aby obrócić koło:</p>
-            <div class="command-category-list">
-              <button class="command-cat-btn active" data-node-target="0">
-                <div class="cat-icon-badge"><i class="fa-solid fa-building"></i></div>
-                <div class="cat-text">
-                  <strong>Radlight Central</strong>
-                  <small>Grupa & O firmie</small>
-                </div>
-                <i class="fa-solid fa-chevron-right cat-arrow"></i>
-              </button>
-              <button class="command-cat-btn" data-node-target="1">
-                <div class="cat-icon-badge"><i class="fa-solid fa-umbrella-beach"></i></div>
-                <div class="cat-text">
-                  <strong>Apartamenty</strong>
-                  <small>Mazury.Holiday & Najem</small>
-                </div>
-                <i class="fa-solid fa-chevron-right cat-arrow"></i>
-              </button>
-              <button class="command-cat-btn" data-node-target="3">
-                <div class="cat-icon-badge"><i class="fa-solid fa-soap"></i></div>
-                <div class="cat-text">
-                  <strong>Pralnia & Czystość</strong>
-                  <small>Pralnia Giżycko & Sprzątanie</small>
-                </div>
-                <i class="fa-solid fa-chevron-right cat-arrow"></i>
-              </button>
-              <button class="command-cat-btn" data-node-target="5">
-                <div class="cat-icon-badge"><i class="fa-solid fa-warehouse"></i></div>
-                <div class="cat-text">
-                  <strong>Hale & Magazyny</strong>
-                  <small>Wynajem & Hale Mazury</small>
-                </div>
-                <i class="fa-solid fa-chevron-right cat-arrow"></i>
-              </button>
-              <button class="command-cat-btn" data-node-target="7">
-                <div class="cat-icon-badge"><i class="fa-solid fa-ship"></i></div>
-                <div class="cat-text">
-                  <strong>Marine & Helipad</strong>
-                  <small>Zimowanie Łodzi & Heli</small>
-                </div>
-                <i class="fa-solid fa-chevron-right cat-arrow"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- C. BENTO LEFT COLUMN (Displayed in Option 4 Bento Grid Matrix) -->
-        <div class="bento-left-col" id="bento-left-col">
-          
-          <!-- Bento Tile 1: Categories -->
-          <div class="bento-tile bento-tile-categories">
-            <div class="bento-tile-header">
-              <i class="fa-solid fa-layer-group"></i>
-              <span>Kategorie Branżowe</span>
-            </div>
-            <div class="bento-categories-grid">
-              <button class="bento-cat-card active" data-bento-target="0">
-                <div class="bento-cat-icon"><i class="fa-solid fa-building"></i></div>
-                <div class="bento-cat-meta">
-                  <strong>Grupa Radlight</strong>
-                  <small>Centrala & Biuro</small>
-                </div>
-              </button>
-              <button class="bento-cat-card" data-bento-target="1">
-                <div class="bento-cat-icon"><i class="fa-solid fa-umbrella-beach"></i></div>
-                <div class="bento-cat-meta">
-                  <strong>Apartamenty</strong>
-                  <small>Mazury.Holiday</small>
-                </div>
-              </button>
-              <button class="bento-cat-card" data-bento-target="2">
-                <div class="bento-cat-icon"><i class="fa-solid fa-key"></i></div>
-                <div class="bento-cat-meta">
-                  <strong>Obsługa Najmu</strong>
-                  <small>Zarządzanie</small>
-                </div>
-              </button>
-              <button class="bento-cat-card" data-bento-target="3">
-                <div class="bento-cat-icon"><i class="fa-solid fa-soap"></i></div>
-                <div class="bento-cat-meta">
-                  <strong>Pralnia Giżycko</strong>
-                  <small>Przemysłowa</small>
-                </div>
-              </button>
-              <button class="bento-cat-card" data-bento-target="5">
-                <div class="bento-cat-icon"><i class="fa-solid fa-warehouse"></i></div>
-                <div class="bento-cat-meta">
-                  <strong>Hale & Magazyny</strong>
-                  <small>Ogrzewane boksy</small>
-                </div>
-              </button>
-              <button class="bento-cat-card" data-bento-target="7">
-                <div class="bento-cat-icon"><i class="fa-solid fa-ship"></i></div>
-                <div class="bento-cat-meta">
-                  <strong>Zimowanie Jachtów</strong>
-                  <small>Hala & Plac</small>
-                </div>
-              </button>
-            </div>
-          </div>
-
-          <!-- Bento Tile 2: Giżycko Infrastructure -->
-          <div class="bento-tile bento-tile-locations">
-            <div class="bento-tile-header">
-              <i class="fa-solid fa-location-dot"></i>
-              <span>Infrastruktura w Giżycku</span>
-            </div>
-            <div class="bento-loc-list">
-              <div class="bento-loc-item">
-                <i class="fa-solid fa-map-pin"></i>
-                <div>
-                  <strong>Baza Główna & Hale:</strong>
-                  <span>ul. Myśliwska 3, Giżycko</span>
-                </div>
-              </div>
-              <div class="bento-loc-item">
-                <i class="fa-solid fa-anchor"></i>
-                <div>
-                  <strong>Hala & Plac Jachtowy:</strong>
-                  <span>Szlak Wielkich Jezior Mazurskich</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- D. THE UNIVERSAL GIANT SPINNING CIRCULAR WHEEL STAGE (Shared Across All 4 Layouts) -->
+        <!-- CENTER: The Universal Giant Spinning Circular Wheel -->
         <div class="wheel-stage-wrapper" id="wheel-stage-wrapper">
           <div class="wheel-container" id="wheel-container">
             
             <!-- Central Hub: Pure Clean Logo / Photo Display -->
-            <div class="wheel-center-hub" id="wheel-center-hub" title="Kliknij, aby przejść do szczegółów usługi">
+            <div class="wheel-center-hub" id="wheel-center-hub" title="Kliknij, aby zjechać do szczegółów usługi w katalogu">
               <div class="hub-bg-layer" id="hub-bg-layer"></div>
               <div class="hub-hover-prompt">
                 <i class="fa-solid fa-arrow-down"></i>
@@ -494,184 +262,58 @@
           </div>
         </div>
 
-        <!-- E. SATELLITE RIGHT PANEL (Displayed in Option 2 Command Center) -->
-        <div class="command-right-panel" id="command-right-panel">
-          <div class="command-glass-card telemetry-card">
-            <div class="panel-card-header">
-              <i class="fa-solid fa-satellite-dish"></i>
-              <h4>Telemetria Usługi</h4>
-              <span class="telemetry-live-badge"><span class="pulse-dot"></span> LIVE</span>
+        <!-- RIGHT: Floating Glassmorphism Hologram HUD Screen -->
+        <div class="hero-glassmorph-screen active" id="hero-glassmorph-screen">
+          <div class="glass-screen-glow"></div>
+          
+          <div class="glass-screen-header">
+            <div class="glass-sector-badge">
+              <span class="pulse-dot"></span>
+              <span id="glass-sector-tag">LIDER REGIONU</span>
             </div>
-            
-            <div class="telemetry-main">
-              <div class="telemetry-meta-row">
-                <span class="telemetry-idx" id="command-telemetry-idx">01 / 08</span>
-                <span class="telemetry-tag" id="command-telemetry-tag">LIDER REGIONU</span>
-              </div>
-              <h3 class="telemetry-title" id="command-telemetry-title">Radlight Giżycko</h3>
-              <p class="telemetry-desc" id="command-telemetry-desc">Centralna grupa usługowo-nieruchomościowa na Mazurach.</p>
+            <span class="glass-counter-badge" id="glass-counter-badge">01 / 08</span>
+          </div>
+
+          <div class="glass-screen-body">
+            <div class="glass-thumb-wrap">
+              <img src="images/logo-w-kole.png" alt="Podgląd wybranej usługi" id="glass-screen-img">
+              <span class="glass-live-pill"><i class="fa-solid fa-satellite-dish"></i> LIVE</span>
             </div>
 
-            <div class="telemetry-details">
-              <div class="telemetry-stat-item">
-                <span class="stat-lbl"><i class="fa-solid fa-phone"></i> Infolinia bezpośrednia:</span>
-                <a href="tel:+48607241090" class="stat-val" id="command-telemetry-phone">+48 607 241 090</a>
-              </div>
-              <div class="telemetry-stat-item">
-                <span class="stat-lbl"><i class="fa-solid fa-envelope"></i> E-mail dedykowany:</span>
-                <a href="mailto:biuro@radlight.pl" class="stat-val" id="command-telemetry-email">biuro@radlight.pl</a>
-              </div>
-            </div>
-
-            <div class="telemetry-cta-row">
-              <a href="#o-nas" class="btn-telemetry-go" id="command-telemetry-link">
-                <span>Przejdź do oferty</span>
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
+            <div class="glass-info-wrap">
+              <h3 class="glass-screen-title" id="glass-screen-title">Radlight Giżycko</h3>
+              <span class="glass-screen-sub" id="glass-screen-sub">Jedna firma. Wiele możliwości.</span>
+              <p class="glass-screen-desc" id="glass-screen-desc">Centralna grupa usługowo-nieruchomościowa na Mazurach. Łączymy turystykę, logistykę i obsługę firm w jednym punkcie.</p>
             </div>
           </div>
-        </div>
 
-        <!-- F. BENTO RIGHT COLUMN (Displayed in Option 4 Bento Grid Matrix) -->
-        <div class="bento-right-col" id="bento-right-col">
-          
-          <!-- Bento Tile 3: Live Service Telemetry & Contact -->
-          <div class="bento-tile bento-tile-live">
-            <div class="bento-tile-header">
-              <i class="fa-solid fa-satellite-dish"></i>
-              <span>Aktywny Sektor</span>
-              <span class="bento-live-badge"><span class="pulse-dot"></span> LIVE</span>
-            </div>
-            <div class="bento-live-content">
-              <div class="bento-live-thumb" id="bento-live-thumb">
-                <img src="images/logo-w-kole.png" alt="Wybrana usługa" id="bento-live-img">
-              </div>
-              <div class="bento-live-info">
-                <span class="bento-count-badge" id="bento-count-badge">01 / 08</span>
-                <h3 id="bento-live-title">Radlight Giżycko</h3>
-                <p id="bento-live-desc">Centralna grupa usługowo-nieruchomościowa na Mazurach.</p>
-              </div>
-            </div>
-            <div class="bento-live-footer">
-              <a href="tel:+48607241090" class="bento-action-btn phone" id="bento-phone-btn">
+          <div class="glass-screen-footer">
+            <div class="glass-contact-row">
+              <a href="tel:+48607241090" class="glass-contact-btn phone" id="glass-phone-btn" title="Zadzwoń bezpośrednio">
                 <i class="fa-solid fa-phone"></i>
-                <span id="bento-phone-text">+48 607 241 090</span>
+                <span id="glass-phone-text">+48 607 241 090</span>
               </a>
-              <a href="#o-nas" class="bento-action-btn details" id="bento-details-btn">
+              <a href="mailto:biuro@radlight.pl" class="glass-contact-btn email" id="glass-email-btn" title="Napisz e-mail">
+                <i class="fa-solid fa-envelope"></i>
+                <span>E-mail</span>
+              </a>
+            </div>
+
+            <div class="glass-cta-row">
+              <a href="#o-nas" class="btn-glass-primary" id="glass-primary-btn" title="Przejdź do oferty">
                 <span>Otwórz stronę</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
-            </div>
-          </div>
-
-          <!-- Bento Tile 4: Stats & Trust -->
-          <div class="bento-tile bento-tile-stats">
-            <div class="bento-stat-item">
-              <strong>8</strong>
-              <span>Branż w 1 Miejscu</span>
-            </div>
-            <div class="bento-stat-item">
-              <strong>100%</strong>
-              <span>Lokalny Kapitał</span>
-            </div>
-            <div class="bento-stat-item">
-              <strong>24/7</strong>
-              <span>Wsparcie</span>
+              <a href="#uslugi" class="btn-glass-secondary" id="glass-scroll-btn" title="Zjedź do kafelka w katalogu na dole">
+                <i class="fa-solid fa-arrow-down"></i>
+                <span>W katalogu</span>
+              </a>
             </div>
           </div>
 
         </div>
 
       </div>
-
-      <!-- Action Banner Under Wheel (Option 1 & Default) -->
-      <aside class="hub-action-banner" id="hub-action-banner" aria-live="polite">
-        <div class="hub-banner-content">
-          <div class="hub-banner-meta">
-            <span data-i18n="selectedService">Wybrana usługa</span>
-            <strong id="hub-banner-count">01 / 08</strong>
-          </div>
-          <div class="hub-banner-text">
-            <h4 id="hub-banner-title">Radlight Giżycko</h4>
-            <span id="hub-banner-sub">Jedna firma. Wiele możliwości.</span>
-          </div>
-          <div class="hub-banner-actions">
-            <a href="tel:+48607241090" id="hub-banner-phone" class="banner-icon-btn" title="Zadzwoń">
-              <i class="fa-solid fa-phone"></i><span data-i18n="callUs">Zadzwoń</span>
-            </a>
-            <a href="mailto:biuro@radlight.pl" id="hub-banner-mail" class="banner-icon-btn" title="Napisz e-mail">
-              <i class="fa-solid fa-envelope"></i><span data-i18n="writeUs">Napisz</span>
-            </a>
-            <a href="#o-nas" id="hub-banner-link" class="banner-go-btn" title="Otwórz szczegóły">
-              <span data-i18n="serviceCta">Przejdź do szczegółów</span> <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </aside>
-
-      <!-- Bottom macOS-style Dock Bar (Option 2 Command Center) -->
-      <div class="command-dock-bar" id="command-dock-bar">
-        <div class="dock-container">
-          <button class="dock-item active" data-dock-index="0" title="Radlight Giżycko">
-            <div class="dock-thumb"><img src="images/logo-w-kole.png" alt="Radlight"></div>
-            <span>Radlight</span>
-          </button>
-          <button class="dock-item" data-dock-index="1" title="Apartamenty Mazury.Holiday">
-            <div class="dock-thumb"><img src="images/512X512-mh.png" alt="Apartamenty"></div>
-            <span>Apartamenty</span>
-          </button>
-          <button class="dock-item" data-dock-index="2" title="Zarządzanie Najmem">
-            <div class="dock-thumb"><img src="images/positive-african-american-property-realtor-with-folder-showing-contemporary-cottage-to-happy-owners-1536x1024.jpg" alt="Najem"></div>
-            <span>Najem</span>
-          </button>
-          <button class="dock-item" data-dock-index="3" title="Pralnia Giżycko">
-            <div class="dock-thumb"><img src="images/logo-kwadrat.jpg" alt="Pralnia"></div>
-            <span>Pralnia</span>
-          </button>
-          <button class="dock-item" data-dock-index="4" title="Usługi Sprzątające">
-            <div class="dock-thumb"><img src="images/123321-1152x1536.jpg" alt="Sprzątanie"></div>
-            <span>Sprzątanie</span>
-          </button>
-          <button class="dock-item" data-dock-index="5" title="Hale i Magazyny">
-            <div class="dock-thumb"><img src="images/hala-zimowanie-ogrzewana.jpg" alt="Hale i Magazyny"></div>
-            <span>Hale i Magazyny</span>
-          </button>
-          <button class="dock-item" data-dock-index="6" title="Helipad Mazury">
-            <div class="dock-thumb"><img src="images/512X512-heli.png" alt="Helipad"></div>
-            <span>Helipad</span>
-          </button>
-          <button class="dock-item" data-dock-index="7" title="Zimowanie Jachtów">
-            <div class="dock-thumb"><img src="images/LOGO-ALL-BOAT.jpg" alt="Zimowanie Jachtów"></div>
-            <span>Zimowanie Łodzi</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Bottom Cinematic Action Strip (Option 3 Cinematic Spotlight) -->
-      <div class="cinematic-action-strip" id="cinematic-action-strip">
-        <div class="cinematic-strip-content">
-          <div class="strip-brand-meta">
-            <span class="strip-label">Bezpośredni kontakt:</span>
-            <a href="tel:+48607241090" class="strip-phone" id="cinematic-strip-phone">
-              <i class="fa-solid fa-phone"></i> <span>+48 607 241 090</span>
-            </a>
-            <a href="mailto:biuro@radlight.pl" class="strip-email" id="cinematic-strip-email">
-              <i class="fa-solid fa-envelope"></i> <span>biuro@radlight.pl</span>
-            </a>
-          </div>
-          <div class="strip-actions">
-            <a href="#o-nas" class="btn btn-primary btn-glow" id="cinematic-strip-link">
-              <span>Zobacz Pełną Ofertę Branży</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
-            <a href="#uslugi" class="btn btn-outline-white">
-              <span>Katalog 8 Usług</span>
-              <i class="fa-solid fa-chevron-down"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
