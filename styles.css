@@ -2486,7 +2486,7 @@ body.dark-theme .icon-moon {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 6px;
+  padding: 0;
   transition: all 0.3s ease;
   transform: rotate(var(--counter-rotation, 0deg));
 }
@@ -2500,7 +2500,7 @@ body.dark-theme .icon-moon {
 .node-icon-box img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
