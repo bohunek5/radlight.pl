@@ -114,6 +114,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const centerHub = document.getElementById('wheel-center-hub');
   const hubBgLayer = document.getElementById('hub-bg-layer');
 
+  // Center Hub Dynamic Action Elements
+  const hubAvatarImg = document.getElementById('hub-avatar-img');
+  const hubTitle = document.getElementById('hub-title');
+  const hubSub = document.getElementById('hub-sub');
+  const hubPhoneBtn = document.getElementById('hub-phone-btn');
+  const hubMailBtn = document.getElementById('hub-mail-btn');
+  const hubScrollBtn = document.getElementById('hub-scroll-btn');
+
   // Hub Banner Elements Below Wheel Stage
   const hubBannerTitle = document.getElementById('hub-banner-title');
   const hubBannerSub = document.getElementById('hub-banner-sub');
@@ -405,22 +413,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const countStr = `${String(index + 1).padStart(2, '0')} / ${String(servicesData.length).padStart(2, '0')}`;
 
     // 1. Update Central Wheel Hub
-    if (hubBgLayer) {
-      hubBgLayer.style.backgroundImage = `url("${data.img}")`;
-      if (data.img.includes('logo') || data.img.includes('512X512') || data.img.includes('svg') || index === 0) {
-        hubBgLayer.style.backgroundColor = '#ffffff';
-        hubBgLayer.style.backgroundSize = '70% auto';
-        hubBgLayer.style.backgroundPosition = 'center';
-        hubBgLayer.style.backgroundRepeat = 'no-repeat';
-      } else {
-        hubBgLayer.style.backgroundColor = 'transparent';
-        hubBgLayer.style.backgroundSize = 'cover';
-        hubBgLayer.style.backgroundPosition = 'center';
-        hubBgLayer.style.backgroundRepeat = 'no-repeat';
-      }
+    if (hubAvatarImg) {
+      hubAvatarImg.src = data.img;
+      hubAvatarImg.alt = data.title;
+    }
+    if (hubTitle) {
+      hubTitle.textContent = data.title;
+    }
+    if (hubSub) {
+      hubSub.textContent = index === 0 ? "Jedna firma. Wiele możliwości." : (data.category || data.sub);
+    }
+    if (hubPhoneBtn) {
+      hubPhoneBtn.href = data.phone;
+      hubPhoneBtn.setAttribute('title', `Zadzwoń: ${data.phoneDisplay}`);
+    }
+    if (hubMailBtn) {
+      hubMailBtn.href = data.email || "mailto:biuro@radlight.pl";
+      hubMailBtn.setAttribute('title', `Napisz: ${data.emailDisplay || 'biuro@radlight.pl'}`);
     }
 
-    // 2. Update Default Action Banner
+    // 2. Update Default Action Banner (if present)
     if (hubActionBanner) {
       hubActionBanner.classList.remove('is-changing');
       void hubActionBanner.offsetWidth;
@@ -647,6 +659,21 @@ document.addEventListener('DOMContentLoaded', () => {
   if (glassScrollBtn) {
     glassScrollBtn.addEventListener('click', (e) => {
       e.preventDefault();
+      stopAutoRotate();
+      const data = servicesData[activeIndex];
+      if (data && data.cardId) {
+        scrollToAndHighlightCard(data.cardId);
+      } else {
+        scrollToAndHighlightCard('uslugi');
+      }
+    });
+  }
+
+  // Central Hub Scroll Button click handler
+  if (hubScrollBtn) {
+    hubScrollBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       stopAutoRotate();
       const data = servicesData[activeIndex];
       if (data && data.cardId) {
