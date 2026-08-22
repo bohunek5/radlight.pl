@@ -138,8 +138,84 @@
         <p class="hero-stage-sub">Obróć centralne koło i dotknij wybranej branży, aby natychmiast zobaczyć szczegóły na ekranie HUD.</p>
       </div>
 
-      <!-- STAGE LAYOUT: CENTERED WHEEL + RIGHT GLASSMORPHISM HUD SCREEN -->
+      <!-- STAGE LAYOUT: LEFT CATEGORIES + CENTER WHEEL + RIGHT HUD SCREEN -->
       <div class="hero-stage-layout">
+
+        <!-- LEFT: Category Quick Selector Panel -->
+        <div class="bento-left-col" id="bento-left-col">
+          <div class="bento-tile bento-tile-categories">
+            <div class="bento-tile-header">
+              <i class="fa-solid fa-layer-group"></i>
+              <span>Kategorie Branżowe</span>
+            </div>
+            <div class="bento-categories-grid">
+              <button class="bento-cat-card active" data-bento-target="0">
+                <div class="bento-cat-icon"><i class="fa-solid fa-building"></i></div>
+                <div class="bento-cat-meta">
+                  <strong>Grupa Radlight</strong>
+                  <small>Centrala & Biuro</small>
+                </div>
+              </button>
+              <button class="bento-cat-card" data-bento-target="1">
+                <div class="bento-cat-icon"><i class="fa-solid fa-hotel"></i></div>
+                <div class="bento-cat-meta">
+                  <strong>Apartamenty</strong>
+                  <small>Mazury.Holiday</small>
+                </div>
+              </button>
+              <button class="bento-cat-card" data-bento-target="2">
+                <div class="bento-cat-icon"><i class="fa-solid fa-key"></i></div>
+                <div class="bento-cat-meta">
+                  <strong>Zarządzanie Najmem</strong>
+                  <small>Kompleksowa Obsługa</small>
+                </div>
+              </button>
+              <button class="bento-cat-card" data-bento-target="3">
+                <div class="bento-cat-icon"><i class="fa-solid fa-shirt"></i></div>
+                <div class="bento-cat-meta">
+                  <strong>Pralnia Giżycko</strong>
+                  <small>Pralnia Przemysłowa</small>
+                </div>
+              </button>
+              <button class="bento-cat-card" data-bento-target="4">
+                <div class="bento-cat-icon"><i class="fa-solid fa-sparkles"></i></div>
+                <div class="bento-cat-meta">
+                  <strong>Serwis Czystości</strong>
+                  <small>Clean Service</small>
+                </div>
+              </button>
+              <button class="bento-cat-card" data-bento-target="5">
+                <div class="bento-cat-icon"><i class="fa-solid fa-warehouse"></i></div>
+                <div class="bento-cat-meta">
+                  <strong>Magazyny & Hale</strong>
+                  <small>Self-Storage Giżycko</small>
+                </div>
+              </button>
+              <button class="bento-cat-card" data-bento-target="6">
+                <div class="bento-cat-icon"><i class="fa-solid fa-helicopter"></i></div>
+                <div class="bento-cat-meta">
+                  <strong>Helipad Mazury</strong>
+                  <small>Lądowisko Śmigłowców</small>
+                </div>
+              </button>
+              <button class="bento-cat-card" data-bento-target="7">
+                <div class="bento-cat-icon"><i class="fa-solid fa-anchor"></i></div>
+                <div class="bento-cat-meta">
+                  <strong>Zimowanie Jachtów</strong>
+                  <small>AllBoat & Marina</small>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <div class="bento-tile bento-tile-location">
+            <div class="bento-loc-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="bento-loc-text">
+              <strong>Baza Operacyjna Giżycko</strong>
+              <span>ul. Myśliwska 3, 11-500 Giżycko • Szlak WJM</span>
+            </div>
+          </div>
+        </div>
 
         <!-- CENTER: Interactive Circular Wheel Stage -->
         <div class="wheel-stage-wrapper" id="wheel-stage-wrapper">
@@ -164,10 +240,10 @@
                 </div>
               </button>
 
-              <!-- Node 2: Zarządzanie Najmem Photo -->
+              <!-- Node 2: Zarządzanie Najmem Badge -->
               <button class="wheel-node" data-index="2" data-service-id="najem" aria-label="Zarządzanie Najmem" title="Zarządzanie Najmem">
-                <div class="node-icon-box photo-type">
-                  <img src="images/positive-african-american-property-realtor-with-folder-showing-contemporary-cottage-to-happy-owners-1536x1024.jpg" alt="Zarządzanie Najmem">
+                <div class="node-icon-box logo-type">
+                  <img src="images/badge-najem.svg" alt="Zarządzanie Najmem">
                 </div>
               </button>
 
@@ -178,17 +254,17 @@
                 </div>
               </button>
 
-              <!-- Node 4: Usługi Sprzątające Photo -->
+              <!-- Node 4: Usługi Sprzątające Clean Service Badge -->
               <button class="wheel-node" data-index="4" data-service-id="sprzatanie" aria-label="Usługi Sprzątające" title="Usługi Sprzątające">
-                <div class="node-icon-box photo-type">
-                  <img src="images/123321-1152x1536.jpg" alt="Usługi Sprzątające">
+                <div class="node-icon-box logo-type">
+                  <img src="images/badge-sprzatanie.svg" alt="Usługi Sprzątające Clean Service">
                 </div>
               </button>
 
-              <!-- Node 5: Hale i Magazyny Photo -->
+              <!-- Node 5: Hale i Magazyny Self Storage Badge -->
               <button class="wheel-node" data-index="5" data-service-id="magazyny" aria-label="Hale i Magazyny Giżycko" title="Magazyny i Hale">
-                <div class="node-icon-box photo-type">
-                  <img src="images/hala-zimowanie-ogrzewana.jpg" alt="Magazyny i Hale Ogrzewane">
+                <div class="node-icon-box logo-type">
+                  <img src="images/badge-magazyny.svg" alt="Magazyny i Hale Self Storage">
                 </div>
               </button>
 

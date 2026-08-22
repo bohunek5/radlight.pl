@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Zarządzanie Najmem",
       sub: "Kompleksowa obsługa apartamentów",
       desc: "Zajmujemy się wszystkim: od marketingu, rezerwacji i zameldowania, po pranie pościeli, sprzątanie i rozliczenia.",
-      img: "images/positive-african-american-property-realtor-with-folder-showing-contemporary-cottage-to-happy-owners-1536x1024.jpg",
+      img: "images/badge-najem.svg",
       bgImg: "images/real-estate-agent-holding-key-with-house-shaped-keychain--1536x1024.jpg",
       phone: "tel:+48607241090",
       phoneDisplay: "+48 607 241 090",
@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Usługi Sprzątające",
       sub: "Domy, biura, apartamenty wakacyjne",
       desc: "Certyfikowany zespół, profesjonalny sprzęt i dedykowane środki czystości. Sprzątanie cykliczne i poremontowe.",
-      img: "images/123321-1152x1536.jpg",
+      img: "images/badge-sprzatanie.svg",
       bgImg: "images/123321-1152x1536.jpg",
       phone: "tel:+48730067027",
       phoneDisplay: "+48 730 067 027",
@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Powierzchnie Magazynowe i Hale",
       sub: "Wynajem komercyjny w Giżycku",
       desc: "Nowoczesne ogrzewane hale, boksy magazynowe self-storage oraz lokale usługowe przy ul. Myśliwskiej 3 w Giżycku.",
-      img: "images/hala-zimowanie-ogrzewana.jpg",
+      img: "images/badge-magazyny.svg",
       bgImg: "images/hala-zimowanie-3.jpg",
       phone: "tel:+48607241090",
       phoneDisplay: "+48 607 241 090",
@@ -494,6 +494,12 @@ document.addEventListener('DOMContentLoaded', () => {
     commandCatBtns.forEach(catBtn => {
       const targetIdx = parseInt(catBtn.getAttribute('data-node-target'), 10);
       catBtn.classList.toggle('active', targetIdx === index);
+    });
+
+    // Update Bento Category Cards active state
+    bentoCatCards.forEach(card => {
+      const targetIdx = parseInt(card.getAttribute('data-bento-target'), 10);
+      card.classList.toggle('active', targetIdx === index);
     });
 
     // 5. Update Option 3 Cinematic Spotlight

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <rect width="200" height="200" rx="100" fill="#ffffff"/>
+  <circle cx="100" cy="100" r="92" fill="#ffffff" stroke="#e2e8f0" stroke-width="4"/>
+  <!-- Sparkling clean icon -->
+  <path d="M100 35 L108 58 L131 66 L108 74 L100 97 L92 74 L69 66 L92 58 Z" fill="#e94e1b"/>
+  <path d="M135 75 L140 88 L153 93 L140 98 L135 111 L130 98 L117 93 L130 88 Z" fill="#0284c7"/>
+  <path d="M68 85 L72 95 L82 99 L72 103 L68 113 L64 103 L54 99 L64 95 Z" fill="#10b981"/>
+  <text x="100" y="148" font-family="'Outfit', 'Inter', sans-serif" font-size="16" font-weight="900" fill="#062b42" text-anchor="middle" letter-spacing="1">CLEAN SERVICE</text>
+  <text x="100" y="170" font-family="'Outfit', 'Inter', sans-serif" font-size="14" font-weight="800" fill="#e94e1b" text-anchor="middle" letter-spacing="2">SPRZĄTANIE</text>
+</svg>
