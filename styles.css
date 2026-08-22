@@ -356,14 +356,16 @@ body.dark-theme .icon-moon {
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 20px;
 }
 
 .nav-link {
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.88);
   padding: 8px 0;
   position: relative;
+  transition: all 0.25s ease;
 }
 
 .nav-link:hover,
@@ -387,17 +389,50 @@ body.dark-theme .icon-moon {
   width: 100%;
 }
 
+/* Header Integrated Layout Switchers */
+.nav-layout-pill {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.nav-layout-pill:hover,
+.nav-layout-pill.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(233, 78, 27, 0.45);
+}
+
+.nav-layout-pill i {
+  font-size: 0.75rem;
+}
+
 .btn-contact {
-  background-color: var(--primary);
+  background: var(--primary);
   color: #fff !important;
-  padding: 8px 22px;
+  padding: 8px 18px !important;
   border-radius: var(--radius-pill);
   box-shadow: var(--shadow-glow);
 }
 
 .btn-contact:hover {
-  background-color: #ff6b35;
+  background: #c73c0f;
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(233, 78, 27, 0.6);
+}
+
+.btn-contact::after {
+  display: none !important;
 }
 
 .mobile-toggle {
@@ -405,13 +440,11 @@ body.dark-theme .icon-moon {
   background: none;
   border: none;
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   cursor: pointer;
   padding: 6px;
 }
 
-/* ==========================================================================
-   HERO LAYOUT SWITCHER BAR (Interactive Layout Selector)
    ========================================================================== */
 
 .hero-layout-switcher-bar {
@@ -946,34 +979,27 @@ body.dark-theme .icon-moon {
   }
 }
 
-/* Wariant 3: Hologram Video & Glass HUD Layout */
+/* Wariant 2: Cockpit 360 & Glass HUD Layout */
 .wheel-hero-section.layout-hologram {
   padding: 30px 0 55px;
-  background: #021420;
+  background: radial-gradient(circle at 50% 30%, #062b42 0%, #021420 60%, #010c14 100%);
 }
 
 .wheel-hero-section.layout-hologram .hero-video-bg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: 100%;
-  height: 100%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-  z-index: 1;
-  opacity: 0.95;
-  filter: brightness(1.05) contrast(1.15);
+  display: none !important;
 }
 
-.wheel-hero-section.layout-hologram .hologram-bg-layer,
 .wheel-hero-section.layout-hologram .cinematic-bg-layer {
+  display: block !important;
+  opacity: 0.7;
+}
+
+.wheel-hero-section.layout-hologram .hologram-bg-layer {
   display: none !important;
 }
 
 .wheel-hero-section.layout-hologram .hero-overlay {
-  background: radial-gradient(circle at 50% 50%, rgba(2, 26, 40, 0.15) 0%, rgba(2, 26, 40, 0.75) 100%) !important;
+  background: radial-gradient(circle at 50% 50%, rgba(2, 26, 40, 0.1) 0%, rgba(1, 12, 20, 0.85) 100%) !important;
   z-index: 2;
 }
 
@@ -2550,31 +2576,7 @@ body.dark-theme .icon-moon {
 }
 
 .node-label {
-  position: absolute;
-  bottom: -22px;
-  left: 50%;
-  transform: translateX(-50%) rotate(var(--counter-rotation, 0deg));
-  background: rgba(2, 26, 40, 0.9);
-  backdrop-filter: blur(8px);
-  color: #ffffff;
-  font-size: 0.72rem;
-  font-weight: 800;
-  padding: 2px 8px;
-  border-radius: 10px;
-  white-space: nowrap;
-  pointer-events: none;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease;
-  opacity: 0.92;
-}
-
-.wheel-node.active .node-label {
-  background: #e94e1b;
-  color: #ffffff;
-  border-color: #e94e1b;
-  opacity: 1;
-  box-shadow: 0 0 12px rgba(233, 78, 27, 0.6);
+  display: none !important;
 }
 
 /* Central Hub Component */

@@ -95,7 +95,7 @@
   <header class="main-header" id="header">
     <div class="container header-container">
       <a href="index.html" class="brand-logo" aria-label="Radlight — strona główna">
-        <img src="images/logo-w-kole.png" alt="" id="logo-img">
+        <img src="images/logo-w-kole.png" alt="Radlight Logo" id="logo-img">
         <span class="brand-copy">
           <strong data-i18n="brandLineOne">Jedna firma.</strong>
           <small data-i18n="brandLineTwo">Wiele możliwości.</small>
@@ -104,10 +104,13 @@
 
       <nav class="nav-menu" id="nav-menu">
         <ul class="nav-list">
-          <li><a href="#kolo-uslug" class="nav-link active" data-i18n="navWheel">Strona Główna</a></li>
-          <li><a href="#uslugi" class="nav-link" data-i18n="navServices">Lista Usług</a></li>
-          <li><a href="#o-nas" class="nav-link" data-i18n="navAbout">O firmie</a></li>
-          <li><a href="#kontakt" class="nav-link btn-contact" data-i18n="navContact">Kontakt</a></li>
+          <li><a href="index.html" class="nav-link active" data-i18n="navHome">Główna</a></li>
+          <li><a href="wariant1.html" class="nav-layout-pill active" title="Wariant 1: Split 50/50"><i class="fa-solid fa-table-columns"></i> Układ 1</a></li>
+          <li><a href="wariant2.html" class="nav-layout-pill" title="Wariant 2: Cockpit 360°"><i class="fa-solid fa-circle-dot"></i> Układ 2</a></li>
+          <li><a href="uslugi.html" class="nav-link" data-i18n="navServices">Usługi</a></li>
+          <li><a href="baza-wiedzy.html" class="nav-link" data-i18n="navKnowledge">Baza Wiedzy</a></li>
+          <li><a href="o-nas.html" class="nav-link" data-i18n="navAbout">O firmie</a></li>
+          <li><a href="kontakt.html" class="nav-link btn-contact" data-i18n="navContact">Kontakt</a></li>
           <li class="mobile-nav-languages" aria-label="Wybór języka">
             <div class="lang-switcher nav-lang-switcher">
               <button class="lang-btn active" data-lang="pl" title="Polski"><span class="flag">🇵🇱</span> PL</button>
@@ -125,33 +128,11 @@
   </header>
 
   <!-- ==========================================================================
-       HERO LAYOUT SWITCHER BAR (2 Główne Warianty Radlight)
-       ========================================================================== -->
-  <div class="hero-layout-switcher-bar" id="hero-layout-switcher-bar">
-    <div class="container switcher-inner">
-      <div class="switcher-badge">
-        <span class="badge-icon-box"><i class="fa-solid fa-layer-group"></i></span>
-        <span>Wybierz Wariant Strony:</span>
-      </div>
-      <div class="switcher-buttons">
-        <a href="wariant1.html" class="layout-pill active" title="Wariant 1: Klasyczny biznesowy układ Split 50/50">
-          <span class="pill-tag">WARIANT 1</span>
-          <span class="pill-text">Classic Split 50/50</span>
-        </a>
-        <a href="wariant2.html" class="layout-pill" title="Wariant 2: Holograficzne wideo 360° z panelem Glassmorphism">
-          <span class="pill-tag">WARIANT 2</span>
-          <span class="pill-text">Hologram Video 360°</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==========================================================================
        WARIANT 1: RADLIGHT CLASSIC SPLIT-SCREEN 50/50
        ========================================================================== -->
   <section class="wheel-hero-section layout-split" id="kolo-uslug" data-layout="split">
     
-    <!-- Dynamic Cinematic & Ambient Backdrop -->
+    <!-- Dynamic Cinematic & Ambient Backdrop (Granat) -->
     <div class="cinematic-backdrop-container" id="cinematic-backdrop">
       <div class="cinematic-bg-layer" id="cinematic-bg-layer"></div>
       <div class="hero-glow-sphere glow-1"></div>
@@ -179,7 +160,7 @@
           </p>
 
           <div class="split-hero-actions">
-            <a href="#uslugi" class="btn btn-primary btn-glow">
+            <a href="uslugi.html" class="btn btn-primary btn-glow">
               <span>Poznaj Wszystkie Usługi</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
@@ -252,7 +233,6 @@
                 <div class="node-icon-box logo-type">
                   <img src="images/logo-w-kole.png" alt="Radlight Main Logo">
                 </div>
-                <span class="node-label">Radlight</span>
               </button>
 
               <!-- Node 1: Mazury Holiday Logo -->
@@ -260,7 +240,6 @@
                 <div class="node-icon-box logo-type">
                   <img src="images/512X512-mh.png" alt="Mazury Holiday Logo">
                 </div>
-                <span class="node-label">Apartamenty</span>
               </button>
 
               <!-- Node 2: Zarządzanie Najmem Photo -->
@@ -268,7 +247,6 @@
                 <div class="node-icon-box photo-type">
                   <img src="images/positive-african-american-property-realtor-with-folder-showing-contemporary-cottage-to-happy-owners-1536x1024.jpg" alt="Zarządzanie Najmem">
                 </div>
-                <span class="node-label">Najem</span>
               </button>
 
               <!-- Node 3: Pralnia Giżycko Logo -->
@@ -276,7 +254,6 @@
                 <div class="node-icon-box logo-type">
                   <img src="images/logo-kwadrat.jpg" alt="Pralnia Giżycko Logo">
                 </div>
-                <span class="node-label">Pralnia</span>
               </button>
 
               <!-- Node 4: Usługi Sprzątające Photo -->
@@ -284,7 +261,6 @@
                 <div class="node-icon-box photo-type">
                   <img src="images/123321-1152x1536.jpg" alt="Usługi Sprzątające">
                 </div>
-                <span class="node-label">Sprzątanie</span>
               </button>
 
               <!-- Node 5: Hale i Magazyny Photo -->
@@ -292,7 +268,6 @@
                 <div class="node-icon-box photo-type">
                   <img src="images/hala-zimowanie-ogrzewana.jpg" alt="Magazyny i Hale Ogrzewane">
                 </div>
-                <span class="node-label">Magazyny</span>
               </button>
 
               <!-- Node 6: Helipad Mazury Logo -->
@@ -300,7 +275,6 @@
                 <div class="node-icon-box logo-type">
                   <img src="images/512X512-heli.png" alt="Helipad Mazury Logo">
                 </div>
-                <span class="node-label">Helipad</span>
               </button>
 
               <!-- Node 7: Zimowanie Jachtów / All Boat Logo -->
@@ -308,7 +282,6 @@
                 <div class="node-icon-box logo-type">
                   <img src="images/LOGO-ALL-BOAT.jpg" alt="Zimowanie Jachtów Giżycko Logo">
                 </div>
-                <span class="node-label">Zimowanie Łodzi</span>
               </button>
             </div>
 
