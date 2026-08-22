@@ -91,17 +91,26 @@
     </div>
   </div>
 
-  <!-- Header Navigation -->
+  <!-- Header Navigation (Slogan Left, Centered Logo, Menu Right) -->
   <header class="main-header" id="header">
     <div class="container header-container">
-      <a href="index.html" class="brand-logo" aria-label="Radlight — strona główna">
-        <img src="images/logo-w-kole.png" alt="Radlight Logo" id="logo-img">
-        <span class="brand-copy">
-          <strong data-i18n="brandLineOne">Jedna firma.</strong>
-          <small data-i18n="brandLineTwo">Wiele możliwości.</small>
-        </span>
-      </a>
+      
+      <!-- Left: Orange Slogan -->
+      <div class="header-slogan-box">
+        <a href="index.html" class="slogan-link">
+          <span class="slogan-primary">JEDNA FIRMA.</span>
+          <span class="slogan-secondary">WIELE MOŻLIWOŚCI.</span>
+        </a>
+      </div>
 
+      <!-- Center: Radlight Logo -->
+      <div class="header-logo-center">
+        <a href="index.html" class="brand-logo-mid" aria-label="Radlight — strona główna">
+          <img src="images/logo-w-kole.png" alt="Radlight Logo" id="logo-img">
+        </a>
+      </div>
+
+      <!-- Right: Navigation Menu -->
       <nav class="nav-menu" id="nav-menu">
         <ul class="nav-list">
           <li><a href="index.html" class="nav-link active" data-i18n="navHome">Główna</a></li>
@@ -126,11 +135,11 @@
   </header>
 
   <!-- ==========================================================================
-       WARIANT 1: RADLIGHT CLASSIC SPLIT-SCREEN 50/50
+       HERO STAGE: DYNAMIC SHOWCASE WINDOW (LEFT) + 360° CLOCK-RINGS WHEEL (RIGHT)
        ========================================================================== -->
   <section class="wheel-hero-section layout-split" id="kolo-uslug" data-layout="split">
     
-    <!-- Dynamic Cinematic & Ambient Backdrop (Granat) -->
+    <!-- Dynamic Ambient Backdrop (Granat) -->
     <div class="cinematic-backdrop-container" id="cinematic-backdrop">
       <div class="cinematic-bg-layer" id="cinematic-bg-layer"></div>
       <div class="hero-glow-sphere glow-1"></div>
@@ -141,83 +150,76 @@
     <div class="container wheel-hero-container">
       <div class="hero-unified-layout">
         
-        <!-- LEFT COLUMN: Split-Screen Executive Hero (Solid & High-Conversion) -->
-        <div class="hero-split-left" id="hero-split-left">
-          <div class="split-kicker-badge">
-            <span class="badge-dot"></span>
-            <span>GRUPA RADLIGHT • GIŻYCKO & MAZURY</span>
-          </div>
-
-          <h1 class="split-hero-title">
-            Jedna Firma.<br>
-            <span class="text-highlight">Wiele Możliwości.</span>
-          </h1>
-
-          <p class="split-hero-lead">
-            Kompleksowy ekosystem 8 branż w sercu Mazur: luksusowe apartamenty, zarządzanie najmem, pralnia przemysłowa, bezpieczne magazyny, lądowisko helikopterów oraz całoroczna marina z zimowaniem łodzi.
-          </p>
-
-          <!-- Solid Value Pillars (Clean & Stable) -->
-          <div class="split-pillars-grid">
-            <div class="pillar-item">
-              <div class="pillar-icon"><i class="fa-solid fa-hotel"></i></div>
-              <div class="pillar-text">
-                <strong>Turystyka & Noclegi</strong>
-                <span>Apartamenty Mazury.Holiday & Czarter</span>
+        <!-- LEFT COLUMN: Dynamic Service Showcase Window (Half Photo Top / Half Text & Actions Bottom) -->
+        <div class="hero-showcase-panel" id="hero-showcase-panel">
+          <div class="service-card-showcase" id="service-card-showcase">
+            
+            <!-- TOP 50%: High-Res Photo with Overlays -->
+            <div class="showcase-photo-box">
+              <img src="images/DJI_0101-1536x864.jpg" alt="Radlight Giżycko" id="showcase-img">
+              <div class="showcase-photo-overlay"></div>
+              
+              <div class="showcase-badge" id="showcase-badge">
+                <span class="badge-dot"></span>
+                <span id="showcase-category">GRUPA CENTRALNA • GIŻYCKO</span>
               </div>
+              <div class="showcase-number-badge" id="showcase-number">01 / 08</div>
             </div>
-            <div class="pillar-item">
-              <div class="pillar-icon"><i class="fa-solid fa-soap"></i></div>
-              <div class="pillar-text">
-                <strong>Pralnia & Czystość</strong>
-                <span>Pralnia Przemysłowa & Serwis Obiektów</span>
-              </div>
-            </div>
-            <div class="pillar-item">
-              <div class="pillar-icon"><i class="fa-solid fa-warehouse"></i></div>
-              <div class="pillar-text">
-                <strong>Magazyny & Marine</strong>
-                <span>Hale Ogrzewane, Slip & Helipad Mazury</span>
-              </div>
-            </div>
-          </div>
 
-          <div class="split-hero-actions">
-            <a href="uslugi.html" class="btn btn-primary btn-glow">
-              <span>Poznaj Wszystkie Usługi</span>
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
-            <a href="tel:+48607241090" class="btn btn-outline-white">
-              <i class="fa-solid fa-phone"></i>
-              <span>+48 607 241 090</span>
-            </a>
-          </div>
+            <!-- BOTTOM 50%: Content & Direct Interactive Actions -->
+            <div class="showcase-body">
+              <div class="showcase-header">
+                <h1 class="showcase-title" id="showcase-title">Radlight Giżycko</h1>
+                <p class="showcase-subtitle" id="showcase-subtitle">Jedna firma. Wiele możliwości.</p>
+              </div>
 
-          <!-- Trust stats badges -->
-          <div class="split-trust-badges">
-            <div class="trust-pill">
-              <i class="fa-solid fa-cubes"></i>
-              <span><strong>8 Branż</strong> w 1 punkcie</span>
-            </div>
-            <div class="trust-pill">
-              <i class="fa-solid fa-shield-halved"></i>
-              <span><strong>100%</strong> lokalny kapitał</span>
-            </div>
-            <div class="trust-pill">
-              <i class="fa-solid fa-location-dot"></i>
-              <span><strong>Giżycko</strong> Myśliwska 3</span>
+              <p class="showcase-desc" id="showcase-desc">
+                Centralna grupa usługowo-nieruchomościowa na Mazurach. Łączymy luksusową bazę noclegową, profesjonalną pralnię, zarządzanie najmem, nowoczesne hale magazynowe, lądowisko dla helikopterów oraz całoroczną marinę z zimowaniem łodzi w jednym punkcie przy ul. Myśliwskiej 3 w Giżycku.
+              </p>
+
+              <!-- Direct Action Grid (Phone & Email) -->
+              <div class="showcase-actions-grid">
+                <a href="tel:+48607241090" class="btn-showcase-call" id="showcase-call-btn" title="Zadzwoń bezpośrednio">
+                  <div class="btn-icon"><i class="fa-solid fa-phone"></i></div>
+                  <div class="btn-details">
+                    <small>Zadzwoń bezpośrednio</small>
+                    <strong id="showcase-phone-text">+48 607 241 090</strong>
+                  </div>
+                </a>
+                <a href="mailto:biuro@radlight.pl" class="btn-showcase-mail" id="showcase-mail-btn" title="Napisz e-mail">
+                  <div class="btn-icon"><i class="fa-solid fa-envelope"></i></div>
+                  <div class="btn-details">
+                    <small>Napisz e-mail</small>
+                    <strong id="showcase-mail-text">biuro@radlight.pl</strong>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Footer CTA Link & Location -->
+              <div class="showcase-footer-row">
+                <a href="#o-nas" class="btn-showcase-explore" id="showcase-explore-btn">
+                  <span id="showcase-explore-text">Przejdź do oferty</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <div class="showcase-quick-stats">
+                  <span><i class="fa-solid fa-location-dot"></i> Giżycko, Myśliwska 3</span>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
 
-        <!-- RIGHT COLUMN: Interactive Circular Wheel Stage (Larger Circles + Interactive Hub) -->
+        <!-- RIGHT COLUMN: Interactive Circular Wheel Stage with 3 Concentric Clock-Rotating Rings -->
         <div class="wheel-stage-wrapper" id="wheel-stage-wrapper">
           <div class="wheel-container" id="interactive-wheel">
             
             <div class="wheel-ambient-glow"></div>
-            <div class="orbit-radar-sweep"></div>
-            <div class="orbit-ticks-ring"></div>
-            <div class="orbit-ring"></div>
+            
+            <!-- 3 Concentric Clock-Rotating Rings (White, Orange, White) -->
+            <div class="clock-ring ring-outer" title="Zewnętrzny pierścień zegarowy (Biały)"></div>
+            <div class="clock-ring ring-middle" title="Środkowy pierścień zegarowy (Pomarańczowy)"></div>
+            <div class="clock-ring ring-inner" title="Wewnętrzny pierścień zegarowy (Biały)"></div>
 
             <div class="wheel-orbit" id="wheel-orbit">
               <!-- Node 0: Radlight Main Logo -->

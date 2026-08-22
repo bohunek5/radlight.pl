@@ -393,8 +393,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('interactive-wheel') || document.querySelector('.wheel-container');
     if (!container) return;
 
-    const orbitRing = container.querySelector('.orbit-ring');
-    const radius = orbitRing && orbitRing.offsetWidth > 0 ? orbitRing.offsetWidth / 2 : (container.offsetWidth > 0 ? container.offsetWidth * 0.4 : 200);
+    const orbitRing = container.querySelector('.clock-ring.ring-middle') || container.querySelector('.orbit-ring');
+    const radius = orbitRing && orbitRing.offsetWidth > 0 ? (orbitRing.offsetWidth / 2) : (container.offsetWidth > 0 ? container.offsetWidth * 0.375 : 225);
 
     nodes.forEach((node, i) => {
       const angle = ((i * (360 / total)) - 90) * (Math.PI / 180);
@@ -449,7 +449,56 @@ document.addEventListener('DOMContentLoaded', () => {
       else hubBannerLink.removeAttribute('target');
     }
 
-    // 3. Update Option 1 Split-Screen Live Card
+    // 3. Update Dynamic Service Showcase Window (Half Photo / Half Text & Actions)
+    const showcaseCard = document.getElementById('service-card-showcase');
+    const scImg = document.getElementById('showcase-img');
+    const scCategory = document.getElementById('showcase-category');
+    const scNumber = document.getElementById('showcase-number');
+    const scTitle = document.getElementById('showcase-title');
+    const scSubtitle = document.getElementById('showcase-subtitle');
+    const scDesc = document.getElementById('showcase-desc');
+    const scCallBtn = document.getElementById('showcase-call-btn');
+    const scPhoneText = document.getElementById('showcase-phone-text');
+    const scMailBtn = document.getElementById('showcase-mail-btn');
+    const scMailText = document.getElementById('showcase-mail-text');
+    const scExploreBtn = document.getElementById('showcase-explore-btn');
+    const scExploreText = document.getElementById('showcase-explore-text');
+
+    if (showcaseCard) {
+      showcaseCard.classList.remove('is-updating');
+      void showcaseCard.offsetWidth;
+      showcaseCard.classList.add('is-updating');
+    }
+
+    if (scImg) {
+      scImg.src = data.bgImg || data.img;
+      scImg.alt = data.title;
+    }
+    if (scCategory) scCategory.textContent = data.category || (index === 0 ? "GRUPA CENTRALNA • GIŻYCKO" : data.tag);
+    if (scNumber) scNumber.textContent = countStr;
+    if (scTitle) scTitle.textContent = data.title;
+    if (scSubtitle) scSubtitle.textContent = data.sub;
+    if (scDesc) scDesc.textContent = data.desc;
+    if (scCallBtn) {
+      scCallBtn.href = data.phone;
+      scCallBtn.setAttribute('title', `Zadzwoń: ${data.phoneDisplay}`);
+    }
+    if (scPhoneText) scPhoneText.textContent = data.phoneDisplay;
+    if (scMailBtn) {
+      scMailBtn.href = data.email || "mailto:biuro@radlight.pl";
+      scMailBtn.setAttribute('title', `Napisz: ${data.emailDisplay || 'biuro@radlight.pl'}`);
+    }
+    if (scMailText) scMailText.textContent = data.emailDisplay || "biuro@radlight.pl";
+    if (scExploreBtn) {
+      scExploreBtn.href = data.link;
+      if (data.link.startsWith('http')) scExploreBtn.target = '_blank';
+      else scExploreBtn.removeAttribute('target');
+    }
+    if (scExploreText) {
+      scExploreText.textContent = data.link.startsWith('http') ? `Przejdź do ${data.sub}` : "Zobacz szczegóły oferty";
+    }
+
+    // Also update legacy splitCard if present
     if (splitCardCategory) splitCardCategory.textContent = data.category;
     if (splitCardCount) splitCardCount.textContent = countStr;
     if (splitCardImg) {

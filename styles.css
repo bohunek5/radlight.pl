@@ -329,34 +329,101 @@ body.dark-theme .icon-moon {
   color: #a855f7;
 }
 
-/* Navigation Header */
+/* Navigation Header with Slogan Left, Centered Logo, Menu Right */
 .main-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: var(--ocean-main);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 14px 0;
-  transition: var(--transition);
+  background-color: #021420;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 12px 0;
+  transition: all 0.3s ease;
+}
+
+.main-header.is-scrolled {
+  background-color: rgba(2, 20, 32, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);
+  padding: 10px 0;
 }
 
 .header-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
+  position: relative;
 }
 
-.brand-logo img {
-  height: 48px;
+/* Slogan Left */
+.header-slogan-box {
+  display: flex;
+  align-items: center;
+}
+
+.slogan-link {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1.15;
+  text-decoration: none;
+  transition: transform 0.25s ease;
+}
+
+.slogan-link:hover {
+  transform: translateX(3px);
+}
+
+.slogan-primary {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: #e94e1b;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-shadow: 0 0 12px rgba(233, 78, 27, 0.45);
+}
+
+.slogan-secondary {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #ff9f1c;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Centered Logo */
+.header-logo-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo-mid img {
+  height: 52px;
   width: auto;
   object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brand-logo-mid:hover img {
+  transform: scale(1.06);
+}
+
+/* Right Navigation Menu */
+.nav-menu {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 22px;
 }
 
 .nav-link {
@@ -370,7 +437,7 @@ body.dark-theme .icon-moon {
 
 .nav-link:hover,
 .nav-link.active {
-  color: #fff;
+  color: #ffffff;
 }
 
 .nav-link::after {
@@ -380,7 +447,7 @@ body.dark-theme .icon-moon {
   left: 0;
   width: 0%;
   height: 2px;
-  background-color: var(--primary);
+  background-color: #e94e1b;
   transition: var(--transition);
 }
 
@@ -2374,9 +2441,275 @@ body.dark-theme .icon-moon {
 }
 
 /* ==========================================================================
-   THE UNIVERSAL ROTATING CIRCULAR WHEEL STAGE (3D Glassmorphism)
+   HERO STAGE: DYNAMIC SHOWCASE WINDOW (LEFT) + CLOCK-RINGS WHEEL (RIGHT)
    ========================================================================== */
+.hero-unified-layout {
+  display: grid;
+  grid-template-columns: minmax(360px, 520px) 1fr;
+  gap: clamp(30px, 4vw, 60px);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  z-index: 6;
+}
 
+/* LEFT COLUMN: Dynamic Service Showcase Window (Half Photo Top / Half Text & Actions Bottom) */
+.hero-showcase-panel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.service-card-showcase {
+  width: 100%;
+  background: linear-gradient(180deg, rgba(6, 43, 66, 0.9) 0%, rgba(2, 20, 32, 0.97) 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75), 0 0 35px rgba(233, 78, 27, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.service-card-showcase:hover {
+  border-color: rgba(233, 78, 27, 0.6);
+  box-shadow: 0 30px 75px rgba(0, 0, 0, 0.85), 0 0 45px rgba(233, 78, 27, 0.25);
+}
+
+.service-card-showcase.is-updating {
+  animation: showcaseFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes showcaseFadeIn {
+  0% { opacity: 0.6; transform: translateY(6px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Top 50% High-Res Photo */
+.showcase-photo-box {
+  height: 250px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.showcase-photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-card-showcase:hover .showcase-photo-box img {
+  transform: scale(1.05);
+}
+
+.showcase-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(2, 20, 32, 0.1) 0%, rgba(2, 20, 32, 0.88) 100%);
+}
+
+.showcase-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(2, 20, 32, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(233, 78, 27, 0.65);
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: #ff9f1c;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.showcase-number-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 5px 12px;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 0.76rem;
+  font-weight: 800;
+  font-family: 'Outfit', sans-serif;
+  z-index: 2;
+}
+
+/* Bottom 50% Content & Direct Interactive Actions */
+.showcase-body {
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.showcase-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.showcase-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.45rem, 2.2vw, 1.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+}
+
+.showcase-subtitle {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #e94e1b;
+  margin: 0;
+}
+
+.showcase-desc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+}
+
+/* Direct Action Grid (Phone & Email) */
+.showcase-actions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.btn-showcase-call {
+  background: rgba(233, 78, 27, 0.18);
+  border: 1px solid rgba(233, 78, 27, 0.45);
+  border-radius: 12px;
+  padding: 9px 12px;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-showcase-call:hover {
+  background: #e94e1b;
+  border-color: #e94e1b;
+  box-shadow: 0 4px 18px rgba(233, 78, 27, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-showcase-mail {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  padding: 9px 12px;
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-showcase-mail:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-icon {
+  font-size: 1.1rem;
+  color: #ff9f1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-showcase-call:hover .btn-icon {
+  color: #ffffff;
+}
+
+.btn-details {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.btn-details small {
+  font-size: 0.66rem;
+  color: rgba(255, 255, 255, 0.65);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.btn-details strong {
+  font-size: 0.82rem;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+/* Footer Link Row */
+.showcase-footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 14px;
+  margin-top: 2px;
+}
+
+.btn-showcase-explore {
+  background: linear-gradient(135deg, #e94e1b 0%, #ff7b00 100%);
+  color: #ffffff;
+  padding: 9px 18px;
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: 0.84rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(233, 78, 27, 0.4);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-showcase-explore:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(233, 78, 27, 0.6);
+}
+
+.showcase-quick-stats {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ==========================================================================
+   RIGHT COLUMN: THE CLOCK-RINGS ROTATING WHEEL (White, Orange, White)
+   ========================================================================== */
 .wheel-stage-wrapper {
   display: flex;
   flex-direction: column;
@@ -2388,8 +2721,8 @@ body.dark-theme .icon-moon {
 
 .wheel-container {
   position: relative;
-  width: 620px;
-  height: 620px;
+  width: 600px;
+  height: 600px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -2397,51 +2730,60 @@ body.dark-theme .icon-moon {
   transition: all 0.4s ease;
 }
 
-
-
-/* Orbit Track Rings */
-.orbit-glow-halo {
-  position: absolute;
-  width: 480px;
-  height: 480px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(233, 78, 27, 0.15) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.orbit-ring {
-  position: absolute;
-  width: 470px;
-  height: 470px;
-  border-radius: 50%;
-  border: 3px solid rgba(255, 255, 255, 0.85);
-  box-shadow: 0 0 40px rgba(255, 255, 255, 0.35);
-}
-
-/* ==========================================================================
-   CIRCULAR INTERACTIVE WHEEL COMPONENT (Large Executive Nodes & Interactive Hub)
-   ========================================================================== */
-.wheel-container {
-  position: relative;
-  width: 560px;
-  height: 560px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.orbit-ring {
+/* 3 Concentric Clock-Rotating Rings (White, Orange, White) */
+.clock-ring {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 420px;
-  height: 420px;
   border-radius: 50%;
-  border: 2px dashed rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 35px rgba(233, 78, 27, 0.2);
   pointer-events: none;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}
+
+/* Ring 1 - Outer White Ring (Clockwise) */
+.clock-ring.ring-outer {
+  width: 580px;
+  height: 580px;
+  border: 2px dashed rgba(255, 255, 255, 0.35);
+  border-top: 2.5px solid rgba(255, 255, 255, 0.95);
+  border-bottom: 2.5px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+  animation: clockRotateCW 42s linear infinite;
+}
+
+/* Ring 2 - Middle Orange Ring (Counter-Clockwise) */
+.clock-ring.ring-middle {
+  width: 450px;
+  height: 450px;
+  border: 2px solid transparent;
+  border-top: 2.5px solid #e94e1b;
+  border-right: 2.5px solid #ff9f1c;
+  border-bottom: 2.5px solid #e94e1b;
+  border-left: 2px dashed rgba(233, 78, 27, 0.45);
+  box-shadow: 0 0 25px rgba(233, 78, 27, 0.3);
+  animation: clockRotateCCW 26s linear infinite;
+}
+
+/* Ring 3 - Inner White Ring (Clockwise) */
+.clock-ring.ring-inner {
+  width: 320px;
+  height: 320px;
+  border: 2px solid transparent;
+  border-top: 2px solid rgba(255, 255, 255, 0.85);
+  border-left: 2px dashed rgba(255, 255, 255, 0.4);
+  border-right: 2px solid rgba(255, 255, 255, 0.85);
+  animation: clockRotateCW 18s linear infinite;
+}
+
+@keyframes clockRotateCW {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes clockRotateCCW {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(-360deg); }
 }
 
 .wheel-orbit {
@@ -6503,6 +6845,62 @@ body {
 }
 
 @media (max-width: 992px) {
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .slogan-secondary {
+    display: none;
+  }
+
+  .hero-unified-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-showcase-panel {
+    max-width: 540px;
+  }
+
+  .wheel-container {
+    width: 480px;
+    height: 480px;
+  }
+
+  .clock-ring.ring-outer {
+    width: 470px;
+    height: 470px;
+  }
+
+  .clock-ring.ring-middle {
+    width: 370px;
+    height: 370px;
+  }
+
+  .clock-ring.ring-inner {
+    width: 270px;
+    height: 270px;
+  }
+
+  .wheel-node {
+    width: 80px;
+    height: 80px;
+    margin-top: -40px;
+    margin-left: -40px;
+  }
+
+  .node-icon-box {
+    width: 74px;
+    height: 74px;
+  }
+
+  .wheel-center-hub {
+    width: 170px;
+    height: 170px;
+  }
+
   .subpage-hero-grid,
   .subpage-main-grid {
     grid-template-columns: 1fr;
@@ -6529,6 +6927,75 @@ body {
 
   .configurator-card {
     padding: 24px 16px;
+  }
+
+  .slogan-primary {
+    font-size: 0.8rem;
+  }
+
+  .brand-logo-mid img {
+    height: 42px;
+  }
+
+  .wheel-container {
+    width: 350px;
+    height: 350px;
+  }
+
+  .clock-ring.ring-outer {
+    width: 340px;
+    height: 340px;
+  }
+
+  .clock-ring.ring-middle {
+    width: 270px;
+    height: 270px;
+  }
+
+  .clock-ring.ring-inner {
+    width: 200px;
+    height: 200px;
+  }
+
+  .wheel-node {
+    width: 62px;
+    height: 62px;
+    margin-top: -31px;
+    margin-left: -31px;
+  }
+
+  .node-icon-box {
+    width: 56px;
+    height: 56px;
+    border-width: 2.5px;
+  }
+
+  .wheel-center-hub {
+    width: 130px;
+    height: 130px;
+  }
+
+  .hub-avatar {
+    width: 44px;
+    height: 44px;
+  }
+
+  .hub-title {
+    font-size: 0.82rem;
+  }
+
+  .hub-sub {
+    font-size: 0.65rem;
+  }
+
+  .hub-action-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 0.72rem;
+  }
+
+  .showcase-actions-grid {
+    grid-template-columns: 1fr;
   }
 }
 
