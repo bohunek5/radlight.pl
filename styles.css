@@ -6152,3 +6152,267 @@ body.light-theme .btn-read-article:hover i {
   color: #ffffff !important;
   transform: translateX(4px) !important;
 }
+
+
+/* ==========================================================================
+   STATUS BADGES IN TABLES & SPECIFICATIONS (MAXIMUM CONTRAST)
+   ========================================================================== */
+
+.status-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  font-family: var(--font-heading) !important;
+  font-weight: 800 !important;
+  font-size: 0.84rem !important;
+  padding: 6px 14px !important;
+  border-radius: var(--radius-pill) !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  transition: all 0.2s ease !important;
+}
+
+.status-badge i {
+  font-size: 0.9rem !important;
+}
+
+/* Available Status (Green) */
+body.light-theme .status-badge-available,
+body.light-theme span.status-badge-available {
+  background: #dcfce7 !important;
+  color: #166534 !important; /* Dark rich forest green - ultra readable on light bg */
+  border: 1.5px solid #86efac !important;
+  box-shadow: 0 2px 6px rgba(22, 101, 52, 0.08) !important;
+}
+
+body:not(.light-theme) .status-badge-available,
+body:not(.light-theme) span.status-badge-available {
+  background: rgba(16, 185, 129, 0.22) !important;
+  color: #4ade80 !important; /* Vivid bright green */
+  border: 1.5px solid rgba(74, 222, 128, 0.5) !important;
+  box-shadow: 0 2px 8px rgba(74, 222, 128, 0.15) !important;
+}
+
+/* Inquiry / Info Status (Amber / Orange) */
+body.light-theme .status-badge-inquiry,
+body.light-theme span.status-badge-inquiry {
+  background: #fef3c7 !important;
+  color: #9a3412 !important; /* Deep dark amber/copper - ultra readable on light bg */
+  border: 1.5px solid #fdba74 !important;
+  box-shadow: 0 2px 6px rgba(154, 52, 18, 0.08) !important;
+}
+
+body:not(.light-theme) .status-badge-inquiry,
+body:not(.light-theme) span.status-badge-inquiry {
+  background: rgba(245, 158, 11, 0.22) !important;
+  color: #fbbf24 !important; /* Vivid bright amber */
+  border: 1.5px solid rgba(251, 191, 36, 0.5) !important;
+  box-shadow: 0 2px 8px rgba(251, 191, 36, 0.15) !important;
+}
+
+/* ==========================================================================
+   BACK TO TOP FLOATING BUTTON (SMOOTH FADE & MOBILE DOCK SAFE)
+   ========================================================================== */
+
+.btn-back-to-top {
+  position: fixed !important;
+  bottom: 32px !important;
+  right: 28px !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 998 !important;
+  cursor: pointer !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(16px) scale(0.9) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35) !important;
+  outline: none !important;
+}
+
+.btn-back-to-top i {
+  font-size: 1.1rem !important;
+  transition: transform 0.2s ease !important;
+}
+
+.btn-back-to-top:hover i {
+  transform: translateY(-2px) !important;
+}
+
+.btn-back-to-top.visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+/* Night Mode: White glass outline -> White solid fill on hover */
+body:not(.light-theme) .btn-back-to-top {
+  background: rgba(6, 43, 66, 0.88) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.35) !important;
+  color: #ffffff !important;
+}
+
+body:not(.light-theme) .btn-back-to-top:hover {
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #062b40 !important;
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.45) !important;
+}
+
+/* Day Mode: White background with navy border -> Navy solid fill on hover */
+body.light-theme .btn-back-to-top {
+  background: #ffffff !important;
+  border: 1.5px solid #062b40 !important;
+  color: #062b40 !important;
+  box-shadow: 0 6px 20px rgba(6, 43, 66, 0.15) !important;
+}
+
+body.light-theme .btn-back-to-top:hover {
+  background: #062b40 !important;
+  border-color: #062b40 !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(6, 43, 66, 0.35) !important;
+}
+
+/* MOBILE SCREEN ADJUSTMENT (Safe above the bottom iOS dock menu) */
+@media (max-width: 991px) {
+  .btn-back-to-top {
+    bottom: 85px !important; /* 85px keeps it cleanly above the 62px bottom dock bar! */
+    right: 18px !important;
+    width: 44px !important;
+    height: 44px !important;
+  }
+}
+
+
+/* ==========================================================================
+   COHESIVE CIRCULAR BADGE ICON ARCHITECTURE (DAY & NIGHT)
+   ========================================================================== */
+
+.service-icon,
+.dept-icon,
+.contact-dept-icon,
+.subpage-feat-icon,
+.about-experience-badge-icon {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.25rem !important;
+  transition: all 0.25s ease !important;
+}
+
+/* Day Mode: Round light-peach background with brand orange icon */
+body.light-theme .service-icon,
+body.light-theme .dept-icon,
+body.light-theme .contact-dept-icon,
+body.light-theme .subpage-feat-icon,
+body.light-theme .about-experience-badge-icon {
+  background: #fff3ed !important;
+  border: 1.5px solid #ffd8c7 !important;
+}
+
+body.light-theme .service-icon i,
+body.light-theme .dept-icon i,
+body.light-theme .contact-dept-icon i,
+body.light-theme .subpage-feat-icon i,
+body.light-theme .about-experience-badge-icon i {
+  color: #de4b26 !important;
+}
+
+/* Night Mode: Round dark glass peach with brand orange icon */
+body:not(.light-theme) .service-icon,
+body:not(.light-theme) .dept-icon,
+body:not(.light-theme) .contact-dept-icon,
+body:not(.light-theme) .subpage-feat-icon,
+body:not(.light-theme) .about-experience-badge-icon {
+  background: rgba(222, 75, 38, 0.16) !important;
+  border: 1.5px solid rgba(222, 75, 38, 0.35) !important;
+}
+
+body:not(.light-theme) .service-icon i,
+body:not(.light-theme) .dept-icon i,
+body:not(.light-theme) .contact-dept-icon i,
+body:not(.light-theme) .subpage-feat-icon i,
+body:not(.light-theme) .about-experience-badge-icon i {
+  color: #de4b26 !important;
+}
+
+/* Hover: Icon fills solid orange with pure white symbol */
+.contact-dept-card:hover .dept-icon,
+.service-card:hover .service-icon,
+.subpage-feat-card:hover .subpage-feat-icon {
+  background: #de4b26 !important;
+  border-color: #de4b26 !important;
+  transform: scale(1.08) !important;
+}
+
+.contact-dept-card:hover .dept-icon i,
+.service-card:hover .service-icon i,
+.subpage-feat-card:hover .subpage-feat-icon i {
+  color: #ffffff !important;
+}
+
+
+/* ==========================================================================
+   STANDALONE RADLIGHT R EMBLEM IN WHEEL CENTER HUB (NO WHITE CIRCLE)
+   ========================================================================== */
+
+.hub-avatar.is-standalone-logo {
+  margin-top: 6px !important;
+  margin-bottom: 14px !important;
+}
+
+.hub-avatar-circle.is-standalone-logo {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  width: auto !important;
+  height: 155px !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+.wheel-center-hub:hover .hub-avatar-circle.is-standalone-logo {
+  box-shadow: none !important;
+  transform: scale(1.06) !important;
+}
+
+.hub-avatar-circle.is-standalone-logo img,
+.hub-avatar.is-standalone-logo #hub-avatar-img {
+  width: auto !important;
+  height: 148px !important;
+  max-width: 175px !important;
+  max-height: 155px !important;
+  object-fit: contain !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  filter: drop-shadow(0 8px 24px rgba(222, 75, 38, 0.45)) !important;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+body.light-theme .hub-avatar-circle.is-standalone-logo img,
+body.light-theme .hub-avatar.is-standalone-logo #hub-avatar-img {
+  filter: drop-shadow(0 6px 20px rgba(222, 75, 38, 0.4)) !important;
+}
+
+@media (max-width: 768px) {
+  .hub-avatar-circle.is-standalone-logo {
+    height: 110px !important;
+  }
+  .hub-avatar-circle.is-standalone-logo img,
+  .hub-avatar.is-standalone-logo #hub-avatar-img {
+    height: 100px !important;
+    max-width: 125px !important;
+  }
+}

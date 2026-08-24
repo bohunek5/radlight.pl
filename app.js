@@ -33,18 +33,20 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
   // 2. MULTI-LANGUAGE SYSTEM (PL / DE / EN)
   // ==========================================================================
+  // 2. MULTI-LANGUAGE SYSTEM (PL / DE / EN) — ULTRA ROBUST
+  // ==========================================================================
 
   let currentLang = localStorage.getItem('radlight_lang') || 'pl';
-  const langBtns = document.querySelectorAll('.lang-btn');
 
   function setLanguage(lang) {
+    if (!lang) return;
     if (typeof translations === 'undefined' || !translations[lang]) return;
     currentLang = lang;
     document.documentElement.lang = lang;
     localStorage.setItem('radlight_lang', lang);
 
-    // Update active class on buttons
-    langBtns.forEach(btn => {
+    // Update active class on all language buttons across page
+    document.querySelectorAll('.lang-btn').forEach(btn => {
       if (btn.getAttribute('data-lang') === lang) {
         btn.classList.add('active');
       } else {
@@ -53,28 +55,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Translate all elements with data-i18n attribute
-    const elements = document.querySelectorAll('[data-i18n]');
-    elements.forEach(el => {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
-      if (translations[lang][key]) {
+      if (translations[lang] && translations[lang][key]) {
         el.innerHTML = translations[lang][key];
       }
     });
 
     // Translate placeholders
-    const placeholders = document.querySelectorAll('[data-i18n-placeholder]');
-    placeholders.forEach(el => {
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
       const key = el.getAttribute('data-i18n-placeholder');
-      if (translations[lang][key]) {
+      if (translations[lang] && translations[lang][key]) {
         el.setAttribute('placeholder', translations[lang][key]);
       }
     });
 
     // Translate titles & aria-labels
-    const titleEls = document.querySelectorAll('[data-i18n-title]');
-    titleEls.forEach(el => {
+    document.querySelectorAll('[data-i18n-title]').forEach(el => {
       const key = el.getAttribute('data-i18n-title');
-      if (translations[lang][key]) {
+      if (translations[lang] && translations[lang][key]) {
         el.setAttribute('title', translations[lang][key]);
         if (el.hasAttribute('aria-label')) {
           el.setAttribute('aria-label', translations[lang][key]);
@@ -82,21 +81,58 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Refresh active wheel node & hub display
-    if (typeof updateShowcase === 'function') {
-      updateShowcase(activeIndex);
+    // Refresh active wheel node & hub display if present
+    if (typeof updateShowcase === 'function' && typeof activeIndex !== 'undefined') {
+      try {
+        updateShowcase(activeIndex);
+      } catch (err) {
+        console.warn('updateShowcase skipped on subpage');
+      }
     }
 
     console.log(`Language set to: ${lang.toUpperCase()}`);
   }
 
-  // Bind click on language buttons
-  langBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
+  // Global delegated click listener for ALL language buttons (top bar, sticky header, mobile drawer)
+  document.addEventListener('click', (e) => {
+    const langBtn = e.target.closest('.lang-btn');
+    if (langBtn) {
       e.preventDefault();
-      const selectedLang = btn.getAttribute('data-lang');
-      setLanguage(selectedLang);
-    });
+      const selectedLang = langBtn.getAttribute('data-lang');
+      if (selectedLang) {
+        setLanguage(selectedLang);
+      }
+    }
+  });
+
+  // ==========================================================================
+  // 2.5 BACK TO TOP FLOATING BUTTON (MOBILE & DESKTOP)
+  // ==========================================================================
+
+  let backToTopBtn = document.getElementById('btn-back-to-top');
+  if (!backToTopBtn) {
+    backToTopBtn = document.createElement('button');
+    backToTopBtn.id = 'btn-back-to-top';
+    backToTopBtn.className = 'btn-back-to-top';
+    backToTopBtn.setAttribute('aria-label', 'Przewiń na górę strony');
+    backToTopBtn.setAttribute('title', 'Przewiń na górę');
+    backToTopBtn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
+    document.body.appendChild(backToTopBtn);
+  }
+
+  const handleScrollBackToTop = () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
+    }
+  };
+  window.addEventListener('scroll', handleScrollBackToTop, { passive: true });
+  handleScrollBackToTop();
+
+  backToTopBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
   // ==========================================================================
@@ -172,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Jedna Firma",
       sub: "wiele możliwości",
       desc: "Centralna baza usług w Giżycku. Łączymy luksusowe apartamenty, pralnię przemysłową, obsługę najmu, magazyny self-storage, helipad oraz marinę z zimowaniem jachtów przy ul. Myśliwskiej 3.",
-      img: "images/logo-w-kole.png",
+      img: "images/radlight-r-symbol.png",
       bgImg: "images/DJI_0101-1536x864.jpg",
       phone: "tel:+48607241090",
       phoneDisplay: "+48 607 241 090",
@@ -345,12 +381,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const displayTitle = langData ? langData.title : data.title;
     const displaySub = langData ? langData.sub : data.sub;
 
-    // 1. Update Center Hub
+    // 1. Update Center Hub (Standalone large logo for index 0 / Radlight Central)
+    const hubAvatar = document.getElementById('hub-avatar') || document.querySelector('.hub-avatar');
     const hubAvatarCircle = document.querySelector('.hub-avatar-circle');
+    const isStandalone = (index === 0) || (data.img && data.img.includes('radlight-r-symbol'));
+
+    if (hubAvatar) {
+      hubAvatar.classList.toggle('is-standalone-logo', isStandalone);
+    }
+    if (hubAvatarCircle) {
+      hubAvatarCircle.classList.toggle('is-standalone-logo', isStandalone);
+    }
+
     if (hubAvatarImg) {
       hubAvatarImg.src = data.img;
       hubAvatarImg.alt = displayTitle;
-      const isLogo = data.img.includes('Logo') || data.img.includes('logo') || data.img.includes('512X512') || data.img.includes('LOGO');
+      const isLogo = data.img.includes('Logo') || data.img.includes('logo') || data.img.includes('512X512') || data.img.includes('LOGO') || isStandalone;
       if (hubAvatarCircle) {
         hubAvatarCircle.classList.toggle('logo-type', isLogo);
       }
@@ -649,13 +695,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }, {
-      rootMargin: '0px 0px -40px 0px',
-      threshold: 0.1
+      rootMargin: '100px 0px 100px 0px',
+      threshold: 0
     });
 
     revealElements.forEach((el, index) => {
       el.classList.add('reveal-element');
-      el.style.transitionDelay = `${(index % 4) * 0.08}s`;
+      el.style.transitionDelay = `${(index % 4) * 0.04}s`;
       revealObserver.observe(el);
     });
   }

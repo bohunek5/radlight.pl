@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kompleksowy Poradnik Zimowania Łodzi i Jachtów na Mazurach | Radlight Giżycko</title>
+  <meta name="description" content="Krok po kroku: bezpieczne slipowanie dźwigiem, mycie kadłuba z osadów, zabezpieczenie układu chłodzenia silnika glikolem, konserwacja baterii oraz zalety ogrzewanej hali przy ul. Sybiraków 15.">
+  <link rel="icon" type="image/png" href="images/logo-w-kole.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-info">
+        <a href="tel:+48607241090" class="top-phone" title="Zadzwoń do nas"><i class="fa-solid fa-phone"></i> +48 607 241 090</a>
+        <a href="mailto:biuro@radlight.pl" class="top-email" title="Napisz e-mail"><i class="fa-solid fa-envelope"></i> biuro@radlight.pl</a>
+        <span class="top-location"><i class="fa-solid fa-location-dot"></i> <span data-i18n="topLocation">Mazury</span></span>
+      </div>
+      <div class="top-links">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="pl" title="Polski"><span class="flag">🇵🇱</span> PL</button>
+          <button class="lang-btn" data-lang="de" title="Deutsch"><span class="flag">🇩🇪</span> DE</button>
+          <button class="lang-btn" data-lang="en" title="English"><span class="flag">🇬🇧</span> EN</button>
+        </div>
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Przełącz motyw dzień/noc" title="Przełącz motyw dzień/noc">
+          <i class="fa-solid fa-sun icon-sun"></i>
+          <i class="fa-solid fa-moon icon-moon"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="main-header" id="header">
+    <div class="container header-container">
+      <div class="header-logo-box">
+        <a href="index.html" class="brand-logo-main" aria-label="Radlight — strona główna">
+          <img src="images/logo-w-kole.png" alt="Radlight Logo" id="logo-img">
+          <div class="brand-text-block">
+            <span class="brand-slogan-main" data-i18n="topSlogan">JEDNA FIRMA. <span class="brand-orange">WIELE MOŻLIWOŚCI.</span></span>
+          </div>
+        </a>
+      </div>
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link" data-i18n="navWheel">Główna</a></li>
+          <li><a href="uslugi.html" class="nav-link" data-i18n="navServices">Katalog Usług</a></li>
+          <li><a href="baza-wiedzy.html" class="nav-link active" data-i18n="navKnowledge">Baza Wiedzy</a></li>
+          <li><a href="o-nas.html" class="nav-link" data-i18n="navAbout">O firmie</a></li>
+          <li><a href="kontakt.html" class="nav-link" data-i18n="navContact">Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="header-quick-actions" id="header-quick-actions">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="pl" title="Polski"><span class="flag">🇵🇱</span> PL</button>
+          <button class="lang-btn" data-lang="de" title="Deutsch"><span class="flag">🇩🇪</span> DE</button>
+          <button class="lang-btn" data-lang="en" title="English"><span class="flag">🇬🇧</span> EN</button>
+        </div>
+        <button class="theme-toggle-btn" aria-label="Przełącz motyw dzień/noc" title="Przełącz motyw dzień/noc">
+          <i class="fa-solid fa-sun icon-sun"></i>
+          <i class="fa-solid fa-moon icon-moon"></i>
+        </button>
+      </div>
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Otwórz menu mobilne">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- SUBPAGE HERO SECTION -->
+  <section class="subpage-hero">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Ścieżka powrotu">
+        <a href="index.html">Strona Główna</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <a href="baza-wiedzy.html">Baza Wiedzy</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Poradnik Zimowania Łodzi</span>
+      </nav>
+      <div class="subpage-hero-grid">
+        <div class="subpage-hero-text">
+          <div class="article-meta-pill" style="display:inline-flex; gap:12px; margin-bottom:12px; font-size:0.84rem; color:var(--primary); font-weight:700;">
+            <span><i class="fa-solid fa-anchor"></i> Marine & Jachty</span>
+            <span>•</span>
+            <span style="color:#cbd5e1;"><i class="fa-regular fa-clock"></i> 7 min czytania</span>
+            <span>•</span>
+            <span style="color:#cbd5e1;"><i class="fa-regular fa-calendar"></i> Sierpień 2026</span>
+          </div>
+          <h1 class="subpage-title">
+            Kompleksowy Poradnik Zimowania Łodzi i Jachtów na Mazurach
+          </h1>
+          <p class="subpage-lead">
+            Krok po kroku: bezpieczne slipowanie dźwigiem, mycie kadłuba z osadów, zabezpieczenie układu chłodzenia silnika glikolem, konserwacja baterii oraz zalety ogrzewanej hali przy ul. Sybiraków 15.
+          </p>
+        </div>
+        <div class="subpage-hero-visual">
+          <div class="subpage-hero-card">
+            <div class="subpage-hero-card-media">
+              <img src="images/baza-zimowanie.jpg" alt="Kompleksowy Poradnik Zimowania Łodzi i Jachtów na Mazurach">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN ARTICLE SECTION WITH FLOATING STICKY SIDEBAR -->
+  <section class="subpage-layout-section">
+    <div class="container">
+      <div class="subpage-main-grid">
+        
+        <!-- Left Content Area -->
+        <div class="subpage-content-area">
+          
+          <article class="subpage-block article-reading-block">
+            <div class="subpage-block-header">
+              <span class="block-sub"><i class="fa-solid fa-water"></i> Przygotowanie Kadłuba</span>
+              <h2>1. Bezpieczne Slipowanie i Mycie Ciśnieniowe Kadłuba</h2>
+            </div>
+            <div class="subpage-prose">
+              <p>Zakończenie sezonu żeglarskiego na Wielkich Jeziorach Mazurskich wymaga precyzyjnego planu. Pozostawienie jachtu w wodzie na zimę wiąże się z ryzykiem uszkodzenia kadłuba przez lód oraz degradacji żelkotu przez glony i osady.</p>
+              <p>W bazie <strong>Radlight Marine Giżycko</strong> slipujemy jachty motorowe i żaglowe przy użyciu atestowanego sprzętu. Bezpośrednio po wyjęciu jednostki z wody wykonujemy mycie ciśnieniowe dna gorącą wodą z użyciem bezpiecznych dla środowiska preparatów usuwających muszle i porosty.</p>
+            </div>
+          </article>
+
+          <article class="subpage-block article-reading-block">
+            <div class="subpage-block-header">
+              <span class="block-sub"><i class="fa-solid fa-gears"></i> Serwis Maszynowy</span>
+              <h2>2. Zabezpieczenie Silnika Glikolem i Instalacji Wodnej</h2>
+            </div>
+            <div class="subpage-prose">
+              <p>Zamarzająca woda w bloku silnika lub przewodach sanitarnych to najczęstsza przyczyna kosztownych awarii na wiosnę. Nasz serwis przeprowadza pełną zimową procedurę:</p>
+              <ul>
+                <li><i class="fa-solid fa-check-circle"></i> Przedmuchanie i zalanie układu chłodzenia silnika nietoksycznym glikolem do -35°C</li>
+                <li><i class="fa-solid fa-check-circle"></i> Opróżnienie zbiorników wody pitnej i instalacji ciśnieniowej</li>
+                <li><i class="fa-solid fa-check-circle"></i> Wymiana oleju silnikowego, przekładniowego i filtrów</li>
+                <li><i class="fa-solid fa-check-circle"></i> Konserwacja akumulatorów (doładowanie buforowe w kontrolowanych warunkach)</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="subpage-block article-reading-block">
+            <div class="subpage-block-header">
+              <span class="block-sub"><i class="fa-solid fa-warehouse"></i> Hala Magazynowa</span>
+              <h2>3. Ogrzewana Hala vs. Plac Zewnętrzny — Co Wybrać?</h2>
+            </div>
+            <div class="subpage-prose">
+              <p>Przechowywanie jachtu w nowoczesnej, izolowanej hali przy ul. Sybiraków 15 całkowicie eliminuje wilgoć, pleśń oraz niszczący wpływ mrozu na tapicerki i elektronikę pokładową. Całodobowy monitoring CCTV oraz ubezpieczenie obiektu dają 100% spokoju przez całą zimę.</p>
+            </div>
+          </article>
+        
+          
+          <!-- Back to Knowledge Base Button -->
+          <div class="article-bottom-actions" style="display:flex; justify-content:space-between; align-items:center; padding-top:20px; border-top:1px solid var(--border-glass);">
+            <a href="baza-wiedzy.html" class="btn-card">
+              <i class="fa-solid fa-arrow-left"></i> Wróć do Bazy Wiedzy
+            </a>
+            <a href="kontakt.html" class="btn-card">
+              Skonsultuj z Ekspertem <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Floating Sticky Sidebar -->
+                <aside class="subpage-sidebar sticky-floating-sidebar">
+          
+          <!-- Widget 1: Tematy Bazy Wiedzy -->
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title"><i class="fa-solid fa-book-open"></i> Baza Wiedzy & Artykuły</h3>
+            <ul class="sidebar-services-nav">
+            <li>
+              <a href="artykul-jak-zwiekszyc-zysk-z-najmu.html">
+                <span class="sidebar-nav-left"><i class="fa-solid fa-hotel"></i> Jak Zwiększyć Zysk z Najmu?</span>
+                <i class="fa-solid fa-chevron-right sidebar-arrow"></i>
+              </a>
+            </li>
+            <li>
+              <a href="artykul-standardy-pralnicze-hotelarstwo.html">
+                <span class="sidebar-nav-left"><i class="fa-solid fa-soap"></i> Standardy Pralnicze Hoteli</span>
+                <i class="fa-solid fa-chevron-right sidebar-arrow"></i>
+              </a>
+            </li>
+            <li>
+              <a href="artykul-poradnik-zimowania-lodzi.html" class="active">
+                <span class="sidebar-nav-left"><i class="fa-solid fa-anchor"></i> Poradnik Zimowania Łodzi</span>
+                <i class="fa-solid fa-chevron-right sidebar-arrow"></i>
+              </a>
+            </li>
+            <li>
+              <a href="artykul-self-storage-dla-firm-i-osob.html">
+                <span class="sidebar-nav-left"><i class="fa-solid fa-warehouse"></i> Przewodnik Self-Storage</span>
+                <i class="fa-solid fa-chevron-right sidebar-arrow"></i>
+              </a>
+            </li>
+            <li>
+              <a href="artykul-procedury-helipad-mazury.html">
+                <span class="sidebar-nav-left"><i class="fa-solid fa-helicopter"></i> Procedury Helipad Mazury</span>
+                <i class="fa-solid fa-chevron-right sidebar-arrow"></i>
+              </a>
+            </li>
+            <li>
+              <a href="artykul-zielona-transformacja-goz.html">
+                <span class="sidebar-nav-left"><i class="fa-solid fa-leaf"></i> Zielona Transformacja GOZ</span>
+                <i class="fa-solid fa-chevron-right sidebar-arrow"></i>
+              </a>
+            </li>
+            </ul>
+          </div>
+
+          <!-- Widget 2: Nasze Usługi -->
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title"><i class="fa-solid fa-layer-group"></i> Nasze Usługi</h3>
+            <ul class="sidebar-services-nav">
+            <li>
+              <a href="apartamenty.html">
+                <span class="sidebar-nav-left"><i class="fa-solid fa-bed"></i> Apartamenty Giżycko</span>
+                <i class="fa-solid fa-chevron-right sidebar-arrow"></i>
+              </a>
+            </li>
+            <li>
+              <a href="zarzadzanie-najmem.html">
+                <span class="sidebar-nav-left"><i class="fa-solid fa-key"></i> Obsługa Najmu</span>
+                <i class="fa-solid fa-chevron-right sidebar-arrow"></i>
+              </a>
+            </li>
+            <li>
+              <a href="pralnia.html">
+                <span class="sidebar-nav-left"><i class="fa-solid fa-shirt"></i> Pralnia Przemysłowa</span>
+                <i class="fa-solid fa-chevron-right sidebar-arrow"></i>
+              </a>
+            </li>
+            <li>
+              <a href="sprzatanie.html">
+                <span class="sidebar-nav-left"><i class="fa-solid fa-broom"></i> Usługi Sprzątające</span>
+                <i class="fa-solid fa-chevron-right sidebar-arrow"></i>
+              </a>
+            </li>
+            <li>
+              <a href="magazyny.html">
+                <span class="sidebar-nav-left"><i class="fa-solid fa-warehouse"></i> Hale i Magazyny</span>
+                <i class="fa-solid fa-chevron-right sidebar-arrow"></i>
+              </a>
+            </li>
+            <li>
+              <a href="zimowanie-jachtow.html">
+                <span class="sidebar-nav-left"><i class="fa-solid fa-anchor"></i> Zimowanie Jachtów</span>
+                <i class="fa-solid fa-chevron-right sidebar-arrow"></i>
+              </a>
+            </li>
+            <li>
+              <a href="helipad.html">
+                <span class="sidebar-nav-left"><i class="fa-solid fa-helicopter"></i> Helipad Mazury</span>
+                <i class="fa-solid fa-chevron-right sidebar-arrow"></i>
+              </a>
+            </li>
+            <li>
+              <a href="czarter.html">
+                <span class="sidebar-nav-left"><i class="fa-solid fa-ship"></i> Czarter Stillo 30</span>
+                <i class="fa-solid fa-chevron-right sidebar-arrow"></i>
+              </a>
+            </li>
+            </ul>
+          </div>
+
+          <!-- Widget 3: Kontakt CTA -->
+          <div class="sidebar-widget sidebar-cta-box text-center">
+            <h4 style="font-size:1.1rem; color:#ffffff; margin-bottom:8px;"><i class="fa-solid fa-phone" style="color:#de4b26;"></i> Masz Pytania?</h4>
+            <p style="font-size:0.85rem; color:#94a3b8; margin-bottom:16px;">Skontaktuj się z naszym biurem w Giżycku:</p>
+            <a href="tel:+48607241090" class="top-phone" style="display:inline-flex; width:100%; justify-content:center; padding:10px 16px;">
+              +48 607 241 090
+            </a>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <img src="images/logo-w-kole.png" alt="" class="footer-watermark" aria-hidden="true">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <img src="images/logo-w-kole.png" alt="Radlight">
+            <strong>RADLIGHT</strong>
+          </div>
+          <p class="footer-desc" data-i18n="footerDesc">Jedna firma. Wiele możliwości.<br>Kompleksowa obsługa turystyki, nieruchomości, logistyki i usług na Mazurach.</p>
+          <div class="footer-company-box">
+            <strong style="color: #ffffff; display: block; margin-bottom: 3px;">RAD'LIGHT Radosław Narwojsz</strong>
+            <span>NIP: 8451647713 • REGON: 280456789</span><br>
+            <span>Biuro: ul. Myśliwska 3, 11-500 Giżycko</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading" data-i18n="footerColServices">Nasze Usługi</h4>
+          <ul class="footer-links">
+            <li><a href="apartamenty.html">Apartamenty, Domki, Pokoje</a></li>
+            <li><a href="zarzadzanie-najmem.html">Zarządzanie Najmem</a></li>
+            <li><a href="pralnia.html">Pralnia Giżycko</a></li>
+            <li><a href="sprzatanie.html">Usługi Sprzątające</a></li>
+            <li><a href="magazyny.html">Hale, Magazyny & Lokale</a></li>
+            <li><a href="helipad.html">Helipad Mazury</a></li>
+            <li><a href="zimowanie-jachtow.html">Zimowanie Jachtów</a></li>
+            <li><a href="czarter.html">Czarter Jachtów</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading" data-i18n="footerColInfo">Firma & Informacje</h4>
+          <ul class="footer-links">
+            <li><a href="o-nas.html">O firmie</a></li>
+            <li><a href="uslugi.html">Katalog Usług</a></li>
+            <li><a href="baza-wiedzy.html">Baza Wiedzy</a></li>
+            <li><a href="projekty-unijne.html">Projekty Unijne GOZ</a></li>
+            <li><a href="kontakt.html">Dane Kontaktowe</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading" data-i18n="footerColContact">Kontakt Bezpośredni</h4>
+          <ul class="footer-contact-list">
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:+48607241090">+48 607 241 090 (Główne)</a></li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:+48730064044">+48 730 064 044 (Pralnia)</a></li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:+48730067027">+48 730 067 027 (Sprzątanie)</a></li>
+            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:biuro@radlight.pl">biuro@radlight.pl</a></li>
+            <li><i class="fa-solid fa-location-dot"></i> <span>Biuro: ul. Myśliwska 3, Giżycko</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footerRights">&copy; 2026</p>
+        <p class="footer-credits">powered by RADLIGHT</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
