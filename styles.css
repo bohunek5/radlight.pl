@@ -6416,3 +6416,169 @@ body.light-theme .hub-avatar.is-standalone-logo #hub-avatar-img {
     max-width: 125px !important;
   }
 }
+
+
+/* ==========================================================================
+   ARTICLE & KNOWLEDGE BASE META TYPOGRAPHY (DAY & NIGHT CONTRAST)
+   ========================================================================== */
+
+.article-meta-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-bottom: 14px !important;
+  font-size: 0.90rem !important;
+  font-weight: 700 !important;
+}
+
+.article-meta-pill .article-category-tag,
+.article-meta-pill > span:first-child {
+  color: #de4b26 !important;
+  font-weight: 800 !important;
+}
+
+.article-meta-pill .meta-separator {
+  opacity: 0.6 !important;
+}
+
+body.light-theme .article-meta-pill .meta-separator {
+  color: #94a3b8 !important;
+}
+
+body:not(.light-theme) .article-meta-pill .meta-separator {
+  color: #64748b !important;
+}
+
+/* Day Mode: Deep charcoal slate (#1e293b) - 100% crisp and readable */
+body.light-theme .article-meta-pill .article-meta-item,
+body.light-theme .article-meta-pill span[class*="article-meta"],
+body.light-theme .knowledge-card-meta span:not(.article-category-tag) {
+  color: #1e293b !important;
+  font-weight: 700 !important;
+}
+
+body.light-theme .article-meta-pill .article-meta-item i,
+body.light-theme .knowledge-card-meta span:not(.article-category-tag) i {
+  color: #475569 !important;
+}
+
+/* Night Mode: Bright cool white/silver (#f1f5f9) */
+body:not(.light-theme) .article-meta-pill .article-meta-item,
+body:not(.light-theme) .article-meta-pill span[class*="article-meta"],
+body:not(.light-theme) .knowledge-card-meta span:not(.article-category-tag) {
+  color: #f1f5f9 !important;
+  font-weight: 600 !important;
+}
+
+body:not(.light-theme) .article-meta-pill .article-meta-item i,
+body:not(.light-theme) .knowledge-card-meta span:not(.article-category-tag) i {
+  color: #cbd5e1 !important;
+}
+
+
+/* ==========================================================================
+   CONTACT DEPARTMENT CARDS (CLEAN & NO ICONS, PERFECT HOVER STATES)
+   ========================================================================== */
+
+.contact-dept-card {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 18px 24px !important;
+  border-radius: 14px !important;
+  text-decoration: none !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer !important;
+}
+
+.contact-dept-card .dept-info {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  flex: 1 1 auto !important;
+}
+
+.contact-dept-card .dept-arrow {
+  flex-shrink: 0 !important;
+  font-size: 1rem !important;
+  transition: transform 0.25s ease, color 0.25s ease !important;
+}
+
+/* Day Mode */
+body.light-theme .contact-dept-card {
+  background: #ffffff !important;
+  border: 1.5px solid #e2e8f0 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02) !important;
+}
+
+body.light-theme .contact-dept-card strong {
+  color: #0f172a !important;
+  font-size: 1.02rem !important;
+  font-weight: 800 !important;
+  transition: color 0.2s ease !important;
+}
+
+body.light-theme .contact-dept-card span {
+  color: #475569 !important;
+  font-size: 0.88rem !important;
+  font-weight: 500 !important;
+}
+
+body.light-theme .contact-dept-card .dept-arrow {
+  color: #94a3b8 !important;
+}
+
+body.light-theme .contact-dept-card:hover {
+  border-color: #de4b26 !important;
+  background: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(222, 75, 38, 0.12) !important;
+  transform: translateY(-2px) !important;
+}
+
+body.light-theme .contact-dept-card:hover strong {
+  color: #de4b26 !important;
+}
+
+body.light-theme .contact-dept-card:hover .dept-arrow {
+  color: #de4b26 !important;
+  transform: translateX(5px) !important;
+}
+
+/* Night Mode */
+body:not(.light-theme) .contact-dept-card {
+  background: rgba(15, 23, 42, 0.6) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+body:not(.light-theme) .contact-dept-card strong {
+  color: #ffffff !important;
+  font-size: 1.02rem !important;
+  font-weight: 800 !important;
+  transition: color 0.2s ease !important;
+}
+
+body:not(.light-theme) .contact-dept-card span {
+  color: #94a3b8 !important;
+  font-size: 0.88rem !important;
+}
+
+body:not(.light-theme) .contact-dept-card .dept-arrow {
+  color: #64748b !important;
+}
+
+body:not(.light-theme) .contact-dept-card:hover {
+  border-color: #de4b26 !important;
+  background: rgba(222, 75, 38, 0.08) !important;
+  box-shadow: 0 8px 28px rgba(222, 75, 38, 0.2) !important;
+  transform: translateY(-2px) !important;
+}
+
+body:not(.light-theme) .contact-dept-card:hover strong {
+  color: #de4b26 !important;
+}
+
+body:not(.light-theme) .contact-dept-card:hover .dept-arrow {
+  color: #de4b26 !important;
+  transform: translateX(5px) !important;
+}
