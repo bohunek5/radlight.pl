@@ -6663,3 +6663,59 @@ body.light-theme .hub-cta-link:hover i {
   color: #ffffff !important;
   transform: translateX(4px) !important;
 }
+
+
+/* ==========================================================================
+   MASTER NIGHT MODE HIGH-CONTRAST CARD & TEXT TYPOGRAPHY
+   (CRISP BRIGHT SILVER-WHITE FOR 100% MAXIMUM READABILITY)
+   ========================================================================== */
+
+body:not(.light-theme) .knowledge-card-excerpt,
+body:not(.light-theme) .service-text,
+body:not(.light-theme) .service-features li,
+body:not(.light-theme) .subpage-prose p,
+body:not(.light-theme) .subpage-prose li,
+body:not(.light-theme) .contact-card-desc,
+body:not(.light-theme) .dept-info span,
+body:not(.light-theme) .section-desc,
+body:not(.light-theme) .subpage-lead,
+body:not(.light-theme) .contact-dept-card p,
+body:not(.light-theme) .faq-answer p,
+body:not(.light-theme) .synergy-desc {
+  color: #f1f5f9 !important; /* Crisp high-contrast cool white */
+  font-weight: 450 !important;
+  line-height: 1.62 !important;
+  opacity: 0.95 !important;
+}
+
+body:not(.light-theme) .service-features li i {
+  color: #de4b26 !important;
+  font-size: 0.88rem !important;
+}
+
+body:not(.light-theme) .knowledge-card-title,
+body:not(.light-theme) .service-title,
+body:not(.light-theme) .section-title,
+body:not(.light-theme) .subpage-title,
+body:not(.light-theme) .dept-info strong,
+body:not(.light-theme) .contact-dept-card h3 {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+
+body.light-theme .knowledge-card-excerpt,
+body.light-theme .service-text,
+body.light-theme .service-features li,
+body.light-theme .subpage-prose p,
+body.light-theme .subpage-prose li,
+body.light-theme .contact-card-desc,
+body.light-theme .dept-info span,
+body.light-theme .section-desc,
+body.light-theme .subpage-lead,
+body.light-theme .contact-dept-card p,
+body.light-theme .faq-answer p,
+body.light-theme .synergy-desc {
+  color: #1e293b !important; /* Rich deep slate navy in Day mode */
+  font-weight: 500 !important;
+  line-height: 1.62 !important;
+}
