@@ -5471,10 +5471,10 @@ body.light-theme .main-footer {
 }
 
 .footer-content {
-  display: grid !important;
-  grid-template-columns: 1.35fr 1fr 1fr 1.25fr !important;
-  gap: 40px !important;
-  margin-bottom: 45px !important;
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1fr 1.25fr;
+  gap: 40px;
+  margin-bottom: 45px;
 }
 
 .footer-col-title {
@@ -7304,5 +7304,227 @@ html {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
+  }
+
+  /* ==========================================================================
+     MOBILE TABLES: VERTICAL FLOW (NO HORIZONTAL SQUEEZING, PURE VERTICAL CARDS)
+     ========================================================================== */
+  .spec-table-container,
+  .spec-table-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: visible !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 16px 0 !important;
+  }
+
+  table.spec-table {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    border: none !important;
+    border-collapse: separate !important;
+  }
+
+  table.spec-table thead {
+    display: none !important;
+  }
+
+  table.spec-table tbody {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+
+  table.spec-table tr {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    padding: 14px 16px !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 14px !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  body.light-theme table.spec-table tr {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04) !important;
+  }
+
+  table.spec-table td {
+    display: block !important;
+    width: 100% !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 1st row: Feature Title / Parametr */
+  table.spec-table td:first-child {
+    font-size: 0.96rem !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    font-family: var(--font-heading) !important;
+  }
+
+  body.light-theme table.spec-table td:first-child {
+    color: #062b40 !important;
+  }
+
+  /* 2nd row: Feature Details */
+  table.spec-table td:nth-child(2) {
+    font-size: 0.86rem !important;
+    line-height: 1.45 !important;
+    color: #cbd5e1 !important;
+    word-break: normal !important;
+  }
+
+  body.light-theme table.spec-table td:nth-child(2) {
+    color: #475569 !important;
+  }
+
+  /* 3rd row: Availability / Status Badge */
+  table.spec-table td:last-child {
+    margin-top: 4px !important;
+    display: block !important;
+  }
+
+  table.spec-table td:last-child .status-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 4px 12px !important;
+    font-size: 0.76rem !important;
+    font-weight: 700 !important;
+    border-radius: var(--radius-pill) !important;
+  }
+
+  /* ==========================================================================
+     MOBILE FOOTER: 100% 1-COLUMN VERTICAL STACK (NO HORIZONTAL SQUEEZING)
+     ========================================================================== */
+  .main-footer {
+    padding: 40px 0 100px !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .footer-content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 28px !important;
+    width: 100% !important;
+    margin-bottom: 28px !important;
+    box-sizing: border-box !important;
+  }
+
+  .footer-col {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    padding: 0 !important;
+    border: none !important;
+    box-sizing: border-box !important;
+  }
+
+  .footer-col:first-child {
+    border-right: none !important;
+    padding-right: 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding-bottom: 22px !important;
+  }
+
+  body.light-theme .footer-col:first-child {
+    border-bottom-color: rgba(255, 255, 255, 0.15) !important;
+  }
+
+  .footer-company-box {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 14px 16px !important;
+    border-radius: 12px !important;
+  }
+
+  .footer-links {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+  }
+
+  .footer-links li {
+    width: 100% !important;
+  }
+
+  .footer-links li a {
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 4px 0 !important;
+    font-size: 0.90rem !important;
+    color: #94a3b8 !important;
+  }
+
+  .footer-contact-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 11px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+  }
+
+  .footer-contact-list li {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    font-size: 0.88rem !important;
+    color: #cbd5e1 !important;
+  }
+
+  .footer-bottom {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 12px !important;
+    padding-top: 22px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .footer-bottom-links {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 14px !important;
+  }
+
+  /* ALL SUBPAGE MAIN GRIDS 1-COLUMN ON MOBILE */
+  .subpage-main-grid,
+  .subpage-layout-grid,
+  .contact-grid,
+  .services-grid,
+  .article-grid,
+  .articles-grid,
+  .about-grid,
+  .form-group-row,
+  .form-row {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 20px !important;
   }
 }
