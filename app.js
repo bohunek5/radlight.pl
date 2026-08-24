@@ -407,9 +407,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const hubCtaText = document.getElementById('hub-cta-text');
     if (hubCtaLink) {
       hubCtaLink.href = data.link;
-      const ctaLabel = index === 0 
-        ? ((typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang].btnExploreHub) ? translations[currentLang].btnExploreHub : 'Poznaj Radlight')
-        : ((typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang].btnReadMoreHub) ? translations[currentLang].btnReadMoreHub : 'Czytaj dalej');
+      const ctaLabel = (typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang].btnReadMoreHub) ? translations[currentLang].btnReadMoreHub : 'Czytaj dalej';
       if (hubCtaText) hubCtaText.textContent = ctaLabel;
     }
     if (hubPhoneBtn) {
