@@ -7001,6 +7001,38 @@ html {
 }
 
 @media (max-width: 768px) {
+  /* Top Bar: larger, bolder phone number and natural capsule flags */
+  .top-phone {
+    font-size: 0.82rem !important;
+    font-weight: 800 !important;
+    padding: 3px 9px !important;
+    border-radius: var(--radius-pill) !important;
+    gap: 6px !important;
+  }
+
+  .top-phone i {
+    font-size: 0.78rem !important;
+  }
+
+  .lang-switcher {
+    padding: 2px 3px !important;
+    border-radius: var(--radius-pill) !important;
+    gap: 2px !important;
+  }
+
+  .lang-btn {
+    padding: 3px 7px !important;
+    font-size: 0.74rem !important;
+    font-weight: 700 !important;
+    border-radius: var(--radius-pill) !important;
+    gap: 4px !important;
+  }
+
+  .lang-btn .flag {
+    font-size: 0.82rem !important;
+    line-height: 1 !important;
+  }
+
   .wheel-hero-section {
     min-height: calc(100vh - 44px) !important;
     min-height: calc(100svh - 44px) !important;
@@ -7010,7 +7042,7 @@ html {
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    padding: 8px 0 16px !important;
+    padding: 6px 0 12px !important;
     box-sizing: border-box !important;
   }
 
@@ -7021,19 +7053,19 @@ html {
     justify-content: center !important;
     width: 100% !important;
     margin: auto 0 !important;
-    gap: 8px !important;
+    gap: 4px !important;
   }
 
-  /* Wider wheel container on mobile for more breathing room */
+  /* Wider, spacious wheel container on mobile */
   .wheel-container {
-    width: min(365px, calc(100vw - 16px)) !important;
-    height: min(365px, calc(100vw - 16px)) !important;
+    width: min(380px, calc(100vw - 8px)) !important;
+    height: min(380px, calc(100vw - 8px)) !important;
     max-width: 98vw !important;
     max-height: 98vw !important;
     margin: 0 auto !important;
   }
 
-  /* Slimmer, delicate borders (ranty) on mobile wheel nodes */
+  /* Slim, delicate rims on orbital node icons */
   .wheel-node {
     width: 58px !important;
     height: 58px !important;
@@ -7062,41 +7094,43 @@ html {
     box-shadow: 0 0 0 2.5px rgba(222, 75, 38, 0.35), 0 6px 16px rgba(0, 0, 0, 0.3) !important;
   }
 
+  /* Spacious, comfortable center hub */
   .wheel-center-hub {
-    width: 155px !important;
-    height: 155px !important;
-    padding: 4px !important;
+    width: 172px !important;
+    height: 172px !important;
+    padding: 6px !important;
   }
 
   .hub-avatar-circle {
-    width: 56px !important;
-    height: 56px !important;
+    width: 62px !important;
+    height: 62px !important;
     margin-bottom: 2px !important;
   }
 
   .hub-avatar-circle.is-standalone-logo {
-    width: 56px !important;
-    height: 56px !important;
+    width: 62px !important;
+    height: 62px !important;
     background: transparent !important;
   }
 
   .hub-avatar.is-standalone-logo #hub-avatar-img,
   .hub-avatar-circle.is-standalone-logo img {
-    height: 50px !important;
-    max-width: 66px !important;
+    height: 54px !important;
+    max-width: 70px !important;
   }
 
   .hub-title {
-    font-size: 0.94rem !important;
-    margin: 1px 0 !important;
+    font-size: 1.02rem !important;
+    margin: 2px 0 1px !important;
+    line-height: 1.15 !important;
   }
 
   .hub-cta-link {
-    font-size: 0.74rem !important;
-    padding: 3px 10px !important;
+    font-size: 0.76rem !important;
+    padding: 4px 12px !important;
     margin-top: 1px !important;
     margin-bottom: 5px !important;
-    gap: 4px !important;
+    gap: 5px !important;
   }
 
   .hub-action-btn {
@@ -7110,14 +7144,15 @@ html {
     display: none !important;
   }
 
+  /* 'Sprawdź ofertę' CTA higher up */
   .hero-bottom-cta-wrap {
-    margin-top: 8px !important;
-    gap: 2px !important;
+    margin-top: 2px !important;
+    gap: 1px !important;
   }
 
   .btn-explore-offer {
-    padding: 8px 22px !important;
-    font-size: 0.86rem !important;
+    padding: 7px 22px !important;
+    font-size: 0.84rem !important;
   }
 }
 
@@ -7193,5 +7228,12 @@ html {
   .btn-explore-offer {
     padding: 8px 20px !important;
     font-size: 0.84rem !important;
+  }
+}
+
+/* Hide hero visual on mobile for specific pages */
+@media (max-width: 991px) {
+  .subpage-hero.no-visual-mobile .subpage-hero-visual {
+    display: none !important;
   }
 }
