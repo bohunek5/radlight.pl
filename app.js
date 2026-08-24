@@ -120,13 +120,38 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(backToTopBtn);
   }
 
+  let lastScrollY = window.scrollY || 0;
+  const scrollThreshold = 6;
+
   const handleScrollBackToTop = () => {
-    if (window.scrollY > 300) {
-      backToTopBtn.classList.add('visible');
+    const currentScrollY = window.scrollY || 0;
+
+    if (window.innerWidth <= 768) {
+      // MOBILE: Hide when scrolling down, show only when actively scrolling UP
+      if (currentScrollY > 200) {
+        if (currentScrollY < lastScrollY - scrollThreshold) {
+          // User is scrolling UP on mobile -> show back-to-top button
+          backToTopBtn.classList.add('visible');
+        } else if (currentScrollY > lastScrollY + scrollThreshold) {
+          // User is scrolling DOWN on mobile -> hide back-to-top button
+          backToTopBtn.classList.remove('visible');
+        }
+      } else {
+        // At or near top -> hide button
+        backToTopBtn.classList.remove('visible');
+      }
     } else {
-      backToTopBtn.classList.remove('visible');
+      // DESKTOP: show when scrolled past hero
+      if (currentScrollY > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
     }
+
+    lastScrollY = currentScrollY;
   };
+
   window.addEventListener('scroll', handleScrollBackToTop, { passive: true });
   handleScrollBackToTop();
 
