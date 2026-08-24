@@ -384,7 +384,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const total = nodes.length;
     const isMobile = window.innerWidth <= 768;
     const containerW = wheelContainer.offsetWidth || (isMobile ? 350 : 760);
-    const radius = isMobile ? Math.round(containerW * 0.405) : 285;
+    const radius = isMobile ? Math.round(containerW * 0.42) : 285;
 
     nodes.forEach((node, i) => {
       const angle = ((i * (360 / total)) - 90) * (Math.PI / 180);
