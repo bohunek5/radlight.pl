@@ -6584,56 +6584,82 @@ body:not(.light-theme) .contact-dept-card:hover .dept-arrow {
 }
 
 
+
+
+
 /* ==========================================================================
-   HUB READ MORE / CTA LINK (IN PLACE OF REPEATED WWW)
+   HUB CTA BUTTON: "CZYTAJ DALEJ →" / "KATALOG USŁUG →"
+   (100% COHESIVE WITH MASTER BUTTON SYSTEM .btn-card & .btn-read-article)
    ========================================================================== */
 
 .hub-cta-link {
   display: inline-flex !important;
   align-items: center !important;
-  gap: 7px !important;
+  justify-content: center !important;
+  gap: 8px !important;
   font-family: var(--font-body) !important;
-  font-size: 0.95rem !important;
+  font-size: 0.92rem !important;
   font-weight: 700 !important;
-  color: #de4b26 !important;
-  background: rgba(222, 75, 38, 0.1) !important;
-  border: 1px solid rgba(222, 75, 38, 0.3) !important;
-  padding: 5px 16px !important;
-  border-radius: 20px !important;
+  padding: 7px 20px !important;
+  border-radius: 24px !important;
   text-decoration: none !important;
-  margin-top: 4px !important;
-  margin-bottom: 12px !important;
+  margin-top: 6px !important;
+  margin-bottom: 14px !important;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
   cursor: pointer !important;
   z-index: 25 !important;
 }
 
 .hub-cta-link i {
-  font-size: 0.82rem !important;
-  transition: transform 0.2s ease !important;
+  font-size: 0.85rem !important;
+  transition: transform 0.25s ease, color 0.25s ease !important;
 }
 
-body.light-theme .hub-cta-link {
-  color: #de4b26 !important;
-  background: rgba(222, 75, 38, 0.08) !important;
-  border-color: rgba(222, 75, 38, 0.25) !important;
-}
-
+/* NIGHT MODE: Crisp White Outline & Text -> Fills White on Hover */
 body:not(.light-theme) .hub-cta-link {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.6) !important;
   color: #ffffff !important;
-  background: rgba(222, 75, 38, 0.2) !important;
-  border-color: rgba(222, 75, 38, 0.4) !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(8px) !important;
 }
 
-.hub-cta-link:hover {
-  background: #de4b26 !important;
-  border-color: #de4b26 !important;
+body:not(.light-theme) .hub-cta-link i {
   color: #ffffff !important;
+}
+
+body:not(.light-theme) .hub-cta-link:hover {
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #062b40 !important;
+  box-shadow: 0 6px 22px rgba(255, 255, 255, 0.4) !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 6px 20px rgba(222, 75, 38, 0.35) !important;
 }
 
-.hub-cta-link:hover i {
+body:not(.light-theme) .hub-cta-link:hover i {
+  color: #062b40 !important;
+  transform: translateX(4px) !important;
+}
+
+/* DAY MODE: Deep Navy Outline & Text -> Fills Deep Navy on Hover */
+body.light-theme .hub-cta-link {
+  background: rgba(6, 43, 66, 0.04) !important;
+  border: 1.5px solid #062b40 !important;
+  color: #062b40 !important;
+}
+
+body.light-theme .hub-cta-link i {
+  color: #062b40 !important;
+}
+
+body.light-theme .hub-cta-link:hover {
+  background: #062b40 !important;
+  border-color: #062b40 !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(6, 43, 66, 0.28) !important;
+  transform: translateY(-2px) !important;
+}
+
+body.light-theme .hub-cta-link:hover i {
+  color: #ffffff !important;
   transform: translateX(4px) !important;
 }

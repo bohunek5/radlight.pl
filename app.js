@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const servicesData = [
     {
       index: 0,
-      title: "Jedna Firma",
+      title: "Poznaj Radlight",
       sub: "wiele możliwości",
       desc: "Centralna baza usług w Giżycku. Łączymy luksusowe apartamenty, pralnię przemysłową, obsługę najmu, magazyny self-storage, helipad oraz marinę z zimowaniem jachtów przy ul. Myśliwskiej 3.",
       img: "images/radlight-r-symbol.png",
@@ -408,7 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (hubCtaLink) {
       hubCtaLink.href = data.link;
       const ctaLabel = index === 0 
-        ? ((typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang].btnExploreHub) ? translations[currentLang].btnExploreHub : 'Katalog usług')
+        ? ((typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang].btnExploreHub) ? translations[currentLang].btnExploreHub : 'Poznaj Radlight')
         : ((typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang].btnReadMoreHub) ? translations[currentLang].btnReadMoreHub : 'Czytaj dalej');
       if (hubCtaText) hubCtaText.textContent = ctaLabel;
     }
