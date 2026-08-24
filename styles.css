@@ -618,15 +618,17 @@ body.light-theme .nav-link.active {
 
 .wheel-hero-section {
   position: relative;
-  padding: 30px 0 40px;
-  background: radial-gradient(circle at center, #0e5b94 0%, #083c66 50%, #021420 100%);
-  min-height: 88vh;
+  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 24px 0 32px;
+  background: radial-gradient(circle at center, #0e5b94 0%, #083c66 50%, #021420 100%);
   overflow: hidden;
+  box-sizing: border-box;
   border: none !important;
-  border-bottom: none !important;
 }
 
 body.light-theme .wheel-hero-section {
@@ -1017,16 +1019,16 @@ body.light-theme .hub-sub {
 }
 
 .hub-action-btn {
-  width: 48px;
-  height: 48px;
-  border-radius: 13px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
   background: #ffffff;
   border: 1px solid #ffffff;
   color: #1a222c !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.15rem;
+  font-size: 0.92rem;
   text-decoration: none;
   cursor: pointer;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
@@ -4002,9 +4004,16 @@ body.light-theme .seo-silo-col h5 {
   }
 
   .hub-action-btn {
-    width: 32px;
-    height: 32px;
-    font-size: 0.85rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  color: #1a222c !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.92rem;
     border-radius: 8px;
   }
 
@@ -4087,9 +4096,16 @@ body.light-theme .seo-silo-col h5 {
   }
 
   .hub-action-btn {
-    width: 30px;
-    height: 30px;
-    font-size: 0.8rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  color: #1a222c !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.92rem;
     border-radius: 7px;
   }
 
@@ -6875,5 +6891,275 @@ html {
   .hero-bottom-cta-wrap {
     margin-top: 10px !important;
     gap: 6px !important;
+  }
+}
+
+
+/* ==========================================================================
+   HERO FULL VIEWPORT CLEAN FRAMING (PC & MOBILE 100% NO BOTTOM RANTS/EDGES)
+   ========================================================================== */
+
+.wheel-hero-section {
+  min-height: calc(100vh - 90px) !important;
+  min-height: calc(100svh - 90px) !important;
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  padding: 24px 0 32px !important;
+}
+
+.hero-wheel-layout {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  gap: 16px !important;
+}
+
+.wheel-container {
+  width: min(500px, 52vh) !important;
+  height: min(500px, 52vh) !important;
+  margin: 0 auto !important;
+  position: relative !important;
+}
+
+.wheel-center-hub {
+  width: min(230px, 24vh) !important;
+  height: min(230px, 24vh) !important;
+}
+
+.hub-avatar-circle {
+  width: min(105px, 11vh) !important;
+  height: min(105px, 11vh) !important;
+  margin-bottom: 4px !important;
+}
+
+.hub-avatar-circle.is-standalone-logo {
+  width: min(110px, 12vh) !important;
+  height: min(110px, 12vh) !important;
+}
+
+.hub-avatar.is-standalone-logo #hub-avatar-img,
+.hub-avatar-circle.is-standalone-logo img {
+  height: min(95px, 10vh) !important;
+  max-width: min(120px, 13vh) !important;
+}
+
+.hub-title {
+  font-size: clamp(1.10rem, 2.0vh, 1.35rem) !important;
+  margin: 2px 0 3px !important;
+}
+
+.hub-cta-link {
+  font-size: clamp(0.76rem, 1.5vh, 0.85rem) !important;
+  padding: 5px 14px !important;
+  margin-top: 2px !important;
+  margin-bottom: 6px !important;
+  gap: 6px !important;
+}
+
+.hub-action-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+}
+
+.hub-action-btn {
+  width: 34px !important;
+  height: 34px !important;
+  border-radius: 50% !important;
+  font-size: 0.85rem !important;
+}
+
+.hub-contact-details {
+  margin-top: 4px !important;
+  gap: 2px !important;
+}
+
+.hub-detail-item {
+  font-size: 0.74rem !important;
+}
+
+.hero-bottom-cta-wrap {
+  margin-top: 14px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 4px !important;
+}
+
+.btn-explore-offer {
+  padding: 8px 24px !important;
+  font-size: 0.88rem !important;
+}
+
+@media (max-width: 768px) {
+  .wheel-hero-section {
+    min-height: calc(100vh - 44px) !important;
+    min-height: calc(100svh - 44px) !important;
+    min-height: calc(100dvh - 44px) !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10px 0 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero-wheel-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: auto 0 !important;
+    gap: 8px !important;
+  }
+
+  .wheel-container {
+    width: 320px !important;
+    height: 320px !important;
+    margin: 0 auto !important;
+  }
+
+  .wheel-center-hub {
+    width: 140px !important;
+    height: 140px !important;
+    padding: 2px !important;
+  }
+
+  .hub-avatar-circle {
+    width: 52px !important;
+    height: 52px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .hub-avatar-circle.is-standalone-logo {
+    width: 52px !important;
+    height: 52px !important;
+    background: transparent !important;
+  }
+
+  .hub-avatar.is-standalone-logo #hub-avatar-img,
+  .hub-avatar-circle.is-standalone-logo img {
+    height: 46px !important;
+    max-width: 60px !important;
+  }
+
+  .hub-title {
+    font-size: 0.86rem !important;
+    margin: 1px 0 !important;
+  }
+
+  .hub-cta-link {
+    font-size: 0.70rem !important;
+    padding: 3px 9px !important;
+    margin-top: 1px !important;
+    margin-bottom: 4px !important;
+    gap: 4px !important;
+  }
+
+  .hub-action-btn {
+    width: 26px !important;
+    height: 26px !important;
+    border-radius: 50% !important;
+    font-size: 0.70rem !important;
+  }
+
+  .hub-contact-details {
+    display: none !important;
+  }
+
+  .hero-bottom-cta-wrap {
+    margin-top: 10px !important;
+    gap: 2px !important;
+  }
+
+  .btn-explore-offer {
+    padding: 8px 20px !important;
+    font-size: 0.84rem !important;
+  }
+}
+
+  .hero-wheel-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: auto 0 !important;
+    gap: 6px !important;
+  }
+
+  .wheel-container {
+    width: 320px !important;
+    height: 320px !important;
+    margin: 0 auto 8px !important;
+  }
+
+  .wheel-center-hub {
+    width: 140px !important;
+    height: 140px !important;
+    padding: 2px !important;
+  }
+
+  .hub-avatar-circle {
+    width: 52px !important;
+    height: 52px !important;
+    margin-bottom: 2px !important;
+  }
+
+  .hub-avatar-circle.is-standalone-logo {
+    width: 52px !important;
+    height: 52px !important;
+    background: transparent !important;
+  }
+
+  .hub-avatar.is-standalone-logo #hub-avatar-img,
+  .hub-avatar-circle.is-standalone-logo img {
+    height: 46px !important;
+    max-width: 60px !important;
+  }
+
+  .hub-title {
+    font-size: 0.86rem !important;
+    margin: 1px 0 !important;
+  }
+
+  .hub-cta-link {
+    font-size: 0.70rem !important;
+    padding: 3px 9px !important;
+    margin-top: 1px !important;
+    margin-bottom: 4px !important;
+    gap: 4px !important;
+  }
+
+  .hub-action-btn {
+    width: 26px !important;
+    height: 26px !important;
+    border-radius: 50% !important;
+    font-size: 0.70rem !important;
+  }
+
+  .hub-contact-details {
+    display: none !important;
+  }
+
+  .hero-bottom-cta-wrap {
+    margin-top: 6px !important;
+    gap: 2px !important;
+  }
+
+  .btn-explore-offer {
+    padding: 8px 20px !important;
+    font-size: 0.84rem !important;
   }
 }
