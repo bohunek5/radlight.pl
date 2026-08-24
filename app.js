@@ -402,7 +402,16 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
     if (hubTitle) hubTitle.textContent = displayTitle;
-    if (hubSub) hubSub.textContent = displaySub;
+    
+    const hubCtaLink = document.getElementById('hub-cta-link');
+    const hubCtaText = document.getElementById('hub-cta-text');
+    if (hubCtaLink) {
+      hubCtaLink.href = data.link;
+      const ctaLabel = index === 0 
+        ? ((typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang].btnExploreHub) ? translations[currentLang].btnExploreHub : 'Katalog usług')
+        : ((typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang].btnReadMoreHub) ? translations[currentLang].btnReadMoreHub : 'Czytaj dalej');
+      if (hubCtaText) hubCtaText.textContent = ctaLabel;
+    }
     if (hubPhoneBtn) {
       hubPhoneBtn.href = data.phone;
       const phoneTip = currentLang === 'de' ? `Anrufen: ${data.phoneDisplay}` : (currentLang === 'en' ? `Call: ${data.phoneDisplay}` : `Zadzwoń: ${data.phoneDisplay}`);
@@ -502,7 +511,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // Center Hub Click Handler
   if (centerHub) {
     centerHub.addEventListener('click', (e) => {
-      if (e.target.closest('.hub-action-btn')) return; // Let buttons work
+      // If clicking any link or button (phone, email mailto, web link or CTA button), allow default browser action
+      if (e.target.closest('a, button, .hub-action-btn, #hub-contact-email, #hub-phone-btn, #hub-mail-btn, #hub-cta-link, #hub-contact-web')) {
+        stopAutoRotate();
+        return;
+      }
       e.preventDefault();
       stopAutoRotate();
       const data = servicesData[activeIndex];
