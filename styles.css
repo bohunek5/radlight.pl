@@ -7010,7 +7010,7 @@ html {
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    padding: 10px 0 16px !important;
+    padding: 8px 0 16px !important;
     box-sizing: border-box !important;
   }
 
@@ -7024,54 +7024,86 @@ html {
     gap: 8px !important;
   }
 
+  /* Wider wheel container on mobile for more breathing room */
   .wheel-container {
-    width: 320px !important;
-    height: 320px !important;
+    width: min(365px, calc(100vw - 16px)) !important;
+    height: min(365px, calc(100vw - 16px)) !important;
+    max-width: 98vw !important;
+    max-height: 98vw !important;
     margin: 0 auto !important;
   }
 
+  /* Slimmer, delicate borders (ranty) on mobile wheel nodes */
+  .wheel-node {
+    width: 58px !important;
+    height: 58px !important;
+    margin-top: -29px !important;
+    margin-left: -29px !important;
+  }
+
+  .node-icon-box {
+    width: 58px !important;
+    height: 58px !important;
+    border: 1.5px solid #ffffff !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22) !important;
+  }
+
+  body.light-theme .node-icon-box {
+    border: 1.5px solid #ffffff !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  .node-icon-box.logo-type img {
+    padding: 3px !important;
+  }
+
+  .wheel-node.active .node-icon-box {
+    border: 2px solid #de4b26 !important;
+    box-shadow: 0 0 0 2.5px rgba(222, 75, 38, 0.35), 0 6px 16px rgba(0, 0, 0, 0.3) !important;
+  }
+
   .wheel-center-hub {
-    width: 140px !important;
-    height: 140px !important;
-    padding: 2px !important;
+    width: 155px !important;
+    height: 155px !important;
+    padding: 4px !important;
   }
 
   .hub-avatar-circle {
-    width: 52px !important;
-    height: 52px !important;
+    width: 56px !important;
+    height: 56px !important;
     margin-bottom: 2px !important;
   }
 
   .hub-avatar-circle.is-standalone-logo {
-    width: 52px !important;
-    height: 52px !important;
+    width: 56px !important;
+    height: 56px !important;
     background: transparent !important;
   }
 
   .hub-avatar.is-standalone-logo #hub-avatar-img,
   .hub-avatar-circle.is-standalone-logo img {
-    height: 46px !important;
-    max-width: 60px !important;
+    height: 50px !important;
+    max-width: 66px !important;
   }
 
   .hub-title {
-    font-size: 0.86rem !important;
+    font-size: 0.94rem !important;
     margin: 1px 0 !important;
   }
 
   .hub-cta-link {
-    font-size: 0.70rem !important;
-    padding: 3px 9px !important;
+    font-size: 0.74rem !important;
+    padding: 3px 10px !important;
     margin-top: 1px !important;
-    margin-bottom: 4px !important;
+    margin-bottom: 5px !important;
     gap: 4px !important;
   }
 
   .hub-action-btn {
-    width: 26px !important;
-    height: 26px !important;
+    width: 28px !important;
+    height: 28px !important;
     border-radius: 50% !important;
-    font-size: 0.70rem !important;
+    font-size: 0.72rem !important;
   }
 
   .hub-contact-details {
@@ -7079,13 +7111,13 @@ html {
   }
 
   .hero-bottom-cta-wrap {
-    margin-top: 10px !important;
+    margin-top: 8px !important;
     gap: 2px !important;
   }
 
   .btn-explore-offer {
-    padding: 8px 20px !important;
-    font-size: 0.84rem !important;
+    padding: 8px 22px !important;
+    font-size: 0.86rem !important;
   }
 }
 
