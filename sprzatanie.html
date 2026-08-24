@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+  <!-- Primary Meta Tags -->
+  <title>Usługi Sprzątające Giżycko | Profesjonalne Sprzątanie Obiektów i Apartamentów Mazury</title>
+  <meta name="title" content="Usługi Sprzątające Giżycko | Profesjonalne Sprzątanie Obiektów i Apartamentów Mazury">
+  <meta name="description"
+    content="Profesjonalne usługi sprzątające w Giżycku (Radlight). Sprzątanie apartamentów wakacyjnych, domów, biur, mycie okien i doczyszczanie poremontowe. Tel: +48 730 067 027.">
+  <meta name="keywords"
+    content="usługi sprzątające Giżycko, firma sprzątająca Mazury, sprzątanie apartamentów Giżycko, sprzątanie po remoncie Giżycko, mycie okien Mazury, sprzątanie biur Giżycko, Radlight">
+  <meta name="author" content="RAD'LIGHT Radosław Narwojsz">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://radlight.pl/sprzatanie.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://radlight.pl/sprzatanie.html">
+  <meta property="og:title" content="Usługi Sprzątające Giżycko – Profesjonalny Serwis Czystości">
+  <meta property="og:description"
+    content="Doświadczony personel, markowy sprzęt Kärcher i ekologiczna chemia. Dbamy o nienaganną czystość w obiektach turystycznych i komercyjnych na Mazurach.">
+  <meta property="og:image" content="images/123321-1152x1536.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo-w-kole.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css?v=58">
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://radlight.pl/sprzatanie.html#business",
+        "name": "Usługi Sprzątające Radlight Giżycko",
+        "image": "https://radlight.pl/images/123321-1152x1536.jpg",
+        "telephone": "+48730067027",
+        "email": "biuro@radlight.pl",
+        "url": "https://radlight.pl/sprzatanie.html",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ul. Myśliwska 3",
+          "addressLocality": "Giżycko",
+          "postalCode": "11-500",
+          "addressRegion": "Warmińsko-Mazurskie",
+          "addressCountry": "PL"
+        },
+        "priceRange": "$$"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Strona Główna",
+            "item": "https://radlight.pl/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Usługi Sprzątające Giżycko",
+            "item": "https://radlight.pl/sprzatanie.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="subpage-sprzatanie">
+
+  <!-- Top Announcement Bar -->
+<div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-info">
+        <a href="tel:+48607241090" class="top-phone" title="Zadzwoń do nas"><i class="fa-solid fa-phone"></i> +48 607 241 090</a>
+        <a href="mailto:biuro@radlight.pl" class="top-email" title="Napisz e-mail"><i class="fa-solid fa-envelope"></i> biuro@radlight.pl</a>
+        <span class="top-location"><i class="fa-solid fa-location-dot"></i> <span data-i18n="topLocation">Mazury</span></span>
+      </div>
+      <div class="top-links">
+        
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="pl" title="Polski"><span class="flag">🇵🇱</span> PL</button>
+          <button class="lang-btn" data-lang="de" title="Deutsch"><span class="flag">🇩🇪</span> DE</button>
+          <button class="lang-btn" data-lang="en" title="English"><span class="flag">🇬🇧</span> EN</button>
+        </div>
+
+        <!-- Day / Night Theme Toggle -->
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Przełącz motyw dzień/noc" title="Przełącz motyw dzień/noc">
+          <i class="fa-solid fa-sun icon-sun"></i>
+          <i class="fa-solid fa-moon icon-moon"></i>
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+    <!-- Header Navigation -->
+  <header class="main-header" id="header">
+    <div class="container header-container">
+      
+      <!-- Brand Logo -->
+      <div class="header-logo-box">
+        <a href="index.html" class="brand-logo-main" aria-label="Radlight — strona główna">
+          <img src="images/logo-w-kole.png" alt="Radlight Logo" id="logo-img">
+          <div class="brand-text-block">
+            <span class="brand-slogan-main" data-i18n="topSlogan">JEDNA FIRMA. <span class="brand-orange">WIELE MOŻLIWOŚCI.</span></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link" data-i18n="navWheel">Główna</a></li>
+          <li><a href="uslugi.html" class="nav-link active" data-i18n="navServices">Katalog Usług</a></li>
+          <li><a href="baza-wiedzy.html" class="nav-link" data-i18n="navKnowledge">Baza Wiedzy</a></li>
+          <li><a href="o-nas.html" class="nav-link" data-i18n="navAbout">O firmie</a></li>
+          <li><a href="kontakt.html" class="nav-link" data-i18n="navContact">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <!-- PC Sticky Quick Actions (Flags + Theme Toggle appearing when scrolled) -->
+      <div class="header-quick-actions" id="header-quick-actions">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="pl" title="Polski"><span class="flag">🇵🇱</span> PL</button>
+          <button class="lang-btn" data-lang="de" title="Deutsch"><span class="flag">🇩🇪</span> DE</button>
+          <button class="lang-btn" data-lang="en" title="English"><span class="flag">🇬🇧</span> EN</button>
+        </div>
+        <button class="theme-toggle-btn" aria-label="Przełącz motyw dzień/noc" title="Przełącz motyw dzień/noc">
+          <i class="fa-solid fa-sun icon-sun"></i>
+          <i class="fa-solid fa-moon icon-moon"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Otwórz menu mobilne">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- SUBPAGE HERO SECTION -->
+  <section class="subpage-hero">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Ścieżka powrotu">
+        <a href="index.html">Strona Główna</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <a href="uslugi.html">Usługi</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Serwis Sprzątający Clean Service</span>
+      </nav>
+      <div class="subpage-hero-grid">
+        <div class="subpage-hero-text">
+          <h1 class="subpage-title">
+            Kompleksowe <span class="text-highlight">Sprzątanie Obiektów</span>
+          </h1>
+          <p class="subpage-lead">
+            Profesjonalne usługi sprzątania apartamentów, domków letniskowych, biur, hal magazynowych, pranie wykładzin, tapicerek oraz doczyszczanie jachtów na terenie Giżycka i okolic.
+          </p>
+
+          <div class="subpage-hero-actions">
+            <a href="kontakt.html" class="btn-primary-hero">
+              <i class="fa-solid fa-wand-magic-sparkles"></i> Zamów Wycenę
+            </a>
+            <a href="tel:+48607241090" class="btn-secondary-hero">
+              <i class="fa-solid fa-phone"></i> +48 607 241 090
+            </a>
+          </div>
+        </div>
+<div class="subpage-hero-visual">
+          <div class="subpage-hero-card">
+            <div class="subpage-hero-card-media">
+              <img src="images/sprzatanie-hero.jpg" alt="Sprzątanie apartamentów i obiektów Giżycko">
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="subpage-layout-section">
+    <div class="container">
+      <div class="subpage-main-grid">
+        
+        <!-- Content Area -->
+        <div class="subpage-content-area">
+          
+          <!-- Block 1 -->
+          <article class="subpage-block">
+            <div class="subpage-block-header">
+              <span class="block-sub">Pełen Zakres Prac</span>
+              <h2>Czystość, Którą Docenią Twoi Goście i Klienci</h2>
+            </div>
+            <div class="subpage-prose">
+              <p>
+                Czystość w obiekcie noclegowym lub biurowym jest wizytówką każdego gospodarza. Nasz zespół to wykwalifikowane i przeszkolone osoby, które dokładnie wiedzą, na jakie detale zwrócić uwagę: od lśniącej armatury w łazienkach, przez pozbawione smug szyby i lustra, aż po higieniczne odkurzanie i mycie podłóg.
+              </p>
+              <p>
+                Dzięki synergii z naszą <strong>Pralnią Giżycko</strong> oferujemy unikalną usługę: podczas sprzątania apartamentu zabieramy zużytą pościel i ręczniki, wstawiając w ich miejsce świeżo wyprasowane i zdezynfekowane komplety hotelowe.
+              </p>
+
+              <ul>
+                <li><i class="fa-solid fa-check-circle"></i> <strong>Sprzątanie apartamentów i domków wakacyjnych</strong> przy zmianie gości</li>
+                <li><i class="fa-solid fa-check-circle"></i> <strong>Regularne sprzątanie biur</strong>, lokali usługowych i gabinetów</li>
+                <li><i class="fa-solid fa-check-circle"></i> <strong>Mycie okien i witryn</strong> sklepowych (również wielkoformatowych)</li>
+                <li><i class="fa-solid fa-check-circle"></i> <strong>Doczyszczanie poremontowe</strong> i pobudowlane przed oddaniem do użytku</li>
+                <li><i class="fa-solid fa-check-circle"></i> <strong>Pranie ekstrakcyjne dywanów, wykładzin i tapicerek meblowych</strong></li>
+                <li><i class="fa-solid fa-check-circle"></i> <strong>Sprzątanie jachtów motorowych i żaglowych</strong> (pokłady, kabiny)</li>
+              </ul>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="subpage-features-grid">
+              <div class="subpage-feat-card">
+                <div class="subpage-feat-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+                <h4>Checklista Jakości</h4>
+                <p>Każde sprzątanie realizowane jest według ścisłego protokołu kontrolnego.</p>
+              </div>
+              <div class="subpage-feat-card">
+                <div class="subpage-feat-icon"><i class="fa-solid fa-clock"></i></div>
+                <h4>Szybka Reakcja</h4>
+                <p>Możliwość realizacji ekspresowego sprzątania w tzw. oknie rotacyjnym (11:00 - 15:00).</p>
+              </div>
+              <div class="subpage-feat-card">
+                <div class="subpage-feat-icon"><i class="fa-solid fa-box-open"></i></div>
+                <h4>Uzupełnianie Środków</h4>
+                <p>Dostarczamy mydła, papier toaletowy, worki na śmieci i kosmetyki hotelowe.</p>
+              </div>
+              <div class="subpage-feat-card">
+                <div class="subpage-feat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <h4>Ubezpieczenie OC</h4>
+                <p>Pełne ubezpieczenie odpowiedzialności cywilnej gwarantuje 100% spokoju.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Block 2: Tabela Usług -->
+          <article class="subpage-block">
+            <div class="subpage-block-header">
+              <span class="block-sub">Pakiety i Cennik</span>
+              <h2>Orientacyjny Cennik Usług Sprzątających w Giżycku</h2>
+            </div>
+            <div class="spec-table-container">
+              <table class="spec-table">
+                <thead>
+                  <tr>
+                    <th>Rodzaj Usługi</th>
+                    <th>Zakres Prac</th>
+                    <th>Stawka Orientacyjna</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Sprzątanie rotacyjne apartamentu (do 40m²)</strong></td>
+                    <td>Odkurzanie, mycie podłóg, sanitariaty, kuchnia, ścielenie łóżek</td>
+                    <td><span style="color:#4edea3;">Od 120 zł / usługa</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Sprzątanie apartamentu (40m² - 70m²)</strong></td>
+                    <td>Kompleksowe doczyszczenie, wyrzucenie śmieci, inspekcja stanu lokalu</td>
+                    <td><span style="color:#4edea3;">Od 160 zł / usługa</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Stały abonament biurowy</strong></td>
+                    <td>Sprzątanie 1-3 razy w tygodniu (biurka, kuchnia, kosze, WC)</td>
+                    <td><span style="color:#4edea3;">Wycena miesięczna</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Sprzątanie poremontowe / gruntowne</strong></td>
+                    <td>Usuwanie pyłu gipsowego, mycie podłóg maszynowe, doczyszczanie fug</td>
+                    <td><span style="color:#ff9f1c;">Wycena za m²</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Mycie okien standardowych</strong></td>
+                    <td>Mycie szyb, ram, uszczelek i parapetów</td>
+                    <td><span style="color:#4edea3;">Od 25 zł / okno</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <!-- Inquiry Form -->
+          <div class="subpage-inquiry-box" id="wycena-sprzatanie">
+            <h3 style="color:#ffffff; margin-bottom:10px;"><i class="fa-solid fa-calendar-plus" style="color:#e94e1b;"></i> Zamów bezpłatną wycenę sprzątania</h3>
+            <p style="color:#cbd5e1; font-size:0.95rem; margin-bottom:20px;">Wypełnij formularz – oddzwonimy z konkretną propozycją terminu i kosztu.</p>
+            <form id="sprzatanieForm" onsubmit="event.preventDefault(); alert('Dziękujemy! Otrzymaliśmy zapytanie o sprzątanie. Skontaktujemy się telefonicznie.');">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="sp-name">Imię i Nazwisko / Firma</label>
+                  <input type="text" id="sp-name" required placeholder="np. Hotel Mazury / Jan Kowalski">
+                </div>
+                <div class="form-group">
+                  <label for="sp-phone">Numer Telefonu</label>
+                  <input type="tel" id="sp-phone" required placeholder="+48 730 067 027">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="sp-loc">Adres Obiektu (Giżycko i okolice)</label>
+                  <input type="text" id="sp-loc" required placeholder="np. Giżycko, ul. Warszawska">
+                </div>
+                <div class="form-group">
+                  <label for="sp-type">Typ usługi</label>
+                  <select id="sp-type">
+                    <option value="apartament">Sprzątanie apartamentu po gościach</option>
+                    <option value="biuro">Sprzątanie biura / firmy</option>
+                    <option value="dom">Sprzątanie domu / mieszkania</option>
+                    <option value="poremontowe">Doczyszczanie po remoncie</option>
+                    <option value="okna">Mycie okien / witryn</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="sp-details">Metraż lokalu i preferowane terminy</label>
+                <textarea id="sp-details" rows="3" placeholder="np. 55 m2, 3 pokoje, zależy nam na stałej współpracy od czerwca..."></textarea>
+              </div>
+              <button type="submit" class="btn-primary-hero" style="width:100%; justify-content:center; cursor:pointer;">
+                <i class="fa-solid fa-broom"></i> Wyślij Zapytanie o Sprzątanie
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="subpage-sidebar">
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title"><i class="fa-solid fa-bars-staggered"></i> Nasze Usługi</h3>
+            <ul class="sidebar-services-nav">
+              <li><a href="apartamenty.html"><span class="sidebar-nav-left"><i class="fa-solid fa-bed"></i> Apartamenty Giżycko</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="zarzadzanie-najmem.html"><span class="sidebar-nav-left"><i class="fa-solid fa-key"></i> Obsługa Najmu</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="pralnia.html"><span class="sidebar-nav-left"><i class="fa-solid fa-shirt"></i> Pralnia Przemysłowa</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="sprzatanie.html" class="active"><span class="sidebar-nav-left"><i class="fa-solid fa-broom"></i> Usługi Sprzątające</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="magazyny.html"><span class="sidebar-nav-left"><i class="fa-solid fa-warehouse"></i> Hale i Magazyny</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="zimowanie-jachtow.html"><span class="sidebar-nav-left"><i class="fa-solid fa-anchor"></i> Zimowanie Jachtów</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="helipad.html"><span class="sidebar-nav-left"><i class="fa-solid fa-helicopter"></i> Helipad Mazury</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="czarter.html"><span class="sidebar-nav-left"><i class="fa-solid fa-ship"></i> Czarter Stillo 30</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-cta-box">
+            <h4><i class="fa-solid fa-phone" style="color:#ff9f1c;"></i> Zadzwoń do Koordynatorki</h4>
+            <p>Szybki kontakt w sprawach sprzątania:</p>
+            <a href="tel:+48730067027" class="btn-primary-hero" style="width:100%; justify-content:center; padding:12px 18px;">
+              +48 730 067 027
+            </a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO FOOTER -->
+
+  <!-- FOOTER -->
+<footer class="main-footer">
+    <img src="images/logo-w-kole.png" alt="" class="footer-watermark" aria-hidden="true">
+    <div class="container">
+      <div class="footer-content">
+        
+        <div class="footer-col">
+          <div class="footer-logo">
+            <img src="images/logo-w-kole.png" alt="Radlight">
+            <strong>RADLIGHT</strong>
+          </div>
+          <p class="footer-desc" data-i18n="footerDesc">Jedna firma. Wiele możliwości.<br>Kompleksowa obsługa turystyki, nieruchomości, logistyki i usług na Mazurach.</p>
+          <div class="footer-company-box">
+            <strong style="color: #ffffff; display: block; margin-bottom: 3px;">RAD'LIGHT Radosław Narwojsz</strong>
+            <span>NIP: 8451647713 • REGON: 280456789</span><br>
+            <span>Biuro: ul. Myśliwska 3, 11-500 Giżycko</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading" data-i18n="footerColServices">Nasze Usługi</h4>
+          <ul class="footer-links">
+            <li><a href="apartamenty.html">Apartamenty, Domki, Pokoje</a></li>
+            <li><a href="zarzadzanie-najmem.html">Zarządzanie Najmem</a></li>
+            <li><a href="pralnia.html">Pralnia Giżycko</a></li>
+            <li><a href="sprzatanie.html">Usługi Sprzątające</a></li>
+            <li><a href="magazyny.html">Hale, Magazyny & Lokale</a></li>
+            <li><a href="helipad.html">Helipad Mazury</a></li>
+            <li><a href="zimowanie-jachtow.html">Zimowanie Jachtów</a></li>
+            <li><a href="czarter.html">Czarter Jachtów</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading" data-i18n="footerColInfo">Firma & Informacje</h4>
+          <ul class="footer-links">
+            <li><a href="o-nas.html">O firmie</a></li>
+            <li><a href="uslugi.html">Katalog Usług</a></li>
+            <li><a href="baza-wiedzy.html">Baza Wiedzy</a></li>
+            <li><a href="projekty-unijne.html">Projekty Unijne GOZ</a></li>
+            <li><a href="kontakt.html">Dane Kontaktowe</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading" data-i18n="footerColContact">Kontakt Bezpośredni</h4>
+          <ul class="footer-contact-list">
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:+48607241090">+48 607 241 090 (Główne)</a></li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:+48730064044">+48 730 064 044 (Pralnia)</a></li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:+48730067027">+48 730 067 027 (Sprzątanie)</a></li>
+            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:biuro@radlight.pl">biuro@radlight.pl</a></li>
+            <li><i class="fa-solid fa-location-dot"></i> <span>Biuro: ul. Myśliwska 3, Giżycko</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footerRights">&copy; 2026</p>
+        <p class="footer-powered" data-i18n="footerPoweredBy">powered by RADLIGHT</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="translations.js?v=41"></script>
+  <script src="app.js?v=41"></script>
+  <!-- Mobile Bottom Navigation Dock (Apple-Style Navigation Bar) -->
+  <div class="mobile-nav-dock">
+    <div class="dock-container">
+      <a href="o-nas.html" class="dock-item">
+        <i class="fa-solid fa-circle-info"></i>
+        <span data-i18n="dockAbout">O firmie</span>
+      </a>
+      <a href="uslugi.html" class="dock-item active">
+        <i class="fa-solid fa-layer-group"></i>
+        <span>Usługi</span>
+      </a>
+      <a href="index.html#kolo-uslug" class="dock-item dock-brand-center" title="Radlight Central">
+        <div class="dock-logo-disc">
+          <img src="images/logo-w-kole.png" alt="Radlight">
+        </div>
+      </a>
+      <a href="baza-wiedzy.html" class="dock-item">
+        <i class="fa-solid fa-book-open"></i>
+        <span>Wiedza</span>
+      </a>
+      <a href="kontakt.html" class="dock-item">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Kontakt</span>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

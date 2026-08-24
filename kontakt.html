@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+  <!-- Primary Meta Tags -->
+  <title>Kontakt & Dane Rejestrowe | Radlight Mazury — Giżycko</title>
+  <meta name="title" content="Kontakt & Dane Rejestrowe | Radlight Mazury — Giżycko">
+  <meta name="description"
+    content="Skontaktuj się z Radlight w Giżycku przy ul. Myśliwskiej 3. Bezpośrednie numery do działów: apartamenty, pralnia przemysłowa, sprzątanie, magazyny, helipad oraz zimowanie jachtów.">
+  <meta name="keywords"
+    content="kontakt Radlight, telefon Radlight Giżycko, Myśliwska 3 Giżycko, biuro Radlight">
+  <meta name="author" content="RAD'LIGHT Radosław Narwojsz">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://radlight.pl/kontakt.html">
+  <meta property="og:title" content="Kontakt — Radlight Mazury">
+  <meta property="og:description"
+    content="Bezpośredni kontakt do wszystkich działów i baza operacyjna przy ul. Myśliwskiej 3 w Giżycku.">
+  <meta property="og:image" content="images/logo-w-kole.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo-w-kole.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css?v=58">
+</head>
+
+<body>
+
+  <!-- Top Announcement Bar -->
+<div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-info">
+        <a href="tel:+48607241090" class="top-phone" title="Zadzwoń do nas"><i class="fa-solid fa-phone"></i> +48 607 241 090</a>
+        <a href="mailto:biuro@radlight.pl" class="top-email" title="Napisz e-mail"><i class="fa-solid fa-envelope"></i> biuro@radlight.pl</a>
+        <span class="top-location"><i class="fa-solid fa-location-dot"></i> <span data-i18n="topLocation">Mazury</span></span>
+      </div>
+      <div class="top-links">
+        
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="pl" title="Polski"><span class="flag">🇵🇱</span> PL</button>
+          <button class="lang-btn" data-lang="de" title="Deutsch"><span class="flag">🇩🇪</span> DE</button>
+          <button class="lang-btn" data-lang="en" title="English"><span class="flag">🇬🇧</span> EN</button>
+        </div>
+
+        <!-- Day / Night Theme Toggle -->
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Przełącz motyw dzień/noc" title="Przełącz motyw dzień/noc">
+          <i class="fa-solid fa-sun icon-sun"></i>
+          <i class="fa-solid fa-moon icon-moon"></i>
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+    <!-- Header Navigation -->
+  <header class="main-header" id="header">
+    <div class="container header-container">
+      
+      <!-- Brand Logo -->
+      <div class="header-logo-box">
+        <a href="index.html" class="brand-logo-main" aria-label="Radlight — strona główna">
+          <img src="images/logo-w-kole.png" alt="Radlight Logo" id="logo-img">
+          <div class="brand-text-block">
+            <span class="brand-slogan-main" data-i18n="topSlogan">JEDNA FIRMA. <span class="brand-orange">WIELE MOŻLIWOŚCI.</span></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link" data-i18n="navWheel">Główna</a></li>
+          <li><a href="uslugi.html" class="nav-link" data-i18n="navServices">Katalog Usług</a></li>
+          <li><a href="baza-wiedzy.html" class="nav-link" data-i18n="navKnowledge">Baza Wiedzy</a></li>
+          <li><a href="o-nas.html" class="nav-link" data-i18n="navAbout">O firmie</a></li>
+          <li><a href="kontakt.html" class="nav-link active" data-i18n="navContact">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <!-- PC Sticky Quick Actions (Flags + Theme Toggle appearing when scrolled) -->
+      <div class="header-quick-actions" id="header-quick-actions">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="pl" title="Polski"><span class="flag">🇵🇱</span> PL</button>
+          <button class="lang-btn" data-lang="de" title="Deutsch"><span class="flag">🇩🇪</span> DE</button>
+          <button class="lang-btn" data-lang="en" title="English"><span class="flag">🇬🇧</span> EN</button>
+        </div>
+        <button class="theme-toggle-btn" aria-label="Przełącz motyw dzień/noc" title="Przełącz motyw dzień/noc">
+          <i class="fa-solid fa-sun icon-sun"></i>
+          <i class="fa-solid fa-moon icon-moon"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Otwórz menu mobilne">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- SUBPAGE HERO SECTION -->
+  <section class="subpage-hero">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Ścieżka powrotu">
+        <a href="index.html">Strona Główna</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Kontakt</span>
+      </nav>
+      <div class="subpage-hero-grid">
+        <div class="subpage-hero-text">
+          <h1 class="subpage-title">
+            Skontaktuj się <span class="text-highlight">z Radlight</span>
+          </h1>
+          <p class="subpage-lead">
+            Jesteśmy do Twojej dyspozycji w sprawach rezerwacji apartamentów, zleceń pralniczych, wynajmu magazynów, slipowania jachtów oraz lądowiska.
+          </p>
+
+          <div class="subpage-hero-actions">
+            <a href="tel:+48607241090" class="btn-primary-hero">
+              <i class="fa-solid fa-phone"></i> Zadzwoń: +48 607 241 090
+            </a>
+            <a href="#formularz" class="btn-secondary-hero">
+              <i class="fa-solid fa-envelope"></i> Formularz Kontaktowy
+            </a>
+          </div>
+        </div>
+<div class="subpage-hero-visual">
+          <div class="subpage-hero-card">
+            <div class="subpage-hero-card-media">
+              <img src="images/DJI_0101-1536x864.jpg" alt="Siedziba Radlight Giżycko Myśliwska 3">
+            </div>
+            </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPARTMENTS SECTION -->
+  <section class="services-section">
+    <div class="container">
+
+      <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+
+        <!-- Department 1: Apartamenty & Zarządzanie -->
+        <div class="service-card">
+          <div class="service-body">
+            <div class="service-icon"><i class="fa-solid fa-hotel"></i></div>
+            <h3 class="service-title">Biuro Główne & Apartamenty</h3>
+            <p class="service-text">Rezerwacje pobytów w Giżycku, umowy zarządzania najmem dla właścicieli nieruchomości oraz administracja.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-phone"></i> <strong>+48 607 241 090</strong></li>
+              <li><i class="fa-solid fa-envelope"></i> rezerwacje@mazury.holiday</li>
+              <li><i class="fa-solid fa-clock"></i> Pon - Nd: 08:00 - 20:00</li>
+            </ul>
+            <div class="service-footer">
+              <a href="tel:+48607241090" class="btn-primary-hero" style="width:100%; justify-content:center; padding:10px 16px;">
+                <i class="fa-solid fa-phone"></i> Zadzwoń do działu
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Department 2: Pralnia Przemysłowa -->
+        <div class="service-card">
+          <div class="service-body">
+            <div class="service-icon"><i class="fa-solid fa-soap"></i></div>
+            <h3 class="service-title">Pralnia Przemysłowa Giżycko</h3>
+            <p class="service-text">Zlecenia pralnicze dla hoteli, restauracji, jachtów, transport własny oraz obsługa klientów detalicznych.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-phone"></i> <strong>+48 730 064 044</strong></li>
+              <li><i class="fa-solid fa-envelope"></i> biuro@pralniagizycko.pl</li>
+              <li><i class="fa-solid fa-clock"></i> Pon - Sob: 07:00 - 18:00</li>
+            </ul>
+            <div class="service-footer">
+              <a href="tel:+48730064044" class="btn-primary-hero" style="width:100%; justify-content:center; padding:10px 16px;">
+                <i class="fa-solid fa-phone"></i> Zadzwoń do pralni
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Department 3: Usługi Sprzątające -->
+        <div class="service-card">
+          <div class="service-body">
+            <div class="service-icon"><i class="fa-solid fa-broom"></i></div>
+            <h3 class="service-title">Usługi Sprzątające & Serwis</h3>
+            <p class="service-text">Sprzątanie apartamentów, domów, biur, hal po budowie oraz profesjonalne doczyszczanie jachtów.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-phone"></i> <strong>+48 730 067 027</strong></li>
+              <li><i class="fa-solid fa-envelope"></i> biuro@radlight.pl</li>
+              <li><i class="fa-solid fa-clock"></i> Pon - Sob: 08:00 - 18:00</li>
+            </ul>
+            <div class="service-footer">
+              <a href="tel:+48730067027" class="btn-primary-hero" style="width:100%; justify-content:center; padding:10px 16px;">
+                <i class="fa-solid fa-phone"></i> Zadzwoń do serwisu
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Department 4: Magazyny, Jachty & Helipad -->
+        <div class="service-card">
+          <div class="service-body">
+            <div class="service-icon"><i class="fa-solid fa-warehouse"></i></div>
+            <h3 class="service-title">Magazyny, Zimowanie & Helipad</h3>
+            <p class="service-text">Wynajem hal, boksów self-storage, slipowanie dźwigiem i hangarowanie łodzi oraz operacje lotnicze.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-phone"></i> <strong>+48 607 241 090</strong></li>
+              <li><i class="fa-solid fa-envelope"></i> biuro@radlight.pl</li>
+              <li><i class="fa-solid fa-location-dot"></i> ul. Sybiraków 15, Giżycko</li>
+              <li><i class="fa-solid fa-clock"></i> Dostęp do magazynów: 24/7</li>
+            </ul>
+            <div class="service-footer">
+              <a href="tel:+48607241090" class="btn-primary-hero" style="width:100%; justify-content:center; padding:10px 16px;">
+                <i class="fa-solid fa-phone"></i> Zadzwoń w sprawie hal
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM & MAP SECTION -->
+  <section class="contact-section" id="formularz">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <h3 class="form-title">Napisz do nas</h3>
+          <p class="form-sub">Wypełnij krótki formularz, a nasz doradca skontaktuje się z Tobą w ciągu maksymalnie 24 godzin.</p>
+
+          <form class="contact-form" action="#" method="POST" id="main-contact-form">
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="contact-name">Imię i Nazwisko / Firma</label>
+                <input type="text" id="contact-name" class="form-control" placeholder="np. Jan Kowalski" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-phone">Numer Telefonu</label>
+                <input type="tel" id="contact-phone" class="form-control" placeholder="np. +48 600 000 000" required>
+              </div>
+            </div>
+
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="contact-email">Adres E-mail</label>
+                <input type="email" id="contact-email" class="form-control" placeholder="np. jan@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-topic">Temat Zapytania</label>
+                <select id="contact-topic" class="form-control">
+                  <option value="apartamenty">Apartamenty i Noclegi</option>
+                  <option value="najem">Obsługa i Zarządzanie Najmem</option>
+                  <option value="pralnia">Pralnia Przemysłowa</option>
+                  <option value="sprzatanie">Usługi Sprzątające</option>
+                  <option value="magazyny">Hale, Magazyny & Lokale</option>
+                  <option value="helipad">Helipad Mazury</option>
+                  <option value="zimowanie">Zimowanie Jachtów</option>
+                  <option value="czarter">Czarter Jachtów</option>
+                  <option value="ogolny">Inny temat ogólny</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Treść Wiadomości</label>
+              <textarea id="contact-message" class="form-control" placeholder="Opisz swoje zapytanie..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit-form">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span data-i18n="btnSubmit">Wyślij Wiadomość</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Location & Directions Card -->
+        <div class="contact-cards-col">
+          <div class="contact-location-card">
+            <h3 class="location-card-title">
+              <i class="fa-solid fa-location-dot"></i> Biuro Radlight Giżycko
+            </h3>
+            <p class="location-card-desc">
+              Nasze biuro mieści się w Giżycku przy ul. Myśliwskiej 3. Zapewniamy wygodny dojazd i parking dla klientów na terenie obiektu.
+            </p>
+
+            <div class="location-info-list">
+              <div class="location-info-item">
+                <strong>Adres:</strong> ul. Myśliwska 3, 11-500 Giżycko
+              </div>
+              <div class="location-info-item">
+                <strong>NIP:</strong> 8451647713 • REGON: 280456789
+              </div>
+              <div class="location-info-item">
+                <strong>Współrzędne GPS:</strong> 54°01'48.0"N 21°46'12.0"E
+              </div>
+            </div>
+
+            <div class="contact-map-embed">
+              <iframe 
+                src="https://maps.google.com/maps?q=My%C5%9Bliwska%203,%2011-500%20Gi%C5%BCycko&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="100%" 
+                style="border:0; display:block;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Mapa dojazdu — Radlight Giżycko">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+<footer class="main-footer">
+    <img src="images/logo-w-kole.png" alt="" class="footer-watermark" aria-hidden="true">
+    <div class="container">
+      <div class="footer-content">
+        
+        <div class="footer-col">
+          <div class="footer-logo">
+            <img src="images/logo-w-kole.png" alt="Radlight">
+            <strong>RADLIGHT</strong>
+          </div>
+          <p class="footer-desc" data-i18n="footerDesc">Jedna firma. Wiele możliwości.<br>Kompleksowa obsługa turystyki, nieruchomości, logistyki i usług na Mazurach.</p>
+          <div class="footer-company-box">
+            <strong style="color: #ffffff; display: block; margin-bottom: 3px;">RAD'LIGHT Radosław Narwojsz</strong>
+            <span>NIP: 8451647713 • REGON: 280456789</span><br>
+            <span>Biuro: ul. Myśliwska 3, 11-500 Giżycko</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading" data-i18n="footerColServices">Nasze Usługi</h4>
+          <ul class="footer-links">
+            <li><a href="apartamenty.html">Apartamenty, Domki, Pokoje</a></li>
+            <li><a href="zarzadzanie-najmem.html">Zarządzanie Najmem</a></li>
+            <li><a href="pralnia.html">Pralnia Giżycko</a></li>
+            <li><a href="sprzatanie.html">Usługi Sprzątające</a></li>
+            <li><a href="magazyny.html">Hale, Magazyny & Lokale</a></li>
+            <li><a href="helipad.html">Helipad Mazury</a></li>
+            <li><a href="zimowanie-jachtow.html">Zimowanie Jachtów</a></li>
+            <li><a href="czarter.html">Czarter Jachtów</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading" data-i18n="footerColInfo">Firma & Informacje</h4>
+          <ul class="footer-links">
+            <li><a href="o-nas.html">O firmie</a></li>
+            <li><a href="uslugi.html">Katalog Usług</a></li>
+            <li><a href="baza-wiedzy.html">Baza Wiedzy</a></li>
+            <li><a href="projekty-unijne.html">Projekty Unijne GOZ</a></li>
+            <li><a href="kontakt.html">Dane Kontaktowe</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading" data-i18n="footerColContact">Kontakt Bezpośredni</h4>
+          <ul class="footer-contact-list">
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:+48607241090">+48 607 241 090 (Główne)</a></li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:+48730064044">+48 730 064 044 (Pralnia)</a></li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:+48730067027">+48 730 067 027 (Sprzątanie)</a></li>
+            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:biuro@radlight.pl">biuro@radlight.pl</a></li>
+            <li><i class="fa-solid fa-location-dot"></i> <span>Biuro: ul. Myśliwska 3, Giżycko</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footerRights">&copy; 2026</p>
+        <p class="footer-powered" data-i18n="footerPoweredBy">powered by RADLIGHT</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE BOTTOM DOCK (APPLE-STYLE NAVIGATION BAR) -->
+  <div class="mobile-nav-dock">
+    <div class="dock-container">
+      <a href="o-nas.html" class="dock-item">
+        <i class="fa-solid fa-circle-info"></i>
+        <span data-i18n="dockAbout">O firmie</span>
+      </a>
+      <a href="uslugi.html" class="dock-item">
+        <i class="fa-solid fa-layer-group"></i>
+        <span>Usługi</span>
+      </a>
+      <a href="index.html#kolo-uslug" class="dock-item dock-brand-center" title="Radlight Central">
+        <div class="dock-logo-disc">
+          <img src="images/logo-w-kole.png" alt="Radlight">
+        </div>
+      </a>
+      <a href="baza-wiedzy.html" class="dock-item">
+        <i class="fa-solid fa-book-open"></i>
+        <span>Wiedza</span>
+      </a>
+      <a href="kontakt.html" class="dock-item active">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Kontakt</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="translations.js?v=41"></script>
+  <script src="app.js?v=41"></script>
+</body>
+
+</html>

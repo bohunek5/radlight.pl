@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgClean" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="98" fill="url(#bgClean)" stroke="#062b40" stroke-width="4"/>
+  <!-- Broom & Sparkles Icon -->
+  <g transform="translate(35, 25) scale(0.65)">
+    <!-- Broom Handle -->
+    <line x1="160" y1="20" x2="90" y2="110" stroke="#de4b26" stroke-width="14" stroke-linecap="round"/>
+    <!-- Broom Cap -->
+    <path d="M80 100 L100 118 L85 135 L65 118 Z" fill="#062b40"/>
+    <!-- Broom Bristles -->
+    <path d="M60 120 L88 142 L55 190 C45 195 30 190 25 180 C20 170 25 155 35 145 Z" fill="#de4b26" opacity="0.9"/>
+    <!-- Sparkles -->
+    <path d="M140 70 L145 82 L157 87 L145 92 L140 104 L135 92 L123 87 L135 82 Z" fill="#062b40"/>
+    <path d="M50 40 L53 48 L61 51 L53 54 L50 62 L47 54 L39 51 L47 48 Z" fill="#de4b26"/>
+  </g>
+  <text x="100" y="160" font-family="'Outfit', sans-serif" font-size="14" font-weight="900" fill="#062b40" text-anchor="middle" letter-spacing="1.5">SPRZĄTANIE</text>
+</svg>

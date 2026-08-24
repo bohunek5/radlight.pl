@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+  <!-- Primary Meta Tags -->
+  <title>Baza Wiedzy & Poradniki Eksperckie | Radlight Mazury</title>
+  <meta name="title" content="Baza Wiedzy & Poradniki Eksperckie | Radlight Mazury">
+  <meta name="description"
+    content="Baza wiedzy i poradniki Radlight: zarządzanie najmem apartamentów w Giżycku, profesjonalne procedury pralnicze dla hoteli, prawidłowe zimowanie jachtów oraz standardy magazynowania.">
+  <meta name="keywords"
+    content="Radlight baza wiedzy, poradnik apartamenty Giżycko, jak zimować jacht Mazury, pralnia hotelowa standardy, zarządzanie najmem Mazury, self-storage Giżycko">
+  <meta name="author" content="RAD'LIGHT Radosław Narwojsz">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://radlight.pl/baza-wiedzy.html">
+  <meta property="og:title" content="Baza Wiedzy & Poradniki Eksperckie — Radlight">
+  <meta property="og:description"
+    content="Praktyczna wiedza i instrukcje dla właścicieli nieruchomości, hoteli, armatorów oraz firm na Mazurach.">
+  <meta property="og:image" content="images/logo-w-kole.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo-w-kole.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css?v=58">
+</head>
+
+<body>
+
+  <!-- Top Announcement Bar -->
+<div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-info">
+        <a href="tel:+48607241090" class="top-phone" title="Zadzwoń do nas"><i class="fa-solid fa-phone"></i> +48 607 241 090</a>
+        <a href="mailto:biuro@radlight.pl" class="top-email" title="Napisz e-mail"><i class="fa-solid fa-envelope"></i> biuro@radlight.pl</a>
+        <span class="top-location"><i class="fa-solid fa-location-dot"></i> <span data-i18n="topLocation">Mazury</span></span>
+      </div>
+      <div class="top-links">
+        
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="pl" title="Polski"><span class="flag">🇵🇱</span> PL</button>
+          <button class="lang-btn" data-lang="de" title="Deutsch"><span class="flag">🇩🇪</span> DE</button>
+          <button class="lang-btn" data-lang="en" title="English"><span class="flag">🇬🇧</span> EN</button>
+        </div>
+
+        <!-- Day / Night Theme Toggle -->
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Przełącz motyw dzień/noc" title="Przełącz motyw dzień/noc">
+          <i class="fa-solid fa-sun icon-sun"></i>
+          <i class="fa-solid fa-moon icon-moon"></i>
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+    <!-- Header Navigation -->
+  <header class="main-header" id="header">
+    <div class="container header-container">
+      
+      <!-- Brand Logo -->
+      <div class="header-logo-box">
+        <a href="index.html" class="brand-logo-main" aria-label="Radlight — strona główna">
+          <img src="images/logo-w-kole.png" alt="Radlight Logo" id="logo-img">
+          <div class="brand-text-block">
+            <span class="brand-slogan-main" data-i18n="topSlogan">JEDNA FIRMA. <span class="brand-orange">WIELE MOŻLIWOŚCI.</span></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link" data-i18n="navWheel">Główna</a></li>
+          <li><a href="uslugi.html" class="nav-link" data-i18n="navServices">Katalog Usług</a></li>
+          <li><a href="baza-wiedzy.html" class="nav-link active" data-i18n="navKnowledge">Baza Wiedzy</a></li>
+          <li><a href="o-nas.html" class="nav-link" data-i18n="navAbout">O firmie</a></li>
+          <li><a href="kontakt.html" class="nav-link" data-i18n="navContact">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <!-- PC Sticky Quick Actions (Flags + Theme Toggle appearing when scrolled) -->
+      <div class="header-quick-actions" id="header-quick-actions">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="pl" title="Polski"><span class="flag">🇵🇱</span> PL</button>
+          <button class="lang-btn" data-lang="de" title="Deutsch"><span class="flag">🇩🇪</span> DE</button>
+          <button class="lang-btn" data-lang="en" title="English"><span class="flag">🇬🇧</span> EN</button>
+        </div>
+        <button class="theme-toggle-btn" aria-label="Przełącz motyw dzień/noc" title="Przełącz motyw dzień/noc">
+          <i class="fa-solid fa-sun icon-sun"></i>
+          <i class="fa-solid fa-moon icon-moon"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Otwórz menu mobilne">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- SUBPAGE HERO SECTION -->
+  <section class="subpage-hero">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Ścieżka powrotu">
+        <a href="index.html">Strona Główna</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Baza Wiedzy & Poradniki</span>
+      </nav>
+      <div class="subpage-hero-grid">
+        <div class="subpage-hero-text">
+          <h1 class="subpage-title">
+            Wiedza i Poradniki <span class="text-highlight">Radlight Mazury</span>
+          </h1>
+          <p class="subpage-lead">
+            Eksperckie publikacje i sprawdzone standardy operacyjne dla właścicieli apartamentów, hotelarzy, żeglarzy oraz firm korzystających z naszych usług.
+          </p>
+
+          <div class="subpage-hero-actions">
+            <a href="#artykuly" class="btn-primary-hero">
+              <i class="fa-solid fa-newspaper"></i> Zobacz Artykuły
+            </a>
+            <a href="#faq" class="btn-secondary-hero">
+              <i class="fa-solid fa-circle-question"></i> Częste Pytania FAQ
+            </a>
+          </div>
+        </div>
+<div class="subpage-hero-visual">
+          <div class="subpage-hero-card">
+            <div class="subpage-hero-card-media">
+              <img src="images/baza-wiedzy-hero.jpg" alt="Baza wiedzy nieruchomości i usług Radlight">
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLES SECTION -->
+  <section class="services-section" id="artykuly">
+    <div class="container">
+      
+      <div class="section-header text-center">
+        <span class="sub-title" data-i18n="kbSub">Baza Wiedzy & Poradniki</span>
+        <h2 class="section-title" data-i18n="kbTitle">Eksperckie Poradniki i Standardy Mazury</h2>
+        <p class="section-desc" data-i18n="kbDesc">Praktyczne przewodniki po nieruchomościach, hotelarstwie, żeglarstwie, pralnictwie i magazynowaniu.</p>
+      </div>
+
+      <div class="knowledge-grid">
+        <!-- Article 1: Najem Inwestycyjny -->
+        <article class="knowledge-card">
+          <div class="knowledge-card-media">
+            <img src="images/baza-apartamenty.jpg" alt="Inwestowanie w apartamenty Giżycko">
+          </div>
+          <div class="knowledge-card-body">
+            <div class="knowledge-card-meta">
+              <span class="article-category-tag"><i class="fa-solid fa-hotel"></i> Nieruchomości</span>
+              <span><i class="fa-regular fa-clock"></i> 6 min</span>
+              <span><i class="fa-regular fa-calendar"></i> Sierpień 2026</span>
+            </div>
+            <h3 class="knowledge-card-title">Jak Zwiększyć Zysk z Najmu Apartamentu na Mazurach?</h3>
+            <p class="knowledge-card-excerpt">
+              Kluczowe strategie optymalizacji obłożenia: profesjonalny dynamic pricing, automatyzacja zameldowań PIN, marketing wielokanałowy (Booking/Airbnb) oraz bezbłędny reżim czystości hotelowej z własną pralnią.
+            </p>
+            <div class="knowledge-card-footer">
+              <a href="zarzadzanie-najmem.html" class="btn-read-article">Czytaj dalej <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 2: Pralnictwo w Hotelarstwie -->
+        <article class="knowledge-card">
+          <div class="knowledge-card-media">
+            <img src="images/pralnia-industrial-plant.jpg" alt="Standardy higieny w hotelach Giżycko">
+          </div>
+          <div class="knowledge-card-body">
+            <div class="knowledge-card-meta">
+              <span class="article-category-tag"><i class="fa-solid fa-soap"></i> Pralnia</span>
+              <span><i class="fa-regular fa-clock"></i> 5 min</span>
+              <span><i class="fa-regular fa-calendar"></i> Sierpień 2026</span>
+            </div>
+            <h3 class="knowledge-card-title">Standardy Pralnicze dla Hoteli, Pensjonatów i Jachtów</h3>
+            <p class="knowledge-card-excerpt">
+              Dlaczego pranie przemysłowe z barierą higieniczną, automatycznym dozowaniem chemii i maglem termicznym przedłuża żywotność tkanin nawet o 40% w porównaniu do pralek domowych.
+            </p>
+            <div class="knowledge-card-footer">
+              <a href="pralnia.html" class="btn-read-article">Czytaj dalej <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 3: Zimowanie Jachtów -->
+        <article class="knowledge-card">
+          <div class="knowledge-card-media">
+            <img src="images/baza-zimowanie.jpg" alt="Prawidłowe zimowanie jachtu Giżycko">
+          </div>
+          <div class="knowledge-card-body">
+            <div class="knowledge-card-meta">
+              <span class="article-category-tag"><i class="fa-solid fa-anchor"></i> Marine</span>
+              <span><i class="fa-regular fa-clock"></i> 7 min</span>
+              <span><i class="fa-regular fa-calendar"></i> Sierpień 2026</span>
+            </div>
+            <h3 class="knowledge-card-title">Kompleksowy Poradnik Zimowania Łodzi na Mazurach</h3>
+            <p class="knowledge-card-excerpt">
+              Krok po kroku: bezpieczne slipowanie dźwigiem, mycie kadłuba z osadów, zabezpieczenie układu chłodzenia silnika glikolem, konserwacja baterii oraz zalety ogrzewanej hali.
+            </p>
+            <div class="knowledge-card-footer">
+              <a href="zimowanie-jachtow.html" class="btn-read-article">Czytaj dalej <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 4: Self-Storage & Magazynowanie -->
+        <article class="knowledge-card">
+          <div class="knowledge-card-media">
+            <img src="images/baza-magazyny.jpg" alt="Magazyny self-storage Giżycko">
+          </div>
+          <div class="knowledge-card-body">
+            <div class="knowledge-card-meta">
+              <span class="article-category-tag"><i class="fa-solid fa-warehouse"></i> Logistyka</span>
+              <span><i class="fa-regular fa-clock"></i> 4 min</span>
+              <span><i class="fa-regular fa-calendar"></i> Sierpień 2026</span>
+            </div>
+            <h3 class="knowledge-card-title">Self-Storage dla Osób Prywatnych i Firm — Jak to Działa?</h3>
+            <p class="knowledge-card-excerpt">
+              Praktyczny przewodnik po doborze rozmiaru boksu magazynowego. Jak bezpiecznie przechowywać meble na czas remontu, sprzęt sezonowy oraz towary handlowe z monitoringiem 24/7.
+            </p>
+            <div class="knowledge-card-footer">
+              <a href="magazyny.html" class="btn-read-article">Czytaj dalej <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 5: Lotnictwo & Helipad -->
+        <article class="knowledge-card">
+          <div class="knowledge-card-media">
+            <img src="images/baza-helipad.jpg" alt="Procedury lądowania helikoptera Giżycko">
+          </div>
+          <div class="knowledge-card-body">
+            <div class="knowledge-card-meta">
+              <span class="article-category-tag"><i class="fa-solid fa-helicopter"></i> Lotnictwo</span>
+              <span><i class="fa-regular fa-clock"></i> 4 min</span>
+              <span><i class="fa-regular fa-calendar"></i> Sierpień 2026</span>
+            </div>
+            <h3 class="knowledge-card-title">Procedury Lądowania i Hangarowania na Helipadzie Mazury</h3>
+            <p class="knowledge-card-excerpt">
+              Zasady zgłaszania operacji lotniczych, oświetlenie nawigacyjne do lotów nocnych, zaplecze dla pilotów oraz integracja z transportem VIP w rejonie Giżycka.
+            </p>
+            <div class="knowledge-card-footer">
+              <a href="helipad.html" class="btn-read-article">Czytaj dalej <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 6: Ekologia & GOZ -->
+        <article class="knowledge-card">
+          <div class="knowledge-card-media">
+            <img src="images/DJI_0101-1536x864.jpg" alt="Ekologia i GOZ Radlight Giżycko">
+          </div>
+          <div class="knowledge-card-body">
+            <div class="knowledge-card-meta">
+              <span class="article-category-tag"><i class="fa-solid fa-leaf"></i> Ekologia GOZ</span>
+              <span><i class="fa-regular fa-clock"></i> 5 min</span>
+              <span><i class="fa-regular fa-calendar"></i> Sierpień 2026</span>
+            </div>
+            <h3 class="knowledge-card-title">Zielona Transformacja i Gospodarka Obiegu Zamkniętego (GOZ)</h3>
+            <p class="knowledge-card-excerpt">
+              Odzysk ciepła z procesów pralniczych, fotowoltaika, retencja wody i redukcja śladu węglowego w infrastrukturze turystyczno-przemysłowej Radlight.
+            </p>
+            <div class="knowledge-card-footer">
+              <a href="projekty-unijne.html" class="btn-read-article">Czytaj dalej <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-title">Najczęstsze pytania</span>
+        <h2 class="section-title">Często Zadawane Pytania (FAQ)</h2>
+        <p class="section-desc">Odpowiedzi na najczęściej zadawane pytania dotyczące wszystkich usług Radlight.</p>
+      </div>
+
+      <div class="faq-accordion">
+        
+        <div class="faq-item active">
+          <button class="faq-question" type="button">
+            <span>Jak przekazać apartament w zarządzanie Radlight?</span>
+            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Wystarczy skontaktować się z nami telefonicznie (+48 607 241 090) lub mailowo. Przeprowadzamy bezpłatny audyt lokalu, ustalamy strategię cenową, wykonujemy profesjonalne zdjęcia i uruchamiamy sprzedaż na portalach rezerwacyjnych z pełną obsługą na miejscu.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Jakie są godziny pracy pralni i możliwości odbioru prania?</span>
+            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Pralnia Giżycko przy ul. Myśliwskiej 3 pracuje od poniedziałku do soboty. Dla partnerów hotelowych i restauracji oferujemy codzienny odbiór i dowóz prania własnym transportem w ustalonych oknach czasowych.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Czy plac zimowania i hala są ubezpieczone i strzeżone?</span>
+            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Tak, cały teren kompleksu przy ul. Myśliwskiej 3 jest ogrodzony, oświetlony, monitorowany przez kamery CCTV w jakości 4K z zapisem oraz chroniony fizycznie. Obiekt posiada pełne ubezpieczenie OC przedsiębiorstwa.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>Jak szybko można wynająć boks magazynowy self-storage?</span>
+            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Umowę możemy sfinalizować w ciągu 15 minut – nawet zdalnie. Po podpisaniu umowy i opłaceniu kaucji otrzymujesz natychmiastowy kod dostępu do bramy głównej i swojego boksu.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+<footer class="main-footer">
+    <img src="images/logo-w-kole.png" alt="" class="footer-watermark" aria-hidden="true">
+    <div class="container">
+      <div class="footer-content">
+        
+        <div class="footer-col">
+          <div class="footer-logo">
+            <img src="images/logo-w-kole.png" alt="Radlight">
+            <strong>RADLIGHT</strong>
+          </div>
+          <p class="footer-desc" data-i18n="footerDesc">Jedna firma. Wiele możliwości.<br>Kompleksowa obsługa turystyki, nieruchomości, logistyki i usług na Mazurach.</p>
+          <div class="footer-company-box">
+            <strong style="color: #ffffff; display: block; margin-bottom: 3px;">RAD'LIGHT Radosław Narwojsz</strong>
+            <span>NIP: 8451647713 • REGON: 280456789</span><br>
+            <span>Biuro: ul. Myśliwska 3, 11-500 Giżycko</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading" data-i18n="footerColServices">Nasze Usługi</h4>
+          <ul class="footer-links">
+            <li><a href="apartamenty.html">Apartamenty, Domki, Pokoje</a></li>
+            <li><a href="zarzadzanie-najmem.html">Zarządzanie Najmem</a></li>
+            <li><a href="pralnia.html">Pralnia Giżycko</a></li>
+            <li><a href="sprzatanie.html">Usługi Sprzątające</a></li>
+            <li><a href="magazyny.html">Hale, Magazyny & Lokale</a></li>
+            <li><a href="helipad.html">Helipad Mazury</a></li>
+            <li><a href="zimowanie-jachtow.html">Zimowanie Jachtów</a></li>
+            <li><a href="czarter.html">Czarter Jachtów</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading" data-i18n="footerColInfo">Firma & Informacje</h4>
+          <ul class="footer-links">
+            <li><a href="o-nas.html">O firmie</a></li>
+            <li><a href="uslugi.html">Katalog Usług</a></li>
+            <li><a href="baza-wiedzy.html">Baza Wiedzy</a></li>
+            <li><a href="projekty-unijne.html">Projekty Unijne GOZ</a></li>
+            <li><a href="kontakt.html">Dane Kontaktowe</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading" data-i18n="footerColContact">Kontakt Bezpośredni</h4>
+          <ul class="footer-contact-list">
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:+48607241090">+48 607 241 090 (Główne)</a></li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:+48730064044">+48 730 064 044 (Pralnia)</a></li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:+48730067027">+48 730 067 027 (Sprzątanie)</a></li>
+            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:biuro@radlight.pl">biuro@radlight.pl</a></li>
+            <li><i class="fa-solid fa-location-dot"></i> <span>Biuro: ul. Myśliwska 3, Giżycko</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footerRights">&copy; 2026</p>
+        <p class="footer-powered" data-i18n="footerPoweredBy">powered by RADLIGHT</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE BOTTOM DOCK (APPLE-STYLE NAVIGATION BAR) -->
+  <div class="mobile-nav-dock">
+    <div class="dock-container">
+      <a href="o-nas.html" class="dock-item">
+        <i class="fa-solid fa-circle-info"></i>
+        <span data-i18n="dockAbout">O firmie</span>
+      </a>
+      <a href="uslugi.html" class="dock-item">
+        <i class="fa-solid fa-layer-group"></i>
+        <span>Usługi</span>
+      </a>
+      <a href="index.html#kolo-uslug" class="dock-item dock-brand-center" title="Radlight Central">
+        <div class="dock-logo-disc">
+          <img src="images/logo-w-kole.png" alt="Radlight">
+        </div>
+      </a>
+      <a href="baza-wiedzy.html" class="dock-item active">
+        <i class="fa-solid fa-book-open"></i>
+        <span>Wiedza</span>
+      </a>
+      <a href="kontakt.html" class="dock-item">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Kontakt</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="translations.js?v=41"></script>
+  <script src="app.js?v=41"></script>
+</body>
+
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>O Radlight | Usługi i Nieruchomości w Giżycku</title>
+  <meta name="description" content="Poznaj historię, infrastrukturę i ofertę Radlight w Giżycku. 100% polski kapitał, 8 sektorów usług, baza przy ul. Myśliwskiej 3.">
+  
+  <link rel="icon" type="image/png" href="images/logo-w-kole.png">
+  <link rel="apple-touch-icon" href="images/logo-w-kole.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="O Radlight — Giżycko & Mazury">
+  <meta property="og:description" content="Usługi lokalne i nieruchomości na Mazurach.">
+  <meta property="og:image" content="images/logo-w-kole.png">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css?v=58">
+</head>
+
+<body>
+
+  <!-- Top Announcement Bar -->
+<div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-info">
+        <a href="tel:+48607241090" class="top-phone" title="Zadzwoń do nas"><i class="fa-solid fa-phone"></i> +48 607 241 090</a>
+        <a href="mailto:biuro@radlight.pl" class="top-email" title="Napisz e-mail"><i class="fa-solid fa-envelope"></i> biuro@radlight.pl</a>
+        <span class="top-location"><i class="fa-solid fa-location-dot"></i> <span data-i18n="topLocation">Mazury</span></span>
+      </div>
+      <div class="top-links">
+        
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="pl" title="Polski"><span class="flag">🇵🇱</span> PL</button>
+          <button class="lang-btn" data-lang="de" title="Deutsch"><span class="flag">🇩🇪</span> DE</button>
+          <button class="lang-btn" data-lang="en" title="English"><span class="flag">🇬🇧</span> EN</button>
+        </div>
+
+        <!-- Day / Night Theme Toggle -->
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Przełącz motyw dzień/noc" title="Przełącz motyw dzień/noc">
+          <i class="fa-solid fa-sun icon-sun"></i>
+          <i class="fa-solid fa-moon icon-moon"></i>
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+    <!-- Header Navigation -->
+  <header class="main-header" id="header">
+    <div class="container header-container">
+      
+      <!-- Brand Logo -->
+      <div class="header-logo-box">
+        <a href="index.html" class="brand-logo-main" aria-label="Radlight — strona główna">
+          <img src="images/logo-w-kole.png" alt="Radlight Logo" id="logo-img">
+          <div class="brand-text-block">
+            <span class="brand-slogan-main" data-i18n="topSlogan">JEDNA FIRMA. <span class="brand-orange">WIELE MOŻLIWOŚCI.</span></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link" data-i18n="navWheel">Główna</a></li>
+          <li><a href="uslugi.html" class="nav-link" data-i18n="navServices">Katalog Usług</a></li>
+          <li><a href="baza-wiedzy.html" class="nav-link" data-i18n="navKnowledge">Baza Wiedzy</a></li>
+          <li><a href="o-nas.html" class="nav-link active" data-i18n="navAbout">O firmie</a></li>
+          <li><a href="kontakt.html" class="nav-link" data-i18n="navContact">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <!-- PC Sticky Quick Actions (Flags + Theme Toggle appearing when scrolled) -->
+      <div class="header-quick-actions" id="header-quick-actions">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="pl" title="Polski"><span class="flag">🇵🇱</span> PL</button>
+          <button class="lang-btn" data-lang="de" title="Deutsch"><span class="flag">🇩🇪</span> DE</button>
+          <button class="lang-btn" data-lang="en" title="English"><span class="flag">🇬🇧</span> EN</button>
+        </div>
+        <button class="theme-toggle-btn" aria-label="Przełącz motyw dzień/noc" title="Przełącz motyw dzień/noc">
+          <i class="fa-solid fa-sun icon-sun"></i>
+          <i class="fa-solid fa-moon icon-moon"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu mobilne">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="subpage-hero">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Strona Główna</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>O firmie</span>
+      </div>
+
+      <div class="subpage-hero-grid">
+        <div class="subpage-hero-text">
+          <h1 class="subpage-title">
+            Jedna Firma, <span class="text-highlight">Wiele Możliwości</span>
+          </h1>
+          <p class="subpage-lead">
+            Nowoczesne usługi lokalne na Mazurach. Łączymy luksusową turystykę, zarządzanie najmem, przemysłowe usługi czystości oraz profesjonalną infrastrukturę magazynową, żeglarską i lotniczą.
+          </p>
+
+          <div class="subpage-hero-actions">
+            <a href="uslugi.html" class="btn-primary-hero">
+              <i class="fa-solid fa-layer-group"></i> Poznaj Usługi
+            </a>
+            <a href="kontakt.html" class="btn-secondary-hero">
+              <i class="fa-solid fa-envelope"></i> Skontaktuj się
+            </a>
+          </div>
+        </div>
+<div class="subpage-hero-visual">
+          <div class="subpage-hero-card">
+            <div class="subpage-hero-card-media">
+              <img src="images/DJI_0101-1536x864.jpg" alt="Baza Radlight Giżycko">
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section subpage-about-main">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <span class="section-tag">Nasza Tożsamość</span>
+          <h2 class="section-title">Wszystkie Usługi w Jednym Miejscu w Giżycku</h2>
+          <p class="about-lead">
+            Radlight z siedzibą w Giżycku powstał, by zapewnić mieszkańcom, turystom oraz partnerom biznesowym kompleksową obsługę – pod jednym, sprawdzonym szyldem.
+          </p>
+          <p>
+            Dzięki dynamicznym inwestycjom w infrastrukturę przy ul. Myśliwskiej 3 w Giżycku, stworzyliśmy nowoczesną bazę obejmującą: profesjonalną pralnię przemysłową, ogrzewaną halę do całorocznego zimowania jachtów, bezpieczne magazyny self-storage oraz certyfikowane lądowisko dla helikopterów Helipad Mazury.
+          </p>
+          <p>
+            Równolegle rozwijamy segment premium turystyki poprzez markę <strong>Mazury.Holiday</strong> (całoroczne apartamenty z bezpośrednim widokiem na jeziora) oraz kompleksowe zarządzanie nieruchomościami komercyjnymi i mieszkaniowymi.
+          </p>
+          
+          <div class="about-stats-grid">
+            <div class="stat-card">
+              <strong class="stat-number">8</strong>
+              <span class="stat-label">Sektorów Usług</span>
+            </div>
+            <div class="stat-card">
+              <strong class="stat-number">100%</strong>
+              <span class="stat-label">Lokalny kapitał PL</span>
+            </div>
+            <div class="stat-card">
+              <strong class="stat-number">24/7</strong>
+              <span class="stat-label">Wsparcie i ochrona bazy</span>
+            </div>
+            <div class="stat-card">
+              <strong class="stat-number">365</strong>
+              <span class="stat-label">Dni dostępności w roku</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual">
+          <div class="about-img-frame">
+            <img src="images/DJI_0121small-1536x1171.jpg" alt="Centrum Operacyjne Radlight Giżycko">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+<footer class="main-footer">
+    <img src="images/logo-w-kole.png" alt="" class="footer-watermark" aria-hidden="true">
+    <div class="container">
+      <div class="footer-content">
+        
+        <div class="footer-col">
+          <div class="footer-logo">
+            <img src="images/logo-w-kole.png" alt="Radlight">
+            <strong>RADLIGHT</strong>
+          </div>
+          <p class="footer-desc" data-i18n="footerDesc">Jedna firma. Wiele możliwości.<br>Kompleksowa obsługa turystyki, nieruchomości, logistyki i usług na Mazurach.</p>
+          <div class="footer-company-box">
+            <strong style="color: #ffffff; display: block; margin-bottom: 3px;">RAD'LIGHT Radosław Narwojsz</strong>
+            <span>NIP: 8451647713 • REGON: 280456789</span><br>
+            <span>Biuro: ul. Myśliwska 3, 11-500 Giżycko</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading" data-i18n="footerColServices">Nasze Usługi</h4>
+          <ul class="footer-links">
+            <li><a href="apartamenty.html">Apartamenty, Domki, Pokoje</a></li>
+            <li><a href="zarzadzanie-najmem.html">Zarządzanie Najmem</a></li>
+            <li><a href="pralnia.html">Pralnia Giżycko</a></li>
+            <li><a href="sprzatanie.html">Usługi Sprzątające</a></li>
+            <li><a href="magazyny.html">Hale, Magazyny & Lokale</a></li>
+            <li><a href="helipad.html">Helipad Mazury</a></li>
+            <li><a href="zimowanie-jachtow.html">Zimowanie Jachtów</a></li>
+            <li><a href="czarter.html">Czarter Jachtów</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading" data-i18n="footerColInfo">Firma & Informacje</h4>
+          <ul class="footer-links">
+            <li><a href="o-nas.html">O firmie</a></li>
+            <li><a href="uslugi.html">Katalog Usług</a></li>
+            <li><a href="baza-wiedzy.html">Baza Wiedzy</a></li>
+            <li><a href="projekty-unijne.html">Projekty Unijne GOZ</a></li>
+            <li><a href="kontakt.html">Dane Kontaktowe</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading" data-i18n="footerColContact">Kontakt Bezpośredni</h4>
+          <ul class="footer-contact-list">
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:+48607241090">+48 607 241 090 (Główne)</a></li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:+48730064044">+48 730 064 044 (Pralnia)</a></li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:+48730067027">+48 730 067 027 (Sprzątanie)</a></li>
+            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:biuro@radlight.pl">biuro@radlight.pl</a></li>
+            <li><i class="fa-solid fa-location-dot"></i> <span>Biuro: ul. Myśliwska 3, Giżycko</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footerRights">&copy; 2026</p>
+        <p class="footer-powered" data-i18n="footerPoweredBy">powered by RADLIGHT</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="translations.js?v=41"></script>
+  <script src="app.js?v=41"></script>
+  <!-- Mobile Bottom Navigation Dock (Apple-Style Navigation Bar) -->
+  <div class="mobile-nav-dock">
+    <div class="dock-container">
+      <a href="o-nas.html" class="dock-item active">
+        <i class="fa-solid fa-circle-info"></i>
+        <span data-i18n="dockAbout">O firmie</span>
+      </a>
+      <a href="uslugi.html" class="dock-item">
+        <i class="fa-solid fa-layer-group"></i>
+        <span>Usługi</span>
+      </a>
+      <a href="index.html#kolo-uslug" class="dock-item dock-brand-center" title="Radlight Central">
+        <div class="dock-logo-disc">
+          <img src="images/logo-w-kole.png" alt="Radlight">
+        </div>
+      </a>
+      <a href="baza-wiedzy.html" class="dock-item">
+        <i class="fa-solid fa-book-open"></i>
+        <span>Wiedza</span>
+      </a>
+      <a href="kontakt.html" class="dock-item">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Kontakt</span>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

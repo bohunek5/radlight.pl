@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+  <!-- Primary Meta Tags -->
+  <title>Pralnia Przemysłowa Giżycko | Pranie dla Hoteli, Gastronomii i Jachtów Mazury</title>
+  <meta name="title" content="Pralnia Przemysłowa Giżycko | Pranie dla Hoteli, Gastronomii i Jachtów Mazury">
+  <meta name="description"
+    content="Nowoczesna pralnia przemysłowa w Giżycku (PralniaGizycko.pl - Radlight). Pranie pościeli hotelowej, ręczników, obrusów, maglowanie i transport na Mazurach. Tel: +48 730 064 044.">
+  <meta name="keywords"
+    content="pralnia Giżycko, pralnia przemysłowa Mazury, pranie dla hoteli Giżycko, maglowanie pościeli Mazury, pranie dla restauracji Giżycko, pralnia jachtowa Mazury, PralniaGizycko.pl, Radlight">
+  <meta name="author" content="RAD'LIGHT Radosław Narwojsz">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://radlight.pl/pralnia.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://radlight.pl/pralnia.html">
+  <meta property="og:title" content="Pralnia Przemysłowa Giżycko – Serwis Pralniczy dla Hoteli i Firm">
+  <meta property="og:description"
+    content="Własny park maszynowy, rygorystyczna higiena, magiel parowy oraz bezpłatny odbiór i dowóz prania na terenie Giżycka i okolic.">
+  <meta property="og:image" content="images/pralnia-industrial-plant.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo-w-kole.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css?v=58">
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "DryCleaningOrLaundry",
+        "@id": "https://radlight.pl/pralnia.html#business",
+        "name": "Pralnia Przemysłowa Giżycko - Radlight",
+        "image": "https://radlight.pl/images/pralnia-industrial-plant.jpg",
+        "telephone": "+48730064044",
+        "email": "biuro@pralniagizycko.pl",
+        "url": "https://radlight.pl/pralnia.html",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ul. Sybiraków 15",
+          "addressLocality": "Giżycko",
+          "postalCode": "11-500",
+          "addressRegion": "Warmińsko-Mazurskie",
+          "addressCountry": "PL"
+        },
+        "priceRange": "$$"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Strona Główna",
+            "item": "https://radlight.pl/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Pralnia Przemysłowa Giżycko",
+            "item": "https://radlight.pl/pralnia.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="subpage-pralnia">
+
+  <!-- Top Announcement Bar -->
+<div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-info">
+        <a href="tel:+48607241090" class="top-phone" title="Zadzwoń do nas"><i class="fa-solid fa-phone"></i> +48 607 241 090</a>
+        <a href="mailto:biuro@radlight.pl" class="top-email" title="Napisz e-mail"><i class="fa-solid fa-envelope"></i> biuro@radlight.pl</a>
+        <span class="top-location"><i class="fa-solid fa-location-dot"></i> <span data-i18n="topLocation">Mazury</span></span>
+      </div>
+      <div class="top-links">
+        
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="pl" title="Polski"><span class="flag">🇵🇱</span> PL</button>
+          <button class="lang-btn" data-lang="de" title="Deutsch"><span class="flag">🇩🇪</span> DE</button>
+          <button class="lang-btn" data-lang="en" title="English"><span class="flag">🇬🇧</span> EN</button>
+        </div>
+
+        <!-- Day / Night Theme Toggle -->
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Przełącz motyw dzień/noc" title="Przełącz motyw dzień/noc">
+          <i class="fa-solid fa-sun icon-sun"></i>
+          <i class="fa-solid fa-moon icon-moon"></i>
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+    <!-- Header Navigation -->
+  <header class="main-header" id="header">
+    <div class="container header-container">
+      
+      <!-- Brand Logo -->
+      <div class="header-logo-box">
+        <a href="index.html" class="brand-logo-main" aria-label="Radlight — strona główna">
+          <img src="images/logo-w-kole.png" alt="Radlight Logo" id="logo-img">
+          <div class="brand-text-block">
+            <span class="brand-slogan-main" data-i18n="topSlogan">JEDNA FIRMA. <span class="brand-orange">WIELE MOŻLIWOŚCI.</span></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link" data-i18n="navWheel">Główna</a></li>
+          <li><a href="uslugi.html" class="nav-link active" data-i18n="navServices">Katalog Usług</a></li>
+          <li><a href="baza-wiedzy.html" class="nav-link" data-i18n="navKnowledge">Baza Wiedzy</a></li>
+          <li><a href="o-nas.html" class="nav-link" data-i18n="navAbout">O firmie</a></li>
+          <li><a href="kontakt.html" class="nav-link" data-i18n="navContact">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <!-- PC Sticky Quick Actions (Flags + Theme Toggle appearing when scrolled) -->
+      <div class="header-quick-actions" id="header-quick-actions">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="pl" title="Polski"><span class="flag">🇵🇱</span> PL</button>
+          <button class="lang-btn" data-lang="de" title="Deutsch"><span class="flag">🇩🇪</span> DE</button>
+          <button class="lang-btn" data-lang="en" title="English"><span class="flag">🇬🇧</span> EN</button>
+        </div>
+        <button class="theme-toggle-btn" aria-label="Przełącz motyw dzień/noc" title="Przełącz motyw dzień/noc">
+          <i class="fa-solid fa-sun icon-sun"></i>
+          <i class="fa-solid fa-moon icon-moon"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Otwórz menu mobilne">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- SUBPAGE HERO SECTION -->
+  <section class="subpage-hero">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Ścieżka powrotu">
+        <a href="index.html">Strona Główna</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <a href="uslugi.html">Usługi</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Pralnia Przemysłowa Giżycko</span>
+      </nav>
+      <div class="subpage-hero-grid">
+        <div class="subpage-hero-text">
+          <h1 class="subpage-title">
+            Profesjonalna Pralnia <span class="text-highlight">w Giżycku</span>
+          </h1>
+          <p class="subpage-lead">
+            Przemysłowe pranie pościeli, ręczników, odzieży roboczej i tekstyliów dla hoteli, restauracji, jachtów oraz pralnia samoobsługowa dla mieszkańców i żeglarzy przy ul. Sybiraków 15.
+          </p>
+
+          <div class="subpage-hero-actions">
+            <a href="kontakt.html" class="btn-primary-hero">
+              <i class="fa-solid fa-truck-fast"></i> Zamów Odbiór Prania
+            </a>
+            <a href="tel:+48607241090" class="btn-secondary-hero">
+              <i class="fa-solid fa-phone"></i> +48 607 241 090
+            </a>
+          </div>
+        </div>
+<div class="subpage-hero-visual">
+          <div class="subpage-hero-card">
+            <div class="subpage-hero-card-media">
+              <img src="images/pralnia-industrial-plant.jpg" alt="Pralnia Przemysłowa Giżycko Radlight">
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="subpage-layout-section">
+    <div class="container">
+      <div class="subpage-main-grid">
+        
+        <!-- Content Area -->
+        <div class="subpage-content-area">
+          
+          <!-- Block 1 -->
+          <article class="subpage-block" id="oferta-hotelowa">
+            <div class="subpage-block-header">
+              <span class="block-sub">Perfekcyjna Czystość & Biel</span>
+              <h2>Kompleksowa Obsługa Obiektów Noclegowych i Gastronomii</h2>
+            </div>
+            <div class="subpage-prose">
+              <p>
+                W branży turystycznej na Mazurach pierwsze wrażenie gościa zależy od nieskazitelnej czystości i świeżości pościeli oraz ręczników. <strong>Pralnia Giżycko</strong> stosuje profesjonalne systemy dozowania chemii przemysłowej, które nie tylko gwarantują śnieżną biel i higieniczną świeżość, ale także chronią włókna tkanin przed przedwczesnym zużyciem.
+              </p>
+              <p>
+                Oferujemy stałe harmonogramy odbiorów i dostaw czystego prania dla hoteli, ośrodków wypoczynkowych, domków letniskowych, restauracji, załóg jachtowych oraz klientów indywidualnych w całym Giżycku, Wilkasach, Rynie, Mikołajkach i Węgorzewie.
+              </p>
+
+              <ul>
+                <li><i class="fa-solid fa-check-circle"></i> <strong>Pranie i maglowanie pościeli hotelowej</strong> (satyna bawełniana, adamaszek)</li>
+                <li><i class="fa-solid fa-check-circle"></i> <strong>Pranie ręczników kąpielowych</strong>, dywaników i szlafroków frotte</li>
+                <li><i class="fa-solid fa-check-circle"></i> <strong>Pranie obrusów, serwet i pokrowców</strong> restauracyjnych z usuwaniem plam tłuszczowych</li>
+                <li><i class="fa-solid fa-check-circle"></i> <strong>Pranie odzieży roboczej, kucharskiej i kelnerskiej</strong></li>
+                <li><i class="fa-solid fa-check-circle"></i> <strong>Pranie kocy, narzut, poduszek, kołder i materacy</strong></li>
+                <li><i class="fa-solid fa-check-circle"></i> <strong>Pranie tapicerki jachtowej, żagli i pościeli pokładowej</strong></li>
+              </ul>
+            </div>
+
+            <!-- Feature Cards -->
+            <div class="subpage-features-grid">
+              <div class="subpage-feat-card">
+                <div class="subpage-feat-icon"><i class="fa-solid fa-shield-virus"></i></div>
+                <h4>Higiena & Dezynfekcja</h4>
+                <p>Procesy zgodne z normami sanitarnymi RKI gwarantujące pełne bezpieczeństwo bakteriologiczne.</p>
+              </div>
+              <div class="subpage-feat-card">
+                <div class="subpage-feat-icon"><i class="fa-solid fa-temperature-arrow-up"></i></div>
+                <h4>Magiel Parowy</h4>
+                <p>Wielkoformatowy magiel zapewniający idealną gładkość i estetyczny połysk tkanin.</p>
+              </div>
+              <div class="subpage-feat-card">
+                <div class="subpage-feat-icon"><i class="fa-solid fa-van-shuttle"></i></div>
+                <h4>Własny Transport</h4>
+                <p>Odbieramy brudne tekstylia i przywozimy zapakowane w folię ochronną prosto do Twojego obiektu.</p>
+              </div>
+              <div class="subpage-feat-card">
+                <div class="subpage-feat-icon"><i class="fa-solid fa-leaf"></i></div>
+                <h4>Ekologiczna Chemia</h4>
+                <p>Używamy biodegradowalnych detergentów przyjaznych dla środowiska Krainy Wielkich Jezior.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Block 2: Galeria Pralni -->
+          <article class="subpage-block">
+            <div class="subpage-block-header">
+              <span class="block-sub">Nasz Zakład</span>
+              <h2>Profesjonalne Zaplecze Maszynowe w Giżycku</h2>
+            </div>
+            <div class="subpage-gallery-grid">
+              <div class="subpage-gallery-item">
+                <img src="images/pralnia-industrial-plant.jpg" alt="Wnętrze pralni Giżycko Radlight">
+              </div>
+              <div class="subpage-gallery-item">
+                <img src="images/work-in-laundry-2025-03-17-04-27-23-utc-1536x1024.jpg" alt="Praca w pralni przemysłowej">
+              </div>
+              <div class="subpage-gallery-item">
+                <img src="images/IMG_6185-1536x1152.jpg" alt="Pościel hotelowa Radlight">
+              </div>
+            </div>
+          </article>
+
+          <!-- Block 3: Tabela Usług i Cennika B2B -->
+          <article class="subpage-block">
+            <div class="subpage-block-header">
+              <span class="block-sub">Katalog Usług</span>
+              <h2>Zakres i Warunki Cenowe</h2>
+            </div>
+            <div class="spec-table-container">
+              <table class="spec-table">
+                <thead>
+                  <tr>
+                    <th>Asortyment</th>
+                    <th>Zakres Usługi</th>
+                    <th>Czas Realizacji</th>
+                    <th>Wycena</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Komplety pościeli hotelowej</strong></td>
+                    <td>Pranie, odplamianie, dezynfekcja, maglowanie, pakowanie</td>
+                    <td>24h - 48h</td>
+                    <td><span style="color:#4edea3;">Wycena za kg / sztukę</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Ręczniki frotte & szlafroki</strong></td>
+                    <td>Pranie, zmiękczanie parowe, suszenie, składanie</td>
+                    <td>24h</td>
+                    <td><span style="color:#4edea3;">Cena za kg</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Obrusy i bielizna gastronomiczna</strong></td>
+                    <td>Specjalistyczne odtłuszczanie, pranie, maglowanie</td>
+                    <td>24h - 48h</td>
+                    <td><span style="color:#4edea3;">Wycena indywidualna</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Kołdry, poduszki, koce</strong></td>
+                    <td>Pranie głębokie, suszenie komorowe, dezynfekcja</td>
+                    <td>48h</td>
+                    <td><span style="color:#4edea3;">Stawka za sztukę</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Tekstylia jachtowe i żagle</strong></td>
+                    <td>Czyszczenie z zacieków, soli i pleśni, impregnacja</td>
+                    <td>Do uzgodnienia</td>
+                    <td><span style="color:#ff9f1c;">Wycena wg metrażu</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <!-- Block 4: FAQ -->
+          <article class="subpage-block" id="faq">
+            <div class="subpage-block-header">
+              <span class="block-sub">Najczęstsze Pytania</span>
+              <h2>FAQ — Pralnia Giżycko</h2>
+            </div>
+            <div class="faq-accordion-wrapper">
+              <div class="faq-item">
+                <button class="faq-question">
+                  <span><i class="fa-solid fa-circle-question"></i> Czy odbieracie pranie z obiektów poza Giżyckiem?</span>
+                  <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </button>
+                <div class="faq-answer">
+                  <p>Tak! Obsługujemy obiekty w promieniu do 40 km od Giżycka (m.in. Wilkasy, Ryn, Mikołajki, Węgorzewo, Kruklanki, Miłki). Posiadamy regularne trasy transportowe.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  <span><i class="fa-solid fa-circle-question"></i> Jak pakowane jest czyste pranie?</span>
+                  <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </button>
+                <div class="faq-answer">
+                  <p>Czyste tekstylia po maglowaniu są pakowane w pakiety zabezpieczone termokurczliwą folią ochronną, co gwarantuje zachowanie sterylności i świeżości podczas transportu i przechowywania w magazynie hotelowym.</p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question">
+                  <span><i class="fa-solid fa-circle-question"></i> Czy obsługujecie klientów indywidualnych?</span>
+                  <i class="fa-solid fa-chevron-down faq-icon"></i>
+                </button>
+                <div class="faq-answer">
+                  <p>Tak! Zapraszamy do naszego punktu przy ul. Myśliwskiej 3 w Giżycku. Przyjmujemy pranie pościeli, firan, kocy, kurtek puchowych oraz ubrań roboczych.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Inquiry Form -->
+          <div class="subpage-inquiry-box" id="wycena-pralni">
+            <h3 style="color:#ffffff; margin-bottom:10px;"><i class="fa-solid fa-soap" style="color:#e94e1b;"></i> Zamów odbiór prania lub ofertę B2B</h3>
+            <p style="color:#cbd5e1; font-size:0.95rem; margin-bottom:20px;">Podaj szczegóły zlecenia, a nasz dyspozytor skontaktuje się w celu ustalenia terminu odbioru tekstyliów.</p>
+            <form id="pralniaForm" onsubmit="event.preventDefault(); alert('Dziękujemy! Zgłoszenie zostało przekazane do dyspozytora Pralni Giżycko.');">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="pr-name">Nazwa Obiektu / Imię i Nazwisko</label>
+                  <input type="text" id="pr-name" required placeholder="np. Hotel Mazurski / Pensjonat">
+                </div>
+                <div class="form-group">
+                  <label for="pr-phone">Numer Telefonu</label>
+                  <input type="tel" id="pr-phone" required placeholder="+48 730 064 044">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="pr-loc">Adres Odbioru (Miejscowość, Ulica)</label>
+                  <input type="text" id="pr-loc" required placeholder="np. Giżycko, ul. Spacerowa">
+                </div>
+                <div class="form-group">
+                  <label for="pr-type">Rodzaj asortymentu</label>
+                  <select id="pr-type">
+                    <option value="hotel">Pościel i ręczniki hotelowe</option>
+                    <option value="gastro">Obrusy i gastronomia</option>
+                    <option value="jachty">Tekstylia jachtowe / mariny</option>
+                    <option value="indywidualne">Zlecenie indywidualne</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="pr-notes">Szacunkowa waga / ilość / uwagi</label>
+                <textarea id="pr-notes" rows="3" placeholder="np. ok. 50 kg pościeli tygodniowo, zależy nam na dostawie w każdy wtorek i piątek..."></textarea>
+              </div>
+              <button type="submit" class="btn-primary-hero" style="width:100%; justify-content:center; cursor:pointer;">
+                <i class="fa-solid fa-truck-ramp-box"></i> Wyślij Zapytanie do Pralni
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="subpage-sidebar">
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title"><i class="fa-solid fa-bars-staggered"></i> Nasze Usługi</h3>
+            <ul class="sidebar-services-nav">
+              <li><a href="apartamenty.html"><span class="sidebar-nav-left"><i class="fa-solid fa-bed"></i> Apartamenty Giżycko</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="zarzadzanie-najmem.html"><span class="sidebar-nav-left"><i class="fa-solid fa-key"></i> Obsługa Najmu</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="pralnia.html" class="active"><span class="sidebar-nav-left"><i class="fa-solid fa-shirt"></i> Pralnia Przemysłowa</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="sprzatanie.html"><span class="sidebar-nav-left"><i class="fa-solid fa-broom"></i> Usługi Sprzątające</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="magazyny.html"><span class="sidebar-nav-left"><i class="fa-solid fa-warehouse"></i> Hale i Magazyny</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="zimowanie-jachtow.html"><span class="sidebar-nav-left"><i class="fa-solid fa-anchor"></i> Zimowanie Jachtów</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="helipad.html"><span class="sidebar-nav-left"><i class="fa-solid fa-helicopter"></i> Helipad Mazury</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+              <li><a href="czarter.html"><span class="sidebar-nav-left"><i class="fa-solid fa-ship"></i> Czarter Stillo 30</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-cta-box">
+            <h4><i class="fa-solid fa-phone" style="color:#ff9f1c;"></i> Bezpośredni Kontakt</h4>
+            <p>Zadzwoń do dyspozytora pralni w Giżycku:</p>
+            <a href="tel:+48730064044" class="btn-primary-hero" style="width:100%; justify-content:center; padding:12px 18px;">
+              +48 730 064 044
+            </a>
+          </div>
+
+          <div class="sidebar-widget" style="font-size:0.85rem; color:#94a3b8; line-height:1.6;">
+            <strong style="color:#ffffff; display:block; margin-bottom:6px;">Punkt Przyjęć & Zakład:</strong>
+            Pralnia Giżycko (Radlight)<br>
+            ul. Sybiraków 15, 11-500 Giżycko<br>
+            Pon - Pt: 7:00 - 17:00<br>
+            Sob: 8:00 - 14:00
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO FOOTER -->
+
+  <!-- FOOTER -->
+<footer class="main-footer">
+    <img src="images/logo-w-kole.png" alt="" class="footer-watermark" aria-hidden="true">
+    <div class="container">
+      <div class="footer-content">
+        
+        <div class="footer-col">
+          <div class="footer-logo">
+            <img src="images/logo-w-kole.png" alt="Radlight">
+            <strong>RADLIGHT</strong>
+          </div>
+          <p class="footer-desc" data-i18n="footerDesc">Jedna firma. Wiele możliwości.<br>Kompleksowa obsługa turystyki, nieruchomości, logistyki i usług na Mazurach.</p>
+          <div class="footer-company-box">
+            <strong style="color: #ffffff; display: block; margin-bottom: 3px;">RAD'LIGHT Radosław Narwojsz</strong>
+            <span>NIP: 8451647713 • REGON: 280456789</span><br>
+            <span>Biuro: ul. Myśliwska 3, 11-500 Giżycko</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading" data-i18n="footerColServices">Nasze Usługi</h4>
+          <ul class="footer-links">
+            <li><a href="apartamenty.html">Apartamenty, Domki, Pokoje</a></li>
+            <li><a href="zarzadzanie-najmem.html">Zarządzanie Najmem</a></li>
+            <li><a href="pralnia.html">Pralnia Giżycko</a></li>
+            <li><a href="sprzatanie.html">Usługi Sprzątające</a></li>
+            <li><a href="magazyny.html">Hale, Magazyny & Lokale</a></li>
+            <li><a href="helipad.html">Helipad Mazury</a></li>
+            <li><a href="zimowanie-jachtow.html">Zimowanie Jachtów</a></li>
+            <li><a href="czarter.html">Czarter Jachtów</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading" data-i18n="footerColInfo">Firma & Informacje</h4>
+          <ul class="footer-links">
+            <li><a href="o-nas.html">O firmie</a></li>
+            <li><a href="uslugi.html">Katalog Usług</a></li>
+            <li><a href="baza-wiedzy.html">Baza Wiedzy</a></li>
+            <li><a href="projekty-unijne.html">Projekty Unijne GOZ</a></li>
+            <li><a href="kontakt.html">Dane Kontaktowe</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading" data-i18n="footerColContact">Kontakt Bezpośredni</h4>
+          <ul class="footer-contact-list">
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:+48607241090">+48 607 241 090 (Główne)</a></li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:+48730064044">+48 730 064 044 (Pralnia)</a></li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:+48730067027">+48 730 067 027 (Sprzątanie)</a></li>
+            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:biuro@radlight.pl">biuro@radlight.pl</a></li>
+            <li><i class="fa-solid fa-location-dot"></i> <span>Biuro: ul. Myśliwska 3, Giżycko</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footerRights">&copy; 2026</p>
+        <p class="footer-powered" data-i18n="footerPoweredBy">powered by RADLIGHT</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="translations.js?v=41"></script>
+  <script src="app.js?v=41"></script>
+  <!-- Mobile Bottom Navigation Dock (Apple-Style Navigation Bar) -->
+  <div class="mobile-nav-dock">
+    <div class="dock-container">
+      <a href="o-nas.html" class="dock-item">
+        <i class="fa-solid fa-circle-info"></i>
+        <span data-i18n="dockAbout">O firmie</span>
+      </a>
+      <a href="uslugi.html" class="dock-item active">
+        <i class="fa-solid fa-layer-group"></i>
+        <span>Usługi</span>
+      </a>
+      <a href="index.html#kolo-uslug" class="dock-item dock-brand-center" title="Radlight Central">
+        <div class="dock-logo-disc">
+          <img src="images/logo-w-kole.png" alt="Radlight">
+        </div>
+      </a>
+      <a href="baza-wiedzy.html" class="dock-item">
+        <i class="fa-solid fa-book-open"></i>
+        <span>Wiedza</span>
+      </a>
+      <a href="kontakt.html" class="dock-item">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Kontakt</span>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

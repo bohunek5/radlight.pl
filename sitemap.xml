@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Strona Główna -->
+  <url>
+    <loc>https://radlight.pl/</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Katalog Usług -->
+  <url>
+    <loc>https://radlight.pl/uslugi.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Apartamenty Giżycko & Mazury Holiday -->
+  <url>
+    <loc>https://radlight.pl/apartamenty.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Zarządzanie Najmem Apartamentów -->
+  <url>
+    <loc>https://radlight.pl/zarzadzanie-najmem.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Pralnia Przemysłowa & Samoobsługowa -->
+  <url>
+    <loc>https://radlight.pl/pralnia.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Usługi Sprzątające -->
+  <url>
+    <loc>https://radlight.pl/sprzatanie.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Hale Magazynowe i Self-Storage -->
+  <url>
+    <loc>https://radlight.pl/magazyny.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Lądowisko dla Helikopterów Helipad Giżycko -->
+  <url>
+    <loc>https://radlight.pl/helipad.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Zimowanie i Serwis Łodzi Motorowych -->
+  <url>
+    <loc>https://radlight.pl/zimowanie-jachtow.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Czarter Jachtów Stillo 31 -->
+  <url>
+    <loc>https://radlight.pl/czarter.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Baza Wiedzy & Poradniki -->
+  <url>
+    <loc>https://radlight.pl/baza-wiedzy.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- O Firmie -->
+  <url>
+    <loc>https://radlight.pl/o-nas.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Kontakt & Lokalizacja -->
+  <url>
+    <loc>https://radlight.pl/kontakt.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Projekty Unijne -->
+  <url>
+    <loc>https://radlight.pl/projekty-unijne.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+</urlset>
