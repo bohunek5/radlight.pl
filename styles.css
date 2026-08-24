@@ -1392,10 +1392,16 @@ body.light-theme .service-features li {
 }
 
 .service-features li i {
-  color: var(--primary);
-  font-size: 0.8rem;
-  margin-top: 3px;
-  flex-shrink: 0;
+  color: #de4b26 !important;
+  font-size: 0.95rem !important;
+  min-width: 18px !important;
+  text-align: center !important;
+  margin-top: 2px !important;
+  margin-right: 2px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
 }
 
 .service-footer {
@@ -1733,23 +1739,35 @@ body.light-theme .faq-question {
 }
 
 .faq-icon {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.8rem;
-  color: var(--primary);
+  font-size: 0.82rem;
+  color: #ffffff;
   flex-shrink: 0;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease, color 0.3s ease;
+}
+
+body.light-theme .faq-icon {
+  background: #f1f5f9;
+  color: #062b40;
+  border: 1px solid #e2e8f0;
 }
 
 .faq-item.active .faq-icon {
-  transform: rotate(45deg);
-  background: var(--primary);
-  color: #ffffff;
+  transform: rotate(180deg);
+  background: rgba(222, 75, 38, 0.15);
+  color: #de4b26;
+}
+
+body.light-theme .faq-item.active .faq-icon {
+  background: #f8fafc;
+  color: #de4b26;
+  border-color: #cbd5e1;
 }
 
 .faq-answer {
@@ -6725,7 +6743,15 @@ body:not(.light-theme) .synergy-desc {
 
 body:not(.light-theme) .service-features li i {
   color: #de4b26 !important;
-  font-size: 0.88rem !important;
+  font-size: 0.95rem !important;
+  min-width: 18px !important;
+  text-align: center !important;
+  margin-top: 2px !important;
+  margin-right: 2px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
 }
 
 body:not(.light-theme) .knowledge-card-title,
@@ -7030,9 +7056,53 @@ html {
 }
 
 /* ==========================================================================
-   MOBILE HERO & WHEEL (SPACIOUS, NO OVERLAPPING, DELICATE RIMS, ELEVATED CTA)
+   MOBILE HERO & WHEEL (SPACIOUS, LARGER WHEEL, COMPACT HUB TEXT, LARGER CONTACT BUTTONS)
    ========================================================================== */
 @media (max-width: 768px) {
+  /* HIDE HERO VISUAL IMAGES ON MOBILE IN BAZA WIEDZY, USŁUGI, KONTAKT */
+  .subpage-hero-visual,
+  .subpage-hero-card,
+  .subpage-hero-card-media,
+  .subpage-hero-media {
+    display: none !important;
+  }
+
+  .subpage-hero {
+    padding: 18px 0 16px !important;
+  }
+
+  .subpage-hero-content {
+    margin-bottom: 0 !important;
+  }
+
+  /* CONTACT / SERVICE FEATURES ICONS IN MOBILE CARDS - VIBRANT BRAND ORANGE */
+  .service-features li i,
+  .contact-meta-item i,
+  .contact-item i,
+  .info-list i,
+  .subpage-prose ul li i,
+  .subpage-contact-meta li i {
+    color: #de4b26 !important;
+    font-size: 0.96rem !important;
+    min-width: 20px !important;
+    text-align: center !important;
+    margin-top: 1px !important;
+    margin-right: 4px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  body.light-theme .service-features li i {
+    color: #de4b26 !important;
+  }
+
+  body:not(.light-theme) .service-features li i {
+    color: #de4b26 !important;
+  }
+
+  /* WHEEL HERO SECTION ON MOBILE */
   .wheel-hero-section {
     min-height: calc(100vh - 44px) !important;
     min-height: calc(100svh - 44px) !important;
@@ -7042,7 +7112,7 @@ html {
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    padding: 6px 0 10px !important;
+    padding: 4px 0 8px !important;
     box-sizing: border-box !important;
   }
 
@@ -7053,19 +7123,19 @@ html {
     justify-content: center !important;
     width: 100% !important;
     margin: auto 0 !important;
-    gap: 4px !important;
+    gap: 3px !important;
   }
 
-  /* WIDE WHEEL CONTAINER ON MOBILE */
+  /* LARGER WHEEL CONTAINER ON MOBILE (WIDER SPATIAL ORBIT) */
   .wheel-container {
-    width: min(375px, calc(100vw - 12px)) !important;
-    height: min(375px, calc(100vw - 12px)) !important;
-    max-width: 98vw !important;
-    max-height: 98vw !important;
+    width: min(390px, calc(100vw - 6px)) !important;
+    height: min(390px, calc(100vw - 6px)) !important;
+    max-width: 99vw !important;
+    max-height: 99vw !important;
     margin: 0 auto !important;
   }
 
-  /* SLIM, COMPACT ORBITAL NODES (48px) WITH DELICATE 1.5px RIMS */
+  /* COMPACT 48px ORBITAL NODES WITH 1.5px CLEAN RIMS */
   .wheel-node {
     width: 48px !important;
     height: 48px !important;
@@ -7094,11 +7164,11 @@ html {
     box-shadow: 0 0 0 2px rgba(222, 75, 38, 0.35), 0 5px 14px rgba(0, 0, 0, 0.3) !important;
   }
 
-  /* SPACIOUS CENTER HUB (180px) WITH 100% ZERO OVERLAPPING */
+  /* SPACIOUS CENTER HUB WITH DELICATE TEXT & LARGER CONTACT CIRCLES */
   .wheel-center-hub {
     width: 180px !important;
     height: 180px !important;
-    padding: 6px !important;
+    padding: 4px !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -7106,61 +7176,70 @@ html {
   }
 
   .hub-avatar {
-    margin-bottom: 2px !important;
+    margin-bottom: 1px !important;
   }
 
   .hub-avatar-circle {
-    width: 44px !important;
-    height: 44px !important;
-    margin-bottom: 2px !important;
+    width: 38px !important;
+    height: 38px !important;
+    margin-bottom: 1px !important;
   }
 
   .hub-avatar-circle.is-standalone-logo {
-    width: 48px !important;
-    height: 48px !important;
+    width: 42px !important;
+    height: 42px !important;
     background: transparent !important;
   }
 
   .hub-avatar.is-standalone-logo #hub-avatar-img,
   .hub-avatar-circle.is-standalone-logo img {
-    height: 42px !important;
-    max-width: 58px !important;
+    height: 36px !important;
+    max-width: 52px !important;
   }
 
+  /* DELICATE, CLEAN SERVICE TITLE IN CENTER HUB */
   .hub-title {
-    font-size: 0.88rem !important;
+    font-size: 0.80rem !important;
     line-height: 1.15 !important;
-    max-width: 160px !important;
-    margin: 2px 0 3px !important;
+    max-width: 148px !important;
+    margin: 1px 0 3px !important;
     text-align: center !important;
   }
 
   .hub-cta-link {
-    font-size: 0.72rem !important;
-    padding: 3px 10px !important;
-    margin: 2px 0 4px !important;
+    font-size: 0.70rem !important;
+    padding: 2.5px 9px !important;
+    margin: 1px 0 4px !important;
     gap: 4px !important;
   }
 
+  /* LARGER CIRCULAR ACTION BUTTONS FOR PHONE & EMAIL (32px) */
   .hub-action-row {
-    gap: 6px !important;
+    gap: 8px !important;
     margin-top: 1px !important;
   }
 
   .hub-action-btn {
-    width: 26px !important;
-    height: 26px !important;
+    width: 32px !important;
+    height: 32px !important;
     border-radius: 50% !important;
-    font-size: 0.68rem !important;
+    font-size: 0.78rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .hub-action-btn i {
+    font-size: 0.78rem !important;
   }
 
   .hub-contact-details {
     display: none !important;
   }
 
-  /* 'Sprawdź ofertę' CTA elevated with tight gap */
+  /* 'Sprawdź ofertę' CTA elevated */
   .hero-bottom-cta-wrap {
-    margin-top: 4px !important;
+    margin-top: 3px !important;
     gap: 2px !important;
   }
 
@@ -7175,7 +7254,7 @@ html {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 8px !important;
     width: 100% !important;
-    margin-top: 18px !important;
+    margin-top: 14px !important;
     padding: 0 4px !important;
     box-sizing: border-box !important;
   }
