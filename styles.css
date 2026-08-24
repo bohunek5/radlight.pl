@@ -6397,13 +6397,13 @@ body:not(.light-theme) .about-experience-badge-icon i {
   object-fit: contain !important;
   border-radius: 0 !important;
   padding: 0 !important;
-  filter: drop-shadow(0 8px 24px rgba(222, 75, 38, 0.45)) !important;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.22)) !important;
   transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1) !important;
 }
 
 body.light-theme .hub-avatar-circle.is-standalone-logo img,
 body.light-theme .hub-avatar.is-standalone-logo #hub-avatar-img {
-  filter: drop-shadow(0 6px 20px rgba(222, 75, 38, 0.4)) !important;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.12)) !important;
 }
 
 @media (max-width: 768px) {
