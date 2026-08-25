@@ -7346,10 +7346,42 @@ html {
     font-size: 1.08rem !important;
   }
 
+  /* Hide domains / slogans on service nodes on mobile */
   .hub-avatar:not(.is-standalone-logo) ~ .hub-sub {
-    font-size: 0.86rem !important;
-    text-decoration: underline !important;
-    margin-bottom: 8px !important;
+    display: none !important;
+  }
+
+  /* Czytaj dalej button on mobile service nodes */
+  .hub-cta-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    font-size: 0.82rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    background: #de4b26 !important;
+    border: 1px solid #de4b26 !important;
+    padding: 4px 14px !important;
+    border-radius: 20px !important;
+    margin: 4px 0 8px !important;
+    text-decoration: none !important;
+    box-shadow: 0 3px 10px rgba(222, 75, 38, 0.35) !important;
+    transition: all 0.2s ease !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  .hub-cta-link:active {
+    transform: scale(0.94) !important;
+    background: #c23b18 !important;
+  }
+
+  .hub-cta-link i {
+    font-size: 0.72rem !important;
+  }
+
+  .hub-avatar.is-standalone-logo ~ .hub-cta-link {
+    display: none !important;
   }
 
   /* Action Buttons (Phone & Mail) */
@@ -7401,10 +7433,6 @@ html {
   body:not(.light-theme) .wheel-node.active .node-icon-box {
     border: 3.5px solid #de4b26 !important;
     box-shadow: 0 0 0 3.5px rgba(222, 75, 38, 0.45), 0 6px 18px rgba(0, 0, 0, 0.45) !important;
-  }
-
-  .hub-cta-link {
-    display: none !important;
   }
 
   .hub-contact-details {
