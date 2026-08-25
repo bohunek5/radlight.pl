@@ -172,31 +172,31 @@ var translations = {
     "dockContact": "Kontakt",
     "servicesWheel": [
       {
-        "title": "Poznaj Radlight",
-        "sub": "www.radlight.pl",
+        "title": "Jedna Firma",
+        "sub": "wiele możliwości",
         "desc": "Centralna baza usług w Giżycku. Łączymy luksusowe apartamenty, pralnię przemysłową, obsługę najmu, magazyny self-storage, helipad oraz marinę z zimowaniem jachtów w Giżycku (baza centralna ul. Myśliwska 3).",
         "tag": "CENTRUM RADLIGHT",
         "category": "RADLIGHT CENTRUM",
         "tooltip": "Radlight — Centrala Usług"
       },
       {
-        "title": "Apartamenty, domki, pokoje",
+        "title": "Apartamenty",
         "sub": "www.mazury.holiday",
         "desc": "Luksusowy wynajem całorocznych apartamentów, domków letniskowych i pokoi w centrum Giżycka i nad mazurskimi jeziorami. Klimatyzacja, szybkie Wi-Fi, pościel hotelowa z naszej pralni oraz dedykowany parking.",
         "tag": "APARTAMENTY & DOMKI",
         "category": "TURYSTYKA & NOCLEGI",
-        "tooltip": "Apartamenty, Domki, Pokoje — Mazury Holiday"
+        "tooltip": "Apartamenty — Mazury Holiday"
       },
       {
-        "title": "Obsługa najmu",
-        "sub": "Zarządzanie apartamentami",
+        "title": "Zarządzanie najmem",
+        "sub": "Zajmiemy się wszystkim",
         "desc": "Kompleksowa opieka nad apartamentem: marketing na Booking i Airbnb, meldunek gości kodem PIN, sprzątanie, wymiana i pranie pościeli oraz pełne rozliczenia finansowe.",
         "tag": "OBSŁUGA NAJMU",
         "category": "NIERUCHOMOŚCI",
         "tooltip": "Zarządzanie Najmem Giżycko"
       },
       {
-        "title": "Pralnia przemysłowa",
+        "title": "Własna pralnia",
         "sub": "www.pralniagizycko.pl",
         "desc": "Nowoczesny park pralniczy dla hoteli, pensjonatów, jachtów, restauracji i klientów indywidualnych w Giżycku. Odbiór i dowóz prania własnym transportem w promieniu 50 km.",
         "tag": "PARK PRALNICZY",
@@ -204,23 +204,23 @@ var translations = {
         "tooltip": "Pralnia Giżycko"
       },
       {
-        "title": "Usługi sprzątające",
-        "sub": "Domy, apartamenty i biura",
+        "title": "Profesjonalne usługi sprzątające",
+        "sub": "Domy, biura, apartamenty",
         "desc": "Doświadczony zespół, profesjonalny sprzęt Kärcher i ekologiczne środki czystości. Sprzątanie cykliczne, poremontowe, mycie okien oraz doczyszczanie jachtów.",
         "tag": "SERWIS CZYSTOŚCI",
         "category": "USŁUGI PORZĄDKOWE",
         "tooltip": "Usługi Sprzątające Giżycko"
       },
       {
-        "title": "Hale, magazyny & lokale",
-        "sub": "Powierzchnie użytkowe",
+        "title": "Powierzchnie usługowo magazynowe",
+        "sub": "Sprawdź ofertę",
         "desc": "Nowoczesne hale produkcyjno-magazynowe, boksy samoobsługowe self-storage, powierzchnie użytkowe i komercyjne oraz place składowe w Giżycku. Monitoring 24/7, dostęp PIN i dojazd TIR.",
         "tag": "HALE & MAGAZYNY",
         "category": "MAGAZYNY & PLACE",
         "tooltip": "Hale, Magazyny i Powierzchnie Użytkowe"
       },
       {
-        "title": "Helipad Mazury",
+        "title": "Lądowisko dla śmigłowców",
         "sub": "www.helipadmazury.pl",
         "desc": "Certyfikowane lądowisko dla śmigłowców w Giżycku. Oświetlenie nawigacyjne do lotów nocnych, hangarowanie, tankowanie oraz transfery VIP i medyczne LPR.",
         "tag": "LĄDOWISKO HELI",
@@ -228,12 +228,20 @@ var translations = {
         "tooltip": "Helipad Mazury — Lądowisko"
       },
       {
-        "title": "Zimowanie jachtów",
-        "sub": "AllBoat Service & Czarter",
-        "desc": "Całoroczne bezpieczne zimowanie łodzi w ogrzewanej hali lub na strzeżonym placu. Slipowanie dźwigiem, mycie dna, serwis silników oraz czarter jachtu motorowego Stillo 30.",
-        "tag": "ZIMOWANIE & CZARTER",
+        "title": "Czarter Stillo30 VIP",
+        "sub": "Zarezerwuj swój rejs!",
+        "desc": "Luksusowy czarter nowoczesnych jednostek motorowych typu Houseboat bez patentu po Szlaku Wielkich Jezior Mazurskich.",
+        "tag": "CZARTER JACHTÓW",
+        "category": "CZARTER & REJSY",
+        "tooltip": "Czarter Jachtów Motorowych Stillo 30"
+      },
+      {
+        "title": "Zimowanie łodzi",
+        "sub": "kliknij po więcej informacji",
+        "desc": "Całoroczne bezpieczne zimowanie łodzi w ogrzewanej hali lub na strzeżonym placu. Slipowanie dźwigiem, mycie dna, serwis silników oraz konserwacja.",
+        "tag": "ZIMOWANIE & SERWIS",
         "category": "SEKTOR MORSKI",
-        "tooltip": "Zimowanie Jachtów i Czarter"
+        "tooltip": "Zimowanie Jachtów All Boat"
       }
     ]
   },
@@ -347,8 +355,8 @@ var translations = {
     "dockContact": "Kontakt",
     "servicesWheel": [
       {
-        "title": "Radlight entdecken",
-        "sub": "www.radlight.pl",
+        "title": "Ein Unternehmen",
+        "sub": "viele Möglichkeiten",
         "desc": "Zentrale Servicebasis in Giżycko. Wir verbinden Luxusapartments, Großwäscherei, Mietverwaltung, Self-Storage Lager, Heliport sowie Marina und Bootswinterlager in der Myśliwska 3.",
         "tag": "RADLIGHT ZENTRALE",
         "category": "RADLIGHT ZENTRALE",
@@ -403,12 +411,20 @@ var translations = {
         "tooltip": "Helipad Masuren — Landeplatz"
       },
       {
+        "title": "Yachtcharter Stillo 30",
+        "sub": "Buchen Sie Ihren Törn!",
+        "desc": "Exklusiver Hausboot- und Motoryacht-Charter ohne Führerschein auf der Masurischen Seenplatte.",
+        "tag": "MOTORBOOT CHARTER",
+        "category": "CHARTER & REISEN",
+        "tooltip": "Yachtcharter Stillo 30 VIP"
+      },
+      {
         "title": "Bootswinterlager",
-        "sub": "AllBoat Service & Charter",
-        "desc": "Ganzjährige sichere Bootslagerung in beheizter Halle oder auf bewachtem Platz. Kran-Slipanlage, Rumpfreinigung, Motorservice und Motoryacht-Charter Stillo 30.",
-        "tag": "WINTERLAGER & CHARTER",
+        "sub": "AllBoat Service & Marina",
+        "desc": "Ganzjährige sichere Bootslagerung in beheizter Halle oder auf bewachtem Platz. Kran-Slipanlage, Rumpfreinigung und Motorservice.",
+        "tag": "WINTERLAGER & SERVICE",
         "category": "MARITIMER SEKTOR",
-        "tooltip": "Winterlager und Yachtcharter"
+        "tooltip": "Bootswinterlager All Boat"
       }
     ],
     "time4Min": "4 Min.",
@@ -585,8 +601,8 @@ var translations = {
     "dockContact": "Contact",
     "servicesWheel": [
       {
-        "title": "Discover Radlight",
-        "sub": "www.radlight.pl",
+        "title": "One Company",
+        "sub": "many opportunities",
         "desc": "Central operations base in Giżycko. We combine luxury apartments, industrial laundry, property management, self-storage warehouses, certified helipad, marina and boat wintering at Myśliwska 3.",
         "tag": "RADLIGHT HEADQUARTERS",
         "category": "RADLIGHT HEADQUARTERS",
@@ -641,12 +657,20 @@ var translations = {
         "tooltip": "Helipad Masuria — Landing Facility"
       },
       {
-        "title": "Yacht Wintering",
-        "sub": "AllBoat Service & Charter",
-        "desc": "Year-round secure boat storage in a heated hall or guarded yard. Crane launch/slipway, hull pressure washing, engine maintenance, and motorboat charter of Stillo 30.",
-        "tag": "WINTERING & CHARTER",
+        "title": "Motor Yacht Charter",
+        "sub": "Book your cruise!",
+        "desc": "Luxury charter of modern Houseboat motor yachts without a license across the Great Masurian Lakes trail.",
+        "tag": "YACHT CHARTER",
+        "category": "CHARTER & CRUISES",
+        "tooltip": "Motor Yacht Charter Stillo 30"
+      },
+      {
+        "title": "Boat Wintering",
+        "sub": "AllBoat Service & Marina",
+        "desc": "Year-round secure boat storage in a heated hall or guarded yard. Crane slipway, hull pressure washing, and authorized engine service.",
+        "tag": "WINTERING & SERVICE",
         "category": "MARINE SECTOR",
-        "tooltip": "Yacht Wintering and Charter"
+        "tooltip": "Boat Wintering All Boat"
       }
     ],
     "time4Min": "4 min",

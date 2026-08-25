@@ -230,10 +230,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const servicesData = [
     {
       index: 0,
-      title: "Poznaj Radlight",
+      title: "Jedna Firma",
       sub: "wiele możliwości",
       desc: "Centralna baza usług w Giżycku. Łączymy luksusowe apartamenty, pralnię przemysłową, obsługę najmu, magazyny self-storage, helipad oraz marinę z zimowaniem jachtów przy ul. Myśliwskiej 3.",
-      img: "images/radlight-r-symbol.png",
+      img: "images/na-strone-Radlight.pl-Logo-pomarancz-czarny.png",
       bgImg: "images/DJI_0101-1536x864.jpg",
       phone: "tel:+48607241090",
       phoneDisplay: "+48 607 241 090",
@@ -246,10 +246,11 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       index: 1,
-      title: "Apartamenty, Domki, Pokoje",
+      title: "Apartamenty",
       sub: "www.mazury.holiday",
       desc: "Luksusowy wynajem całorocznych apartamentów, domków letniskowych i pokoi w centrum Giżycka i nad mazurskimi jeziorami. Klimatyzacja, szybkie Wi-Fi, pościel hotelowa z naszej pralni oraz dedykowany parking.",
-      img: "images/512X512-mh.png",
+      img: "images/stranda_hero_jacuzzi.webp",
+      nodeImg: "images/512X512-mh.png",
       bgImg: "images/IMG_6185-1536x1152.jpg",
       phone: "tel:+48607241090",
       phoneDisplay: "+48 607 241 090",
@@ -262,10 +263,11 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       index: 2,
-      title: "Zarządzanie Najmem",
-      sub: "Kompleksowa obsługa apartamentów",
+      title: "Zarządzanie najmem",
+      sub: "Zajmiemy się wszystkim",
       desc: "Zajmujemy się wszystkim: od profesjonalnej sesji zdjęciowej i marketingu na Booking/Airbnb, po zameldowanie gości, pranie pościeli, sprzątanie pobytowe i terminowe rozliczenia.",
       img: "images/103761_7.jpg",
+      nodeImg: "images/real-estate-agent-holding-key-with-house-shaped-keychain--1536x1024.jpg",
       bgImg: "images/103779_7.jpg",
       phone: "tel:+48607241090",
       phoneDisplay: "+48 607 241 090",
@@ -278,10 +280,11 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       index: 3,
-      title: "Własna Pralnia",
-      sub: "ul. Sybiraków 15 • www.pralniagizycko.pl",
+      title: "Własna pralnia",
+      sub: "www.pralniagizycko.pl",
       desc: "Nowoczesny park pralniczy dla hoteli, pensjonatów, jachtów, restauracji i klientów indywidualnych w Giżycku. Odbiór i dowóz prania własnym transportem w promieniu 50 km.",
-      img: "images/logo-kwadrat.jpg",
+      img: "images/work-in-laundry-2025-03-17-04-27-23-utc-1536x1024.jpg",
+      nodeImg: "images/logo-kwadrat.jpg",
       bgImg: "images/pralnia-industrial-plant.jpg",
       phone: "tel:+48730064044",
       phoneDisplay: "+48 730 064 044",
@@ -294,10 +297,11 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       index: 4,
-      title: "Usługi Sprzątające",
-      sub: "Domy, biura, apartamenty i jachty",
+      title: "Profesjonalne usługi sprzątające",
+      sub: "Domy, biura, apartamenty",
       desc: "Certyfikowany zespół, profesjonalny sprzęt Kärcher i ekologiczne środki czystości. Kompleksowe sprzątanie cykliczne, poremontowe oraz doczyszczanie jachtów po sezonie.",
       img: "images/modern-office-2025-02-22-16-24-55-utc-2048x1365.jpg",
+      nodeImg: "images/pralnia-1536x863.png",
       bgImg: "images/modern-office-2025-02-22-16-24-55-utc-2048x1365.jpg",
       phone: "tel:+48730067027",
       phoneDisplay: "+48 730 067 027",
@@ -310,10 +314,11 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       index: 5,
-      title: "Hale, Magazyny & Lokale",
-      sub: "ul. Sybiraków 15 • Powierzchnie Użytkowe",
+      title: "Powierzchnie usługowo magazynowe",
+      sub: "Sprawdź ofertę",
       desc: "Nowoczesne hale produkcyjno-magazynowe, boksy magazynowe self-storage, powierzchnie użytkowe i komercyjne oraz utwardzone place składowe przy ul. Sybiraków 15. Monitoring CCTV 24/7, bramy z poziomu 0 i dogodny dojazd TIR.",
-      img: "images/DJI_0121small-1536x1171.jpg",
+      img: "images/hala-zimowanie-3.jpg",
+      nodeImg: "images/DJI_0121small-1536x1171.jpg",
       bgImg: "images/hala-zimowanie-3.jpg",
       phone: "tel:+48607241090",
       phoneDisplay: "+48 607 241 090",
@@ -326,10 +331,11 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       index: 6,
-      title: "Helipad Mazury",
+      title: "Lądowisko dla śmigłowców",
       sub: "www.helipadmazury.pl",
       desc: "Certyfikowane lądowisko dla śmigłowców w Giżycku z pełnym oświetleniem nawigacyjnym, zapleczem hangarowym, tankowaniem i profesjonalną logistyką VIP / LPR.",
-      img: "images/512X512-heli.png",
+      img: "images/air-rescue-service-1536x1024.jpg",
+      nodeImg: "images/512X512-heli.png",
       bgImg: "images/air-rescue-service-1536x1024.jpg",
       phone: "tel:+48607241090",
       phoneDisplay: "+48 607 241 090",
@@ -342,10 +348,28 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       index: 7,
-      title: "Zimowanie Jachtów",
-      sub: "AllBoat Service & Marina",
+      title: "Czarter Stillo30 VIP",
+      sub: "Zarezerwuj swój rejs!",
+      desc: "Luksusowy czarter nowoczesnych jednostek motorowych typu Houseboat bez patentu po Szlaku Wielkich Jezior Mazurskich.",
+      img: "images/103945_3.jpg",
+      nodeImg: "images/103945_3.jpg",
+      bgImg: "images/103945_3.jpg",
+      phone: "tel:+48607241090",
+      phoneDisplay: "+48 607 241 090",
+      email: "mailto:biuro@radlight.pl",
+      emailDisplay: "biuro@radlight.pl",
+      link: "czarter.html",
+      cardId: "card-czarter",
+      category: "CZARTER & REJSY",
+      tag: "CZARTER JACHTÓW"
+    },
+    {
+      index: 8,
+      title: "Zimowanie łodzi",
+      sub: "kliknij po więcej informacji",
       desc: "Nowoczesna ogrzewana hala, strzeżony plac, slipowanie dźwigiem, transport specjalistyczny, mycie dna, zabezpieczenie antyporostowe i autoryzowany serwis silników jachtowych.",
-      img: "images/LOGO-ALL-BOAT.jpg",
+      img: "images/hero-yard-evening-v3.jpg",
+      nodeImg: "images/LOGO-ALL-BOAT.jpg",
       bgImg: "images/hero-yard-evening-v3.jpg",
       phone: "tel:+48607241090",
       phoneDisplay: "+48 607 241 090",
@@ -364,7 +388,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const wheelContainer = document.getElementById('interactive-wheel');
   const wheelOrbit = document.getElementById('wheel-orbit');
-  const nodes = document.querySelectorAll('.wheel-node');
+  let nodes = document.querySelectorAll('.wheel-node');
   const centerHub = document.getElementById('wheel-center-hub');
 
   // Center Hub DOM Elements
@@ -378,13 +402,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const hubContactWeb = document.getElementById('hub-contact-web');
   const hubWebText = document.getElementById('hub-web-text');
 
-  // Position nodes radially on the orbit ring (285px desktop radius)
+  // Position nodes radially on the orbit ring
   function positionNodes() {
+    nodes = document.querySelectorAll('.wheel-node');
     if (!wheelContainer || nodes.length === 0) return;
     const total = nodes.length;
     const isMobile = window.innerWidth <= 768;
     const containerW = wheelContainer.offsetWidth || (isMobile ? 350 : 760);
-    const radius = isMobile ? Math.round(containerW * 0.42) : 285;
+    const radius = isMobile ? Math.round(containerW * 0.415) : 285;
 
     nodes.forEach((node, i) => {
       const angle = ((i * (360 / total)) - 90) * (Math.PI / 180);
@@ -406,10 +431,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const displayTitle = langData ? langData.title : data.title;
     const displaySub = langData ? langData.sub : data.sub;
 
+    const hubInner = document.getElementById('hub-inner-core');
+    if (hubInner) {
+      hubInner.classList.remove('animate-in');
+      void hubInner.offsetWidth;
+      hubInner.classList.add('animate-in');
+    }
+
     // 1. Update Center Hub (Standalone large logo for index 0 / Radlight Central)
     const hubAvatar = document.getElementById('hub-avatar') || document.querySelector('.hub-avatar');
     const hubAvatarCircle = document.querySelector('.hub-avatar-circle');
-    const isStandalone = (index === 0) || (data.img && data.img.includes('radlight-r-symbol'));
+    const isStandalone = (index === 0);
 
     if (hubAvatar) {
       hubAvatar.classList.toggle('is-standalone-logo', isStandalone);
@@ -421,12 +453,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (hubAvatarImg) {
       hubAvatarImg.src = data.img;
       hubAvatarImg.alt = displayTitle;
-      const isLogo = data.img.includes('Logo') || data.img.includes('logo') || data.img.includes('512X512') || data.img.includes('LOGO') || isStandalone;
+      const isLogo = isStandalone || data.img.includes('Logo') || data.img.includes('logo') || data.img.includes('512X512') || data.img.includes('LOGO');
       if (hubAvatarCircle) {
         hubAvatarCircle.classList.toggle('logo-type', isLogo);
       }
     }
     if (hubTitle) hubTitle.textContent = displayTitle;
+    if (hubSub) hubSub.textContent = displaySub;
     
     const hubCtaLink = document.getElementById('hub-cta-link');
     const hubCtaText = document.getElementById('hub-cta-text');
@@ -459,6 +492,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 2. Highlight Active Node & Update Tooltips in Current Language
+    nodes = document.querySelectorAll('.wheel-node');
     nodes.forEach((n, idx) => {
       n.classList.toggle('active', idx === index);
       const nodeLang = (typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang].servicesWheel)
@@ -472,31 +506,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function setActiveIndex(newIndex) {
+    nodes = document.querySelectorAll('.wheel-node');
     const total = nodes.length;
     activeIndex = (newIndex + total) % total;
-
-    // Rotate Orbit
-    const rotationAngle = -activeIndex * (360 / total);
-    if (wheelOrbit) {
-      wheelOrbit.style.transform = `rotate(${rotationAngle}deg)`;
-    }
-
-    // Counter-rotate node contents so they stay perfectly upright
-    nodes.forEach((n) => {
-      const innerBox = n.querySelector('.node-icon-box');
-      if (innerBox) {
-        innerBox.style.setProperty('--counter-rotation', `${-rotationAngle}deg`);
-      }
-    });
 
     updateShowcase(activeIndex);
   }
 
   function startAutoRotate() {
-    stopAutoRotate();
-    autoRotateTimer = setInterval(() => {
-      setActiveIndex(activeIndex + 1);
-    }, 6000);
+    // Keep fixed like radlight.pl
   }
 
   function stopAutoRotate() {
@@ -506,28 +524,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Node Click Handlers
+  // Node Click and Hover Handlers (1:1 with radlight.pl)
   nodes.forEach((node, i) => {
     node.addEventListener('click', (e) => {
       e.preventDefault();
-      stopAutoRotate();
+      setActiveIndex(i);
+    });
 
-      if (activeIndex === i) {
-        // Second click on active node -> go to subpage or scroll to card
-        const data = servicesData[i];
-        if (data && data.link) {
-          if (data.link.startsWith('#')) {
-            scrollToTargetCard(data.link);
-          } else if (data.link.startsWith('http')) {
-            window.open(data.link, '_blank');
-          } else {
-            window.location.href = data.link;
-          }
-        }
-      } else {
-        setActiveIndex(i);
-        startAutoRotate();
-      }
+    node.addEventListener('mouseenter', () => {
+      setActiveIndex(i);
     });
   });
 

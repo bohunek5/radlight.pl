@@ -334,7 +334,7 @@
             <circle class="orbit-ring orbit-ring-inner" cx="380" cy="380" r="262" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="440 140 350 150 290 140" />
           </svg>
 
-          <!-- 8 Circular Nodes along the Orbit -->
+          <!-- 9 Circular Nodes along the Orbit -->
           <div class="wheel-orbit" id="wheel-orbit">
             
             <!-- Node 0 (Top / 0°): Radlight Central Logo (Active default) -->
@@ -344,50 +344,57 @@
               </div>
             </button>
 
-            <!-- Node 1 (Top-Right / 45°): Mazury Holiday -->
+            <!-- Node 1 (Top-Right / 40°): Mazury Holiday -->
             <button class="wheel-node" data-index="1" data-service-id="apartamenty" aria-label="Apartamenty Mazury" title="Apartamenty — Mazury Holiday">
               <div class="node-icon-box logo-type">
                 <img src="images/512X512-mh.png" alt="Mazury Holiday Apartamenty">
               </div>
             </button>
 
-            <!-- Node 2 (Right / 90°): Zarządzanie Najmem -->
+            <!-- Node 2 (Right / 80°): Zarządzanie Najmem -->
             <button class="wheel-node" data-index="2" data-service-id="najem" aria-label="Zarządzanie Najmem" title="Zarządzanie Najmem">
               <div class="node-icon-box">
                 <img src="images/real-estate-agent-holding-key-with-house-shaped-keychain--1536x1024.jpg" alt="Zarządzanie Najmem">
               </div>
             </button>
 
-            <!-- Node 3 (Bottom-Right / 135°): Pralnia Giżycko -->
+            <!-- Node 3 (Bottom-Right / 120°): Pralnia Giżycko -->
             <button class="wheel-node" data-index="3" data-service-id="pralnia" aria-label="Pralnia Przemysłowa Giżycko" title="Pralnia Giżycko">
               <div class="node-icon-box logo-type">
                 <img src="images/logo-kwadrat.jpg" alt="Pralnia Giżycko">
               </div>
             </button>
 
-            <!-- Node 4 (Bottom / 180°): Usługi Sprzątające -->
+            <!-- Node 4 (Bottom / 160°): Usługi Sprzątające -->
             <button class="wheel-node" data-index="4" data-service-id="sprzatanie" aria-label="Usługi Sprzątające" title="Usługi Sprzątające">
               <div class="node-icon-box">
-                <img src="images/modern-office-2025-02-22-16-24-55-utc-2048x1365.jpg" alt="Usługi Sprzątające">
+                <img src="images/pralnia-1536x863.png" alt="Usługi Sprzątające">
               </div>
             </button>
 
-            <!-- Node 5 (Bottom-Left / 225°): Hale i Magazyny -->
+            <!-- Node 5 (Bottom-Left / 200°): Hale i Magazyny -->
             <button class="wheel-node" data-index="5" data-service-id="magazyny" aria-label="Hale i Magazyny Giżycko" title="Hale i Magazyny">
               <div class="node-icon-box">
                 <img src="images/DJI_0121small-1536x1171.jpg" alt="Hale i Magazyny">
               </div>
             </button>
 
-            <!-- Node 6 (Left / 270°): Helipad Mazury -->
+            <!-- Node 6 (Left / 240°): Helipad Mazury -->
             <button class="wheel-node" data-index="6" data-service-id="helipad" aria-label="Lądowisko Śmigłowców Helipad" title="Helipad Mazury">
               <div class="node-icon-box logo-type">
                 <img src="images/512X512-heli.png" alt="Helipad Mazury">
               </div>
             </button>
 
-            <!-- Node 7 (Top-Left / 315°): Zimowanie Jachtów & Czarter -->
-            <button class="wheel-node" data-index="7" data-service-id="zimowanie" aria-label="Zimowanie Jachtów Giżycko" title="Zimowanie i Czarter Jachtów">
+            <!-- Node 7 (Top-Left / 280°): Czarter Jachtów Stillo 30 -->
+            <button class="wheel-node" data-index="7" data-service-id="czarter" aria-label="Czarter Jachtów Motorowych Stillo 30" title="Czarter Jachtów Motorowych">
+              <div class="node-icon-box">
+                <img src="images/103945_3.jpg" alt="Czarter Jachtów Motorowych Stillo 30">
+              </div>
+            </button>
+
+            <!-- Node 8 (Top-Left / 320°): Zimowanie Jachtów All Boat -->
+            <button class="wheel-node" data-index="8" data-service-id="zimowanie" aria-label="Zimowanie Jachtów Giżycko" title="Zimowanie Jachtów All Boat">
               <div class="node-icon-box logo-type">
                 <img src="images/LOGO-ALL-BOAT.jpg" alt="Zimowanie Jachtów All Boat">
               </div>
@@ -397,26 +404,27 @@
 
           <!-- Central Hub: Service Round Badge (like orbital nodes), Title, Domain & Action Box with Mail/Phone/Website -->
           <div class="wheel-center-hub" id="wheel-center-hub" role="button" tabindex="0" title="Kliknij, aby przejść do oferty">
-            <div class="hub-inner-core">
+            <div class="hub-inner-core" id="hub-inner-core">
               
               <!-- Center Circular Node/Badge (Same design as orbital circles) -->
               <div class="hub-avatar is-standalone-logo" id="hub-avatar">
                 <div class="hub-avatar-circle is-standalone-logo logo-type">
-                  <img src="images/radlight-r-symbol.png" alt="Radlight" id="hub-avatar-img">
+                  <img src="images/na-strone-Radlight.pl-Logo-pomarancz-czarny.png" alt="Radlight" id="hub-avatar-img">
                 </div>
               </div>
 
               <!-- Main Title & Subtitle (Service Name & Domain / Tagline) -->
-              <h2 class="hub-title" id="hub-title">Poznaj Radlight</h2>
+              <h2 class="hub-title" id="hub-title">Jedna Firma</h2>
+              <div class="hub-sub" id="hub-sub">wiele możliwości</div>
               <a href="uslugi.html" class="hub-cta-link" id="hub-cta-link"><span id="hub-cta-text" data-i18n="btnReadMoreHub">Czytaj dalej</span> <i class="fa-solid fa-arrow-right"></i></a>
               
               <!-- Lower Action Box: Phone & Mail buttons + direct mail and web link -->
               <div class="hub-action-box" id="hub-action-box">
                 <div class="hub-action-row" id="hub-action-row">
-                  <a href="tel:+48607241090" class="hub-action-btn hub-btn-phone" id="hub-phone-btn" title="Zadzwoń bezpośrednio">
+                  <a href="tel:+48607241090" class="hub-action-btn hub-btn-phone" id="hub-phone-btn" title="Zadzwoń: +48 607 241 090" aria-label="Zadzwoń">
                     <i class="fa-solid fa-phone"></i>
                   </a>
-                  <a href="mailto:biuro@radlight.pl" class="hub-action-btn hub-btn-mail" id="hub-mail-btn" title="Napisz e-mail">
+                  <a href="mailto:biuro@radlight.pl" class="hub-action-btn hub-btn-mail" id="hub-mail-btn" title="Napisz: biuro@radlight.pl" aria-label="Napisz e-mail">
                     <i class="fa-solid fa-envelope"></i>
                   </a>
                 </div>
@@ -437,6 +445,24 @@
             </div>
           </div>
 
+        </div>
+
+        <!-- Mobile Bottom EU Project Flag (Matching radlight.pl mobile view) -->
+        <div class="hero-eu-badge-mobile" id="hero-eu-badge-mobile">
+          <a href="projekty-unijne.html" class="eu-badge-link" title="Projekty unijne">
+            <div class="eu-flag-icon" id="eu-flag-icon">
+              <svg class="eu-flag-svg" viewBox="0 0 810 540" width="46" height="30" xmlns="http://www.w3.org/2000/svg">
+                <rect width="810" height="540" fill="#003399"/>
+                <g fill="#ffcc00" transform="translate(405,270) scale(32)">
+                  <g id="d"><g id="c"><g id="b"><g id="a">
+                    <polygon points="0,-1 0.5878,0.8090 -0.9511,-0.3090 0.9511,-0.3090 -0.5878,0.8090" transform="translate(0,-6)"/>
+                  </g><use href="#a" transform="rotate(30)"/></g><use href="#b" transform="rotate(60)"/></g><use href="#c" transform="rotate(120)"/></g>
+                  <use href="#d" transform="rotate(240)"/>
+                </g>
+              </svg>
+            </div>
+            <p class="eu-badge-caption" data-i18n="euCaptionMobile">Projekty unijne</p>
+          </a>
         </div>
 
         <!-- Apple-Style "Sprawdź Ofertę" CTA & Pulsing Scroll Down Arrow -->

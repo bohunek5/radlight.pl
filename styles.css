@@ -1011,6 +1011,10 @@ body.light-theme .hub-sub {
   margin-top: 2px;
 }
 
+.hero-eu-badge-mobile {
+  display: none;
+}
+
 .hub-action-row {
   display: flex;
   align-items: center;
@@ -7035,31 +7039,18 @@ html {
   gap: 6px !important;
 }
 
-.hub-action-row {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 10px !important;
-}
-
-.hub-action-btn {
-  width: 34px !important;
-  height: 34px !important;
-  border-radius: 50% !important;
-  font-size: 0.85rem !important;
-}
-
 .hero-bottom-cta-wrap {
-  margin-top: 10px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  gap: 4px !important;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  z-index: 10;
 }
 
 .btn-explore-offer {
-  padding: 8px 24px !important;
-  font-size: 0.88rem !important;
+  padding: 10px 28px;
+  font-size: 0.94rem;
 }
 
 /* ==========================================================================
@@ -7109,161 +7100,408 @@ html {
     color: #de4b26 !important;
   }
 
-  /* WHEEL HERO SECTION ON MOBILE */
+  /* ==========================================================================
+     MOBILE WHEEL & HERO — 1:1 WITH RADLIGHT.PL MOBILE EXPERIENCE
+     ========================================================================== */
+  
+  /* Top Bar hidden on main page hero for clean 1:1 view */
+  .top-bar {
+    display: none !important;
+  }
+
+  .mobile-nav-dock {
+    display: none !important;
+  }
+
+  body {
+    padding-bottom: 0 !important;
+  }
+
   .wheel-hero-section {
-    min-height: calc(100vh - 44px) !important;
-    min-height: calc(100svh - 44px) !important;
-    min-height: calc(100dvh - 44px) !important;
-    height: auto !important;
+    position: relative !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: calc(env(safe-area-inset-top, 12px) + 8px) 0 calc(env(safe-area-inset-bottom, 12px) + 10px) !important;
+    background: #004b87 !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  body.light-theme .wheel-hero-section {
+    background: #004b87 !important;
+  }
+
+  .hero-radial-backdrop {
+    display: none !important;
+  }
+
+  .hero-wheel-center-container {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    padding: 4px 0 8px !important;
-    box-sizing: border-box !important;
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    margin: auto 0 !important;
+    padding: 0 !important;
   }
 
-  .hero-wheel-layout {
+  .wheel-stage-wrapper {
+    position: relative !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
     width: 100% !important;
-    margin: auto 0 !important;
-    gap: 3px !important;
   }
 
-  /* LARGER WHEEL CONTAINER ON MOBILE (WIDER SPATIAL ORBIT) */
+  /* WHEEL CONTAINER ON MOBILE */
   .wheel-container {
-    width: min(392px, calc(100vw - 4px)) !important;
-    height: min(392px, calc(100vw - 4px)) !important;
-    max-width: 99vw !important;
-    max-height: 99vw !important;
+    width: min(350px, calc(100vw - 20px)) !important;
+    height: min(350px, calc(100vw - 20px)) !important;
+    max-width: 95vw !important;
+    max-height: 95vw !important;
     margin: 0 auto !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
-  /* LARGER 52px ORBITAL NODES WITH 2px CLEAN RIMS */
+  /* SVG ORBIT RINGS ON MOBILE */
+  .wheel-svg-orbit-system {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    pointer-events: none !important;
+    z-index: 2 !important;
+  }
+
+  /* 9 CIRCULAR NODES (60px) WITH CLEAN WHITE BORDER 1:1 */
   .wheel-node {
-    width: 52px !important;
-    height: 52px !important;
-    margin-top: -26px !important;
-    margin-left: -26px !important;
+    width: 60px !important;
+    height: 60px !important;
+    margin-top: -30px !important;
+    margin-left: -30px !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    z-index: 10 !important;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    -webkit-tap-highlight-color: transparent !important;
   }
 
   .node-icon-box {
-    width: 52px !important;
-    height: 52px !important;
-    border: 2px solid #ffffff !important;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25) !important;
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    background: #ffffff !important;
+    border: 3px solid #ffffff !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    transition: all 0.3s ease !important;
+    transform: rotate(var(--counter-rotation, 0deg)) !important;
   }
 
   body.light-theme .node-icon-box {
-    border: 2px solid #ffffff !important;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    background: #ffffff !important;
+    border-color: #ffffff !important;
+  }
+
+  .node-icon-box img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    display: block !important;
+  }
+
+  .node-icon-box.logo-type {
+    background: #ffffff !important;
   }
 
   .node-icon-box.logo-type img {
-    padding: 2px !important;
-  }
-
-  /* PROMINENT ACTIVE NODE ON MOBILE (LARGER & VIBRANT) */
-  .wheel-node.active .node-icon-box {
-    width: 62px !important;
-    height: 62px !important;
-    margin-top: -5px !important;
-    margin-left: -5px !important;
-    border: 2.5px solid #de4b26 !important;
-    box-shadow: 0 0 0 3px rgba(222, 75, 38, 0.4), 0 8px 18px rgba(0, 0, 0, 0.35) !important;
-  }
-
-  /* CENTER HUB ELEVATED SLIGHTLY HIGHER SO IT NEVER TOUCHES NODES */
-  .wheel-center-hub {
-    width: 170px !important;
-    height: 170px !important;
+    object-fit: contain !important;
     padding: 4px !important;
+  }
+
+  /* ACTIVE NODE ON MOBILE (3.5px ORANGE BORDER WITH VIBRANT ORANGE GLOW) */
+  .wheel-node.active .node-icon-box {
+    border: 3.5px solid #de4b26 !important;
+    box-shadow: 0 0 0 3.5px rgba(222, 75, 38, 0.45), 0 6px 18px rgba(0, 0, 0, 0.45) !important;
+    transform: rotate(var(--counter-rotation, 0deg)) scale(1.06) !important;
+  }
+
+  /* CENTER HUB (1:1 WITH RADLIGHT.PL) */
+  .wheel-center-hub {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 180px !important;
+    height: 200px !important;
+    max-width: 54vw !important;
+    max-height: 56vw !important;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    cursor: pointer !important;
+    z-index: 20 !important;
+    padding: 0 !important;
+  }
+
+  .hub-inner-core {
+    position: relative !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    height: 100% !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    transform: translate(-50%, -53%) !important;
-  }
-
-  .hub-avatar {
-    margin-bottom: 1px !important;
-  }
-
-  .hub-avatar-circle {
-    width: 36px !important;
-    height: 36px !important;
-    margin-bottom: 1px !important;
-  }
-
-  .hub-avatar-circle.is-standalone-logo {
-    width: 40px !important;
-    height: 40px !important;
-    background: transparent !important;
-  }
-
-  .hub-avatar.is-standalone-logo #hub-avatar-img,
-  .hub-avatar-circle.is-standalone-logo img {
-    height: 34px !important;
-    max-width: 50px !important;
-  }
-
-  /* DELICATE, CLEAN SERVICE TITLE IN CENTER HUB */
-  .hub-title {
-    font-size: 0.78rem !important;
-    line-height: 1.15 !important;
-    max-width: 144px !important;
-    margin: 1px 0 2px !important;
+    padding: 0 !important;
     text-align: center !important;
   }
 
-  .hub-cta-link {
-    font-size: 0.68rem !important;
-    padding: 2px 8px !important;
-    margin: 1px 0 3px !important;
-    gap: 4px !important;
+  .hub-inner-core.animate-in {
+    animation: comeIn 0.32s cubic-bezier(0.22, 1, 0.36, 1) !important;
   }
 
-  /* SMALLER ACTION CIRCLE BUTTONS FOR PHONE & EMAIL (26px), WITH FULL-SIZED ICONS (0.85rem) */
-  .hub-action-row {
-    gap: 6px !important;
-    margin-top: 1px !important;
+  /* 1. Node 0 (Radlight) Initial Center State */
+  .hub-avatar.is-standalone-logo {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 2px !important;
   }
 
-  .hub-action-btn {
-    width: 26px !important;
-    height: 26px !important;
-    min-width: 26px !important;
-    min-height: 26px !important;
-    border-radius: 50% !important;
+  .hub-avatar-circle.is-standalone-logo {
+    width: 110px !important;
+    height: 75px !important;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     padding: 0 !important;
+  }
+
+  .hub-avatar-circle.is-standalone-logo img {
+    width: 110px !important;
+    height: auto !important;
+    max-height: 75px !important;
+    object-fit: contain !important;
+    border-radius: 0 !important;
+  }
+
+  /* 2. Other Nodes (1..8) Service Center Photo */
+  .hub-avatar:not(.is-standalone-logo) {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 4px !important;
+  }
+
+  .hub-avatar-circle:not(.is-standalone-logo) {
+    width: 82px !important;
+    height: 82px !important;
+    border-radius: 16px !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
+    overflow: hidden !important;
+    border: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+  }
+
+  .hub-avatar-circle:not(.is-standalone-logo) img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 16px !important;
+  }
+
+  .hub-avatar-circle:not(.is-standalone-logo).logo-type img {
+    object-fit: contain !important;
+    padding: 6px !important;
+  }
+
+  /* Center Hub Title & Subtitle */
+  .hub-title {
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+    margin: 2px 0 0 !important;
+    line-height: 1.2 !important;
+    font-family: var(--font-heading), 'Plus Jakarta Sans', sans-serif !important;
+  }
+
+  .hub-sub {
+    font-size: 0.94rem !important;
+    font-weight: 400 !important;
+    color: #ffffff !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+    margin: 1px 0 8px !important;
+    line-height: 1.2 !important;
+    display: block !important;
+  }
+
+  .hub-avatar:not(.is-standalone-logo) ~ .hub-title {
+    font-size: 1.08rem !important;
+  }
+
+  .hub-avatar:not(.is-standalone-logo) ~ .hub-sub {
+    font-size: 0.86rem !important;
+    text-decoration: underline !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* Action Buttons (Phone & Mail) */
+  .hub-action-row {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    margin-top: 0 !important;
+  }
+
+  body .wheel-hero-section .hub-action-btn,
+  body.light-theme .wheel-hero-section .hub-action-btn,
+  body:not(.light-theme) .wheel-hero-section .hub-action-btn {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    min-height: 38px !important;
+    border-radius: 8px !important;
+    background: #1f6fa8 !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    color: #ffffff !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25) !important;
+    transition: background 0.2s ease, transform 0.2s ease !important;
+    text-decoration: none !important;
   }
 
-  .hub-action-btn i {
-    font-size: 0.85rem !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    line-height: 1 !important;
+  body .wheel-hero-section .hub-action-btn:active,
+  body.light-theme .wheel-hero-section .hub-action-btn:active,
+  body:not(.light-theme) .wheel-hero-section .hub-action-btn:active {
+    transform: scale(0.92) !important;
+    background: #de4b26 !important;
+  }
+
+  body .wheel-hero-section .hub-action-btn i,
+  body.light-theme .wheel-hero-section .hub-action-btn i,
+  body:not(.light-theme) .wheel-hero-section .hub-action-btn i {
+    font-size: 0.95rem !important;
+    color: #ffffff !important;
+  }
+
+  .wheel-node.active .node-icon-box,
+  body .wheel-node.active .node-icon-box,
+  body.light-theme .wheel-node.active .node-icon-box,
+  body:not(.light-theme) .wheel-node.active .node-icon-box {
+    border: 3.5px solid #de4b26 !important;
+    box-shadow: 0 0 0 3.5px rgba(222, 75, 38, 0.45), 0 6px 18px rgba(0, 0, 0, 0.45) !important;
+  }
+
+  .hub-cta-link {
+    display: none !important;
   }
 
   .hub-contact-details {
     display: none !important;
   }
 
-  /* 'Sprawdź ofertę' CTA elevated */
   .hero-bottom-cta-wrap {
-    margin-top: 3px !important;
-    gap: 2px !important;
+    display: none !important;
   }
 
-  .btn-explore-offer {
-    padding: 7px 20px !important;
-    font-size: 0.84rem !important;
+  /* EU PROJECT FLAG AT BOTTOM OF MOBILE HERO */
+  .hero-eu-badge-mobile {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-top: auto !important;
+    padding-bottom: 4px !important;
+    z-index: 10 !important;
+    text-align: center !important;
+  }
+
+  .eu-badge-link {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 4px !important;
+    text-decoration: none !important;
+  }
+
+  .eu-flag-svg {
+    width: 48px !important;
+    height: 32px !important;
+    border-radius: 4px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+    display: block !important;
+  }
+
+  .eu-badge-caption {
+    color: rgba(255, 255, 255, 0.88) !important;
+    font-size: 0.72rem !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    letter-spacing: 0.02em !important;
+  }
+
+  @keyframes comeIn {
+    0% {
+      transform: rotate(20deg) translateX(20%) scaleY(0.5) skew(-20deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotate(0deg) translateX(0%) scaleY(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes comeOut {
+    0% {
+      transform: rotate(0deg) translateX(0%) scaleY(1);
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(-20deg) translateX(-20%) scaleY(0.5) skew(20deg);
+      opacity: 0;
+    }
   }
 
   /* 2-Column Catalog Category Buttons on Mobile */
