@@ -575,6 +575,13 @@ document.addEventListener('DOMContentLoaded', () => {
       hubCtaLink.href = data.link;
       const ctaLabel = (typeof translations !== 'undefined' && translations[currentLang] && translations[currentLang].btnReadMoreHub) ? translations[currentLang].btnReadMoreHub : 'Czytaj dalej';
       if (hubCtaText) hubCtaText.textContent = ctaLabel;
+      if (isMobile && index === 0) {
+        hubCtaLink.style.display = 'none';
+      } else if (isMobile) {
+        hubCtaLink.style.display = 'inline-flex';
+      } else {
+        hubCtaLink.style.display = '';
+      }
     }
     if (hubPhoneBtn) {
       hubPhoneBtn.href = data.phone;

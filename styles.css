@@ -7411,6 +7411,9 @@ html {
     text-decoration: none !important;
   }
 
+  body .wheel-hero-section .hub-avatar.is-standalone-logo ~ .hub-cta-link,
+  body:not(.light-theme) .wheel-hero-section .hub-avatar.is-standalone-logo ~ .hub-cta-link,
+  body.light-theme .wheel-hero-section .hub-avatar.is-standalone-logo ~ .hub-cta-link,
   .hub-avatar.is-standalone-logo ~ .hub-cta-link {
     display: none !important;
   }
@@ -7470,44 +7473,44 @@ html {
     display: none !important;
   }
 
-  .hero-bottom-cta-wrap {
+  .hero-eu-badge-mobile {
     display: none !important;
   }
 
-  /* EU PROJECT FLAG AT BOTTOM OF MOBILE HERO */
-  .hero-eu-badge-mobile {
+  /* PULSING SCROLL DOWN ARROW ON MOBILE (Navigates to services below) */
+  .hero-bottom-cta-wrap {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
     margin-top: auto !important;
-    padding-bottom: 4px !important;
+    padding-bottom: 8px !important;
     z-index: 10 !important;
-    text-align: center !important;
   }
 
-  .eu-badge-link {
-    display: flex !important;
-    flex-direction: column !important;
+  .hero-bottom-cta-wrap .btn-explore-offer {
+    display: none !important;
+  }
+
+  .hero-bottom-cta-wrap .hero-pulse-arrow {
+    display: inline-flex !important;
     align-items: center !important;
-    gap: 4px !important;
+    justify-content: center !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 1.45rem !important;
     text-decoration: none !important;
+    animation: pulseBounceArrow 1.8s ease-in-out infinite !important;
+    -webkit-tap-highlight-color: transparent !important;
+    cursor: pointer !important;
+    transition: transform 0.2s ease !important;
   }
 
-  .eu-flag-svg {
-    width: 48px !important;
-    height: 32px !important;
-    border-radius: 4px !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
-    display: block !important;
-  }
-
-  .eu-badge-caption {
-    color: rgba(255, 255, 255, 0.88) !important;
-    font-size: 0.72rem !important;
-    font-weight: 600 !important;
-    margin: 0 !important;
-    letter-spacing: 0.02em !important;
+  .hero-bottom-cta-wrap .hero-pulse-arrow:active {
+    transform: scale(0.9) translateY(4px) !important;
+    color: #de4b26 !important;
   }
 
   @keyframes comeIn {
