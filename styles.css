@@ -1011,8 +1011,9 @@ body.light-theme .hub-sub {
   margin-top: 2px;
 }
 
-.hero-eu-badge-mobile {
-  display: none;
+.hero-eu-badge-mobile,
+.wheel-node-mobile-only {
+  display: none !important;
 }
 
 .hub-action-row {
@@ -7193,16 +7194,15 @@ html {
     position: absolute !important;
     top: 50% !important;
     left: 50% !important;
-    z-index: 10 !important;
-    background: transparent !important;
-    border: none !important;
-    outline: none !important;
-    cursor: pointer !important;
-    padding: 0 !important;
+    z-index: 30 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     -webkit-tap-highlight-color: transparent !important;
+  }
+
+  .wheel-node-mobile-only {
+    display: flex !important;
   }
 
   .node-icon-box {
@@ -7257,17 +7257,17 @@ html {
     top: 50% !important;
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
-    width: 180px !important;
-    height: 200px !important;
-    max-width: 54vw !important;
-    max-height: 56vw !important;
+    width: 170px !important;
+    height: 180px !important;
+    max-width: 50vw !important;
+    max-height: 52vw !important;
     background: transparent !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     text-align: center !important;
     cursor: pointer !important;
-    z-index: 20 !important;
+    z-index: 10 !important;
     padding: 0 !important;
   }
 

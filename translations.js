@@ -172,31 +172,31 @@ var translations = {
     "dockContact": "Kontakt",
     "servicesWheel": [
       {
-        "title": "Jedna Firma",
-        "sub": "wiele możliwości",
+        "title": "Poznaj Radlight",
+        "sub": "www.radlight.pl",
         "desc": "Centralna baza usług w Giżycku. Łączymy luksusowe apartamenty, pralnię przemysłową, obsługę najmu, magazyny self-storage, helipad oraz marinę z zimowaniem jachtów w Giżycku (baza centralna ul. Myśliwska 3).",
         "tag": "CENTRUM RADLIGHT",
         "category": "RADLIGHT CENTRUM",
         "tooltip": "Radlight — Centrala Usług"
       },
       {
-        "title": "Apartamenty",
+        "title": "Apartamenty, domki, pokoje",
         "sub": "www.mazury.holiday",
         "desc": "Luksusowy wynajem całorocznych apartamentów, domków letniskowych i pokoi w centrum Giżycka i nad mazurskimi jeziorami. Klimatyzacja, szybkie Wi-Fi, pościel hotelowa z naszej pralni oraz dedykowany parking.",
         "tag": "APARTAMENTY & DOMKI",
         "category": "TURYSTYKA & NOCLEGI",
-        "tooltip": "Apartamenty — Mazury Holiday"
+        "tooltip": "Apartamenty, Domki, Pokoje — Mazury Holiday"
       },
       {
-        "title": "Zarządzanie najmem",
-        "sub": "Zajmiemy się wszystkim",
+        "title": "Obsługa najmu",
+        "sub": "Zarządzanie apartamentami",
         "desc": "Kompleksowa opieka nad apartamentem: marketing na Booking i Airbnb, meldunek gości kodem PIN, sprzątanie, wymiana i pranie pościeli oraz pełne rozliczenia finansowe.",
         "tag": "OBSŁUGA NAJMU",
         "category": "NIERUCHOMOŚCI",
         "tooltip": "Zarządzanie Najmem Giżycko"
       },
       {
-        "title": "Własna pralnia",
+        "title": "Pralnia przemysłowa",
         "sub": "www.pralniagizycko.pl",
         "desc": "Nowoczesny park pralniczy dla hoteli, pensjonatów, jachtów, restauracji i klientów indywidualnych w Giżycku. Odbiór i dowóz prania własnym transportem w promieniu 50 km.",
         "tag": "PARK PRALNICZY",
@@ -204,23 +204,23 @@ var translations = {
         "tooltip": "Pralnia Giżycko"
       },
       {
-        "title": "Profesjonalne usługi sprzątające",
-        "sub": "Domy, biura, apartamenty",
+        "title": "Usługi sprzątające",
+        "sub": "Domy, apartamenty i biura",
         "desc": "Doświadczony zespół, profesjonalny sprzęt Kärcher i ekologiczne środki czystości. Sprzątanie cykliczne, poremontowe, mycie okien oraz doczyszczanie jachtów.",
         "tag": "SERWIS CZYSTOŚCI",
         "category": "USŁUGI PORZĄDKOWE",
         "tooltip": "Usługi Sprzątające Giżycko"
       },
       {
-        "title": "Powierzchnie usługowo magazynowe",
-        "sub": "Sprawdź ofertę",
+        "title": "Hale, magazyny & lokale",
+        "sub": "Powierzchnie użytkowe",
         "desc": "Nowoczesne hale produkcyjno-magazynowe, boksy samoobsługowe self-storage, powierzchnie użytkowe i komercyjne oraz place składowe w Giżycku. Monitoring 24/7, dostęp PIN i dojazd TIR.",
         "tag": "HALE & MAGAZYNY",
         "category": "MAGAZYNY & PLACE",
         "tooltip": "Hale, Magazyny i Powierzchnie Użytkowe"
       },
       {
-        "title": "Lądowisko dla śmigłowców",
+        "title": "Helipad Mazury",
         "sub": "www.helipadmazury.pl",
         "desc": "Certyfikowane lądowisko dla śmigłowców w Giżycku. Oświetlenie nawigacyjne do lotów nocnych, hangarowanie, tankowanie oraz transfery VIP i medyczne LPR.",
         "tag": "LĄDOWISKO HELI",
@@ -228,21 +228,24 @@ var translations = {
         "tooltip": "Helipad Mazury — Lądowisko"
       },
       {
-        "title": "Czarter Stillo30 VIP",
-        "sub": "Zarezerwuj swój rejs!",
-        "desc": "Luksusowy czarter nowoczesnych jednostek motorowych typu Houseboat bez patentu po Szlaku Wielkich Jezior Mazurskich.",
-        "tag": "CZARTER JACHTÓW",
-        "category": "CZARTER & REJSY",
-        "tooltip": "Czarter Jachtów Motorowych Stillo 30"
-      },
-      {
-        "title": "Zimowanie łodzi",
-        "sub": "kliknij po więcej informacji",
-        "desc": "Całoroczne bezpieczne zimowanie łodzi w ogrzewanej hali lub na strzeżonym placu. Slipowanie dźwigiem, mycie dna, serwis silników oraz konserwacja.",
-        "tag": "ZIMOWANIE & SERWIS",
+        "title": "Zimowanie jachtów",
+        "sub": "AllBoat Service & Czarter",
+        "desc": "Całoroczne bezpieczne zimowanie łodzi w ogrzewanej hali lub na strzeżonym placu. Slipowanie dźwigiem, mycie dna, serwis silników oraz czarter jachtu motorowego Stillo 30.",
+        "tag": "ZIMOWANIE & CZARTER",
         "category": "SEKTOR MORSKI",
-        "tooltip": "Zimowanie Jachtów All Boat"
+        "tooltip": "Zimowanie Jachtów i Czarter"
       }
+    ],
+    "servicesWheelMobile": [
+      { "title": "Jedna Firma", "sub": "wiele możliwości", "tooltip": "Radlight — Centrala Usług" },
+      { "title": "Apartamenty", "sub": "www.mazury.holiday", "tooltip": "Apartamenty — Mazury Holiday" },
+      { "title": "Zarządzanie najmem", "sub": "Zajmiemy się wszystkim", "tooltip": "Zarządzanie Najmem Giżycko" },
+      { "title": "Własna pralnia", "sub": "www.pralniagizycko.pl", "tooltip": "Pralnia Giżycko" },
+      { "title": "Profesjonalne usługi sprzątające", "sub": "Domy, biura, apartamenty", "tooltip": "Usługi Sprzątające Giżycko" },
+      { "title": "Powierzchnie usługowo magazynowe", "sub": "Sprawdź ofertę", "tooltip": "Hale, Magazyny i Powierzchnie Użytkowe" },
+      { "title": "Lądowisko dla śmigłowców", "sub": "www.helipadmazury.pl", "tooltip": "Helipad Mazury — Lądowisko" },
+      { "title": "Czarter Stillo30 VIP", "sub": "Zarezerwuj swój rejs!", "tooltip": "Czarter Jachtów Motorowych Stillo 30" },
+      { "title": "Zimowanie łodzi", "sub": "kliknij po więcej informacji", "tooltip": "Zimowanie Jachtów All Boat" }
     ]
   },
   "de": {
@@ -355,8 +358,8 @@ var translations = {
     "dockContact": "Kontakt",
     "servicesWheel": [
       {
-        "title": "Ein Unternehmen",
-        "sub": "viele Möglichkeiten",
+        "title": "Radlight entdecken",
+        "sub": "www.radlight.pl",
         "desc": "Zentrale Servicebasis in Giżycko. Wir verbinden Luxusapartments, Großwäscherei, Mietverwaltung, Self-Storage Lager, Heliport sowie Marina und Bootswinterlager in der Myśliwska 3.",
         "tag": "RADLIGHT ZENTRALE",
         "category": "RADLIGHT ZENTRALE",
@@ -411,21 +414,24 @@ var translations = {
         "tooltip": "Helipad Masuren — Landeplatz"
       },
       {
-        "title": "Yachtcharter Stillo 30",
-        "sub": "Buchen Sie Ihren Törn!",
-        "desc": "Exklusiver Hausboot- und Motoryacht-Charter ohne Führerschein auf der Masurischen Seenplatte.",
-        "tag": "MOTORBOOT CHARTER",
-        "category": "CHARTER & REISEN",
-        "tooltip": "Yachtcharter Stillo 30 VIP"
-      },
-      {
         "title": "Bootswinterlager",
-        "sub": "AllBoat Service & Marina",
-        "desc": "Ganzjährige sichere Bootslagerung in beheizter Halle oder auf bewachtem Platz. Kran-Slipanlage, Rumpfreinigung und Motorservice.",
-        "tag": "WINTERLAGER & SERVICE",
+        "sub": "AllBoat Service & Charter",
+        "desc": "Ganzjährige sichere Bootslagerung in beheizter Halle oder auf bewachtem Platz. Kran-Slipanlage, Rumpfreinigung, Motorservice und Motoryacht-Charter Stillo 30.",
+        "tag": "WINTERLAGER & CHARTER",
         "category": "MARITIMER SEKTOR",
-        "tooltip": "Bootswinterlager All Boat"
+        "tooltip": "Winterlager und Yachtcharter"
       }
+    ],
+    "servicesWheelMobile": [
+      { "title": "Ein Unternehmen", "sub": "viele Möglichkeiten", "tooltip": "Radlight — Servicezentrale" },
+      { "title": "Ferienwohnungen", "sub": "www.mazury.holiday", "tooltip": "Ferienwohnungen — Mazury Holiday" },
+      { "title": "Mietverwaltung", "sub": "Komplettbetreuung von Apartments", "tooltip": "Mietverwaltung Giżycko" },
+      { "title": "Eigene Wäscherei", "sub": "www.pralniagizycko.pl", "tooltip": "Wäscherei Giżycko" },
+      { "title": "Reinigungsservice", "sub": "Häuser, Büros und Boote", "tooltip": "Reinigungsservice Giżycko" },
+      { "title": "Lager & Hallen", "sub": "Nutzflächen & Self-Storage", "tooltip": "Lagerhallen und Gewerbeflächen" },
+      { "title": "Helipad Masuren", "sub": "www.helipadmazury.pl", "tooltip": "Helipad Masuren — Landeplatz" },
+      { "title": "Yachtcharter Stillo 30", "sub": "Buchen Sie Ihren Törn!", "tooltip": "Yachtcharter Stillo 30 VIP" },
+      { "title": "Bootswinterlager", "sub": "AllBoat Service & Marina", "tooltip": "Bootswinterlager All Boat" }
     ],
     "time4Min": "4 Min.",
     "time5Min": "5 Min.",
@@ -601,8 +607,8 @@ var translations = {
     "dockContact": "Contact",
     "servicesWheel": [
       {
-        "title": "One Company",
-        "sub": "many opportunities",
+        "title": "Discover Radlight",
+        "sub": "www.radlight.pl",
         "desc": "Central operations base in Giżycko. We combine luxury apartments, industrial laundry, property management, self-storage warehouses, certified helipad, marina and boat wintering at Myśliwska 3.",
         "tag": "RADLIGHT HEADQUARTERS",
         "category": "RADLIGHT HEADQUARTERS",
@@ -657,21 +663,24 @@ var translations = {
         "tooltip": "Helipad Masuria — Landing Facility"
       },
       {
-        "title": "Motor Yacht Charter",
-        "sub": "Book your cruise!",
-        "desc": "Luxury charter of modern Houseboat motor yachts without a license across the Great Masurian Lakes trail.",
-        "tag": "YACHT CHARTER",
-        "category": "CHARTER & CRUISES",
-        "tooltip": "Motor Yacht Charter Stillo 30"
-      },
-      {
-        "title": "Boat Wintering",
-        "sub": "AllBoat Service & Marina",
-        "desc": "Year-round secure boat storage in a heated hall or guarded yard. Crane slipway, hull pressure washing, and authorized engine service.",
-        "tag": "WINTERING & SERVICE",
+        "title": "Yacht Wintering",
+        "sub": "AllBoat Service & Charter",
+        "desc": "Year-round secure boat storage in a heated hall or guarded yard. Crane launch/slipway, hull pressure washing, engine maintenance, and motorboat charter of Stillo 30.",
+        "tag": "WINTERING & CHARTER",
         "category": "MARINE SECTOR",
-        "tooltip": "Boat Wintering All Boat"
+        "tooltip": "Yacht Wintering and Charter"
       }
+    ],
+    "servicesWheelMobile": [
+      { "title": "One Company", "sub": "many opportunities", "tooltip": "Radlight — Central Headquarters" },
+      { "title": "Luxury Apartments", "sub": "www.mazury.holiday", "tooltip": "Luxury Apartments — Mazury Holiday" },
+      { "title": "Rental Management", "sub": "Full Apartment Management", "tooltip": "Rental Management Giżycko" },
+      { "title": "Industrial Laundry", "sub": "www.pralniagizycko.pl", "tooltip": "Industrial Laundry Giżycko" },
+      { "title": "Cleaning Services", "sub": "Homes, Offices & Yachts", "tooltip": "Cleaning Services Giżycko" },
+      { "title": "Halls & Warehouses", "sub": "Commercial Space & Storage", "tooltip": "Halls, Warehouses & Commercial Spaces" },
+      { "title": "Helipad Masuria", "sub": "www.helipadmazury.pl", "tooltip": "Helipad Masuria — Landing Facility" },
+      { "title": "Motor Yacht Charter", "sub": "Book your cruise!", "tooltip": "Motor Yacht Charter Stillo 30" },
+      { "title": "Boat Wintering", "sub": "AllBoat Service & Marina", "tooltip": "Boat Wintering All Boat" }
     ],
     "time4Min": "4 min",
     "time5Min": "5 min",
