@@ -7133,10 +7133,10 @@ html {
 
   /* WHEEL CONTAINER ON MOBILE */
   .wheel-container {
-    width: min(350px, calc(100vw - 20px)) !important;
-    height: min(350px, calc(100vw - 20px)) !important;
-    max-width: 95vw !important;
-    max-height: 95vw !important;
+    width: min(380px, calc(100vw - 12px)) !important;
+    height: min(380px, calc(100vw - 12px)) !important;
+    max-width: 98vw !important;
+    max-height: 98vw !important;
     margin: 0 auto !important;
     position: relative !important;
     display: flex !important;
@@ -7287,20 +7287,20 @@ html {
     border-radius: 0 !important;
   }
 
-  /* 2. Other Nodes (1..8) Service Center Photo */
+  /* 2. Other Nodes (1..8) Service Center Photo (More compact icon) */
   .hub-avatar:not(.is-standalone-logo) {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    margin-bottom: 4px !important;
+    margin-bottom: 3px !important;
   }
 
   .hub-avatar-circle:not(.is-standalone-logo) {
-    width: 82px !important;
-    height: 82px !important;
-    border-radius: 16px !important;
+    width: 66px !important;
+    height: 66px !important;
+    border-radius: 14px !important;
     background: #ffffff !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
     overflow: hidden !important;
     border: none !important;
     display: flex !important;
@@ -7313,12 +7313,12 @@ html {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
-    border-radius: 16px !important;
+    border-radius: 14px !important;
   }
 
   .hub-avatar-circle:not(.is-standalone-logo).logo-type img {
     object-fit: contain !important;
-    padding: 6px !important;
+    padding: 4px !important;
   }
 
   /* Center Hub Title & Subtitle */
@@ -7351,33 +7351,64 @@ html {
     display: none !important;
   }
 
-  /* Czytaj dalej button on mobile service nodes */
+  /* Czytaj dalej plain text link on mobile service nodes (pure text link, no borders, no buttons) */
+  body .wheel-hero-section .hub-cta-link,
+  body:not(.light-theme) .wheel-hero-section .hub-cta-link,
+  body.light-theme .wheel-hero-section .hub-cta-link,
   .hub-cta-link {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 6px !important;
-    font-size: 0.82rem !important;
-    font-weight: 700 !important;
+    gap: 5px !important;
+    font-size: 0.88rem !important;
+    font-weight: 600 !important;
     color: #ffffff !important;
-    background: #de4b26 !important;
-    border: 1px solid #de4b26 !important;
-    padding: 4px 14px !important;
-    border-radius: 20px !important;
-    margin: 4px 0 8px !important;
-    text-decoration: none !important;
-    box-shadow: 0 3px 10px rgba(222, 75, 38, 0.35) !important;
-    transition: all 0.2s ease !important;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    margin: 2px 0 8px !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px !important;
+    box-shadow: none !important;
+    transition: opacity 0.2s ease, transform 0.2s ease !important;
     -webkit-tap-highlight-color: transparent !important;
+    opacity: 0.95 !important;
+  }
+
+  body .wheel-hero-section .hub-cta-link:hover,
+  body:not(.light-theme) .wheel-hero-section .hub-cta-link:hover,
+  body.light-theme .wheel-hero-section .hub-cta-link:hover {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #ffffff !important;
+    transform: none !important;
+  }
+
+  .hub-cta-link:focus,
+  .hub-cta-link:focus-visible {
+    outline: none !important;
+    border: none !important;
   }
 
   .hub-cta-link:active {
-    transform: scale(0.94) !important;
-    background: #c23b18 !important;
+    transform: scale(0.96) !important;
+    opacity: 0.75 !important;
+    background: transparent !important;
+    border: none !important;
   }
 
+  body .wheel-hero-section .hub-cta-link i,
+  body:not(.light-theme) .wheel-hero-section .hub-cta-link i,
+  body.light-theme .wheel-hero-section .hub-cta-link i,
   .hub-cta-link i {
-    font-size: 0.72rem !important;
+    font-size: 0.76rem !important;
+    color: #ffffff !important;
+    display: inline-block !important;
+    margin-left: 2px !important;
+    text-decoration: none !important;
   }
 
   .hub-avatar.is-standalone-logo ~ .hub-cta-link {
