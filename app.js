@@ -676,9 +676,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const i = parseInt(node.getAttribute('data-index'), 10);
       const isMobile = window.innerWidth <= 768;
 
-      if (!isMobile && activeIndex === i) {
-        // Desktop second click -> navigate
-        const data = desktopServicesData[i];
+      if (activeIndex === i) {
+        // Click on already active node -> navigate to subpage or scroll to target
+        const data = isMobile ? mobileServicesData[i] : desktopServicesData[i];
         if (data && data.link) {
           if (data.link.startsWith('#')) {
             scrollToTargetCard(data.link);
@@ -695,17 +695,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Center Hub Click Handler
+  // Center Hub Click Handler (navigates to service subpage on mobile & desktop)
   if (centerHub) {
     centerHub.addEventListener('click', (e) => {
-      // If clicking any link or button (phone, email mailto, web link or CTA button), allow default browser action
-      if (e.target.closest('a, button, .hub-action-btn, #hub-contact-email, #hub-phone-btn, #hub-mail-btn, #hub-cta-link, #hub-contact-web')) {
+      // If clicking phone or email direct action buttons, allow normal action
+      if (e.target.closest('.hub-action-btn, #hub-phone-btn, #hub-mail-btn, #hub-contact-email')) {
         stopAutoRotate();
         return;
       }
       e.preventDefault();
       stopAutoRotate();
-      const data = servicesData[activeIndex];
+
+      const isMobile = window.innerWidth <= 768;
+      const data = isMobile ? mobileServicesData[activeIndex] : desktopServicesData[activeIndex];
       if (data && data.link) {
         if (data.link.startsWith('#')) {
           scrollToTargetCard(data.link);
