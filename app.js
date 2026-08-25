@@ -160,6 +160,17 @@ document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
+  const dockBrandCenter = document.querySelector('.dock-brand-center');
+  if (dockBrandCenter) {
+    dockBrandCenter.addEventListener('click', (e) => {
+      const isIndex = window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || !window.location.pathname.includes('.html');
+      if (isIndex) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  }
+
   // ==========================================================================
   // 3. MOBILE NAVIGATION DRAWER
   // ==========================================================================
