@@ -3650,177 +3650,92 @@ body.light-theme .seo-silo-col h5 {
     box-sizing: border-box !important;
   }
   
-  /* MAIN HEADER ON MOBILE: Clean top navbar with logo, language, theme toggle and hamburger */
+  /* MAIN HEADER: Hidden on mobile in favor of bottom dock navigation */
   .main-header {
+    display: none !important;
+  }
+
+  .mobile-toggle {
+    display: none !important;
+  }
+
+  .nav-menu {
+    display: none !important;
+  }
+
+  /* TOP BAR: Clean, compact top bar with phone, theme toggle, and language flags */
+  .top-bar {
     display: block !important;
     position: sticky !important;
     top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
     z-index: 1000 !important;
-    background: #00335c !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
-    padding: 7px 12px !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35) !important;
+    padding: 4px 8px !important;
+    background: #002b4d !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
   }
 
-  body.light-theme .main-header {
+  body.light-theme .top-bar {
     background: #f8fafc !important;
     border-bottom-color: #cbd5e1 !important;
   }
 
-  .header-container {
+  .top-bar-content {
     display: flex !important;
-    align-items: center !important;
     justify-content: space-between !important;
+    align-items: center !important;
     width: 100% !important;
-    padding: 0 !important;
+    gap: 4px !important;
   }
 
-  .header-logo-box {
+  .top-info {
     display: flex !important;
     align-items: center !important;
+    gap: 0 !important;
+    flex-shrink: 0 !important;
+    margin-right: auto !important;
   }
 
-  .brand-logo-main img {
-    height: 36px !important;
-    width: auto !important;
-  }
-
-  .brand-text-block {
+  .top-slogan-left,
+  .top-location,
+  .top-email {
     display: none !important;
   }
 
-  .header-quick-actions {
+  .top-phone {
+    display: inline-flex !important;
+    padding: 3px 8px !important;
+    font-size: 0.76rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.02em !important;
+    border-radius: var(--radius-pill) !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: #ffffff !important;
+    white-space: nowrap !important;
+    align-items: center !important;
+    gap: 5px !important;
+  }
+
+  body.light-theme .top-phone {
+    background: #e2e8f0 !important;
+    border-color: #cbd5e1 !important;
+    color: #0f172a !important;
+  }
+
+  .top-phone i {
+    font-size: 0.72rem !important;
+    color: #ffffff !important;
+  }
+
+  body.light-theme .top-phone i {
+    color: #0f172a !important;
+  }
+
+  .top-links {
     display: flex !important;
     align-items: center !important;
     gap: 4px !important;
-    margin-left: auto !important;
-    margin-right: 8px !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: none !important;
-  }
-
-  .header-quick-actions .theme-toggle-btn {
-    width: 30px !important;
-    height: 30px !important;
-    font-size: 0.78rem !important;
-    border-radius: 50% !important;
-    background: rgba(255, 255, 255, 0.12) !important;
-    border: 1px solid rgba(255, 255, 255, 0.25) !important;
-    color: #ffffff !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-
-  body.light-theme .header-quick-actions .theme-toggle-btn {
-    background: #e2e8f0 !important;
-    border-color: #cbd5e1 !important;
-    color: #0f172a !important;
-  }
-
-  .header-quick-actions .lang-switcher {
-    display: flex !important;
-    padding: 2px 3px !important;
-    border-radius: 20px !important;
-    background: rgba(255, 255, 255, 0.12) !important;
-    border: 1px solid rgba(255, 255, 255, 0.25) !important;
-    gap: 2px !important;
-  }
-
-  body.light-theme .header-quick-actions .lang-switcher {
-    background: #e2e8f0 !important;
-    border-color: #cbd5e1 !important;
-  }
-
-  .mobile-toggle {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 36px !important;
-    height: 36px !important;
-    border-radius: 8px !important;
-    background: rgba(255, 255, 255, 0.12) !important;
-    border: 1px solid rgba(255, 255, 255, 0.25) !important;
-    color: #ffffff !important;
-    font-size: 1.15rem !important;
-    cursor: pointer !important;
     flex-shrink: 0 !important;
-  }
-
-  body.light-theme .mobile-toggle {
-    background: #e2e8f0 !important;
-    border-color: #cbd5e1 !important;
-    color: #0f172a !important;
-  }
-
-  /* MOBILE NAVIGATION DRAWER (Dropdown Menu when hamburger is clicked) */
-  .nav-menu {
-    position: absolute !important;
-    top: 100% !important;
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    background: #002b4d !important;
-    border-bottom: 3px solid #de4b26 !important;
-    padding: 16px 20px !important;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6) !important;
-    display: none !important;
-    flex-direction: column !important;
-    z-index: 999 !important;
-  }
-
-  body.light-theme .nav-menu {
-    background: #ffffff !important;
-    border-bottom-color: #de4b26 !important;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15) !important;
-  }
-
-  .nav-menu.active {
-    display: flex !important;
-  }
-
-  .nav-list {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 12px !important;
-    width: 100% !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  .nav-list li {
-    width: 100% !important;
-  }
-
-  .nav-link {
-    font-size: 1.02rem !important;
-    font-weight: 700 !important;
-    color: rgba(255, 255, 255, 0.9) !important;
-    padding: 6px 0 !important;
-    display: block !important;
-    width: 100% !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-  }
-
-  body.light-theme .nav-link {
-    color: #0f172a !important;
-    border-bottom-color: #e2e8f0 !important;
-  }
-
-  .nav-link:hover,
-  .nav-link.active {
-    color: #de4b26 !important;
-    padding-left: 6px !important;
-  }
-
-  /* TOP BAR: Clean, spacious, unclipped layout on mobile */
-  .top-bar {
-    display: none !important;
   }
 
   .top-links .theme-toggle-btn {
@@ -3828,7 +3743,7 @@ body.light-theme .seo-silo-col h5 {
     width: 26px !important;
     height: 26px !important;
     font-size: 0.74rem !important;
-    background: #1a222c !important;
+    background: rgba(255, 255, 255, 0.12) !important;
     border: 1px solid rgba(255, 255, 255, 0.25) !important;
     color: #ffffff !important;
     border-radius: var(--radius-pill) !important;
@@ -3838,15 +3753,26 @@ body.light-theme .seo-silo-col h5 {
     margin-right: 2px !important;
   }
 
+  body.light-theme .top-links .theme-toggle-btn {
+    background: #e2e8f0 !important;
+    border-color: #cbd5e1 !important;
+    color: #0f172a !important;
+  }
+
   .lang-switcher {
     order: 1 !important;
     padding: 2px 3px !important;
     border-radius: var(--radius-pill) !important;
-    background: #1a222c !important;
+    background: rgba(255, 255, 255, 0.12) !important;
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
     gap: 2px !important;
     display: flex !important;
     align-items: center !important;
+  }
+
+  body.light-theme .lang-switcher {
+    background: #e2e8f0 !important;
+    border-color: #cbd5e1 !important;
   }
 
   .lang-btn {
@@ -3858,6 +3784,48 @@ body.light-theme .seo-silo-col h5 {
     gap: 3px !important;
     display: inline-flex !important;
     align-items: center !important;
+  }
+
+  body.light-theme .lang-btn {
+    color: #334155 !important;
+  }
+
+  .lang-btn.active {
+    background: #de4b26 !important;
+    color: #ffffff !important;
+  }
+
+  .lang-btn .flag {
+    font-size: 0.76rem !important;
+    line-height: 1 !important;
+  }
+
+  /* MOBILE BOTTOM DOCK (APPLE-STYLE NAVIGATION BAR AT BOTTOM) */
+  .mobile-nav-dock {
+    display: block !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100vw !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    background: rgba(0, 35, 64, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+    padding: 6px 12px calc(8px + env(safe-area-inset-bottom, 0px)) !important;
+    z-index: 99999 !important;
+  }
+
+  body.light-theme .mobile-nav-dock {
+    background: rgba(255, 255, 255, 0.98) !important;
+    border-top: 1px solid rgba(15, 23, 42, 0.12) !important;
+    box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  body {
+    padding-bottom: 74px !important;
   }
 
   .lang-btn .flag {
@@ -7179,30 +7147,25 @@ html {
      MOBILE WHEEL & HERO — 1:1 WITH RADLIGHT.PL MOBILE EXPERIENCE
      ========================================================================== */
   
-  /* Top Bar hidden on main page hero for clean 1:1 view */
-  .top-bar {
-    display: none !important;
-  }
-
   .mobile-nav-dock {
-    display: none !important;
+    display: block !important;
   }
 
   body {
-    padding-bottom: 0 !important;
+    padding-bottom: 74px !important;
   }
 
   .wheel-hero-section {
     position: relative !important;
-    height: calc(100vh - 52px) !important;
-    height: calc(100dvh - 52px) !important;
-    min-height: calc(100vh - 52px) !important;
-    min-height: calc(100dvh - 52px) !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: space-between !important;
-    padding: 6px 0 8px !important;
+    padding: calc(env(safe-area-inset-top, 8px) + 6px) 0 calc(env(safe-area-inset-bottom, 8px) + 72px) !important;
     background: #004b87 !important;
     overflow: hidden !important;
     box-sizing: border-box !important;
