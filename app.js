@@ -494,7 +494,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const hubContactWeb = document.getElementById('hub-contact-web');
   const hubWebText = document.getElementById('hub-web-text');
 
-  // Position nodes radially on the orbit ring
+  // Position nodes radially on the orbit ring (perfectly aligned with SVG concentric tracks)
   function positionNodes() {
     const isMobile = window.innerWidth <= 768;
     const currentNodes = isMobile 
@@ -504,7 +504,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!wheelContainer || currentNodes.length === 0) return;
     const total = currentNodes.length;
     const containerW = wheelContainer.offsetWidth || (isMobile ? 350 : 760);
-    const radius = isMobile ? Math.round(containerW * 0.415) : 285;
+    // Exact mathematical alignment with SVG orbit rings (r=308 outer, r=262 inner, center = 285 in 760 viewBox)
+    const radius = Math.round(containerW * (285 / 760));
 
     currentNodes.forEach((node, i) => {
       const angle = ((i * (360 / total)) - 90) * (Math.PI / 180);

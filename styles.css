@@ -6974,88 +6974,8 @@ html {
   scroll-margin-top: 65px !important;
 }
 
-/* PC Hero Layout */
-.wheel-hero-section {
-  min-height: calc(100vh - 90px) !important;
-  min-height: calc(100svh - 90px) !important;
-  height: auto !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  box-sizing: border-box !important;
-  overflow: hidden !important;
-  padding: 20px 0 30px !important;
-}
-
-.hero-wheel-layout {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 100% !important;
-  margin: 0 auto !important;
-  gap: 14px !important;
-}
-
-.wheel-container {
-  width: min(500px, 52vh) !important;
-  height: min(500px, 52vh) !important;
-  margin: 0 auto !important;
-  position: relative !important;
-}
-
-.wheel-center-hub {
-  width: min(230px, 24vh) !important;
-  height: min(230px, 24vh) !important;
-}
-
-.hub-avatar-circle {
-  width: min(105px, 11vh) !important;
-  height: min(105px, 11vh) !important;
-  margin-bottom: 4px !important;
-}
-
-.hub-avatar-circle.is-standalone-logo {
-  width: min(110px, 12vh) !important;
-  height: min(110px, 12vh) !important;
-}
-
-.hub-avatar.is-standalone-logo #hub-avatar-img,
-.hub-avatar-circle.is-standalone-logo img {
-  height: min(95px, 10vh) !important;
-  max-width: min(120px, 13vh) !important;
-}
-
-.hub-title {
-  font-size: clamp(1.10rem, 2.0vh, 1.35rem) !important;
-  margin: 2px 0 3px !important;
-}
-
-.hub-cta-link {
-  font-size: clamp(0.76rem, 1.5vh, 0.85rem) !important;
-  padding: 5px 14px !important;
-  margin-top: 2px !important;
-  margin-bottom: 6px !important;
-  gap: 6px !important;
-}
-
-.hero-bottom-cta-wrap {
-  margin-top: 70px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  z-index: 10;
-}
-
-.btn-explore-offer {
-  padding: 10px 28px;
-  font-size: 0.94rem;
-}
-
 /* ==========================================================================
-   MOBILE HERO & WHEEL (SPACIOUS, LARGER WHEEL, COMPACT HUB TEXT, LARGER CONTACT BUTTONS)
+   MOBILE HERO & WHEEL (1:1 WITH RADLIGHT.PL)
    ========================================================================== */
 @media (max-width: 768px) {
   /* HIDE HERO VISUAL IMAGES ON MOBILE IN BAZA WIEDZY, USŁUGI, KONTAKT */
