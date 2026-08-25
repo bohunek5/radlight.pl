@@ -363,15 +363,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileServicesData = [
     {
       index: 0,
-      title: "Jedna Firma",
-      sub: "wiele możliwości",
+      title: "Poznaj Radlight",
+      sub: "",
       desc: "Centralna baza usług w Giżycku. Łączymy luksusowe apartamenty, pralnię przemysłową, obsługę najmu, magazyny self-storage, helipad oraz marinę z zimowaniem jachtów w Giżycku.",
-      img: "images/na-strone-Radlight.pl-Logo-pomarancz-czarny.png",
+      img: "images/radlight-r-symbol.png",
       phone: "tel:+48607241090",
       phoneDisplay: "+48 607 241 090",
       email: "mailto:biuro@radlight.pl",
       emailDisplay: "biuro@radlight.pl",
-      link: "uslugi.html"
+      link: "o-nas.html"
     },
     {
       index: 1,

@@ -266,7 +266,7 @@ var translations = {
       }
     ],
     "servicesWheelMobile": [
-      { "title": "Jedna Firma", "sub": "wiele możliwości", "tooltip": "Radlight — Centrala Usług" },
+      { "title": "Poznaj Radlight", "sub": "", "tooltip": "Poznaj Radlight — O firmie" },
       { "title": "Apartamenty", "sub": "www.mazury.holiday", "tooltip": "Apartamenty — Mazury Holiday" },
       { "title": "Zarządzanie najmem", "sub": "Zajmiemy się wszystkim", "tooltip": "Zarządzanie Najmem Giżycko" },
       { "title": "Własna pralnia", "sub": "www.pralniagizycko.pl", "tooltip": "Pralnia Giżycko" },
@@ -481,7 +481,7 @@ var translations = {
       }
     ],
     "servicesWheelMobile": [
-      { "title": "Ein Unternehmen", "sub": "viele Möglichkeiten", "tooltip": "Radlight — Servicezentrale" },
+      { "title": "Radlight entdecken", "sub": "", "tooltip": "Radlight — Über uns" },
       { "title": "Ferienwohnungen", "sub": "www.mazury.holiday", "tooltip": "Ferienwohnungen — Mazury Holiday" },
       { "title": "Mietverwaltung", "sub": "Komplettbetreuung von Apartments", "tooltip": "Mietverwaltung Giżycko" },
       { "title": "Eigene Wäscherei", "sub": "www.pralniagizycko.pl", "tooltip": "Wäscherei Giżycko" },
@@ -759,7 +759,7 @@ var translations = {
       }
     ],
     "servicesWheelMobile": [
-      { "title": "One Company", "sub": "many opportunities", "tooltip": "Radlight — Central Headquarters" },
+      { "title": "Discover Radlight", "sub": "", "tooltip": "Discover Radlight — About us" },
       { "title": "Luxury Apartments", "sub": "www.mazury.holiday", "tooltip": "Luxury Apartments — Mazury Holiday" },
       { "title": "Rental Management", "sub": "Full Apartment Management", "tooltip": "Rental Management Giżycko" },
       { "title": "Industrial Laundry", "sub": "www.pralniagizycko.pl", "tooltip": "Industrial Laundry Giżycko" },
