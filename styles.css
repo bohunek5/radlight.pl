@@ -2413,16 +2413,16 @@ body.light-theme .dock-item.active i {
 
 .subpage-hero {
   padding: 44px 0 40px;
-  background: radial-gradient(circle at 50% 20%, #0e5b94 0%, #083c66 50%, #021420 100%);
+  background: linear-gradient(180deg, #001f38 0%, #001424 100%);
   border: none !important;
   border-top: none !important;
-  border-bottom: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
   position: relative;
   overflow: hidden;
 }
 
 body.light-theme .subpage-hero {
-  background: linear-gradient(180deg, #f0f7fc 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
   border-bottom: 1px solid #e2e8f0 !important;
 }
 
@@ -2982,16 +2982,17 @@ body.light-theme .btn-secondary-hero:hover {
 
 /* Subpage Hero Visual Card */
 .subpage-hero-card {
-  background: var(--bg-dark-card);
-  border: 1px solid var(--border-glass);
+  background: transparent;
+  border: none;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-card);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
 }
 
 body.light-theme .subpage-hero-card {
-  background: #ffffff;
-  border-color: #e2e8f0;
+  background: transparent;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .subpage-hero-card-media {
@@ -7141,6 +7142,7 @@ html {
 /* ==========================================================================
    MOBILE HERO & WHEEL (1:1 WITH RADLIGHT.PL)
    ========================================================================== */
+@media (max-width: 768px) {
   /* HERO VISUAL IMAGES ON MOBILE SUBPAGES */
   .subpage-hero-visual,
   .subpage-hero-card {
