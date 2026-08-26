@@ -2023,7 +2023,7 @@ textarea.form-control {
   justify-content: center;
   gap: 10px;
   transition: var(--transition);
-  margin-top: 8px;
+  margin-top: 24px !important;
 }
 
 .btn-submit-form i {
@@ -2043,6 +2043,7 @@ body.light-theme .btn-submit-form {
   color: #ffffff !important;
   border: 1px solid #1a222c !important;
   box-shadow: 0 4px 14px rgba(26, 34, 44, 0.2);
+  margin-top: 24px !important;
 }
 
 body.light-theme .btn-submit-form:hover {
@@ -3247,16 +3248,18 @@ body.light-theme .subpage-feat-card p {
 /* Subpage Inquiry Box */
 .subpage-inquiry-box {
   background: linear-gradient(135deg, #062b40 0%, #021420 100%);
-  border: 1px solid rgba(222, 75, 38, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-top: 3px solid #de4b26 !important;
   border-radius: var(--radius-lg);
   padding: 36px 32px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 25px rgba(222, 75, 38, 0.2);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
 }
 
 body.light-theme .subpage-inquiry-box {
-  background: #ffffff;
-  border-color: #de4b26;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-top: 3px solid #de4b26 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
 }
 
 .subpage-inquiry-box h3 {
@@ -6231,7 +6234,7 @@ button[type="submit"].btn-submit {
   justify-content: center !important;
   gap: 10px !important;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  margin-top: 8px !important;
+  margin-top: 24px !important;
   text-decoration: none !important;
   box-sizing: border-box !important;
 }
