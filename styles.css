@@ -3911,8 +3911,27 @@ body.light-theme .seo-silo-col h5 {
     flex-direction: column !important;
     width: 100% !important;
     max-width: 100% !important;
-    gap: 12px !important;
+    gap: 14px !important;
     margin-bottom: 0 !important;
+  }
+
+  /* PHOTO ON TOP */
+  .subpage-hero-visual {
+    order: 1 !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 4px 0 2px !important;
+    padding: 0 !important;
+  }
+
+  /* TEXT UNDER PHOTO */
+  .subpage-hero-text {
+    order: 2 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
   }
 
   .subpage-hero-title,
@@ -3942,35 +3961,36 @@ body.light-theme .seo-silo-col h5 {
     display: none !important;
   }
 
-  /* Magazine Hero Visual Card on Mobile */
-  .subpage-hero-visual,
+  /* Clean photo without framing / box wrapper overlay ("bez tej nakładki ramki") */
   .subpage-hero-card {
     display: block !important;
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
-    border-radius: 16px !important;
+    border-radius: 14px !important;
     overflow: hidden !important;
-    margin-top: 4px !important;
-    border: 1px solid rgba(255, 255, 255, 0.15) !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
-    background: rgba(0, 0, 0, 0.2) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35) !important;
   }
 
-  body.light-theme .subpage-hero-visual,
   body.light-theme .subpage-hero-card {
-    border-color: rgba(0, 0, 0, 0.08) !important;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06) !important;
-    background: #ffffff !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12) !important;
   }
 
   .subpage-hero-card-media,
   .subpage-hero-media {
     display: block !important;
     width: 100% !important;
-    height: 175px !important;
+    height: 190px !important;
     overflow: hidden !important;
-    position: relative !important;
+    border-radius: 14px !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .subpage-hero-card-media img,
@@ -3979,6 +3999,7 @@ body.light-theme .seo-silo-col h5 {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
+    border-radius: 14px !important;
   }
 
   /* Horizontal Filter Tabs on mobile services page */
@@ -7145,33 +7166,6 @@ html {
    MOBILE HERO & WHEEL (1:1 WITH RADLIGHT.PL)
    ========================================================================== */
 @media (max-width: 768px) {
-  /* HERO VISUAL IMAGES ON MOBILE SUBPAGES */
-  .subpage-hero-visual,
-  .subpage-hero-card {
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    border-radius: 14px !important;
-    overflow: hidden !important;
-    margin-top: 10px !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
-  }
-
-  .subpage-hero-card-media,
-  .subpage-hero-media {
-    display: block !important;
-    width: 100% !important;
-    height: 180px !important;
-    overflow: hidden !important;
-  }
-
-  .subpage-hero-card-media img,
-  .subpage-hero-media img {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-  }
 
   /* CONTACT / SERVICE FEATURES ICONS IN MOBILE CARDS - VIBRANT BRAND ORANGE */
   .service-features li i,
@@ -7385,17 +7379,18 @@ html {
     animation: comeIn 0.32s cubic-bezier(0.22, 1, 0.36, 1) !important;
   }
 
-  /* 1. Node 0 (Radlight) Center Logo - Larger and positioned higher */
+  /* 1. Node 0 (Radlight) Center Logo - Extra Large and positioned higher */
   .hub-avatar.is-standalone-logo {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     margin-bottom: 0 !important;
+    transform: translateY(-8px) !important;
   }
 
   .hub-avatar-circle.is-standalone-logo {
-    width: 125px !important;
-    height: 90px !important;
+    width: 145px !important;
+    height: 105px !important;
     background: transparent !important;
     border: none !important;
     outline: none !important;
@@ -7408,29 +7403,29 @@ html {
   }
 
   .hub-avatar-circle.is-standalone-logo img {
-    width: 120px !important;
+    width: 140px !important;
     height: auto !important;
-    max-height: 85px !important;
+    max-height: 100px !important;
     object-fit: contain !important;
     border-radius: 0 !important;
-    transform: translateY(-5px) !important;
   }
 
-  /* 2. Other Nodes (1..8) Service Center Photo (Clean round circular badge) */
+  /* 2. Other Nodes (1..8) Service Center Photo (Enlarged round circle badge positioned higher) */
   .hub-avatar:not(.is-standalone-logo) {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     margin-bottom: 2px !important;
+    transform: translateY(-8px) !important;
   }
 
   .hub-avatar-circle:not(.is-standalone-logo) {
-    width: 70px !important;
-    height: 70px !important;
+    width: 82px !important;
+    height: 82px !important;
     border-radius: 50% !important;
     background: #ffffff !important;
-    border: 2.5px solid #ffffff !important;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+    border: 3px solid #ffffff !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
     overflow: hidden !important;
     display: flex !important;
     align-items: center !important;
@@ -7447,21 +7442,26 @@ html {
 
   .hub-avatar-circle:not(.is-standalone-logo).logo-type img {
     object-fit: contain !important;
-    padding: 5px !important;
+    padding: 6px !important;
   }
 
   /* Center Hub Title: Node 0 (Poznaj Radlight) rendered with clean link font */
   .hub-avatar.is-standalone-logo ~ .hub-title {
     font-family: var(--font-body), -apple-system, BlinkMacSystemFont, sans-serif !important;
-    font-size: 0.95rem !important;
+    font-size: 0.96rem !important;
     font-weight: 700 !important;
     color: #ffffff !important;
     text-decoration: underline !important;
     text-underline-offset: 3px !important;
-    margin: 1px 0 6px !important;
+    margin: -4px 0 6px !important;
     text-shadow: none !important;
     letter-spacing: 0.01em !important;
     line-height: 1.2 !important;
+    transform: translateY(-4px) !important;
+  }
+
+  .hub-avatar.is-standalone-logo ~ .hub-action-box {
+    transform: translateY(-4px) !important;
   }
 
   /* Service Nodes (1..8) Title in 1 Clean Line */
@@ -7471,12 +7471,21 @@ html {
     font-weight: 800 !important;
     color: #ffffff !important;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
-    margin: 2px 0 2px !important;
+    margin: 0 0 2px !important;
     white-space: nowrap !important;
     max-width: 160px !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
     line-height: 1.2 !important;
+    transform: translateY(-6px) !important;
+  }
+
+  .hub-avatar:not(.is-standalone-logo) ~ .hub-cta-link {
+    transform: translateY(-6px) !important;
+  }
+
+  .hub-avatar:not(.is-standalone-logo) ~ .hub-action-box {
+    transform: translateY(-6px) !important;
   }
 
   .hub-sub {
