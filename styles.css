@@ -2316,8 +2316,9 @@ body.light-theme .mobile-nav-dock {
   display: grid;
   grid-template-columns: 1fr 1fr auto 1fr 1fr;
   align-items: center;
-  max-width: 480px;
+  max-width: 420px;
   margin: 0 auto;
+  gap: 2px;
 }
 
 .dock-item {
@@ -2325,28 +2326,28 @@ body.light-theme .mobile-nav-dock {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3px;
-  color: #cbd5e1;
-  font-size: 0.72rem;
-  font-weight: 700;
+  gap: 2px;
+  color: #94a3b8;
+  font-size: 0.68rem;
+  font-weight: 600;
   text-decoration: none;
-  transition: var(--transition);
-  padding: 4px 0;
+  transition: all 0.2s ease;
+  padding: 3px 0;
 }
 
 .dock-item i {
-  font-size: 1.15rem;
-  color: #cbd5e1;
-  transition: var(--transition);
+  font-size: 1.12rem;
+  color: #94a3b8;
+  transition: all 0.2s ease;
 }
 
-/* Light Theme: Deep Navy (#1a222c) for non-active items */
+/* Light Theme: Slate for non-active items */
 body.light-theme .dock-item {
-  color: #1a222c !important;
+  color: #64748b !important;
 }
 
 body.light-theme .dock-item i {
-  color: #1a222c !important;
+  color: #64748b !important;
 }
 
 /* Active & Hover States: Brand Orange (#de4b26) */
@@ -2358,6 +2359,7 @@ body.light-theme .dock-item i {
 .dock-item:hover i,
 .dock-item.active i {
   color: var(--primary) !important;
+  transform: translateY(-1px);
 }
 
 body.light-theme .dock-item:hover,
@@ -2370,10 +2372,10 @@ body.light-theme .dock-item.active i {
   color: var(--primary) !important;
 }
 
-/* Central Floating Radlight Logo Disc */
+/* Central Radlight Logo Disc - Sits smoothly inside bar, clean circle, subtle refined shadow */
 .dock-brand-center {
   position: relative;
-  top: -14px;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2381,30 +2383,30 @@ body.light-theme .dock-item.active i {
 }
 
 .dock-logo-disc {
-  width: 52px;
-  height: 52px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: #ffffff;
-  border: 3px solid var(--primary);
-  box-shadow: 0 6px 20px rgba(222, 75, 38, 0.55), 0 0 12px rgba(222, 75, 38, 0.3);
+  border: 2px solid var(--primary);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .dock-logo-disc img {
-  width: 82%;
-  height: 82%;
+  width: 76%;
+  height: 76%;
   object-fit: contain;
   display: block;
 }
 
 .dock-brand-center:hover .dock-logo-disc,
 .dock-brand-center:active .dock-logo-disc {
-  transform: scale(1.14);
-  box-shadow: 0 8px 25px rgba(222, 75, 38, 0.85);
+  transform: scale(1.06);
+  box-shadow: 0 4px 12px rgba(222, 75, 38, 0.35);
 }
 
 /* ==========================================================================
@@ -7277,12 +7279,12 @@ html {
     z-index: 2 !important;
   }
 
-  /* 9 CIRCULAR NODES (60px) WITH CLEAN WHITE BORDER 1:1 */
+  /* 9 CIRCULAR NODES (58px) WITH CLEAN WHITE BORDER */
   .wheel-node {
-    width: 60px !important;
-    height: 60px !important;
-    margin-top: -30px !important;
-    margin-left: -30px !important;
+    width: 58px !important;
+    height: 58px !important;
+    margin-top: -29px !important;
+    margin-left: -29px !important;
     position: absolute !important;
     top: 50% !important;
     left: 50% !important;
@@ -7298,11 +7300,11 @@ html {
   }
 
   .node-icon-box {
-    width: 60px !important;
-    height: 60px !important;
+    width: 58px !important;
+    height: 58px !important;
     border-radius: 50% !important;
     background: #ffffff !important;
-    border: 3px solid #ffffff !important;
+    border: 2.5px solid #ffffff !important;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
     display: flex !important;
     align-items: center !important;
@@ -7310,7 +7312,7 @@ html {
     overflow: hidden !important;
     padding: 0 !important;
     box-sizing: border-box !important;
-    transition: all 0.3s ease !important;
+    transition: all 0.25s ease !important;
     transform: rotate(var(--counter-rotation, 0deg)) !important;
   }
 
@@ -7333,17 +7335,20 @@ html {
 
   .node-icon-box.logo-type img {
     object-fit: contain !important;
-    padding: 4px !important;
+    padding: 5px !important;
   }
 
-  /* ACTIVE NODE ON MOBILE (3.5px ORANGE BORDER WITH VIBRANT ORANGE GLOW) */
-  .wheel-node.active .node-icon-box {
-    border: 3.5px solid #de4b26 !important;
-    box-shadow: 0 0 0 3.5px rgba(222, 75, 38, 0.45), 0 6px 18px rgba(0, 0, 0, 0.45) !important;
+  /* ACTIVE NODE ON MOBILE (3px ORANGE BORDER WITH REFINED RING) */
+  .wheel-node.active .node-icon-box,
+  body .wheel-node.active .node-icon-box,
+  body.light-theme .wheel-node.active .node-icon-box,
+  body:not(.light-theme) .wheel-node.active .node-icon-box {
+    border: 3px solid #de4b26 !important;
+    box-shadow: 0 0 0 3px rgba(222, 75, 38, 0.4), 0 6px 16px rgba(0, 0, 0, 0.4) !important;
     transform: rotate(var(--counter-rotation, 0deg)) scale(1.06) !important;
   }
 
-  /* CENTER HUB (1:1 WITH RADLIGHT.PL) */
+  /* CENTER HUB */
   .wheel-center-hub {
     position: absolute !important;
     top: 50% !important;
@@ -7380,17 +7385,17 @@ html {
     animation: comeIn 0.32s cubic-bezier(0.22, 1, 0.36, 1) !important;
   }
 
-  /* 1. Node 0 (Radlight) Initial Center State */
+  /* 1. Node 0 (Radlight) Center Logo - Larger and positioned higher */
   .hub-avatar.is-standalone-logo {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    margin-bottom: 2px !important;
+    margin-bottom: 0 !important;
   }
 
   .hub-avatar-circle.is-standalone-logo {
-    width: 110px !important;
-    height: 75px !important;
+    width: 125px !important;
+    height: 90px !important;
     background: transparent !important;
     border: none !important;
     outline: none !important;
@@ -7403,29 +7408,30 @@ html {
   }
 
   .hub-avatar-circle.is-standalone-logo img {
-    width: 110px !important;
+    width: 120px !important;
     height: auto !important;
-    max-height: 75px !important;
+    max-height: 85px !important;
     object-fit: contain !important;
     border-radius: 0 !important;
+    transform: translateY(-5px) !important;
   }
 
-  /* 2. Other Nodes (1..8) Service Center Photo (More compact icon) */
+  /* 2. Other Nodes (1..8) Service Center Photo (Clean round circular badge) */
   .hub-avatar:not(.is-standalone-logo) {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    margin-bottom: 3px !important;
+    margin-bottom: 2px !important;
   }
 
   .hub-avatar-circle:not(.is-standalone-logo) {
-    width: 66px !important;
-    height: 66px !important;
-    border-radius: 14px !important;
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 50% !important;
     background: #ffffff !important;
+    border: 2.5px solid #ffffff !important;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
     overflow: hidden !important;
-    border: none !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -7436,45 +7442,48 @@ html {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
-    border-radius: 14px !important;
+    border-radius: 50% !important;
   }
 
   .hub-avatar-circle:not(.is-standalone-logo).logo-type img {
     object-fit: contain !important;
-    padding: 4px !important;
+    padding: 5px !important;
   }
 
-  /* Center Hub Title & Subtitle */
-  .hub-title {
-    font-size: 1.15rem !important;
+  /* Center Hub Title: Node 0 (Poznaj Radlight) rendered with clean link font */
+  .hub-avatar.is-standalone-logo ~ .hub-title {
+    font-family: var(--font-body), -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-size: 0.95rem !important;
     font-weight: 700 !important;
     color: #ffffff !important;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
-    margin: 2px 0 0 !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px !important;
+    margin: 1px 0 6px !important;
+    text-shadow: none !important;
+    letter-spacing: 0.01em !important;
     line-height: 1.2 !important;
+  }
+
+  /* Service Nodes (1..8) Title in 1 Clean Line */
+  .hub-avatar:not(.is-standalone-logo) ~ .hub-title {
     font-family: var(--font-heading), 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 1.02rem !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+    margin: 2px 0 2px !important;
+    white-space: nowrap !important;
+    max-width: 160px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    line-height: 1.2 !important;
   }
 
   .hub-sub {
-    font-size: 0.94rem !important;
-    font-weight: 400 !important;
-    color: #ffffff !important;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
-    margin: 1px 0 8px !important;
-    line-height: 1.2 !important;
-    display: block !important;
-  }
-
-  .hub-avatar:not(.is-standalone-logo) ~ .hub-title {
-    font-size: 1.08rem !important;
-  }
-
-  /* Hide domains / slogans on service nodes on mobile */
-  .hub-avatar:not(.is-standalone-logo) ~ .hub-sub {
     display: none !important;
   }
 
-  /* Czytaj dalej plain text link on mobile service nodes (pure text link, no borders, no buttons) */
+  /* Czytaj dalej plain text link on mobile service nodes */
   body .wheel-hero-section .hub-cta-link,
   body:not(.light-theme) .wheel-hero-section .hub-cta-link,
   body.light-theme .wheel-hero-section .hub-cta-link,
@@ -7482,16 +7491,17 @@ html {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 5px !important;
+    gap: 4px !important;
+    font-family: var(--font-body), -apple-system, BlinkMacSystemFont, sans-serif !important;
     font-size: 0.88rem !important;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
     color: #ffffff !important;
     background: transparent !important;
     border: none !important;
     outline: none !important;
     padding: 0 !important;
     border-radius: 0 !important;
-    margin: 2px 0 8px !important;
+    margin: 2px 0 6px !important;
     text-decoration: underline !important;
     text-underline-offset: 3px !important;
     box-shadow: none !important;
@@ -7519,8 +7529,6 @@ html {
   .hub-cta-link:active {
     transform: scale(0.96) !important;
     opacity: 0.75 !important;
-    background: transparent !important;
-    border: none !important;
   }
 
   body .wheel-hero-section .hub-cta-link i,
@@ -7541,32 +7549,32 @@ html {
     display: none !important;
   }
 
-  /* Action Buttons (Phone & Mail) */
+  /* Action Buttons (Phone & Mail) Framed Neatly Below */
   .hub-action-row {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 8px !important;
-    margin-top: 0 !important;
+    gap: 12px !important;
+    margin-top: 2px !important;
   }
 
   body .wheel-hero-section .hub-action-btn,
   body.light-theme .wheel-hero-section .hub-action-btn,
   body:not(.light-theme) .wheel-hero-section .hub-action-btn {
-    width: 38px !important;
-    height: 38px !important;
-    min-width: 38px !important;
-    min-height: 38px !important;
-    border-radius: 8px !important;
-    background: #1f6fa8 !important;
-    border: 1px solid rgba(255, 255, 255, 0.25) !important;
-    color: #ffffff !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
+    border-radius: 50% !important;
+    background: #ffffff !important;
+    border: 1px solid #ffffff !important;
+    color: #002340 !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25) !important;
-    transition: background 0.2s ease, transform 0.2s ease !important;
+    transition: all 0.2s ease !important;
     text-decoration: none !important;
   }
 
@@ -7575,21 +7583,20 @@ html {
   body:not(.light-theme) .wheel-hero-section .hub-action-btn:active {
     transform: scale(0.92) !important;
     background: #de4b26 !important;
+    border-color: #de4b26 !important;
   }
 
   body .wheel-hero-section .hub-action-btn i,
   body.light-theme .wheel-hero-section .hub-action-btn i,
   body:not(.light-theme) .wheel-hero-section .hub-action-btn i {
-    font-size: 0.95rem !important;
-    color: #ffffff !important;
+    font-size: 0.88rem !important;
+    color: #002340 !important;
   }
 
-  .wheel-node.active .node-icon-box,
-  body .wheel-node.active .node-icon-box,
-  body.light-theme .wheel-node.active .node-icon-box,
-  body:not(.light-theme) .wheel-node.active .node-icon-box {
-    border: 3.5px solid #de4b26 !important;
-    box-shadow: 0 0 0 3.5px rgba(222, 75, 38, 0.45), 0 6px 18px rgba(0, 0, 0, 0.45) !important;
+  body .wheel-hero-section .hub-action-btn:active i,
+  body.light-theme .wheel-hero-section .hub-action-btn:active i,
+  body:not(.light-theme) .wheel-hero-section .hub-action-btn:active i {
+    color: #ffffff !important;
   }
 
   .hub-contact-details {
