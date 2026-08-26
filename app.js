@@ -243,23 +243,23 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       index: 0,
       title: "Poznaj Radlight",
-      sub: "www.radlight.pl",
+      sub: "",
       desc: "Centralna baza usług w Giżycku. Łączymy luksusowe apartamenty, pralnię przemysłową, obsługę najmu, magazyny self-storage, helipad oraz marinę z zimowaniem jachtów w Giżycku (baza centralna ul. Myśliwska 3).",
       img: "images/radlight-r-symbol.png",
       phone: "tel:+48607241090",
       phoneDisplay: "+48 607 241 090",
       email: "mailto:biuro@radlight.pl",
       emailDisplay: "biuro@radlight.pl",
-      link: "uslugi.html",
-      linkTarget: "uslugi.html",
-      linkText: "www.radlight.pl",
+      link: "o-nas.html",
+      linkTarget: "o-nas.html",
+      linkText: "o-nas.html",
       category: "RADLIGHT CENTRUM",
       tag: "CENTRUM RADLIGHT"
     },
     {
       index: 1,
       title: "Apartamenty, domki, pokoje",
-      sub: "www.mazury.holiday",
+      sub: "",
       desc: "Luksusowy wynajem całorocznych apartamentów, domków letniskowych i pokoi w centrum Giżycka i nad mazurskimi jeziorami. Klimatyzacja, szybkie Wi-Fi, pościel hotelowa z naszej pralni oraz dedykowany parking.",
       img: "images/512X512-mh.png",
       phone: "tel:+48607241090",
@@ -275,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       index: 2,
       title: "Obsługa najmu",
-      sub: "Zarządzanie apartamentami",
+      sub: "",
       desc: "Kompleksowa opieka nad apartamentem: marketing na Booking i Airbnb, meldunek gości kodem PIN, sprzątanie, wymiana i pranie pościeli oraz pełne rozliczenia finansowe.",
       img: "images/real-estate-agent-holding-key-with-house-shaped-keychain--1536x1024.jpg",
       phone: "tel:+48607241090",
@@ -291,7 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       index: 3,
       title: "Pralnia przemysłowa",
-      sub: "www.pralniagizycko.pl",
+      sub: "",
       desc: "Nowoczesny park pralniczy dla hoteli, pensjonatów, jachtów, restauracji i klientów indywidualnych w Giżycku. Odbiór i dowóz prania własnym transportem w promieniu 50 km.",
       img: "images/logo-kwadrat.jpg",
       phone: "tel:+48730064044",
@@ -307,7 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       index: 4,
       title: "Usługi sprzątające",
-      sub: "Domy, apartamenty i biura",
+      sub: "",
       desc: "Doświadczony zespół, profesjonalny sprzęt Kärcher i ekologiczne środki czystości. Sprzątanie cykliczne, poremontowe, mycie okien oraz doczyszczanie jachtów.",
       img: "images/modern-office-2025-02-22-16-24-55-utc-2048x1365.jpg",
       phone: "tel:+48730067027",
@@ -323,7 +323,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       index: 5,
       title: "Hale, magazyny & lokale",
-      sub: "Powierzchnie użytkowe",
+      sub: "",
       desc: "Nowoczesne hale produkcyjno-magazynowe, boksy samoobsługowe self-storage, powierzchnie użytkowe i komercyjne oraz place składowe w Giżycku. Monitoring 24/7, dostęp PIN i dojazd TIR.",
       img: "images/DJI_0121small-1536x1171.jpg",
       phone: "tel:+48607241090",
@@ -339,7 +339,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       index: 6,
       title: "Helipad Mazury",
-      sub: "www.helipadmazury.pl",
+      sub: "",
       desc: "Certyfikowane lądowisko dla śmigłowców w Giżycku. Oświetlenie nawigacyjne do lotów nocnych, hangarowanie, tankowanie oraz transfery VIP i medyczne LPR.",
       img: "images/512X512-heli.png",
       phone: "tel:+48607241090",
@@ -355,7 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       index: 7,
       title: "Zimowanie jachtów",
-      sub: "AllBoat Service & Czarter",
+      sub: "",
       desc: "Całoroczne bezpieczne zimowanie łodzi w ogrzewanej hali lub na strzeżonym placu. Slipowanie dźwigiem, mycie dna, serwis silników oraz czarter jachtu motorowego Stillo 30.",
       img: "images/LOGO-ALL-BOAT.jpg",
       phone: "tel:+48607241090",
@@ -387,7 +387,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       index: 1,
       title: "Apartamenty",
-      sub: "www.mazury.holiday",
+      sub: "",
       desc: "Luksusowy wynajem całorocznych apartamentów, domków letniskowych i pokoi w centrum Giżycka.",
       img: "images/stranda_hero_jacuzzi.webp",
       phone: "tel:+48607241090",
@@ -399,7 +399,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       index: 2,
       title: "Zarządzanie najmem",
-      sub: "Zajmiemy się wszystkim",
+      sub: "",
       desc: "Kompleksowa opieka nad apartamentem: marketing na Booking i Airbnb, meldunek gości kodem PIN.",
       img: "images/103761_7.jpg",
       phone: "tel:+48607241090",
@@ -411,7 +411,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       index: 3,
       title: "Własna pralnia",
-      sub: "www.pralniagizycko.pl",
+      sub: "",
       desc: "Nowoczesny park pralniczy dla hoteli, pensjonatów, jachtów i restauracji w Giżycku.",
       img: "images/work-in-laundry-2025-03-17-04-27-23-utc-1536x1024.jpg",
       phone: "tel:+48730064044",
@@ -423,7 +423,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       index: 4,
       title: "Profesjonalne usługi sprzątające",
-      sub: "Domy, biura, apartamenty",
+      sub: "",
       desc: "Doświadczony zespół, profesjonalny sprzęt Kärcher i ekologiczne środki czystości.",
       img: "images/modern-office-2025-02-22-16-24-55-utc-2048x1365.jpg",
       phone: "tel:+48730067027",
@@ -435,7 +435,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       index: 5,
       title: "Powierzchnie usługowo magazynowe",
-      sub: "Sprawdź ofertę",
+      sub: "",
       desc: "Nowoczesne hale produkcyjno-magazynowe, boksy samoobsługowe self-storage i place składowe.",
       img: "images/hala-zimowanie-3.jpg",
       phone: "tel:+48607241090",
@@ -447,7 +447,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       index: 6,
       title: "Lądowisko dla śmigłowców",
-      sub: "www.helipadmazury.pl",
+      sub: "",
       desc: "Certyfikowane lądowisko dla śmigłowców w Giżycku z pełnym oświetleniem nawigacyjnym.",
       img: "images/air-rescue-service-1536x1024.jpg",
       phone: "tel:+48607241090",
@@ -459,7 +459,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       index: 7,
       title: "Czarter Stillo30 VIP",
-      sub: "Zarezerwuj swój rejs!",
+      sub: "",
       desc: "Luksusowy czarter nowoczesnych jednostek motorowych typu Houseboat bez patentu po Szlaku Wielkich Jezior Mazurskich.",
       img: "images/hero-yard-evening-v3.jpg",
       phone: "tel:+48607241090",
@@ -471,7 +471,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       index: 8,
       title: "Zimowanie łodzi",
-      sub: "kliknij po więcej informacji",
+      sub: "",
       desc: "Całoroczne bezpieczne zimowanie łodzi w ogrzewanej hali lub na strzeżonym placu.",
       img: "images/DJI_0101-1536x864.jpg",
       phone: "tel:+48607241090",
@@ -588,10 +588,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (hubCtaText) hubCtaText.textContent = ctaLabel;
       if (isMobile && index === 0) {
         hubCtaLink.style.display = 'none';
-      } else if (isMobile) {
-        hubCtaLink.style.display = 'inline-flex';
       } else {
-        hubCtaLink.style.display = '';
+        hubCtaLink.style.display = 'inline-flex';
       }
     }
     if (hubPhoneBtn) {
