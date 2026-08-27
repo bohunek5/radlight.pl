@@ -7281,6 +7281,11 @@ html {
    ========================================================================== */
 @media (max-width: 768px) {
 
+  /* Mobile Section Scroll Docking - Zakres Działalności at the top of the viewport */
+  #uslugi {
+    scroll-margin-top: 10px !important;
+  }
+
   /* CONTACT / SERVICE FEATURES ICONS IN MOBILE CARDS - VIBRANT BRAND ORANGE */
   .service-features li i,
   .contact-meta-item i,

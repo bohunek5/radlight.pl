@@ -759,10 +759,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const targetEl = document.getElementById(cleanId);
     if (!targetEl) return;
 
-    // Header offset for sticky navigation
-    const headerHeight = document.querySelector('.main-header')?.offsetHeight || 75;
-    const extraMargin = 25;
-    const headerOffset = headerHeight + extraMargin;
+    const isMobile = window.innerWidth <= 768;
 
     // If inside services catalog, ensure all filter is active
     if (targetEl.classList.contains('service-card')) {
@@ -770,11 +767,27 @@ document.addEventListener('DOMContentLoaded', () => {
       if (allFilterBtn) allFilterBtn.click();
     }
 
-    const elementPosition = targetEl.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    let offsetPosition;
+    if (isMobile) {
+      if (cleanId === 'uslugi') {
+        // Scroll so that the "Zakres działalności" section starts directly at the top of the mobile screen
+        const headerEl = targetEl.querySelector('.section-header') || targetEl;
+        const elementPosition = headerEl.getBoundingClientRect().top;
+        offsetPosition = elementPosition + window.pageYOffset - 12;
+      } else {
+        const elementPosition = targetEl.getBoundingClientRect().top;
+        offsetPosition = elementPosition + window.pageYOffset - 10;
+      }
+    } else {
+      const headerHeight = document.querySelector('.main-header')?.offsetHeight || 75;
+      const extraMargin = 25;
+      const headerOffset = headerHeight + extraMargin;
+      const elementPosition = targetEl.getBoundingClientRect().top;
+      offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    }
 
     window.scrollTo({
-      top: offsetPosition,
+      top: Math.max(0, offsetPosition),
       behavior: 'smooth'
     });
 
