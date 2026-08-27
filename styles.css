@@ -3749,28 +3749,50 @@ body.light-theme .seo-silo-col h5 {
     align-items: center !important;
     gap: 0 !important;
     flex-shrink: 0 !important;
-    margin-right: auto !important;
+    margin: 0 !important;
   }
 
   .top-slogan-left,
   .top-location,
-  .top-email,
-  .top-phone,
-  .top-info {
+  .top-email {
     display: none !important;
   }
 
-  /* MOBILE TOP BAR: Flags on LEFT, Day/Night Toggle on RIGHT */
+  .top-phone {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    font-size: 0.76rem !important;
+    font-weight: 700 !important;
+    padding: 4px 8px !important;
+    border-radius: var(--radius-pill) !important;
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    line-height: 1 !important;
+  }
+
+  body.light-theme .top-phone {
+    color: #062b40 !important;
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05) !important;
+  }
+
+  /* MOBILE TOP BAR: Phone on LEFT, Flags and Day/Night Toggle on RIGHT */
   .top-bar {
     padding: 6px 0 !important;
   }
 
+  .top-bar-content,
   .top-bar-container {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
     justify-content: space-between !important;
-    padding: 0 12px !important;
+    padding: 0 10px !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
@@ -3779,10 +3801,11 @@ body.light-theme .seo-silo-col h5 {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
-    justify-content: space-between !important;
-    width: 100% !important;
+    justify-content: flex-end !important;
     margin: 0 !important;
-    gap: 0 !important;
+    gap: 6px !important;
+    flex-shrink: 0 !important;
+    width: auto !important;
   }
 
   .lang-switcher {
@@ -3804,12 +3827,12 @@ body.light-theme .seo-silo-col h5 {
   }
 
   .lang-btn {
-    padding: 3px 7px !important;
-    font-size: 0.72rem !important;
+    padding: 3px 6px !important;
+    font-size: 0.70rem !important;
     font-weight: 700 !important;
     border-radius: var(--radius-pill) !important;
     color: rgba(255, 255, 255, 0.85) !important;
-    gap: 3px !important;
+    gap: 2px !important;
     display: inline-flex !important;
     align-items: center !important;
   }
@@ -3825,16 +3848,16 @@ body.light-theme .seo-silo-col h5 {
   }
 
   .lang-btn .flag {
-    font-size: 0.78rem !important;
+    font-size: 0.74rem !important;
     line-height: 1 !important;
   }
 
   .top-links .theme-toggle-btn {
     order: 2 !important;
-    width: 32px !important;
-    height: 32px !important;
-    min-width: 32px !important;
-    min-height: 32px !important;
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+    min-height: 30px !important;
     border-radius: 50% !important;
     display: flex !important;
     align-items: center !important;
@@ -3856,7 +3879,7 @@ body.light-theme .seo-silo-col h5 {
     align-items: center !important;
     justify-content: center !important;
     color: #ffffff !important;
-    font-size: 0.96rem !important;
+    font-size: 0.90rem !important;
   }
 
   body.light-theme .top-links .theme-toggle-btn {
@@ -7587,14 +7610,18 @@ html {
     padding: 6px !important;
   }
 
-  /* Center Hub Title: Node 0 (Poznaj Radlight) rendered with clean link font */
+  /* Center Hub Title: Node 0 (Poznaj Radlight) rendered with clean pure text, NO frame, NO underline */
   .hub-avatar.is-standalone-logo ~ .hub-title {
     font-family: var(--font-body), -apple-system, BlinkMacSystemFont, sans-serif !important;
-    font-size: 1.02rem !important;
+    font-size: 1.05rem !important;
     font-weight: 700 !important;
     color: #ffffff !important;
-    text-decoration: underline !important;
-    text-underline-offset: 3px !important;
+    text-decoration: none !important;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
     margin: -8px 0 6px !important;
     text-shadow: none !important;
     letter-spacing: 0.01em !important;
@@ -7602,16 +7629,27 @@ html {
     transform: translateY(-10px) !important;
   }
 
+  body.light-theme .wheel-hero-section .hub-avatar.is-standalone-logo ~ .hub-title {
+    color: #0f172a !important;
+    text-shadow: none !important;
+  }
+
   .hub-avatar.is-standalone-logo ~ .hub-action-box {
     transform: translateY(-8px) !important;
   }
 
-  /* Service Nodes (1..8) Title in 1 Clean Line */
+  /* Service Nodes (1..8) Title in 1 Clean Line - pure text */
   .hub-avatar:not(.is-standalone-logo) ~ .hub-title {
     font-family: var(--font-heading), 'Plus Jakarta Sans', sans-serif !important;
     font-size: 1.02rem !important;
     font-weight: 800 !important;
     color: #ffffff !important;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+    padding: 0 !important;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
     margin: 0 0 2px !important;
     white-space: nowrap !important;
@@ -7620,6 +7658,11 @@ html {
     text-overflow: ellipsis !important;
     line-height: 1.2 !important;
     transform: translateY(-6px) !important;
+  }
+
+  body.light-theme .wheel-hero-section .hub-avatar:not(.is-standalone-logo) ~ .hub-title {
+    color: #0f172a !important;
+    text-shadow: none !important;
   }
 
   .hub-avatar:not(.is-standalone-logo) ~ .hub-cta-link {
@@ -7634,8 +7677,9 @@ html {
     display: none !important;
   }
 
-  /* Czytaj dalej plain text link on mobile service nodes */
+  /* Czytaj dalej plain text link on mobile service nodes - pure text, no frame, no border */
   body:not(.light-theme) .wheel-hero-section .hub-cta-link,
+  body.light-theme .wheel-hero-section .hub-cta-link,
   .hub-cta-link {
     display: inline-flex !important;
     align-items: center !important;
@@ -7651,8 +7695,7 @@ html {
     padding: 0 !important;
     border-radius: 0 !important;
     margin: 2px 0 6px !important;
-    text-decoration: underline !important;
-    text-underline-offset: 3px !important;
+    text-decoration: none !important;
     box-shadow: none !important;
     transition: opacity 0.2s ease, transform 0.2s ease !important;
     -webkit-tap-highlight-color: transparent !important;
@@ -7675,6 +7718,10 @@ html {
     box-shadow: none !important;
     color: #ffffff !important;
     transform: none !important;
+  }
+
+  body.light-theme .wheel-hero-section .hub-cta-link:hover {
+    color: #c43c18 !important;
   }
 
   .hub-cta-link:focus,
