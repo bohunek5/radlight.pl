@@ -437,7 +437,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Powierzchnie usługowo magazynowe",
       sub: "",
       desc: "Nowoczesne hale produkcyjno-magazynowe, boksy samoobsługowe self-storage i place składowe.",
-      img: "images/hala-zimowanie-3.jpg",
+      img: "images/hala_1.webp",
       phone: "tel:+48607241090",
       phoneDisplay: "+48 607 241 090",
       email: "mailto:biuro@radlight.pl",

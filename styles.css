@@ -2682,7 +2682,7 @@ body.light-theme .subpage-feat-title {
 }
 
 .spec-table th {
-  background: #010e17;
+  background: #062b40;
   color: #ffffff;
   font-family: var(--font-heading);
   font-weight: 800;
@@ -2697,7 +2697,7 @@ body.light-theme .spec-table th {
 .spec-table td {
   padding: 14px 18px;
   border-bottom: 1px solid var(--border-glass);
-  color: var(--text-muted);
+  color: #e2e8f0;
 }
 
 body.light-theme .spec-table td {
@@ -2706,7 +2706,7 @@ body.light-theme .spec-table td {
 }
 
 .spec-table tr:nth-child(even) {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 body.light-theme .spec-table tr:nth-child(even) {
@@ -3130,6 +3130,18 @@ body.light-theme .subpage-layout-section {
 body.light-theme .subpage-block {
   background: #ffffff;
   border-color: #e2e8f0;
+}
+
+.subpage-block h2,
+.subpage-block h3,
+.subpage-block h4 {
+  color: #ffffff;
+}
+
+body.light-theme .subpage-block h2,
+body.light-theme .subpage-block h3,
+body.light-theme .subpage-block h4 {
+  color: #021420;
 }
 
 .subpage-block-header {
