@@ -1051,18 +1051,30 @@ document.addEventListener('DOMContentLoaded', () => {
       this.images = [];
 
       allImgs.forEach(img => {
-        // Exclude icons, logos, watermarks, wheel nodes, flags
+        // Strictly exclude all UI logos, wheel nodes, center hub avatar, mobile dock R button, flags, and watermarks
         if (
           img.id === 'logo-img' ||
+          img.id === 'hub-avatar-img' ||
           img.closest('.logo') ||
           img.closest('.nav-logo') ||
+          img.closest('.mobile-nav-dock') ||
+          img.closest('.dock-center-r-btn') ||
+          img.closest('.dock-item') ||
           img.closest('.footer-watermark') ||
           img.closest('.footer-logo') ||
           img.closest('.wheel-node') ||
+          img.closest('.wheel-container') ||
+          img.closest('.wheel-hero-section') ||
+          img.closest('.hero-wheel-section') ||
+          img.closest('.wheel-center-hub') ||
           img.closest('.hub-avatar') ||
           img.closest('.hub-avatar-circle') ||
+          img.closest('.hub-inner-core') ||
+          img.closest('.top-bar') ||
+          img.closest('.lang-switcher') ||
           img.classList.contains('footer-watermark') ||
           img.classList.contains('flag-icon') ||
+          img.classList.contains('hub-avatar-img') ||
           img.hasAttribute('data-no-zoom')
         ) {
           return;
