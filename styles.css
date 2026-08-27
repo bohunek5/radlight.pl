@@ -7555,7 +7555,7 @@ html {
     align-items: center !important;
     justify-content: center !important;
     margin-bottom: 0 !important;
-    transform: translateY(-12px) !important;
+    transform: translateY(-24px) !important;
   }
 
   .hub-avatar-circle.is-standalone-logo {
@@ -7586,12 +7586,12 @@ html {
     align-items: center !important;
     justify-content: center !important;
     margin-bottom: 2px !important;
-    transform: translateY(-8px) !important;
+    transform: translateY(-10px) !important;
   }
 
   .hub-avatar-circle:not(.is-standalone-logo) {
-    width: 82px !important;
-    height: 82px !important;
+    width: 80px !important;
+    height: 80px !important;
     border-radius: 50% !important;
     background: #ffffff !important;
     border: 3px solid #ffffff !important;
@@ -7615,7 +7615,7 @@ html {
     padding: 6px !important;
   }
 
-  /* Center Hub Title: Node 0 (Poznaj Radlight) rendered with clean pure text, NO frame, NO underline */
+  /* Center Hub Title: Node 0 (Poznaj Radlight) rendered with clean pure text, NO frame, NO underline, positioned higher */
   .hub-avatar.is-standalone-logo ~ .hub-title {
     font-family: var(--font-body), -apple-system, BlinkMacSystemFont, sans-serif !important;
     font-size: 1.05rem !important;
@@ -7627,11 +7627,11 @@ html {
     outline: none !important;
     box-shadow: none !important;
     padding: 0 !important;
-    margin: -8px 0 6px !important;
+    margin: -8px 0 4px !important;
     text-shadow: none !important;
     letter-spacing: 0.01em !important;
     line-height: 1.2 !important;
-    transform: translateY(-10px) !important;
+    transform: translateY(-22px) !important;
   }
 
   body.light-theme .wheel-hero-section .hub-avatar.is-standalone-logo ~ .hub-title {
@@ -7640,13 +7640,13 @@ html {
   }
 
   .hub-avatar.is-standalone-logo ~ .hub-action-box {
-    transform: translateY(-8px) !important;
+    transform: translateY(-16px) !important;
   }
 
-  /* Service Nodes (1..8) Title in 1 Clean Line - pure text */
+  /* Service Nodes (1..8) Title - Full Text, NO ellipsis, NO 3 dots, clean wrapping in center */
   .hub-avatar:not(.is-standalone-logo) ~ .hub-title {
     font-family: var(--font-heading), 'Plus Jakarta Sans', sans-serif !important;
-    font-size: 1.02rem !important;
+    font-size: 0.90rem !important;
     font-weight: 800 !important;
     color: #ffffff !important;
     background: transparent !important;
@@ -7656,13 +7656,17 @@ html {
     text-decoration: none !important;
     padding: 0 !important;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
-    margin: 0 0 2px !important;
-    white-space: nowrap !important;
-    max-width: 160px !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    line-height: 1.2 !important;
-    transform: translateY(-6px) !important;
+    margin: 0 auto 3px !important;
+    white-space: normal !important;
+    max-width: 175px !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    text-wrap: balance !important;
+    line-height: 1.18 !important;
+    text-align: center !important;
+    transform: translateY(-8px) !important;
   }
 
   body.light-theme .wheel-hero-section .hub-avatar:not(.is-standalone-logo) ~ .hub-title {
@@ -7671,11 +7675,11 @@ html {
   }
 
   .hub-avatar:not(.is-standalone-logo) ~ .hub-cta-link {
-    transform: translateY(-6px) !important;
+    transform: translateY(-8px) !important;
   }
 
   .hub-avatar:not(.is-standalone-logo) ~ .hub-action-box {
-    transform: translateY(-6px) !important;
+    transform: translateY(-8px) !important;
   }
 
   .hub-sub {
