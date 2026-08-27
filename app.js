@@ -937,4 +937,508 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ==========================================================================
+  // 10. RADLIGHT MASTER IMAGE LIGHTBOX & ZOOM ENGINE (PC & MOBILE)
+  // ==========================================================================
+
+  class RadlightLightbox {
+    constructor() {
+      this.isOpen = false;
+      this.currentIndex = 0;
+      this.images = [];
+      this.scale = 1;
+      this.minScale = 1;
+      this.maxScale = 4.0;
+      this.translateX = 0;
+      this.translateY = 0;
+      this.isDragging = false;
+      this.dragStartX = 0;
+      this.dragStartY = 0;
+      this.lastTranslateX = 0;
+      this.lastTranslateY = 0;
+
+      // Mobile Touch Gesture state
+      this.touchStartX = 0;
+      this.touchStartY = 0;
+      this.touchDistanceStart = 0;
+      this.initialScaleOnPinch = 1;
+      this.lastTapTime = 0;
+      this.isPinching = false;
+
+      this.initDom();
+      this.collectImages();
+      this.bindEvents();
+    }
+
+    initDom() {
+      let lb = document.getElementById('rad-lightbox');
+      if (!lb) {
+        const lbHtml = `
+          <div id="rad-lightbox" class="rad-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Podgląd zdjęcia">
+            <!-- Top Header Bar -->
+            <div class="rad-lightbox-header">
+              <div class="rad-lightbox-info">
+                <span class="rad-lightbox-counter" id="rad-lightbox-counter">1 / 1</span>
+                <span class="rad-lightbox-zoom-badge" id="rad-lightbox-zoom-badge">100%</span>
+              </div>
+              <div class="rad-lightbox-actions">
+                <button type="button" class="rad-lightbox-btn" id="rad-lb-zoom-out" aria-label="Pomniejsz" title="Pomniejsz (-)">
+                  <i class="fa-solid fa-magnifying-glass-minus"></i>
+                </button>
+                <button type="button" class="rad-lightbox-btn" id="rad-lb-zoom-reset" aria-label="Dopasuj rozmiar" title="Dopasuj (0)">
+                  <i class="fa-solid fa-arrows-rotate"></i>
+                </button>
+                <button type="button" class="rad-lightbox-btn" id="rad-lb-zoom-in" aria-label="Powiększ" title="Powiększ (+)">
+                  <i class="fa-solid fa-magnifying-glass-plus"></i>
+                </button>
+                <button type="button" class="rad-lightbox-btn rad-lightbox-btn-close" id="rad-lb-close" aria-label="Zamknij podgląd" title="Zamknij (Esc)">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Main Viewport / Stage -->
+            <div class="rad-lightbox-viewport" id="rad-lightbox-viewport">
+              <button type="button" class="rad-lightbox-nav rad-lightbox-prev" id="rad-lb-prev" aria-label="Poprzednie zdjęcie" title="Poprzednie (←)">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              
+              <div class="rad-lightbox-stage" id="rad-lightbox-stage">
+                <img src="" alt="" class="rad-lightbox-img" id="rad-lightbox-img" draggable="false">
+                <div class="rad-lightbox-spinner" id="rad-lightbox-spinner">
+                  <i class="fa-solid fa-spinner fa-spin"></i>
+                </div>
+              </div>
+
+              <button type="button" class="rad-lightbox-nav rad-lightbox-next" id="rad-lb-next" aria-label="Następne zdjęcie" title="Następne (→)">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+
+            <!-- Bottom Caption Bar -->
+            <div class="rad-lightbox-footer">
+              <div class="rad-lightbox-caption" id="rad-lightbox-caption"></div>
+              <div class="rad-lightbox-hints">
+                <span class="desktop-hint"><kbd>Esc</kbd> Zamknij &bull; <kbd>←</kbd><kbd>→</kbd> Zmień &bull; Scroll / 2x klik: Zoom &bull; Przeciągnij: Przesuń</span>
+                <span class="mobile-hint">Dotknij 2x aby powiększyć &bull; Przesuń w dół aby zamknąć</span>
+              </div>
+            </div>
+          </div>
+        `;
+        document.body.insertAdjacentHTML('beforeend', lbHtml);
+      }
+
+      this.dom = {
+        lightbox: document.getElementById('rad-lightbox'),
+        viewport: document.getElementById('rad-lightbox-viewport'),
+        stage: document.getElementById('rad-lightbox-stage'),
+        img: document.getElementById('rad-lightbox-img'),
+        spinner: document.getElementById('rad-lightbox-spinner'),
+        counter: document.getElementById('rad-lightbox-counter'),
+        zoomBadge: document.getElementById('rad-lightbox-zoom-badge'),
+        caption: document.getElementById('rad-lightbox-caption'),
+        btnClose: document.getElementById('rad-lb-close'),
+        btnZoomIn: document.getElementById('rad-lb-zoom-in'),
+        btnZoomOut: document.getElementById('rad-lb-zoom-out'),
+        btnZoomReset: document.getElementById('rad-lb-zoom-reset'),
+        btnPrev: document.getElementById('rad-lb-prev'),
+        btnNext: document.getElementById('rad-lb-next'),
+      };
+    }
+
+    collectImages() {
+      const allImgs = Array.from(document.querySelectorAll('img'));
+      this.images = [];
+
+      allImgs.forEach(img => {
+        // Exclude icons, logos, watermarks, wheel nodes, flags
+        if (
+          img.id === 'logo-img' ||
+          img.closest('.logo') ||
+          img.closest('.nav-logo') ||
+          img.closest('.footer-watermark') ||
+          img.closest('.footer-logo') ||
+          img.closest('.wheel-node') ||
+          img.closest('.hub-avatar') ||
+          img.closest('.hub-avatar-circle') ||
+          img.classList.contains('footer-watermark') ||
+          img.classList.contains('flag-icon') ||
+          img.hasAttribute('data-no-zoom')
+        ) {
+          return;
+        }
+
+        // Get descriptive caption
+        let caption = img.getAttribute('data-caption') || img.getAttribute('alt') || img.getAttribute('title') || '';
+        if (!caption || caption.trim().length === 0) {
+          const card = img.closest('.service-card, .subpage-block, .subpage-feat-card, .article-card, .eu-card, .about-content, .subpage-hero-card');
+          if (card) {
+            const heading = card.querySelector('h1, h2, h3, h4, .service-title, .subpage-title, .block-sub');
+            if (heading) caption = heading.textContent.trim();
+          }
+        }
+        if (!caption) caption = 'Zdjęcie Radlight Giżycko';
+
+        img.classList.add('rad-zoomable-img');
+        img.setAttribute('tabindex', '0');
+        img.setAttribute('role', 'button');
+        img.setAttribute('title', 'Kliknij, aby powiększyć');
+
+        const index = this.images.length;
+        this.images.push({
+          src: img.getAttribute('src') || img.src,
+          alt: img.getAttribute('alt') || '',
+          caption: caption,
+          element: img
+        });
+
+        // Click & keyboard handlers
+        img.addEventListener('click', (e) => {
+          e.preventDefault();
+          this.open(index);
+        });
+
+        img.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.open(index);
+          }
+        });
+      });
+    }
+
+    open(index) {
+      if (index < 0 || index >= this.images.length) return;
+      this.currentIndex = index;
+      this.isOpen = true;
+      this.scale = 1;
+      this.translateX = 0;
+      this.translateY = 0;
+
+      this.dom.lightbox.classList.add('active');
+      this.dom.lightbox.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('rad-lightbox-open');
+
+      this.loadImage(this.currentIndex);
+      this.updateTransform();
+      this.updateNavButtons();
+    }
+
+    close() {
+      if (!this.isOpen) return;
+      this.isOpen = false;
+      this.dom.lightbox.classList.remove('active');
+      this.dom.lightbox.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('rad-lightbox-open');
+
+      setTimeout(() => {
+        this.scale = 1;
+        this.translateX = 0;
+        this.translateY = 0;
+        this.updateTransform();
+      }, 300);
+    }
+
+    loadImage(index) {
+      const item = this.images[index];
+      if (!item) return;
+
+      this.dom.spinner.classList.add('active');
+      this.dom.counter.textContent = `${index + 1} / ${this.images.length}`;
+      this.dom.caption.textContent = item.caption;
+
+      const tempImg = new Image();
+      tempImg.src = item.src;
+      tempImg.onload = () => {
+        this.dom.img.src = item.src;
+        this.dom.img.alt = item.alt;
+        this.dom.spinner.classList.remove('active');
+      };
+      tempImg.onerror = () => {
+        this.dom.img.src = item.src;
+        this.dom.spinner.classList.remove('active');
+      };
+
+      // Reset zoom on slide transition
+      this.scale = 1;
+      this.translateX = 0;
+      this.translateY = 0;
+      this.updateTransform();
+      this.updateNavButtons();
+    }
+
+    next() {
+      if (this.currentIndex < this.images.length - 1) {
+        this.currentIndex++;
+      } else {
+        this.currentIndex = 0;
+      }
+      this.loadImage(this.currentIndex);
+    }
+
+    prev() {
+      if (this.currentIndex > 0) {
+        this.currentIndex--;
+      } else {
+        this.currentIndex = this.images.length - 1;
+      }
+      this.loadImage(this.currentIndex);
+    }
+
+    updateNavButtons() {
+      if (this.images.length <= 1) {
+        this.dom.btnPrev.classList.add('hidden');
+        this.dom.btnNext.classList.add('hidden');
+      } else {
+        this.dom.btnPrev.classList.remove('hidden');
+        this.dom.btnNext.classList.remove('hidden');
+      }
+    }
+
+    setZoom(newScale, originX = 0, originY = 0) {
+      const prevScale = this.scale;
+      this.scale = Math.min(Math.max(newScale, this.minScale), this.maxScale);
+
+      if (this.scale === 1) {
+        this.translateX = 0;
+        this.translateY = 0;
+        this.dom.stage.classList.remove('is-zoomed');
+      } else {
+        this.dom.stage.classList.add('is-zoomed');
+        if (originX !== 0 || originY !== 0) {
+          const factor = (this.scale - prevScale) / prevScale;
+          this.translateX -= originX * factor * 0.5;
+          this.translateY -= originY * factor * 0.5;
+        }
+      }
+
+      this.clampBounds();
+      this.updateTransform();
+    }
+
+    clampBounds() {
+      if (this.scale <= 1) {
+        this.translateX = 0;
+        this.translateY = 0;
+        return;
+      }
+      const rect = this.dom.img.getBoundingClientRect();
+      const maxDragX = (rect.width * this.scale - window.innerWidth) / 2 + 100;
+      const maxDragY = (rect.height * this.scale - window.innerHeight) / 2 + 100;
+      if (maxDragX > 0) {
+        this.translateX = Math.min(Math.max(this.translateX, -maxDragX), maxDragX);
+      } else {
+        this.translateX = 0;
+      }
+      if (maxDragY > 0) {
+        this.translateY = Math.min(Math.max(this.translateY, -maxDragY), maxDragY);
+      } else {
+        this.translateY = 0;
+      }
+    }
+
+    updateTransform() {
+      this.dom.img.style.transform = `translate3d(${this.translateX}px, ${this.translateY}px, 0px) scale(${this.scale})`;
+      this.dom.zoomBadge.textContent = `${Math.round(this.scale * 100)}%`;
+    }
+
+    bindEvents() {
+      // Close button
+      this.dom.btnClose.addEventListener('click', () => this.close());
+
+      // Zoom In / Out / Reset buttons
+      this.dom.btnZoomIn.addEventListener('click', () => this.setZoom(this.scale + 0.5));
+      this.dom.btnZoomOut.addEventListener('click', () => this.setZoom(this.scale - 0.5));
+      this.dom.btnZoomReset.addEventListener('click', () => this.setZoom(1));
+
+      // Next / Prev buttons
+      this.dom.btnNext.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.next();
+      });
+      this.dom.btnPrev.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.prev();
+      });
+
+      // Backdrop click to close (clicking empty stage/viewport outside img)
+      this.dom.viewport.addEventListener('click', (e) => {
+        if (e.target === this.dom.viewport || e.target === this.dom.stage) {
+          if (!this.isDragging && !this.isPinching) {
+            this.close();
+          }
+        }
+      });
+
+      // Keyboard shortcuts
+      document.addEventListener('keydown', (e) => {
+        if (!this.isOpen) return;
+        if (e.key === 'Escape') {
+          this.close();
+        } else if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') {
+          this.next();
+        } else if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') {
+          this.prev();
+        } else if (e.key === '+' || e.key === '=') {
+          this.setZoom(this.scale + 0.35);
+        } else if (e.key === '-' || e.key === '_') {
+          this.setZoom(this.scale - 0.35);
+        } else if (e.key === '0') {
+          this.setZoom(1);
+        }
+      });
+
+      // Mouse Wheel Zoom
+      this.dom.viewport.addEventListener('wheel', (e) => {
+        if (!this.isOpen) return;
+        e.preventDefault();
+        const delta = e.deltaY < 0 ? 0.25 : -0.25;
+        this.setZoom(this.scale + delta, e.clientX - window.innerWidth / 2, e.clientY - window.innerHeight / 2);
+      }, { passive: false });
+
+      // Double click on image toggles zoom
+      this.dom.img.addEventListener('dblclick', (e) => {
+        e.preventDefault();
+        if (this.scale > 1) {
+          this.setZoom(1);
+        } else {
+          this.setZoom(2.2, e.clientX - window.innerWidth / 2, e.clientY - window.innerHeight / 2);
+        }
+      });
+
+      // Mouse Drag / Pan when zoomed
+      this.dom.img.addEventListener('mousedown', (e) => {
+        if (!this.isOpen || this.scale <= 1) return;
+        e.preventDefault();
+        this.isDragging = true;
+        this.dom.stage.classList.add('is-dragging');
+        this.dragStartX = e.clientX - this.translateX;
+        this.dragStartY = e.clientY - this.translateY;
+      });
+
+      window.addEventListener('mousemove', (e) => {
+        if (!this.isDragging) return;
+        e.preventDefault();
+        this.translateX = e.clientX - this.dragStartX;
+        this.translateY = e.clientY - this.dragStartY;
+        this.clampBounds();
+        this.updateTransform();
+      });
+
+      window.addEventListener('mouseup', () => {
+        if (this.isDragging) {
+          this.isDragging = false;
+          this.dom.stage.classList.remove('is-dragging');
+        }
+      });
+
+      // Touch Events for Mobile (Swipe, Drag, Pinch, Double Tap)
+      this.dom.viewport.addEventListener('touchstart', (e) => {
+        if (!this.isOpen) return;
+        if (e.touches.length === 1) {
+          const touch = e.touches[0];
+          this.touchStartX = touch.clientX;
+          this.touchStartY = touch.clientY;
+          this.lastTranslateX = this.translateX;
+          this.lastTranslateY = this.translateY;
+          this.isDragging = this.scale > 1;
+
+          // Double tap detection (< 300ms)
+          const now = Date.now();
+          if (now - this.lastTapTime < 300) {
+            e.preventDefault();
+            if (this.scale > 1) {
+              this.setZoom(1);
+            } else {
+              this.setZoom(2.2, touch.clientX - window.innerWidth / 2, touch.clientY - window.innerHeight / 2);
+            }
+          }
+          this.lastTapTime = now;
+        } else if (e.touches.length === 2) {
+          // Pinch start
+          this.isPinching = true;
+          this.dom.stage.classList.add('is-pinching');
+          const dx = e.touches[0].clientX - e.touches[1].clientX;
+          const dy = e.touches[0].clientY - e.touches[1].clientY;
+          this.touchDistanceStart = Math.hypot(dx, dy);
+          this.initialScaleOnPinch = this.scale;
+        }
+      }, { passive: false });
+
+      this.dom.viewport.addEventListener('touchmove', (e) => {
+        if (!this.isOpen) return;
+        e.preventDefault();
+
+        if (this.isPinching && e.touches.length === 2) {
+          const dx = e.touches[0].clientX - e.touches[1].clientX;
+          const dy = e.touches[0].clientY - e.touches[1].clientY;
+          const currentDistance = Math.hypot(dx, dy);
+          if (this.touchDistanceStart > 0) {
+            const factor = currentDistance / this.touchDistanceStart;
+            this.setZoom(this.initialScaleOnPinch * factor);
+          }
+        } else if (e.touches.length === 1) {
+          const touch = e.touches[0];
+          const diffX = touch.clientX - this.touchStartX;
+          const diffY = touch.clientY - this.touchStartY;
+
+          if (this.scale > 1) {
+            // Pan zoomed image
+            this.translateX = this.lastTranslateX + diffX;
+            this.translateY = this.lastTranslateY + diffY;
+            this.clampBounds();
+            this.updateTransform();
+          } else {
+            // Pull down effect when swiping to dismiss
+            if (Math.abs(diffY) > 20 && Math.abs(diffY) > Math.abs(diffX)) {
+              this.dom.img.style.transform = `translate3d(0px, ${diffY * 0.65}px, 0px) scale(${1 - Math.min(Math.abs(diffY) / 1200, 0.2)})`;
+            }
+          }
+        }
+      }, { passive: false });
+
+      this.dom.viewport.addEventListener('touchend', (e) => {
+        if (!this.isOpen) return;
+        if (this.isPinching) {
+          this.isPinching = false;
+          this.dom.stage.classList.remove('is-pinching');
+          if (this.scale < 1) this.setZoom(1);
+          return;
+        }
+
+        if (this.scale > 1) {
+          this.isDragging = false;
+        } else if (e.changedTouches.length === 1) {
+          const touch = e.changedTouches[0];
+          const diffX = touch.clientX - this.touchStartX;
+          const diffY = touch.clientY - this.touchStartY;
+
+          // 1. Swipe down or up to dismiss (delta > 70px)
+          if (Math.abs(diffY) > 70 && Math.abs(diffY) > Math.abs(diffX) * 1.4) {
+            this.close();
+            return;
+          }
+
+          // 2. Horizontal swipe to navigate (delta > 45px)
+          if (Math.abs(diffX) > 45 && Math.abs(diffX) > Math.abs(diffY) * 1.4) {
+            if (diffX < 0) {
+              this.next();
+            } else {
+              this.prev();
+            }
+            return;
+          }
+
+          // Reset position if swipe wasn't far enough
+          this.updateTransform();
+        }
+      });
+    }
+  }
+
+  // Instantiate and expose globally
+  const radlightLightbox = new RadlightLightbox();
+  window.radlightLightbox = radlightLightbox;
+
 });
+

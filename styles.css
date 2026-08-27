@@ -8212,3 +8212,416 @@ html {
     gap: 20px !important;
   }
 }
+
+/* ==========================================================================
+   RADLIGHT IMAGE LIGHTBOX & INTERACTIVE ZOOM MODAL (PC & MOBILE)
+   ========================================================================== */
+
+/* Cursor indication for all zoomable images across pages */
+.rad-zoomable-img,
+.subpage-gallery-item img,
+.subpage-hero-card-media img,
+.service-image img,
+.about-img-frame img,
+.article-cover img,
+.article-body img,
+.baza-card-img img,
+.contact-visual img {
+  cursor: zoom-in !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+}
+
+.subpage-gallery-item,
+.subpage-hero-card-media,
+.service-image,
+.about-img-frame {
+  position: relative;
+}
+
+/* Subtle zoom overlay hint on hover for gallery and hero media */
+.subpage-gallery-item::after,
+.subpage-hero-card-media::after {
+  content: '\f00e';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  background: rgba(6, 43, 66, 0.85);
+  color: #00d2ff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  opacity: 0;
+  transform: scale(0.75);
+  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
+  pointer-events: none;
+  z-index: 5;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.subpage-gallery-item:hover::after,
+.subpage-hero-card-media:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+body.light-theme .subpage-gallery-item::after,
+body.light-theme .subpage-hero-card-media::after {
+  background: rgba(255, 255, 255, 0.9);
+  color: #de4b26;
+  border-color: rgba(222, 75, 38, 0.4);
+}
+
+/* Lock body scrolling when lightbox is open */
+body.rad-lightbox-open {
+  overflow: hidden !important;
+  touch-action: none !important;
+}
+
+/* Lightbox Modal Root Container */
+.rad-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background: rgba(2, 14, 23, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.rad-lightbox.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Top Header Bar */
+.rad-lightbox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 28px;
+  position: relative;
+  z-index: 20;
+  background: linear-gradient(180deg, rgba(2, 20, 32, 0.9) 0%, rgba(2, 20, 32, 0) 100%);
+}
+
+.rad-lightbox-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rad-lightbox-counter {
+  font-family: var(--font-heading, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill, 9999px);
+  letter-spacing: 0.5px;
+}
+
+.rad-lightbox-zoom-badge {
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #00d2ff;
+  background: rgba(0, 210, 255, 0.12);
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill, 9999px);
+}
+
+.rad-lightbox-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rad-lightbox-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #f8fafc;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.rad-lightbox-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px) scale(1.05);
+  color: #ffffff;
+}
+
+.rad-lightbox-btn:active {
+  transform: translateY(0) scale(0.96);
+}
+
+.rad-lightbox-btn-close {
+  background: rgba(222, 75, 38, 0.85);
+  border-color: rgba(222, 75, 38, 0.9);
+  color: #ffffff;
+  margin-left: 6px;
+}
+
+.rad-lightbox-btn-close:hover {
+  background: #de4b26;
+  border-color: #ff6538;
+  box-shadow: 0 0 20px rgba(222, 75, 38, 0.6);
+}
+
+/* Viewport / Stage */
+.rad-lightbox-viewport {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+.rad-lightbox-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+
+.rad-lightbox-stage.is-zoomed {
+  cursor: grab;
+}
+
+.rad-lightbox-stage.is-dragging {
+  cursor: grabbing !important;
+}
+
+.rad-lightbox-img {
+  max-width: 88vw;
+  max-height: 76vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.12);
+  user-select: none;
+  -webkit-user-drag: none;
+  transform-origin: center center;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+  will-change: transform;
+}
+
+.rad-lightbox-stage.is-dragging .rad-lightbox-img,
+.rad-lightbox-stage.is-pinching .rad-lightbox-img {
+  transition: none !important;
+}
+
+/* Spinner */
+.rad-lightbox-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: #00d2ff;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.rad-lightbox-spinner.active {
+  opacity: 1;
+}
+
+/* Navigation Buttons */
+.rad-lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(6, 43, 66, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 15;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.rad-lightbox-prev {
+  left: 24px;
+}
+
+.rad-lightbox-next {
+  right: 24px;
+}
+
+.rad-lightbox-nav:hover {
+  background: #de4b26;
+  border-color: #ff6538;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 0 25px rgba(222, 75, 38, 0.5);
+}
+
+.rad-lightbox-nav:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.rad-lightbox-nav.hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+/* Bottom Footer Bar */
+.rad-lightbox-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 28px 22px;
+  position: relative;
+  z-index: 20;
+  background: linear-gradient(0deg, rgba(2, 20, 32, 0.9) 0%, rgba(2, 20, 32, 0) 100%);
+  text-align: center;
+  gap: 8px;
+}
+
+.rad-lightbox-caption {
+  font-family: var(--font-heading, sans-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #f8fafc;
+  max-width: 800px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  line-height: 1.4;
+}
+
+.rad-lightbox-hints {
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.8rem;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rad-lightbox-hints kbd {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 0.75rem;
+  color: #f8fafc;
+}
+
+.rad-lightbox-hints .desktop-hint {
+  display: inline-block;
+}
+
+.rad-lightbox-hints .mobile-hint {
+  display: none;
+}
+
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 768px) {
+  .rad-lightbox-header {
+    padding: 14px 16px;
+  }
+
+  .rad-lightbox-counter {
+    font-size: 0.85rem;
+    padding: 4px 10px;
+  }
+
+  .rad-lightbox-zoom-badge {
+    font-size: 0.78rem;
+    padding: 4px 8px;
+  }
+
+  .rad-lightbox-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .rad-lightbox-btn-close {
+    width: 44px;
+    height: 44px;
+    font-size: 1.15rem;
+  }
+
+  .rad-lightbox-img {
+    max-width: 95vw;
+    max-height: 74vh;
+    border-radius: 8px;
+  }
+
+  .rad-lightbox-nav {
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+  }
+
+  .rad-lightbox-prev {
+    left: 10px;
+  }
+
+  .rad-lightbox-next {
+    right: 10px;
+  }
+
+  .rad-lightbox-footer {
+    padding: 12px 16px 20px;
+  }
+
+  .rad-lightbox-caption {
+    font-size: 0.92rem;
+  }
+
+  .rad-lightbox-hints .desktop-hint {
+    display: none;
+  }
+
+  .rad-lightbox-hints .mobile-hint {
+    display: inline-block;
+    font-size: 0.78rem;
+    color: #cbd5e1;
+  }
+}
