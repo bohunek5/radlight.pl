@@ -1051,14 +1051,19 @@ document.addEventListener('DOMContentLoaded', () => {
       this.images = [];
 
       allImgs.forEach(img => {
-        // Strictly exclude all UI logos, wheel nodes, center hub avatar, mobile dock R button, flags, and watermarks
+        // Strictly exclude lightbox's own image, UI logos, wheel nodes, center hub avatar, mobile dock R button, flags, and watermarks
         if (
           img.id === 'logo-img' ||
           img.id === 'hub-avatar-img' ||
+          img.id === 'rad-lightbox-img' ||
+          img.closest('.rad-lightbox') ||
+          img.closest('#rad-lightbox') ||
           img.closest('.logo') ||
           img.closest('.nav-logo') ||
+          img.closest('.brand-logo-main') ||
           img.closest('.mobile-nav-dock') ||
           img.closest('.dock-center-r-btn') ||
+          img.closest('.dock-logo-disc') ||
           img.closest('.dock-item') ||
           img.closest('.footer-watermark') ||
           img.closest('.footer-logo') ||
@@ -1075,6 +1080,9 @@ document.addEventListener('DOMContentLoaded', () => {
           img.classList.contains('footer-watermark') ||
           img.classList.contains('flag-icon') ||
           img.classList.contains('hub-avatar-img') ||
+          img.classList.contains('rad-lightbox-img') ||
+          !img.getAttribute('src') ||
+          img.getAttribute('src').trim() === '' ||
           img.hasAttribute('data-no-zoom')
         ) {
           return;
