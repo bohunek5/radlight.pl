@@ -120,7 +120,8 @@ ul {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 clamp(16px, 3.5vw, 40px);
+  padding: 0 clamp(20px, 3.5vw, 48px);
+  box-sizing: border-box;
 }
 
 /* Typography */
@@ -622,13 +623,13 @@ body.light-theme .nav-link.active {
 
 .wheel-hero-section {
   position: relative;
-  min-height: 100vh;
-  min-height: 100svh;
+  min-height: calc(100vh - 128px);
+  min-height: calc(100dvh - 128px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 24px 0 32px;
+  justify-content: space-between;
+  padding: 6px 0 14px;
   background: radial-gradient(circle at center, #0e5b94 0%, #083c66 50%, #021420 100%);
   overflow: hidden;
   box-sizing: border-box;
@@ -738,10 +739,10 @@ body.light-theme .wheel-node.active .node-icon-box {
 
 .wheel-container {
   position: relative;
-  width: 760px;
-  height: 760px;
-  max-width: 95vw;
-  max-height: 95vw;
+  width: min(640px, calc(100vh - 270px));
+  height: min(640px, calc(100vh - 270px));
+  max-width: 90vw;
+  max-height: 90vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1084,12 +1085,14 @@ body.light-theme .hub-action-btn:hover {
 
 /* Explore Offer Button & Pulsing Arrow directly below */
 .hero-bottom-cta-wrap {
-  margin-top: 20px;
+  margin-top: auto;
+  padding-bottom: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   z-index: 10;
+  flex-shrink: 0;
 }
 
 .btn-explore-offer {
@@ -2583,9 +2586,15 @@ body.light-theme .subpage-main-section {
 
 .subpage-layout-grid {
   display: grid;
-  grid-template-columns: 1fr 340px;
-  gap: 48px;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
+  gap: clamp(24px, 3.5vw, 48px);
   align-items: start;
+}
+
+.subpage-content-block,
+.subpage-hero-grid,
+.subpage-layout-grid > * {
+  min-width: 0;
 }
 
 .subpage-content-block {
