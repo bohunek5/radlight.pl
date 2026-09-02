@@ -623,13 +623,12 @@ body.light-theme .nav-link.active {
 
 .wheel-hero-section {
   position: relative;
-  min-height: calc(100vh - 128px);
-  min-height: calc(100dvh - 128px);
+  min-height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 6px 0 14px;
+  justify-content: center;
+  padding: 32px 0 28px;
   background: radial-gradient(circle at center, #0e5b94 0%, #083c66 50%, #021420 100%);
   overflow: hidden;
   box-sizing: border-box;
@@ -739,14 +738,14 @@ body.light-theme .wheel-node.active .node-icon-box {
 
 .wheel-container {
   position: relative;
-  width: min(640px, calc(100vh - 270px));
-  height: min(640px, calc(100vh - 270px));
-  max-width: 90vw;
-  max-height: 90vw;
+  width: min(740px, calc(100vh - 220px));
+  height: min(740px, calc(100vh - 220px));
+  max-width: 94vw;
+  max-height: 94vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
+  margin: 16px auto 12px;
 }
 
 /* SVG Orbit System: 2 Dynamic Rings (Outer Orange CW, Inner White/Navy CCW) */
@@ -813,10 +812,10 @@ body.light-theme .orbit-ring-inner {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 114px;
-  height: 114px;
-  margin-top: -57px;
-  margin-left: -57px;
+  width: 104px;
+  height: 104px;
+  margin-top: -52px;
+  margin-left: -52px;
   background: transparent !important;
   border: none !important;
   outline: none !important;
@@ -830,8 +829,8 @@ body.light-theme .orbit-ring-inner {
 }
 
 .node-icon-box {
-  width: 114px;
-  height: 114px;
+  width: 104px;
+  height: 104px;
   border-radius: 50% !important;
   background: #ffffff;
   border: 3.5px solid #ffffff;
