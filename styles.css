@@ -3036,6 +3036,181 @@ body.light-theme .btn-secondary-hero:hover {
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
 }
 
+/* ==========================================================================
+   STRANDA RESIDENCE & KISAJNO SHOWCASE CARD (MAZURY HOLIDAY)
+   ========================================================================== */
+.stranda-showcase-card {
+  position: relative;
+  display: block;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  background: #06192a;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.3s ease;
+}
+
+.stranda-showcase-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(222, 75, 38, 0.25);
+  border-color: rgba(222, 75, 38, 0.45);
+}
+
+.stranda-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #e67e22;
+  background: linear-gradient(135deg, #f59e0b 0%, #de4b26 100%);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  z-index: 5;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
+.stranda-card-media {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+  background: #03121f;
+}
+
+.stranda-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.stranda-showcase-card:hover .stranda-card-media img {
+  transform: scale(1.06);
+}
+
+.stranda-card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px 22px;
+  background: linear-gradient(180deg, rgba(2, 17, 28, 0.05) 0%, rgba(2, 17, 28, 0.45) 45%, rgba(2, 17, 28, 0.94) 100%);
+  z-index: 4;
+  transition: background 0.3s ease;
+}
+
+.stranda-showcase-card:hover .stranda-card-overlay {
+  background: linear-gradient(180deg, rgba(2, 17, 28, 0.02) 0%, rgba(2, 17, 28, 0.4) 40%, rgba(2, 17, 28, 0.96) 100%);
+}
+
+.stranda-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 14px 0;
+  line-height: 1.25;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  transition: color 0.3s ease;
+}
+
+.stranda-showcase-card:hover .stranda-card-title {
+  color: #fbd38d;
+}
+
+.stranda-icon-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.stranda-icon-pill {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 0.88rem;
+  transition: background 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+.stranda-showcase-card:hover .stranda-icon-pill {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.stranda-cta-btn {
+  color: #f59e0b;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.25s ease, gap 0.25s ease;
+}
+
+.stranda-cta-btn i {
+  font-size: 0.85rem;
+  transition: transform 0.25s ease;
+}
+
+.stranda-showcase-card:hover .stranda-cta-btn {
+  color: #ffb74d;
+  gap: 10px;
+}
+
+.stranda-showcase-card:hover .stranda-cta-btn i {
+  transform: translateX(4px);
+}
+
+/* Locations grid inside subpage content */
+.stranda-locations-block {
+  margin: 36px 0 24px 0;
+}
+
+.stranda-locations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .stranda-locations-grid {
+    grid-template-columns: 1fr;
+  }
+  .stranda-card-media {
+    height: 320px;
+  }
+}
+
+body.light-theme .stranda-showcase-card {
+  background: #ffffff;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+body.light-theme .stranda-showcase-card:hover {
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.18), 0 0 20px rgba(222, 75, 38, 0.2);
+}
+
 body.light-theme .subpage-hero-card {
   background: transparent;
   border: none;
