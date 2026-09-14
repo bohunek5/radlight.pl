@@ -70,6 +70,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    // Translate image alternative text
+    document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+      const key = el.getAttribute('data-i18n-alt');
+      if (translations[lang] && translations[lang][key]) {
+        el.setAttribute('alt', translations[lang][key]);
+      }
+    });
+
     // Translate titles & aria-labels
     document.querySelectorAll('[data-i18n-title]').forEach(el => {
       const key = el.getAttribute('data-i18n-title');
@@ -909,6 +917,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const rentalManagementForm = document.getElementById('najemForm');
+  if (rentalManagementForm) {
+    rentalManagementForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const lang = document.documentElement.lang || 'pl';
+      const copy = (typeof translations !== 'undefined' && translations[lang])
+        ? translations[lang]
+        : translations.pl;
+      const propertyType = document.getElementById('nj-type');
+      const details = document.getElementById('nj-details').value.trim();
+      const bodyLines = [
+        `${copy.znFormName}: ${document.getElementById('nj-name').value.trim()}`,
+        `${copy.znFormPhone}: ${document.getElementById('nj-phone').value.trim()}`,
+        `${copy.znFormLocation}: ${document.getElementById('nj-loc').value.trim()}`,
+        `${copy.znFormType}: ${propertyType.options[propertyType.selectedIndex].text}`
+      ];
+
+      if (details) {
+        bodyLines.push(`${copy.znFormDetails}: ${details}`);
+      }
+
+      const subject = encodeURIComponent(copy.znMailSubject);
+      const body = encodeURIComponent(bodyLines.join('\n'));
+      window.location.href = `mailto:biuro@radlight.pl?subject=${subject}&body=${body}`;
+    });
+  }
+
   // ==========================================================================
   // 9. SMOOTH SCROLL REVEAL ANIMATIONS (IntersectionObserver)
   // ==========================================================================
@@ -1461,4 +1497,3 @@ document.addEventListener('DOMContentLoaded', () => {
   window.radlightLightbox = radlightLightbox;
 
 });
-
