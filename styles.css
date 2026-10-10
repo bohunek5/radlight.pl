@@ -2724,7 +2724,7 @@ body.light-theme .spec-table tr:nth-child(even) {
 /* Photo Gallery Grid */
 .subpage-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
 }
 
@@ -5989,8 +5989,6 @@ body:not(.light-theme) .sidebar-cta-box .btn-primary-hero *,
 body:not(.light-theme) .sidebar-cta-box .btn-primary-hero i,
 body:not(.light-theme) .service-footer .btn-primary-hero *,
 body:not(.light-theme) .service-footer .btn-primary-hero i,
-body:not(.light-theme) .service-footer a *,
-body:not(.light-theme) .service-footer a i,
 body:not(.light-theme) .hub-action-btn *,
 body:not(.light-theme) .hub-action-btn i,
 body:not(.light-theme) .feature-circle-badge *,
@@ -6015,7 +6013,6 @@ body:not(.light-theme) .showcase-btn-primary:hover,
 body:not(.light-theme) .showcase-btn-secondary:hover,
 body:not(.light-theme) .sidebar-cta-box .btn-primary-hero:hover,
 body:not(.light-theme) .service-footer .btn-primary-hero:hover,
-body:not(.light-theme) .service-footer a:hover,
 body:not(.light-theme) .hub-action-btn:hover,
 body:not(.light-theme) .feature-circle-badge:hover,
 body:not(.light-theme) .subpage-feat-card:hover .subpage-feat-icon,
@@ -6056,8 +6053,6 @@ body:not(.light-theme) .sidebar-cta-box .btn-primary-hero:hover *,
 body:not(.light-theme) .sidebar-cta-box .btn-primary-hero:hover i,
 body:not(.light-theme) .service-footer .btn-primary-hero:hover *,
 body:not(.light-theme) .service-footer .btn-primary-hero:hover i,
-body:not(.light-theme) .service-footer a:hover *,
-body:not(.light-theme) .service-footer a:hover i,
 body:not(.light-theme) .hub-action-btn:hover *,
 body:not(.light-theme) .hub-action-btn:hover i,
 body:not(.light-theme) .feature-circle-badge:hover *,
@@ -6085,7 +6080,6 @@ body.light-theme .showcase-btn-primary,
 body.light-theme .showcase-btn-secondary,
 body.light-theme .sidebar-cta-box .btn-primary-hero,
 body.light-theme .service-footer .btn-primary-hero,
-body.light-theme .service-footer a,
 body.light-theme .hub-action-btn,
 body.light-theme .feature-circle-badge,
 body.light-theme .subpage-feat-icon,
@@ -6126,8 +6120,6 @@ body.light-theme .sidebar-cta-box .btn-primary-hero *,
 body.light-theme .sidebar-cta-box .btn-primary-hero i,
 body.light-theme .service-footer .btn-primary-hero *,
 body.light-theme .service-footer .btn-primary-hero i,
-body.light-theme .service-footer a *,
-body.light-theme .service-footer a i,
 body.light-theme .hub-action-btn *,
 body.light-theme .hub-action-btn i,
 body.light-theme .feature-circle-badge *,
@@ -6152,7 +6144,6 @@ body.light-theme .showcase-btn-primary:hover,
 body.light-theme .showcase-btn-secondary:hover,
 body.light-theme .sidebar-cta-box .btn-primary-hero:hover,
 body.light-theme .service-footer .btn-primary-hero:hover,
-body.light-theme .service-footer a:hover,
 body.light-theme .hub-action-btn:hover,
 body.light-theme .feature-circle-badge:hover,
 body.light-theme .subpage-feat-card:hover .subpage-feat-icon,
@@ -6193,8 +6184,6 @@ body.light-theme .sidebar-cta-box .btn-primary-hero:hover *,
 body.light-theme .sidebar-cta-box .btn-primary-hero:hover i,
 body.light-theme .service-footer .btn-primary-hero:hover *,
 body.light-theme .service-footer .btn-primary-hero:hover i,
-body.light-theme .service-footer a:hover *,
-body.light-theme .service-footer a:hover i,
 body.light-theme .hub-action-btn:hover *,
 body.light-theme .feature-circle-badge:hover *,
 body.light-theme .subpage-feat-card:hover .subpage-feat-icon *,
@@ -6519,24 +6508,33 @@ body.light-theme .card-phone-btn:hover i {
 }
 
 body:not(.light-theme) .card-phone-btn {
-  background: #ffffff !important;
-  border: 1.5px solid #ffffff !important;
-  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.25) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.45) !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
 }
 
 body:not(.light-theme) .card-phone-btn i {
-  color: #062b40 !important;
+  color: inherit !important;
 }
 
 body:not(.light-theme) .card-phone-btn:hover {
   background: #ffffff !important;
+  color: #062b40 !important;
   border-color: #de4b26 !important;
   box-shadow: 0 6px 20px rgba(222, 75, 38, 0.45) !important;
   transform: translateY(-2px) scale(1.08) !important;
 }
 
 body:not(.light-theme) .card-phone-btn:hover i {
-  color: #de4b26 !important;
+  color: inherit !important;
+}
+
+.btn-card:focus-visible,
+.btn-read-article:focus-visible,
+.card-phone-btn:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 4px;
 }
 
 
