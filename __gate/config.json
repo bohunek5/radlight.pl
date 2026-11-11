@@ -1,0 +1,1 @@
+{"version":1,"format":"sealed-pages-v1","build":"6c8fc65275d008d1954597611d1d879a","basepath":"/radlight.pl/","cipher":"AES-256-GCM","kdf":"PBKDF2","hash":"SHA-256","iterations":600000,"salt":"hfOP5DioRVohAE3/4smAu8Jxr4QKd50518g1VFT/Zms=","manifest":"dc27fbb49885b4d7fe0bc1d121b935097e3ffe29f52c7b47cd2f25763dec0d4d","chunkSize":4194304}
